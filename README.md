@@ -142,7 +142,8 @@ totales, demografía y estado, y se te dice qué campos se han rellenado. Solo s
 que esté vacío: lo que escribas tú nunca se pisa.
 
 Si la ficha aún no está descargada, no pasa nada: los campos que dejes en blanco se
-**heredan de la edición** en cuanto llegue, sin tener que tocar la serie. El estado tiene
+**heredan de la edición** en cuanto llegue, sin tener que tocar la serie. Y si quieres
+tenerlos **al instante**, sin publicar, mira *Traer los datos al momento* más abajo. El estado tiene
 por eso un valor *«Según la edición»*, que es el que trae por defecto.
 
 El botón *«Usar los datos de esta edición»* solo aparece cuando un valor tuyo choca con
@@ -158,6 +159,29 @@ es el tamaño que publican; si quieres una mejor, pega una URL en *URL de la por
 Si prefieres, también puedes pegar el ID a mano: es el número de la URL de la ficha, en
 `coleccion.php?id=2688`. Y para las series **sin enlazar**, el script busca candidatos por
 título y los deja como sugerencias, que aparecen en el detalle como botones de un clic.
+
+#### Traer los datos al momento (opcional)
+
+Por defecto los datos de una edición nueva llegan al publicar. Con un proxy configurado
+se traen **al elegir la edición**, sin esperar y sin publicar nada.
+
+Hace falta un proxy porque ListadoManga no envía cabeceras CORS. El repositorio incluye
+uno listo en `workers/listadomanga-proxy.js`, para desplegar gratis en Cloudflare Workers:
+
+1. dash.cloudflare.com → *Workers & Pages* → *Create* → *Worker*
+2. Pega el fichero, ajusta `ORIGENES` si tu web está en otra URL, y *Deploy*
+3. Copia la URL en Ajustes → *Traer los datos al momento*
+
+Solo deja pasar `coleccion.php?id=<número>` de listadomanga.es —no es un proxy abierto— y
+cachea una hora en el borde, así que a ListadoManga le llegan menos peticiones que antes.
+
+Las fichas que traigas así se guardan en tu navegador y se superponen a las publicadas,
+de modo que sus fechas y precios se ven ya. Al publicar, el Action las sube al repositorio
+y quedan también para quien visite la web.
+
+> El navegador y el Action analizan la ficha por separado (`assets/js/ficha.js` y
+> `scripts/actualizar_calendario.py`). Si tocas uno, revisa el otro: hay una prueba que
+> comprueba que los dos devuelven exactamente lo mismo.
 
 #### Cómo funciona por dentro
 
@@ -209,6 +233,8 @@ index.html                 Estructura y navegación
 assets/css/estilos.css     Estilos (tema claro/oscuro con variables CSS)
 assets/js/util.js          Utilidades: fechas en español, escapado, modal, avisos
 assets/js/datos.js         Modelo, cálculos y persistencia
+assets/js/cripto.js        Cifrado del token con la contraseña
+assets/js/ficha.js         Lectura de fichas en directo (vía proxy)
 assets/js/github.js        Publicación vía API de contenidos de GitHub
 assets/js/vistas.js        Render de cada pantalla
 assets/js/formularios.js   Altas, ediciones y diálogos
@@ -219,6 +245,7 @@ data/listadomanga-indice.json      Catálogo de ediciones (ídem)
 data/portadas/             Portadas descargadas una vez por el Action
 scripts/actualizar_calendario.py   Descarga de fechas, precios y datos de la edición
 scripts/actualizar_indice.py       Descarga del catálogo de ediciones
+workers/listadomanga-proxy.js      Proxy CORS opcional para Cloudflare Workers
 ```
 
 ### Formato de los datos

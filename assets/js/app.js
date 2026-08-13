@@ -297,6 +297,31 @@
       App.render();
     },
 
+    'guardar-proxy': function () {
+      var url = U.$('#fiProxy').value.trim();
+      if (!url) { U.aviso('Escribe la URL del proxy', 'error'); return; }
+
+      FI.guardarProxy(url);
+      U.aviso('Probando el proxy…');
+
+      // Se prueba con una colección real: si devuelve una ficha, funciona.
+      FI.traer('3000')
+        .then(function (ficha) {
+          U.aviso('Proxy correcto: ha leído «' + ficha.titulo + '»', 'ok');
+          App.render();
+        })
+        .catch(function (e) {
+          U.aviso('No funciona: ' + e.message, 'error');
+        });
+    },
+
+    'quitar-proxy': function () {
+      FI.guardarProxy('');
+      FI.limpiarCache();
+      U.aviso('Proxy quitado');
+      App.render();
+    },
+
     'bloquear-gh': function () {
       GH.bloquear();
       U.aviso('Bloqueado: se pedirá la contraseña al publicar');

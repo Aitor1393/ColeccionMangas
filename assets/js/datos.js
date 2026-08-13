@@ -113,6 +113,12 @@
             sugerencias: json.sugerencias || {}
           };
         }
+        // Las fichas traídas en directo se superponen a las publicadas, para
+        // que sus datos se vean antes de que el Action las suba al repo.
+        var local = FI.cacheLocal();
+        Object.keys(local).forEach(function (id) {
+          if (!D.calendario.colecciones[id]) D.calendario.colecciones[id] = local[id];
+        });
       });
   }
 

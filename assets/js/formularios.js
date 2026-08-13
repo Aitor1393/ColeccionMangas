@@ -181,6 +181,23 @@
 
       var rellenados = precargarDesdeFicha(c.id);
 
+      // Sin ficha guardada, se intenta traerla al momento si hay proxy.
+      if (rellenados === null && FI.hayProxy()) {
+        elegida.innerHTML = 'Trayendo los datos de <strong>' + U.esc(c.nombre) + '</strong>…';
+        FI.traer(c.id)
+          .then(function () {
+            var traidos = precargarDesdeFicha(c.id) || [];
+            elegida.innerHTML = '✓ <strong>' + U.esc(c.nombre) + '</strong> · traído de ListadoManga' +
+              (traidos.length ? ': ' + U.esc(traidos.join(', ')) : '') + '.';
+          })
+          .catch(function (e) {
+            elegida.innerHTML = '✓ Se enlazará con <strong>' + U.esc(c.nombre) + '</strong>. ' +
+              'No se ha podido leer la ficha ahora (' + U.esc(e.message) + '); ' +
+              'los datos llegarán al publicar.';
+          });
+        return;
+      }
+
       if (rellenados === null) {
         elegida.innerHTML = '✓ Se enlazará con <strong>' + U.esc(c.nombre) + '</strong>. ' +
           'Aún no tenemos su ficha descargada: los datos y las fechas llegarán en la ' +

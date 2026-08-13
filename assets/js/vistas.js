@@ -375,6 +375,27 @@
       '</div>' +
 
       '<div class="tarjeta">' +
+        '<h3>Traer los datos al momento</h3>' +
+        '<p>Sin esto, los datos de una edición nueva (portada, autor, sinopsis, fechas y ' +
+        'precios) llegan cuando publicas. Con un proxy configurado se traen <strong>al elegir ' +
+        'la edición</strong>, sin esperar.</p>' +
+        '<p class="ayuda">ListadoManga no envía cabeceras CORS, así que el navegador no puede ' +
+        'consultarlo directamente. El repositorio incluye un Worker de Cloudflare listo para ' +
+        'desplegar gratis en <code>workers/listadomanga-proxy.js</code>.</p>' +
+        '<div class="campos">' +
+          '<div class="campo--ancho"><label for="fiProxy">URL del proxy</label>' +
+            '<input type="url" id="fiProxy" value="' + U.esc(FI.proxy()) + '" ' +
+            'placeholder="https://mi-proxy.workers.dev/?id={id}">' +
+            '<div class="ayuda">Puedes usar <code>{id}</code> donde vaya el número de la ' +
+            'colección; si no lo pones, se añade como parámetro <code>id</code>.</div></div>' +
+        '</div>' +
+        '<div class="tarjeta__acciones">' +
+          '<button class="btn btn--primario" data-accion="guardar-proxy">Guardar y probar</button>' +
+          (FI.hayProxy() ? '<button class="btn btn--peligro" data-accion="quitar-proxy">Quitar proxy</button>' : '') +
+        '</div>' +
+      '</div>' +
+
+      '<div class="tarjeta">' +
         '<h3>Copia de seguridad</h3>' +
         '<p>Descarga un JSON con toda la colección o restaura desde uno anterior.</p>' +
         '<div class="tarjeta__acciones">' +

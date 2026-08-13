@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="oscuro">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mi Colección de Mangas</title>
+<meta name="description" content="Colección personal de mangas: tomos que tengo, pendientes de leer y próximas publicaciones.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📚</text></svg>">
+<link rel="stylesheet" href="assets/css/estilos.css">
+</head>
+<body>
+
+<header class="cabecera">
+  <div class="contenedor cabecera__interior">
+    <a class="marca" href="#/resumen">
+      <span class="marca__icono">📚</span>
+      <span class="marca__texto">Mi Colección<small>de mangas</small></span>
+    </a>
+
+    <nav class="nav" id="nav">
+      <a href="#/resumen" data-vista="resumen">Resumen</a>
+      <a href="#/biblioteca" data-vista="biblioteca">Biblioteca</a>
+      <a href="#/pendientes" data-vista="pendientes">Pendientes</a>
+      <a href="#/calendario" data-vista="calendario">Próximas</a>
+      <a href="#/ajustes" data-vista="ajustes">Ajustes</a>
+    </nav>
+
+    <div class="cabecera__acciones">
+      <button class="btn btn--icono" id="btnTema" title="Cambiar tema" aria-label="Cambiar tema">🌙</button>
+      <button class="btn btn--primario" id="btnNuevaSerie">+ Añadir serie</button>
+    </div>
+  </div>
+</header>
+
+<div id="avisoCambios" class="aviso oculto">
+  <div class="contenedor aviso__interior">
+    <span>Tienes <strong id="avisoNum">0</strong> cambios sin publicar. Solo los ves tú en este dispositivo.</span>
+    <span class="aviso__botones">
+      <button class="btn btn--pequeno" id="btnPublicarAviso">Publicar</button>
+      <button class="btn btn--pequeno btn--fantasma" id="btnDescartarAviso">Descartar cambios</button>
+    </span>
+  </div>
+</div>
+
+<main class="contenedor" id="app">
+  <div class="cargando">Cargando colección…</div>
+</main>
+
+<footer class="pie">
+  <div class="contenedor">
+    <span>Colección personal de mangas · datos en <code>data/coleccion.json</code></span>
+    <span id="pieActualizado"></span>
+  </div>
+</footer>
+
+<!-- ══════════ Modal genérico ══════════ -->
+<div class="modal oculto" id="modal" role="dialog" aria-modal="true">
+  <div class="modal__fondo" data-cerrar-modal></div>
+  <div class="modal__caja" role="document">
+    <button class="modal__cerrar" data-cerrar-modal aria-label="Cerrar">✕</button>
+    <div class="modal__contenido" id="modalContenido"></div>
+  </div>
+</div>
+
+<div id="notificaciones" class="notificaciones"></div>
+
+<script src="assets/js/util.js"></script>
+<script src="assets/js/datos.js"></script>
+<script src="assets/js/mangadex.js"></script>
+<script src="assets/js/github.js"></script>
+<script src="assets/js/vistas.js"></script>
+<script src="assets/js/formularios.js"></script>
+<script src="assets/js/app.js"></script>
+</body>
+</html>

@@ -107,6 +107,30 @@
   /* ============================================================
      Vista: Resumen
      ============================================================ */
+
+  // Qué secciones del resumen tienes plegadas. Es preferencia del navegador,
+  // no de la colección: no tiene por qué ser igual para quien la visite.
+  V.seccionesPlegadas = U.leerLocal('cm:resumenPlegado', {});
+
+  /**
+   * Sección con título pulsable que se pliega. El contador y los botones
+   * siguen a la vista plegada, para saber qué hay dentro sin abrirla.
+   */
+  function seccionPlegable(clave, titulo, contador, extra, cuerpo) {
+    var plegada = !!V.seccionesPlegadas[clave];
+    return '<section class="seccion">' +
+      '<div class="seccion__titulo">' +
+        '<button class="plegar" data-accion="plegar-seccion" data-clave="' + U.esc(clave) + '" ' +
+          'aria-expanded="' + (plegada ? 'false' : 'true') + '">' +
+          '<span class="plegar__flecha' + (plegada ? ' plegar__flecha--cerrada' : '') + '">▾</span>' +
+          '<h2>' + U.esc(titulo) + '</h2>' +
+        '</button>' +
+        '<span class="contador">' + contador + '</span>' + extra +
+      '</div>' +
+      (plegada ? '' : cuerpo) +
+    '</section>';
+  }
+
   V.resumen = function () {
     var g = D.statsGlobales();
 
@@ -147,23 +171,17 @@
     // Próximas salidas
     var proximas = D.proximasPublicaciones(90).slice(0, 6);
     if (proximas.length) {
-      html += '<section class="seccion">' +
-        '<div class="seccion__titulo"><h2>Próximas publicaciones</h2>' +
-        '<span class="contador">siguientes 90 días</span>' +
-        '<a href="#/calendario" class="btn btn--pequeno btn--fantasma" style="margin-left:auto">Ver todas</a></div>' +
-        '<div class="lista">' + proximas.map(filaSalida).join('') + '</div>' +
-      '</section>';
+      html += seccionPlegable('proximas', 'Próximas publicaciones', 'siguientes 90 días',
+        '<a href="#/calendario" class="btn btn--pequeno btn--fantasma" style="margin-left:auto">Ver todas</a>',
+        '<div class="lista">' + proximas.map(filaSalida).join('') + '</div>');
     }
 
     // Lo que ya está en las tiendas y todavía te falta: un avance de Compras.
     var pendientesCompra = D.pendientesDeCompra();
     if (pendientesCompra.length) {
-      html += '<section class="seccion">' +
-        '<div class="seccion__titulo"><h2>Ya a la venta y aún no lo tienes</h2>' +
-        '<span class="contador">' + pendientesCompra.length + '</span>' +
-        '<a href="#/compras" class="btn btn--pequeno btn--fantasma" style="margin-left:auto">Próximas compras</a></div>' +
-        '<div class="lista">' + pendientesCompra.slice(0, 5).map(comoSalida).map(filaSalida).join('') + '</div>' +
-      '</section>';
+      html += seccionPlegable('venta', 'Ya a la venta y aún no lo tienes', pendientesCompra.length,
+        '<a href="#/compras" class="btn btn--pequeno btn--fantasma" style="margin-left:auto">Próximas compras</a>',
+        '<div class="lista">' + pendientesCompra.slice(0, 5).map(comoSalida).map(filaSalida).join('') + '</div>');
     }
 
     // Continuar leyendo
@@ -273,21 +291,34 @@
       '</label>' +
     '</div>';
 
-    var series = V.filtrar(D.coleccion.series);
-    var puestos = filtrosPuestos();
+    // La cabecera y los resultados se repintan solos al filtrar, sin tocar el
+    // panel: si se recreara el <input>, el cursor saltaría al principio en
+    // cuanto escribieras la segunda letra.
+    return '<div class="vista__cabecera"><div class="crece">' +
+        '<h1>Biblioteca</h1>' +
+        '<p id="bibCuenta">' + V.bibliotecaCuenta() + '</p>' +
+      '</div><div class="acciones-vista" id="bibAcciones">' + V.bibliotecaAcciones() + '</div></div>' + barra +
+      '<div id="bibResultados">' + V.bibliotecaResultados() + '</div>';
+  };
 
-    var boton = '<button class="btn' + (puestos ? ' btn--primario' : '') + '" ' +
+  V.bibliotecaResultados = function () {
+    return rejilla(V.filtrar(D.coleccion.series),
+      '<h3>Ningún resultado</h3><p>Prueba a aflojar los filtros.</p>');
+  };
+
+  V.bibliotecaCuenta = function () {
+    var n = V.filtrar(D.coleccion.series).length;
+    return U.plural(n, 'serie') + ' de ' + D.coleccion.series.length +
+      (filtrosPuestos() && !V.filtrosAbiertos ? ' · lista filtrada' : '');
+  };
+
+  V.bibliotecaAcciones = function () {
+    var puestos = filtrosPuestos();
+    return '<button class="btn' + (puestos ? ' btn--primario' : '') + '" ' +
         'data-accion="alternar-filtros" aria-expanded="' + (V.filtrosAbiertos ? 'true' : 'false') + '" ' +
         'aria-controls="panelFiltros">🔍 Buscar y filtrar' +
         (puestos ? ' <span class="contador-filtros">' + puestos + '</span>' : '') + '</button>' +
       (puestos ? '<button class="btn btn--fantasma btn--pequeno" data-accion="limpiar-filtros">Quitar filtros</button>' : '');
-
-    return '<div class="vista__cabecera"><div class="crece">' +
-        '<h1>Biblioteca</h1>' +
-        '<p>' + U.plural(series.length, 'serie') + ' de ' + D.coleccion.series.length +
-          (puestos && !V.filtrosAbiertos ? ' · lista filtrada' : '') + '</p>' +
-      '</div><div class="acciones-vista">' + boton + '</div></div>' + barra +
-      rejilla(series, '<h3>Ningún resultado</h3><p>Prueba a aflojar los filtros.</p>');
   };
 
   V.filtrar = function (series) {
@@ -443,11 +474,19 @@
   }
 
   /** Flechas para colocar un elemento donde quieras en la lista de compra. */
+  /**
+   * Flechas para mover de uno en uno y una casilla para escribir el puesto
+   * directamente: con listas largas, bajar algo veinte posiciones a golpe de
+   * flecha es inviable.
+   */
   function flechasOrden(clave, i, total) {
     return '<div class="orden">' +
       '<button class="orden__btn" data-accion="mover-compra" data-clave="' + U.esc(clave) + '" ' +
         'data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Comprar antes">▲</button>' +
-      '<span class="orden__num">' + (i + 1) + '</span>' +
+      '<input class="orden__num" type="number" inputmode="numeric" min="1" max="' + total + '" ' +
+        'value="' + (i + 1) + '" data-posicion="' + U.esc(clave) + '" ' +
+        'title="Escribe el puesto que quieras y el resto se corre" ' +
+        'aria-label="Puesto ' + (i + 1) + ' de ' + total + '">' +
       '<button class="orden__btn" data-accion="mover-compra" data-clave="' + U.esc(clave) + '" ' +
         'data-dir="1"' + (i === total - 1 ? ' disabled' : '') + ' aria-label="Comprar después">▼</button>' +
     '</div>';

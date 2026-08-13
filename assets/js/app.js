@@ -33,8 +33,21 @@
     location.hash = '#/' + vista;
   }
 
+  /** Alto que ocupa ahora mismo la banda de cambios sin publicar (0 si no está). */
+  function altoAviso() {
+    var a = document.getElementById('avisoCambios');
+    return a && !a.classList.contains('oculto') ? a.offsetHeight : 0;
+  }
+
   App.render = function () {
     var r = rutaActual();
+    var mismaVista = r.vista === vistaActual;
+    // Repintar cambia el innerHTML entero y el navegador manda la página
+    // arriba. Si sigues en la misma vista —cerrar una ficha, marcar un tomo—
+    // hay que devolverte donde estabas; al cambiar de vista, el hashchange
+    // sube a propósito.
+    var alturaScroll = window.scrollY;
+    var avisoAntes = altoAviso();
     vistaActual = r.vista;
 
     U.$$('#nav a').forEach(function (a) {
@@ -55,6 +68,13 @@
     if (vistaActual === 'biblioteca') conectarFiltros();
     actualizarAviso();
     actualizarPie();
+
+    // Se restaura después del aviso: la primera vez que tocas algo aparece la
+    // banda de «cambios sin publicar» y empuja la página hacia abajo, así que
+    // hay que sumar lo que crece o volverías 52 px más arriba de lo que mirabas.
+    if (mismaVista && alturaScroll) {
+      window.scrollTo(0, Math.max(0, alturaScroll + (altoAviso() - avisoAntes)));
+    }
 
     // Si había una serie abierta en el modal, la refrescamos
     if (serieAbierta && U.modalAbierto()) {
@@ -96,28 +116,37 @@
 
   /* ---------- Filtros de la biblioteca ---------- */
 
+  /**
+   * Repinta solo lo que depende de los filtros: la cuenta, los botones y la
+   * rejilla. El panel se queda intacto, así que el <input> del buscador no se
+   * recrea y el cursor no se mueve de donde lo tengas.
+   */
+  App.refrescarBiblioteca = function () {
+    var cuenta = U.$('#bibCuenta');
+    if (!cuenta) return App.render();
+    cuenta.innerHTML = V.bibliotecaCuenta();
+    U.$('#bibAcciones').innerHTML = V.bibliotecaAcciones();
+    U.$('#bibResultados').innerHTML = V.bibliotecaResultados();
+  };
+
   function conectarFiltros() {
     var texto = U.$('#fTexto');
     if (!texto) return;
 
-    var posicion = texto.selectionStart;
-    texto.focus();
-    try { texto.setSelectionRange(posicion, posicion); } catch (e) { /* ignorado */ }
-
     texto.addEventListener('input', U.debounce(function () {
       V.filtros.texto = texto.value;
-      App.render();
+      App.refrescarBiblioteca();
     }, 250));
 
     [['#fEstado', 'estado'], ['#fDemografia', 'demografia'], ['#fEditorial', 'editorial'],
      ['#fTenencia', 'tenencia'], ['#fSeguimiento', 'seguimiento'], ['#fOrden', 'orden']]
       .forEach(function (par) {
         var nodo = U.$(par[0]);
-        if (nodo) nodo.addEventListener('change', function () { V.filtros[par[1]] = nodo.value; App.render(); });
+        if (nodo) nodo.addEventListener('change', function () { V.filtros[par[1]] = nodo.value; App.refrescarBiblioteca(); });
       });
 
     var pend = U.$('#fPendientes');
-    if (pend) pend.addEventListener('change', function () { V.filtros.soloPendientes = pend.checked; App.render(); });
+    if (pend) pend.addEventListener('change', function () { V.filtros.soloPendientes = pend.checked; App.refrescarBiblioteca(); });
   }
 
   /* ---------- Acciones (delegación global) ---------- */
@@ -241,10 +270,25 @@
       window.scrollTo(0, 0);
     },
 
+    'plegar-seccion': function (el) {
+      var c = el.dataset.clave;
+      V.seccionesPlegadas[c] = !V.seccionesPlegadas[c];
+      U.guardarLocal('cm:resumenPlegado', V.seccionesPlegadas);
+      App.render();
+    },
+
     'alternar-filtros': function () {
       V.filtrosAbiertos = !V.filtrosAbiertos;
       U.guardarLocal('cm:filtrosBiblioteca', V.filtrosAbiertos);
-      App.render();     // conectarFiltros deja el cursor en el buscador
+      App.render();
+      // Solo al abrirlo: entrar en la Biblioteca no debe robar el foco ni
+      // levantar el teclado en el móvil.
+      var caja = U.$('#fTexto');
+      if (V.filtrosAbiertos && caja) {
+        caja.focus();
+        var n = caja.value.length;
+        try { caja.setSelectionRange(n, n); } catch (e) { /* ignorado */ }
+      }
     },
 
     'limpiar-filtros': function () {
@@ -425,6 +469,19 @@
     }
   };
 
+  /** Cambios en campos sueltos que no son un botón con data-accion. */
+  function alCambiar(e) {
+    var pos = e.target.dataset && e.target.dataset.posicion;
+    if (!pos) return;
+    var y = window.scrollY;
+    if (D.moverCompraA(V.modoCompras, pos, e.target.value)) {
+      App.render();
+      window.scrollTo(0, y);
+    } else {
+      App.render();   // valor imposible: se repinta para devolver el puesto real
+    }
+  }
+
   function alPulsar(e) {
     var cerrar = e.target.closest('[data-cerrar-modal]');
     if (cerrar) {
@@ -456,6 +513,14 @@
     aplicarTema(U.leerLocal('cm:tema', 'oscuro'));
 
     document.addEventListener('click', alPulsar);
+    document.addEventListener('change', alCambiar);
+    // Enter en la casilla de puesto: sin esto habría que salir del campo.
+    document.addEventListener('keydown', function (e) {
+      if (e.key === 'Enter' && e.target.dataset && e.target.dataset.posicion) {
+        e.preventDefault();
+        e.target.blur();
+      }
+    });
     document.addEventListener('keydown', function (e) {
       if (e.key === 'Escape' && U.modalAbierto()) {
         U.cerrarModal();

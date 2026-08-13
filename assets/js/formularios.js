@@ -377,11 +377,37 @@
       '</tr>';
     }).join('');
 
+    var opcionesTomo = function (sel) {
+      return tomos.map(function (t) {
+        return '<option value="' + t.numero + '"' + (sel === t.numero ? ' selected' : '') + '>' + t.numero + '</option>';
+      }).join('');
+    };
+
+    // Reparto: lo habitual al comprar un lote o un pack es saber lo que
+    // costó entero, no lo que valía cada tomo.
+    var reparto = tomos.length < 2 ? '' :
+      '<div class="reparto">' +
+        '<div class="reparto__campos">' +
+          '<label for="rImporte">Pagué en total</label>' +
+          '<input type="number" step="0.01" min="0" id="rImporte" placeholder="0,00">' +
+          '<span>€ por los tomos</span>' +
+          '<select id="rDesde">' + opcionesTomo(tomos[0].numero) + '</select>' +
+          '<span>a</span>' +
+          '<select id="rHasta">' + opcionesTomo(tomos[tomos.length - 1].numero) + '</select>' +
+          '<label for="rFecha" class="reparto__opcional">y los compré el</label>' +
+          '<input type="date" id="rFecha">' +
+          '<button type="button" class="btn btn--pequeno" id="rRepartir">Repartir</button>' +
+        '</div>' +
+        '<div class="ayuda" id="rAviso">Divide el importe a partes iguales entre esos tomos y lo ' +
+          'escribe en la tabla. Nada se guarda hasta que le des a «Guardar precios».</div>' +
+      '</div>';
+
     U.abrirModal(
       '<h2>Precios · ' + U.esc(serie.titulo) + '</h2>' +
       '<p class="ayuda">Lo que dejes en blanco se calcula con el PVP menos tu descuento (' +
       D.descuento() + '%). Escribe el precio solo si pagaste otra cosa: de segunda mano, ' +
       'de oferta o en un pack.</p>' +
+      reparto +
       '<div class="precios">' +
         '<table>' +
           '<thead><tr><th>Tomo</th><th>Estimado</th><th>Lo que pagué</th><th>Fecha</th></tr></thead>' +
@@ -398,6 +424,52 @@
     U.$('#pVaciar').addEventListener('click', function () {
       U.$$('.precios__input').forEach(function (i) { i.value = ''; });
     });
+
+    if (U.$('#rRepartir')) {
+      U.$('#rRepartir').addEventListener('click', function () {
+        var aviso = U.$('#rAviso');
+        var importe = Number(U.$('#rImporte').value);
+        var desde = Number(U.$('#rDesde').value);
+        var hasta = Number(U.$('#rHasta').value);
+        var fecha = U.$('#rFecha').value;
+
+        if (desde > hasta) { var v = desde; desde = hasta; hasta = v; }
+
+        var elegidos = U.$$('.precios__input').filter(function (i) {
+          var n = Number(i.dataset.tomo);
+          return n >= desde && n <= hasta;
+        });
+
+        if (!(importe > 0)) {
+          aviso.innerHTML = '<strong>Escribe primero cuánto pagaste.</strong>';
+          U.$('#rImporte').focus();
+          return;
+        }
+        if (!elegidos.length) { aviso.innerHTML = '<strong>Ese tramo no tiene tomos.</strong>'; return; }
+
+        // En céntimos para que la suma cuadre exactamente: 10 € entre 3 son
+        // 3,34 + 3,33 + 3,33, no tres veces 3,33.
+        var centimos = Math.round(importe * 100);
+        var base = Math.floor(centimos / elegidos.length);
+        var sobran = centimos - base * elegidos.length;
+
+        elegidos.forEach(function (input, n) {
+          input.value = ((base + (n < sobran ? 1 : 0)) / 100).toFixed(2);
+        });
+
+        if (fecha) {
+          U.$$('.precios__fecha').forEach(function (i) {
+            var n = Number(i.dataset.tomo);
+            if (n >= desde && n <= hasta) i.value = fecha;
+          });
+        }
+
+        aviso.innerHTML = '✓ ' + U.euros(importe) + ' repartidos entre ' +
+          U.plural(elegidos.length, 'tomo') + ': ' + U.euros(base / 100) +
+          (sobran ? ' cada uno, y ' + U.plural(sobran, 'tomo') + ' con un céntimo más para que cuadre' : ' cada uno') +
+          '. Revísalo y dale a «Guardar precios».';
+      });
+    }
 
     U.$('#pGuardar').addEventListener('click', function () {
       var fechas = {};

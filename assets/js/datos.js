@@ -764,29 +764,49 @@
     });
   };
 
-  /**
-   * Sube o baja un elemento en tu orden de compra.
-   *
-   * El orden guardado solo tiene lo que has movido, así que antes de mover
-   * hay que fijar la lista tal y como se está viendo; si no, subir el tercero
-   * lo colocaría por delante de dos elementos que ni siquiera estaban puestos.
-   */
+  /** Sube o baja un elemento un puesto en tu orden de compra. */
   D.moverCompra = function (modo, clave, direccion) {
-    var visible = (modo === 'series' ? D.pendientesDeCompraPorSerie() : D.pendientesDeCompra())
-      .map(function (x) { return x.clave; });
-
+    var visible = ordenVisible(modo);
     var i = visible.indexOf(clave);
-    var j = i + direccion;
-    if (i === -1 || j < 0 || j >= visible.length) return false;
+    if (i === -1) return false;
+    return colocarCompra(modo, visible, i, i + direccion);
+  };
 
-    visible[i] = visible[j];
-    visible[j] = clave;
+  /**
+   * Lleva un elemento a la posición que le digas (1 = el primero) y corre el
+   * resto para hacerle hueco, en vez de intercambiarlo con su vecino.
+   */
+  D.moverCompraA = function (modo, clave, posicion) {
+    var visible = ordenVisible(modo);
+    var i = visible.indexOf(clave);
+    if (i === -1) return false;
+    return colocarCompra(modo, visible, i, Number(posicion) - 1);
+  };
+
+  function ordenVisible(modo) {
+    return (modo === 'series' ? D.pendientesDeCompraPorSerie() : D.pendientesDeCompra())
+      .map(function (x) { return x.clave; });
+  }
+
+  /**
+   * Saca el elemento de su sitio y lo mete en el nuevo, corriendo el resto.
+   *
+   * El orden guardado solo tiene lo que has movido, así que se fija primero la
+   * lista tal y como se está viendo; si no, colocar el tercero lo pondría por
+   * delante de elementos que ni siquiera estaban puestos.
+   */
+  function colocarCompra(modo, visible, desde, hasta) {
+    if (isNaN(hasta) || hasta < 0 || hasta >= visible.length || hasta === desde) return false;
+
+    var clave = visible[desde];
+    visible.splice(desde, 1);
+    visible.splice(hasta, 0, clave);
 
     if (!D.coleccion.compras) D.coleccion.compras = { series: [], tomos: [] };
     D.coleccion.compras[modo] = visible;
     D.guardar();
     return true;
-  };
+  }
 
   /** Olvida el orden manual y vuelve al automático. */
   D.limpiarOrdenCompras = function (modo) {

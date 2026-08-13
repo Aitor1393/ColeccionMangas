@@ -123,6 +123,15 @@ main { padding: 28px 0 60px; }
 .seccion__titulo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
 .seccion__titulo h2 { margin: 0; }
 .seccion__titulo .contador { font-size: .8rem; color: var(--texto-3); background: var(--panel-2); padding: 2px 9px; border-radius: 99px; }
+/* Título pulsable para plegar la sección */
+.plegar {
+  display: flex; align-items: center; gap: 8px; padding: 0; margin: 0;
+  background: none; border: 0; color: inherit; font: inherit; cursor: pointer; text-align: left;
+}
+.plegar h2 { margin: 0; }
+.plegar:hover h2 { color: var(--acento); }
+.plegar__flecha { color: var(--texto-3); font-size: .9rem; transition: transform var(--transicion); }
+.plegar__flecha--cerrada { transform: rotate(-90deg); }
 
 .cargando, .vacio {
   padding: 48px 20px; text-align: center; color: var(--texto-3);
@@ -239,6 +248,19 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .fila__fecha strong { display: block; font-size: .95rem; }
 .fila__fecha span { font-size: .76rem; color: var(--texto-3); }
 
+/* ───────────── Reparto de un importe entre varios tomos ───────────── */
+.reparto {
+  background: var(--panel-2); border: 1px solid var(--borde); border-radius: var(--radio-s);
+  padding: 12px 14px; margin-bottom: 14px;
+}
+.reparto__campos { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: .87rem; }
+.reparto__campos label { margin: 0; white-space: nowrap; }
+.reparto__campos input[type="number"] { width: 96px; }
+.reparto__campos input[type="date"] { width: auto; }
+.reparto__campos select { width: auto; min-width: 68px; }
+.reparto__opcional { color: var(--texto-3); }
+.reparto .ayuda { margin-top: 8px; }
+
 /* ───────────── Próximas compras ───────────── */
 .resumen-compras {
   display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
@@ -261,7 +283,16 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 }
 .orden__btn:hover:not(:disabled) { border-color: var(--acento); color: var(--acento); }
 .orden__btn:disabled { opacity: .25; cursor: default; }
-.orden__num { font-size: .72rem; font-weight: 700; color: var(--texto-3); }
+.orden__num {
+  width: 34px; padding: 2px 0; text-align: center;
+  font: inherit; font-size: .72rem; font-weight: 700; color: var(--texto-2);
+  background: var(--panel-2); border: 1px solid var(--borde); border-radius: 6px;
+}
+.orden__num:focus { border-color: var(--acento); color: var(--texto); outline: none; }
+/* Las flechitas del number roban sitio en una casilla tan estrecha */
+.orden__num::-webkit-outer-spin-button,
+.orden__num::-webkit-inner-spin-button { -webkit-appearance: none; margin: 0; }
+.orden__num { -moz-appearance: textfield; appearance: textfield; }
 
 /* Los tomos que faltan, uno por pastilla: al pulsarla queda comprado */
 .tomo-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }

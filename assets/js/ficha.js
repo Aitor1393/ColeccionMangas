@@ -100,9 +100,14 @@
     return campos;
   }
 
-  /** Números con su fecha y precio, del mismo modo que el script de Python. */
-  function numeros(doc) {
+  /**
+   * Números con su fecha y precio, del mismo modo que el script de Python.
+   * En las obras de tomo único el bloque no lleva «nº1», solo el título, así
+   * que se recoge aparte y se usa como número 1 si no ha salido ningún otro.
+   */
+  function numeros(doc, total) {
     var porNumero = {};
+    var sinNumero = [];
 
     U.$$('td.cen', doc).forEach(function (celda) {
       // Los <br> hay que convertirlos en espacio antes de leer el texto: sin
@@ -113,9 +118,10 @@
       });
       var texto = copia.textContent || '';
 
+      var imagen = celda.querySelector('img.portada');
       var m = texto.match(/nº\s*(\d+)/);
-      if (!m) return;
-      var numero = Number(m[1]);
+      if (!m && !imagen) return;
+      var numero = m ? Number(m[1]) : 1;
 
       var precio = texto.match(/(\d+),(\d{2})\s*€/);
       var enlace = celda.querySelector('a[href*="novedades.php?mes="]');
@@ -148,14 +154,20 @@
         aproximada: aproximada,
         // En directo se apunta a la imagen de ListadoManga; cuando el Action
         // la publique, pasará a ser la copia de data/portadas/.
-        portada: urlDeImagen(celda.querySelector('img.portada'))
+        portada: urlDeImagen(imagen)
       };
+
+      if (!m) { sinNumero.push(registro); return; }
 
       // La ficha repite números en «portadas alternativas»: nos quedamos con
       // la primera aparición que traiga fecha.
       var previoReg = porNumero[numero];
       if (!previoReg || (!previoReg.fecha && fecha)) porNumero[numero] = registro;
     });
+
+    if (!Object.keys(porNumero).length && sinNumero.length && (total || 0) <= 1) {
+      porNumero[1] = sinNumero[0];
+    }
 
     return Object.keys(porNumero)
       .map(function (k) { return porNumero[k]; })
@@ -215,7 +227,7 @@
       descargado: U.isoHoy(),
       sinopsis: sinopsis(doc),
       portada: portada(doc),
-      numeros: numeros(doc)
+      numeros: numeros(doc, total ? Number(total[1]) : 0)
     };
   };
 

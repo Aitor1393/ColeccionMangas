@@ -74,7 +74,7 @@ def descargar(url, intentos=REINTENTOS):
     raise RuntimeError('no se pudo descargar %s: %s' % (url, ultimo_error))
 
 
-def extraer_numeros(pagina):
+def extraer_numeros(pagina, total=0):
     """
     Devuelve [{numero, fecha, precio, aproximada}] a partir de una ficha de colección.
 
@@ -87,18 +87,21 @@ def extraer_numeros(pagina):
 
     La ficha repite números en la sección de portadas alternativas, así que nos
     quedamos con la primera aparición que traiga fecha.
+
+    En las obras de tomo único el bloque no lleva «nº1», solo el título, así que
+    se recoge aparte y se usa como número 1 si no ha salido ningún otro.
     """
     porNumero = {}
+    sinNumero = []
     for bruto in re.findall(r'(?is)<td class="cen">(.*?)</td>', pagina):
         bloque = html.unescape(bruto)
         texto = re.sub(r'<[^>]+>', ' ', bloque)
 
-        coincidencia = re.search(r'nº\s*(\d+)', texto)
-        if not coincidencia:
-            continue
-        numero = int(coincidencia.group(1))
-
         imagen = re.search(r'<img class="portada"[^>]*>', bloque)
+        coincidencia = re.search(r'nº\s*(\d+)', texto)
+        if not coincidencia and not imagen:
+            continue
+        numero = int(coincidencia.group(1)) if coincidencia else 1
         precio = re.search(r'(\d+,\d{2})\s*€', bloque)
         fecha_enlace = re.search(
             r'(?:(\d{1,2})\s*)?<a href="novedades\.php\?mes=(\d+)&(?:amp;)?ano=(\d+)"', bloque)
@@ -118,9 +121,16 @@ def extraer_numeros(pagina):
                     'aproximada': aproximada,
                     'portada': url_de_imagen(imagen.group(0)) if imagen else ''}
 
+        if not coincidencia:
+            sinNumero.append(registro)
+            continue
+
         previo = porNumero.get(numero)
         if previo is None or (previo['fecha'] is None and fecha is not None):
             porNumero[numero] = registro
+
+    if not porNumero and sinNumero and total <= 1:
+        porNumero[1] = sinNumero[0]
 
     return sorted(porNumero.values(), key=lambda v: v['numero'])
 
@@ -348,10 +358,11 @@ def main():
             time.sleep(PAUSA)
             continue
 
-        numeros = extraer_numeros(pagina)
+        meta = metadatos(pagina)
+        numeros = extraer_numeros(pagina, meta['totalNumeros'])
         conFecha = [n for n in numeros if n['fecha']]
         ficha = {'titulo': titulo_de(pagina), 'url': url, 'numeros': numeros}
-        ficha.update(metadatos(pagina))
+        ficha.update(meta)
         ficha['descargado'] = time.strftime('%Y-%m-%d')
         ficha['sinopsis'] = extraer_sinopsis(pagina)
 

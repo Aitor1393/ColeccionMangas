@@ -373,7 +373,7 @@
       return html + '<div class="vacio"><h3>No te falta nada a la venta</h3>' +
         '<p>Tienes todos los tomos que han salido ya. Lo que aún no se ha publicado ' +
         'lo verás en <a href="#/calendario">Próximas publicaciones</a>.</p></div>' +
-        avisoAbandonadas();
+        avisoFuera();
     }
 
     var modo = V.modoCompras;
@@ -387,7 +387,7 @@
       (hayOrden ? '<button class="btn btn--pequeno btn--fantasma" data-accion="orden-automatico" ' +
         'data-modo="' + modo + '">Volver al orden automático</button>'
         : '<span class="ayuda">Ordenados por el que lleva más tiempo esperando</span>') +
-    '</div>' + avisoAbandonadas();
+    '</div>' + avisoFuera();
 
     var filas = modo === 'series' ? grupos.map(filaCompraSerie) : tomos.map(filaCompraTomo);
     return html + '<div class="lista lista--ordenable">' + filas.join('') + '</div>';
@@ -406,6 +406,17 @@
       '<a href="#/biblioteca" data-accion="ver-abandonadas">Verlas</a></p>';
   }
 
+  /** Lo que queda fuera de Próximas compras, dicho en voz alta. */
+  function avisoFuera() {
+    var leidos = D.leidosSinComprar().length;
+    return avisoAbandonadas() +
+      (leidos
+        ? '<p class="ayuda" style="margin:-6px 0 16px">' +
+          U.plural(leidos, 'tomo que leíste sin comprarlo', 'tomos que leíste sin comprarlos') +
+          ' tampoco cuenta' + (leidos === 1 ? '' : 'n') + ': ya los has disfrutado.</p>'
+        : '');
+  }
+
   /** Flechas para colocar un elemento donde quieras en la lista de compra. */
   function flechasOrden(clave, i, total) {
     return '<div class="orden">' +
@@ -419,7 +430,7 @@
 
   function filaCompraSerie(g, i, todos) {
     var nums = g.tomos.map(function (t) {
-      return '<button class="tomo-chip' + (t.leido ? ' tomo-chip--leido' : '') + '" ' +
+      return '<button class="tomo-chip" ' +
         'data-accion="comprado" data-serie-id="' + U.esc(g.serie.id) + '" data-tomo="' + t.numero + '" ' +
         'title="Marcar el tomo ' + t.numero + ' como comprado">' + t.numero + '</button>';
     }).join('');
@@ -444,8 +455,7 @@
       miniPortada(t.serie) +
       '<div class="fila__cuerpo">' +
         '<div class="fila__titulo" data-serie="' + U.esc(t.serie.id) + '">' +
-          U.esc(nombreListado(t.serie)) + ' <span class="chip">Tomo ' + t.numero + '</span>' +
-          (t.leido ? ' <span class="chip chip--verde">✓ leído</span>' : '') + '</div>' +
+          U.esc(nombreListado(t.serie)) + ' <span class="chip">Tomo ' + t.numero + '</span></div>' +
         '<div class="fila__sub">Salió ' + U.cuando(t.fecha) + ' · ' + U.fechaCorta(t.fecha) +
           (t.precio ? ' · ≈ ' + U.euros(t.precio) : ' · sin precio') + '</div>' +
       '</div>' +

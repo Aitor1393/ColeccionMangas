@@ -654,39 +654,71 @@
    *
    * En cuanto marcas un tomo como que lo tienes, deja de aparecer.
    */
-  D.pendientesDeCompra = function () {
+  /**
+   * Recorre los tomos ya publicados que no tienes, serie por serie.
+   *
+   * «Ya ha salido» es tener fecha y que esa fecha haya pasado. Los tomos sin
+   * fecha NO cuentan: en ListadoManga viven bajo «Números no editados», o sea
+   * anunciados pero aún sin publicar.
+   *
+   * Las series abandonadas quedan fuera enteras: no vas a comprar más de ellas.
+   */
+  function recorrerPublicadosQueFaltan(cb) {
     var hoy = U.isoHoy();
-    var lista = [];
 
     D.coleccion.series.forEach(function (s) {
-      if (s.abandonada) return;          // no vas a comprar más de esta
+      if (s.abandonada) return;
       var vistos = {};
 
-      function anadir(numero, fecha, precio, origen) {
+      function mirar(numero, fecha, origen) {
         if (!fecha || fecha > hoy || vistos[numero]) return;
         var t = D.tomo(s, numero, false);
-        if (t && t.tengo) return;                  // ya lo tienes: fuera
+        if (t && t.tengo) return;                  // ya lo tienes
         vistos[numero] = true;
-        // El precio sale de la misma regla que el resto de la web: el que
-        // hayas escrito tú, y si no el PVP menos tu descuento habitual.
-        var p = D.precioDe(s, t || { numero: numero, precio: null });
-        lista.push({
-          serie: s, numero: numero, fecha: fecha, origen: origen,
-          precio: p.valor, precioManual: p.manual, pvp: p.pvp,
-          leido: !!(t && t.leido),                 // lo leíste prestado y no lo tienes
-          clave: s.id + '#' + numero
-        });
+        cb(s, numero, fecha, origen, t);
       }
 
       // Lo que apuntes a mano manda sobre la ficha.
-      s.proximas.forEach(function (p) { anadir(p.numero, p.fecha, null, 'manual'); });
-      D.numerosLM(s).forEach(function (n) { anadir(n.numero, n.fecha, n.precio, 'listadomanga'); });
+      s.proximas.forEach(function (p) { mirar(p.numero, p.fecha, 'manual'); });
+      D.numerosLM(s).forEach(function (n) { mirar(n.numero, n.fecha, 'listadomanga'); });
+    });
+  }
+
+  /**
+   * Tomos a la venta que todavía te faltan, sin límite de fecha.
+   *
+   * En cuanto marcas un tomo como que lo tienes, deja de aparecer. Lo que
+   * leíste sin comprarlo tampoco cuenta: ya lo has disfrutado, no es una
+   * compra pendiente.
+   */
+  D.pendientesDeCompra = function () {
+    var lista = [];
+
+    recorrerPublicadosQueFaltan(function (s, numero, fecha, origen, t) {
+      if (t && t.leido) return;                    // leído sin tenerlo
+      // El precio sale de la misma regla que el resto de la web: el que
+      // hayas escrito tú, y si no el PVP menos tu descuento habitual.
+      var p = D.precioDe(s, t || { numero: numero, precio: null });
+      lista.push({
+        serie: s, numero: numero, fecha: fecha, origen: origen,
+        precio: p.valor, precioManual: p.manual, pvp: p.pvp,
+        clave: s.id + '#' + numero
+      });
     });
 
     return D.ordenarCompras(lista, 'tomos', function (a, b) {
       // Por defecto, lo que lleva más tiempo a la venta va primero.
       return String(a.fecha).localeCompare(String(b.fecha)) || a.numero - b.numero;
     });
+  };
+
+  /** Los que están a la venta, no tienes, y ya leíste: quedan fuera de compras. */
+  D.leidosSinComprar = function () {
+    var lista = [];
+    recorrerPublicadosQueFaltan(function (s, numero, fecha, origen, t) {
+      if (t && t.leido) lista.push({ serie: s, numero: numero, fecha: fecha });
+    });
+    return lista;
   };
 
   /** Los mismos tomos, agrupados por serie. */

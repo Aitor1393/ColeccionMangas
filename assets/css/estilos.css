@@ -263,7 +263,6 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
   font-size: .8rem; font-weight: 600; transition: var(--transicion);
 }
 .tomo-chip:hover { border-color: var(--verde); color: var(--verde); }
-.tomo-chip--leido { border-style: dashed; border-color: color-mix(in srgb, var(--verde) 45%, transparent); }
 
 .mes { margin-bottom: 26px; }
 .mes__titulo {

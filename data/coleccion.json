@@ -2577,6 +2577,58 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "38cd3101-a356-4255-855a-89b84ffc1e8e",
+      "titulo": "Alma",
+      "tituloAlt": "",
+      "autor": "Shinji Mito",
+      "editorial": "Norma Editorial",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "tomosTotales": 4,
+      "portada": "",
+      "sinopsis": "PUEDE QUE SEAMOS LOS ÚNICOS QUE QUEDEN EN EL MUNDO\n\nEn una Tierra en ruinas, el joven Rei y su compañera Trice buscan a otros supervivientes como ellos. Cierto día entran en contacto con una extraña visitante que llega volando por el cielo. Y, a raíz de ese encuentro, la verdad tras el “secreto” que los había mantenido unidos durante quince años sale a la luz. Poco después, el joven Rei emprende un viaje impulsado por “cierta palabra”...\n\nAquí comienza esta historia protagonizada por humanos y máquinas ambientada en un futuro no tan lejano como pueda parecer.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5342",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

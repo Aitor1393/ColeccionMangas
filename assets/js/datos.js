@@ -244,15 +244,20 @@
   };
 
   /**
-   * Ciclo de un clic sobre un tomo: nada → lo tengo → leído → nada.
+   * Ciclo de un clic sobre un tomo:
+   *   nada → lo tengo → lo tengo y leído → leído sin tenerlo → nada
+   *
+   * El último estado es para lo que has leído prestado, en digital o en una
+   * biblioteca: cuenta como leído pero no forma parte de tu colección.
    */
   D.ciclarTomo = function (idSerie, numero) {
     var s = D.serie(idSerie);
     if (!s) return;
     var t = D.tomo(s, numero, true);
-    if (!t.tengo) { t.tengo = true; t.leido = false; }
-    else if (!t.leido) { t.leido = true; }
-    else { t.tengo = false; t.leido = false; }
+    if (!t.tengo && !t.leido) { t.tengo = true; }
+    else if (t.tengo && !t.leido) { t.leido = true; }
+    else if (t.tengo && t.leido) { t.tengo = false; }
+    else { t.leido = false; }
     D.guardar();
   };
 
@@ -261,7 +266,6 @@
     if (!s) return;
     var t = D.tomo(s, numero, true);
     Object.keys(campos).forEach(function (k) { t[k] = campos[k]; });
-    if (t.leido && !t.tengo) t.tengo = true; // no puedes haber leído lo que no tienes
     D.guardar();
   };
 
@@ -269,7 +273,8 @@
 
   D.statsSerie = function (s) {
     var totalDeclarado = D.totalDe(s);
-    var tengo = 0, leidos = 0, gasto = 0, maxTomo = totalDeclarado, ultimoQueTengo = 0;
+    var tengo = 0, leidos = 0, leidosSinTener = 0, gasto = 0;
+    var maxTomo = totalDeclarado, ultimoQueTengo = 0;
     s.tomos.forEach(function (t) {
       if (t.numero > maxTomo) maxTomo = t.numero;
       if (t.tengo) {
@@ -277,6 +282,8 @@
         if (t.numero > ultimoQueTengo) ultimoQueTengo = t.numero;
         if (t.precio) gasto += t.precio;
         if (t.leido) leidos++;
+      } else if (t.leido) {
+        leidosSinTener++;
       }
     });
     var total = totalDeclarado || maxTomo;
@@ -289,7 +296,9 @@
     }
     return {
       tengo: tengo,
-      leidos: leidos,
+      leidos: leidos,                        // leídos y en tu poder
+      leidosSinTener: leidosSinTener,        // leídos prestados, digitales…
+      leidosTotal: leidos + leidosSinTener,
       pendientes: tengo - leidos,
       total: total,
       maxTomo: maxTomo,
@@ -306,13 +315,14 @@
 
   D.statsGlobales = function () {
     var g = {
-      series: D.coleccion.series.length, tomos: 0, leidos: 0, pendientes: 0,
-      gasto: 0, seriesCompletas: 0, seriesAbiertas: 0, proximas30: 0
+      series: D.coleccion.series.length, tomos: 0, leidos: 0, leidosSinTener: 0,
+      pendientes: 0, gasto: 0, seriesCompletas: 0, seriesAbiertas: 0, proximas30: 0
     };
     D.coleccion.series.forEach(function (s) {
       var st = D.statsSerie(s);
       g.tomos += st.tengo;
       g.leidos += st.leidos;
+      g.leidosSinTener += st.leidosSinTener;
       g.pendientes += st.pendientes;
       g.gasto += st.gasto;
       if (st.completa) g.seriesCompletas++;

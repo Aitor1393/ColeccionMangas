@@ -58,6 +58,9 @@
             '<input type="number" id="cTotales" min="0" step="1" value="' + (s.tomosTotales || '') + '" placeholder="0 = desconocido"></div>' +
           '<div><label for="cTengo">Ya tengo hasta el tomo…</label>' +
             '<input type="number" id="cTengo" min="0" step="1" placeholder="' + (edicion ? 'dejar vacío' : 'opcional') + '"></div>' +
+          '<div><label for="cLeido">He leído hasta el tomo…</label>' +
+            '<input type="number" id="cLeido" min="0" step="1" placeholder="aunque no los tengas">' +
+            '<div class="ayuda">Para lo que hayas leído prestado, en digital o en la biblioteca.</div></div>' +
           '<div class="campo--ancho">' +
             '<label for="lmBuscar">Edición española (ListadoManga)</label>' +
             '<div style="display:flex;gap:8px">' +
@@ -102,16 +105,18 @@
       if (!datos.titulo) return;
 
       var hasta = Number(U.$('#cTengo').value) || 0;
+      var leidoHasta = Number(U.$('#cLeido').value) || 0;
 
       if (edicion) {
         if (hasta > 0) rellenarHasta(serie, hasta);
+        if (leidoHasta > 0) rellenarHasta(serie, leidoHasta, 'leido');
         D.actualizarSerie(serie.id, datos);
         U.aviso('Serie actualizada', 'ok');
         App.abrirSerie(serie.id);
       } else {
         datos.tomos = [];
-        for (var i = 1; i <= hasta; i++) {
-          datos.tomos.push({ numero: i, tengo: true, leido: false });
+        for (var i = 1; i <= Math.max(hasta, leidoHasta); i++) {
+          datos.tomos.push({ numero: i, tengo: i <= hasta, leido: i <= leidoHasta });
         }
         var nueva = D.anadirSerie(datos);
         U.aviso('«' + nueva.titulo + '» añadida', 'ok');
@@ -263,10 +268,9 @@
     return rellenados;
   }
 
-  function rellenarHasta(serie, hasta) {
+  function rellenarHasta(serie, hasta, campo) {
     for (var i = 1; i <= hasta; i++) {
-      var t = D.tomo(serie, i, true);
-      t.tengo = true;
+      D.tomo(serie, i, true)[campo || 'tengo'] = true;
     }
   }
 

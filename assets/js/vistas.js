@@ -42,6 +42,8 @@
     var insignia = '';
     if (st.pendientes > 0) {
       insignia = '<span class="serie__insignia serie__insignia--pendiente">' + st.pendientes + ' sin leer</span>';
+    } else if (!st.tengo && st.leidosTotal) {
+      insignia = '<span class="serie__insignia serie__insignia--leida">✓ leída</span>';
     } else if (st.completa) {
       insignia = '<span class="serie__insignia serie__insignia--completa">✓ completa</span>';
     } else if (st.totalDeclarado) {
@@ -52,12 +54,17 @@
       '<article class="serie" data-serie="' + U.esc(serie.id) + '" tabindex="0" role="button">' +
         '<div class="serie__portada">' +
           portadaHTML(serie, '') + insignia +
-          '<div class="serie__barra"><span style="width:' + Math.min(100, st.progresoTengo) + '%"></span></div>' +
+          '<div class="serie__barra' + (!st.tengo && st.leidosTotal ? ' serie__barra--leida' : '') + '">' +
+            '<span style="width:' + Math.min(100, !st.tengo && st.leidosTotal
+              ? U.porcentaje(st.leidosTotal, st.total || st.maxTomo || 1)
+              : st.progresoTengo) + '%"></span></div>' +
         '</div>' +
         '<div>' +
           '<div class="serie__titulo">' + U.esc(serie.titulo) + '</div>' +
           '<div class="serie__meta">' +
-            '<span>' + U.plural(st.tengo, 'tomo') + (st.totalDeclarado ? ' de ' + st.totalDeclarado : '') + '</span>' +
+            '<span>' + (st.tengo
+              ? U.plural(st.tengo, 'tomo') + (st.totalDeclarado ? ' de ' + st.totalDeclarado : '')
+              : U.plural(st.leidosTotal, 'tomo leído', 'tomos leídos')) + '</span>' +
           '</div>' +
         '</div>' +
       '</article>';
@@ -86,7 +93,10 @@
     var stats = [
       { valor: g.series, etiqueta: 'Series', extra: g.seriesAbiertas + ' en publicación', icono: '📚' },
       { valor: g.tomos, etiqueta: 'Tomos en casa', extra: U.euros(g.gasto) + ' invertidos', icono: '📦' },
-      { valor: g.leidos, etiqueta: 'Tomos leídos', extra: U.porcentaje(g.leidos, g.tomos) + '% de lo que tengo', icono: '✅' },
+      { valor: g.leidos + g.leidosSinTener, etiqueta: 'Tomos leídos',
+        extra: g.leidosSinTener
+          ? g.leidosSinTener + ' sin tenerlos'
+          : U.porcentaje(g.leidos, g.tomos) + '% de lo que tengo', icono: '✅' },
       { valor: g.pendientes, etiqueta: 'Pendientes de leer', extra: g.pendientes ? 'te esperan en la estantería' : '¡al día!', icono: '🕒' },
       { valor: g.proximas30, etiqueta: 'Salen este mes', extra: 'próximos 30 días', icono: '📅' }
     ];
@@ -432,8 +442,9 @@
       var t = D.tomo(serie, i, false);
       var clase = 'tomo';
       var titulo = 'Tomo ' + i + ': no lo tienes';
-      if (t && t.leido) { clase += ' tomo--leido'; titulo = 'Tomo ' + i + ': leído'; }
+      if (t && t.tengo && t.leido) { clase += ' tomo--leido'; titulo = 'Tomo ' + i + ': leído'; }
       else if (t && t.tengo) { clase += ' tomo--tengo'; titulo = 'Tomo ' + i + ': lo tienes, sin leer'; }
+      else if (t && t.leido) { clase += ' tomo--soloLeido'; titulo = 'Tomo ' + i + ': leído, pero no lo tienes'; }
 
       var nLM = D.numeroLM(serie, i);
       var imagen = nLM && nLM.portada;
@@ -565,18 +576,21 @@
             '<div class="progreso"><span style="width:' + Math.min(100, U.porcentaje(st.tengo, total)) + '%"></span></div>' +
           '</div>' +
           '<div>' +
-            '<label>Leídos ' + st.leidos + ' de ' + st.tengo + '</label>' +
-            '<div class="progreso progreso--verde"><span style="width:' + st.progresoLeido + '%"></span></div>' +
+            '<label>Leídos ' + st.leidosTotal + (st.total ? ' de ' + st.total : '') +
+              (st.leidosSinTener ? ' · ' + st.leidosSinTener + ' sin tenerlos' : '') + '</label>' +
+            '<div class="progreso progreso--verde"><span style="width:' +
+              Math.min(100, U.porcentaje(st.leidosTotal, st.total || st.maxTomo || 1)) + '%"></span></div>' +
           '</div>' +
         '</div>' +
 
         '<h3>Tomos</h3>' +
-        '<p class="ayuda">Clic en un número para pasar de «no lo tengo» → «lo tengo» → «leído».</p>' +
+        '<p class="ayuda">Clic para pasar de «no lo tengo» → «lo tengo» → «leído» → «leído sin tenerlo».</p>' +
         '<div class="tomos">' + celdas + '</div>' +
         '<div class="leyenda">' +
           '<span><i style="background:var(--panel-2)"></i>No lo tengo</span>' +
           '<span><i style="background:color-mix(in srgb,var(--ambar) 45%,transparent)"></i>Lo tengo, sin leer</span>' +
           '<span><i style="background:color-mix(in srgb,var(--verde) 45%,transparent)"></i>Leído</span>' +
+          '<span><i style="border:1px dashed var(--verde);background:none"></i>Leído sin tenerlo</span>' +
         '</div>' +
         huecos +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">' +

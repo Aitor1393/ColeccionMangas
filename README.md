@@ -99,13 +99,32 @@ En Ajustes tienes *Bloquear ahora*, que olvida el token descifrado sin borrarlo,
   más un apartado de *«ya está a la venta y aún no lo tienes»*.
 - **Detalle de serie** — cuadrícula de tomos donde cada clic cicla el estado:
 
-  > no lo tengo → **lo tengo** → **leído** → no lo tengo
+  > no lo tengo → **lo tengo** → **leído** → **leído sin tenerlo** → no lo tengo
 
   Además: huecos de la colección, gasto acumulado, fechas de salida y notas.
 - **Añadir serie** — eliges tu edición española y se rellenan solos portada, autor,
   sinopsis, editorial, número de tomos, estado, fechas y precios. También puedes
   escribirlo todo a mano.
 - **Modo claro y oscuro**, y diseño adaptado a móvil.
+
+### Lo que has leído sin tenerlo
+
+Prestado, en digital, en la biblioteca… se lleva igual que el resto, con un cuarto estado
+en la misma cuadrícula: la portada se ve algo apagada y el borde es verde discontinuo, para
+distinguirlo de un tomo tuyo (borde continuo) y de uno que te falta (gris del todo).
+
+Cuenta como leído pero **no como tomo en propiedad**: no suma al gasto, no aparece en
+*Pendientes de leer* y sigue contando como hueco de la colección si algún día lo compras.
+
+Para no ir uno por uno hay dos atajos:
+
+- Al añadir o editar una serie, el campo **«He leído hasta el tomo…»**, hermano de «Ya
+  tengo hasta el tomo…». Puedes usar los dos a la vez: tienes hasta el 5 y has leído
+  hasta el 20.
+- En el detalle, **«Marcar todo como leído»** abarca todos los tomos, los tengas o no.
+
+Una serie que hayas leído entera sin tener ningún tomo aparece en la biblioteca con la
+insignia *«✓ leída»* y su barra de progreso en verde.
 
 ### Fechas de publicación: automáticas desde ListadoManga
 

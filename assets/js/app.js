@@ -158,10 +158,14 @@
     'marcar-todo-leido': function (el) {
       var s = D.serie(el.dataset.serieId);
       if (!s) return;
-      s.tomos.forEach(function (t) { if (t.tengo) t.leido = true; });
+      // Marca todos los tomos que constan, los tengas o no: si has leído la
+      // serie entera prestada, no tiene sentido obligar a ir uno por uno.
+      var st = D.statsSerie(s);
+      var hasta = Math.max(st.maxTomo, st.total, 1);
+      for (var i = 1; i <= hasta; i++) D.tomo(s, i, true).leido = true;
       D.guardar();
       refrescarModalSerie();
-      U.aviso('Serie al día', 'ok');
+      U.aviso('Serie marcada como leída', 'ok');
     },
 
     'leer-siguiente': function (el) {

@@ -314,6 +314,29 @@
   };
 
   /* ============================================================
+     Qué sale un día concreto
+     ============================================================ */
+  F.dia = function (fecha) {
+    var items = D.proximasPublicaciones().filter(function (i) {
+      return String(i.salida.fecha).slice(0, 10) === fecha;
+    });
+
+    var aproximadas = items.filter(function (i) { return i.salida.aproximada; }).length;
+    var suma = items.reduce(function (t, i) { return t + (i.salida.precio || 0); }, 0);
+
+    U.abrirModal(
+      '<h2>' + U.esc(U.fechaLarga(fecha)) + '</h2>' +
+      '<p class="ayuda">' + U.plural(items.length, 'tomo') + ' · ' + U.cuando(fecha) +
+        (suma ? ' · ' + U.euros(suma) + ' en total' : '') + '</p>' +
+      (aproximadas
+        ? '<p class="ayuda">' + U.plural(aproximadas, 'tomo tiene', 'tomos tienen') +
+          ' fecha aproximada: la editorial solo ha dado el mes.</p>'
+        : '') +
+      '<div class="lista" style="margin-top:14px">' + items.map(V.filaSalida).join('') + '</div>'
+    );
+  };
+
+  /* ============================================================
      Precios de los tomos
      ============================================================ */
   F.precios = function (serie) {

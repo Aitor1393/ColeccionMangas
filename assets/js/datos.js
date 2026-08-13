@@ -32,7 +32,7 @@
 
   /* ---------- Estado en memoria ---------- */
 
-  D.coleccion = { version: 1, actualizado: null, ajustes: { descuento: 5 }, series: [] };
+  D.coleccion = { version: 1, actualizado: null, ajustes: { descuento: 5, mostrarGasto: false }, series: [] };
   D.publicada = null;   // copia tal cual está en el repo
   D.sucia = false;      // hay cambios locales sin publicar
 
@@ -84,7 +84,7 @@
     };
   };
 
-  D.AJUSTES_POR_DEFECTO = { descuento: 5 };
+  D.AJUSTES_POR_DEFECTO = { descuento: 5, mostrarGasto: false };
 
   D.normalizarColeccion = function (bruto) {
     bruto = bruto || {};
@@ -97,7 +97,11 @@
         // en el navegador para que el gasto salga igual para quien la visite.
         descuento: ajustes.descuento === undefined
           ? D.AJUSTES_POR_DEFECTO.descuento
-          : Number(ajustes.descuento) || 0
+          : Number(ajustes.descuento) || 0,
+        // El total invertido va oculto por defecto: la web es pública.
+        mostrarGasto: ajustes.mostrarGasto === undefined
+          ? D.AJUSTES_POR_DEFECTO.mostrarGasto
+          : !!ajustes.mostrarGasto
       },
       series: (Array.isArray(bruto.series) ? bruto.series : []).map(D.normalizarSerie)
     };
@@ -105,6 +109,26 @@
 
   D.descuento = function () {
     return (D.coleccion.ajustes && D.coleccion.ajustes.descuento) || 0;
+  };
+
+  /** ¿Se enseña el total invertido? Un vistazo puntual no cambia el ajuste. */
+  var gastoAlDescubierto = false;
+
+  D.mostrarGasto = function () {
+    return gastoAlDescubierto ||
+      !!(D.coleccion.ajustes && D.coleccion.ajustes.mostrarGasto);
+  };
+
+  D.alternarVistazoGasto = function () {
+    gastoAlDescubierto = !gastoAlDescubierto;
+    return gastoAlDescubierto;
+  };
+
+  D.guardarMostrarGasto = function (valor) {
+    if (!D.coleccion.ajustes) D.coleccion.ajustes = {};
+    D.coleccion.ajustes.mostrarGasto = !!valor;
+    gastoAlDescubierto = false;
+    D.guardar();
   };
 
   D.guardarDescuento = function (porcentaje) {

@@ -92,8 +92,10 @@
 
     var stats = [
       { valor: g.series, etiqueta: 'Series', extra: g.seriesAbiertas + ' en publicación', icono: '📚' },
-      { valor: g.tomos, etiqueta: 'Tomos en casa',
-        extra: U.euros(g.gasto) + ' invertidos' + (g.precioEstimado ? ' (aprox.)' : ''), icono: '📦' },
+      { valor: g.tomos, etiqueta: 'Tomos en casa', accion: 'vistazo-gasto',
+        extra: D.mostrarGasto()
+          ? U.euros(g.gasto) + ' invertidos' + (g.precioEstimado ? ' (aprox.)' : '')
+          : '••••• € invertidos · pulsa para ver', icono: '📦' },
       { valor: g.leidos + g.leidosSinTener, etiqueta: 'Tomos leídos',
         extra: g.leidosSinTener
           ? g.leidosSinTener + ' sin tenerlos'
@@ -103,7 +105,7 @@
     ];
 
     var html = '<div class="rejilla-stats">' + stats.map(function (s) {
-      return '<div class="stat">' +
+      return '<div class="stat' + (s.accion ? ' stat--pulsable" data-accion="' + s.accion : '') + '">' +
         '<span class="stat__icono">' + s.icono + '</span>' +
         '<div class="stat__valor">' + s.valor + '</div>' +
         '<div class="stat__etiqueta">' + s.etiqueta + '</div>' +
@@ -297,6 +299,8 @@
   /* ============================================================
      Vista: Calendario de próximas publicaciones
      ============================================================ */
+  V.modoProximas = U.leerLocal('cm:vistaProximas', 'lista');
+
   V.calendario = function () {
     var proximas = D.proximasPublicaciones();
     var pasadas = D.publicacionesPasadas();
@@ -307,6 +311,12 @@
       'Los tomos que ya tienes no aparecen.' +
       (D.calendario.actualizado ? ' Última descarga: ' + U.fechaLarga(D.calendario.actualizado) + '.' : '') +
       '</p>' +
+    '</div>' +
+    '<div class="conmutador">' +
+      '<button class="' + (V.modoProximas === 'lista' ? 'activo' : '') + '" ' +
+        'data-accion="modo-proximas" data-modo="lista">Lista</button>' +
+      '<button class="' + (V.modoProximas === 'calendario' ? 'activo' : '') + '" ' +
+        'data-accion="modo-proximas" data-modo="calendario">Calendario</button>' +
     '</div></div>';
 
     if (pasadas.length) {
@@ -317,12 +327,16 @@
     }
 
     if (!proximas.length) {
-      html += '<div class="vacio"><h3>No hay fechas apuntadas</h3>' +
-        '<p>Abre una serie y usa «Añadir fecha de salida» para llevar el control de los próximos tomos.</p></div>';
-      return html;
+      return html + '<div class="vacio"><h3>No hay fechas apuntadas</h3>' +
+        '<p>Enlaza tus series con su edición para que lleguen solas, o usa ' +
+        '«Añadir fecha de salida» en el detalle de la serie.</p></div>';
     }
 
-    // Agrupamos por mes
+    return html + (V.modoProximas === 'calendario' ? vistaMeses(proximas) : vistaLista(proximas));
+  };
+
+  /** Modo lista: las salidas agrupadas por mes, una debajo de otra. */
+  function vistaLista(proximas) {
     var meses = [];
     var indice = {};
     proximas.forEach(function (item) {
@@ -331,15 +345,73 @@
       indice[clave].push(item);
     });
 
-    html += meses.map(function (m) {
+    return meses.map(function (m) {
       return '<div class="mes">' +
         '<div class="mes__titulo">' + U.esc(m.nombre) + ' · ' + U.plural(m.items.length, 'tomo') + '</div>' +
         '<div class="lista">' + m.items.map(filaSalida).join('') + '</div>' +
       '</div>';
     }).join('');
+  }
 
-    return html;
-  };
+  /**
+   * Modo calendario: los tres meses siguientes en cuadrícula. Los días con
+   * salidas se marcan y, al pulsarlos, se abre el detalle de ese día.
+   */
+  function vistaMeses(proximas) {
+    // Agrupamos por día para saber qué casillas marcar.
+    var porDia = {};
+    proximas.forEach(function (item) {
+      var f = String(item.salida.fecha).slice(0, 10);
+      (porDia[f] = porDia[f] || []).push(item);
+    });
+
+    var hoy = U.hoy();
+    var html = '<div class="meses">';
+    for (var i = 0; i < 3; i++) {
+      html += mesHTML(hoy.getFullYear(), hoy.getMonth() + i, porDia, hoy);
+    }
+    return html + '</div>' +
+      '<p class="ayuda" style="margin-top:14px">Pulsa un día marcado para ver qué sale.</p>';
+  }
+
+  var DIAS = ['L', 'M', 'X', 'J', 'V', 'S', 'D'];
+
+  function mesHTML(anio, mes, porDia, hoy) {
+    var primero = new Date(anio, mes, 1);
+    var diasEnMes = new Date(anio, mes + 1, 0).getDate();
+
+    // getDay() da 0 para domingo; aquí la semana empieza en lunes.
+    var hueco = (primero.getDay() + 6) % 7;
+
+    var celdas = '';
+    for (var h = 0; h < hueco; h++) celdas += '<div class="dia dia--vacio"></div>';
+
+    for (var d = 1; d <= diasEnMes; d++) {
+      var fecha = primero.getFullYear() + '-' + U.pad(mes + 1) + '-' + U.pad(d);
+      var items = porDia[fecha] || [];
+      var esHoy = hoy.getFullYear() === primero.getFullYear() &&
+        hoy.getMonth() === mes && hoy.getDate() === d;
+
+      var clase = 'dia' + (items.length ? ' dia--conSalidas' : '') + (esHoy ? ' dia--hoy' : '');
+      celdas += '<' + (items.length ? 'button' : 'div') + ' class="' + clase + '"' +
+        (items.length
+          ? ' data-accion="ver-dia" data-fecha="' + fecha + '"' +
+            ' title="' + U.esc(U.plural(items.length, 'tomo') + ' el ' + U.fechaLarga(fecha)) + '"'
+          : '') +
+        '>' +
+        '<span class="dia__numero">' + d + '</span>' +
+        (items.length ? '<span class="dia__marca">' + items.length + '</span>' : '') +
+        '</' + (items.length ? 'button' : 'div') + '>';
+    }
+
+    return '<div class="mes-rejilla">' +
+      '<div class="mes-rejilla__titulo">' + U.esc(U.mesLargo(anio + '-' + U.pad(mes + 1) + '-01')) + '</div>' +
+      '<div class="semana">' + DIAS.map(function (n) {
+        return '<span class="semana__dia">' + n + '</span>';
+      }).join('') + '</div>' +
+      '<div class="dias">' + celdas + '</div>' +
+    '</div>';
+  }
 
   /* ============================================================
      Vista: Ajustes
@@ -419,6 +491,12 @@
 
       '<div class="tarjeta">' +
         '<h3>Precios y gasto</h3>' +
+        '<p><label style="display:flex;align-items:center;gap:8px;margin:0;font-size:.92rem">' +
+          '<input type="checkbox" id="ajMostrarGasto" style="width:auto"' +
+          (D.coleccion.ajustes && D.coleccion.ajustes.mostrarGasto ? ' checked' : '') + '> ' +
+          'Mostrar el dinero invertido en el resumen</label>' +
+          '<span class="ayuda">La web es pública, así que va oculto por defecto. Aun estando ' +
+          'oculto, puedes pulsar la tarjeta «Tomos en casa» para verlo un momento.</span></p>' +
         '<p>Cuando no escribes el precio de un tomo, se calcula a partir del PVP que ' +
         'publica ListadoManga aplicando tu descuento habitual. Los precios que escribas ' +
         'tú mandan siempre y se usan tal cual, sin descuento.</p>' +
@@ -429,7 +507,7 @@
         '<div class="ayuda">Ahora mismo: ' + U.plural(g.precioEstimado, 'tomo estimado', 'tomos estimados') +
         (g.sinPrecio ? ' y ' + U.plural(g.sinPrecio, 'tomo sin precio conocido') : '') + '.</div>' +
         '<div class="tarjeta__acciones">' +
-          '<button class="btn btn--primario" data-accion="guardar-descuento">Guardar</button>' +
+          '<button class="btn btn--primario" data-accion="guardar-precios-ajustes">Guardar</button>' +
         '</div>' +
       '</div>' +
 
@@ -644,6 +722,8 @@
       '</div>' +
     '</div>';
   };
+
+  V.filaSalida = filaSalida;
 
   global.V = V;
 })(window);

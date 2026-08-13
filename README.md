@@ -96,8 +96,9 @@ En Ajustes tienes *Bloquear ahora*, que olvida el token descifrado sin borrarlo,
   autor, editorial, etiqueta), **comprados o solo leídos**, estado, demografía y editorial,
   con varios criterios de orden.
 - **Pendientes** — todos los tomos que tienes en casa y no has leído, agrupados por serie.
-- **Próximas** — calendario de salidas agrupado por mes (con precio cuando se conoce),
-  más un apartado de *«ya está a la venta y aún no lo tienes»*.
+- **Próximas** — en **lista** (agrupada por mes, con precio cuando se conoce) o en
+  **calendario** de tres meses, donde los días con salidas se marcan y al pulsarlos sale
+  qué se publica ese día. Más un apartado de *«ya está a la venta y aún no lo tienes»*.
 - **Detalle de serie** — cuadrícula de tomos donde cada clic cicla el estado:
 
   > no lo tengo → **lo tengo** → **leído** → **leído sin tenerlo** → no lo tengo
@@ -122,6 +123,11 @@ lleva descuento**: es lo que pagaste.
 
 Bajo la cuadrícula, el detalle desglosa cuántos tomos van estimados y cuántos a precio
 tuyo, y las cifras aproximadas se marcan como tales.
+
+**El total invertido va oculto por defecto**, porque la web es pública: en el resumen sale
+`••••• €`. Se enseña de dos maneras: pulsando la tarjeta *Tomos en casa* para un vistazo
+puntual, que no se recuerda al recargar, o dejándolo visible con el interruptor de
+Ajustes.
 
 ### Lo que has leído sin tenerlo
 

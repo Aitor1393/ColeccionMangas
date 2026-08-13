@@ -232,14 +232,32 @@
       App.render();
     },
 
+    'modo-proximas': function (el) {
+      V.modoProximas = el.dataset.modo;
+      U.guardarLocal('cm:vistaProximas', V.modoProximas);
+      App.render();
+      window.scrollTo(0, 0);
+    },
+
+    'ver-dia': function (el) {
+      F.dia(el.dataset.fecha);
+    },
+
     'precios': function (el) {
       var s = D.serie(el.dataset.serieId);
       if (s) F.precios(s);
     },
 
-    'guardar-descuento': function () {
+    'guardar-precios-ajustes': function () {
+      D.guardarMostrarGasto(U.$('#ajMostrarGasto').checked);
       D.guardarDescuento(U.$('#ajDescuento').value);
-      U.aviso('Descuento guardado: ' + D.descuento() + '%', 'ok');
+      U.aviso('Guardado: descuento ' + D.descuento() + '%, gasto ' +
+        (D.mostrarGasto() ? 'visible' : 'oculto'), 'ok');
+      App.render();
+    },
+
+    'vistazo-gasto': function () {
+      D.alternarVistazoGasto();
       App.render();
     },
 

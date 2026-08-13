@@ -140,6 +140,8 @@ main { padding: 28px 0 60px; }
 .stat__etiqueta { font-size: .78rem; color: var(--texto-2); text-transform: uppercase; letter-spacing: .05em; margin-top: 4px; }
 .stat__extra { font-size: .8rem; color: var(--texto-3); margin-top: 6px; }
 .stat__icono { position: absolute; right: 12px; top: 12px; font-size: 1.3rem; opacity: .35; }
+.stat--pulsable { cursor: pointer; }
+.stat--pulsable:hover { border-color: var(--texto-3); }
 
 /* ───────────── Rejilla de series ───────────── */
 .rejilla-series { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 20px; }
@@ -225,6 +227,47 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .mes__titulo {
   font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;
   color: var(--texto-3); padding-bottom: 8px; margin-bottom: 12px; border-bottom: 1px solid var(--borde);
+}
+
+/* ───────────── Conmutador lista / calendario ───────────── */
+.conmutador { display: flex; gap: 2px; background: var(--panel-2); border: 1px solid var(--borde); border-radius: 99px; padding: 3px; }
+.conmutador button {
+  font: inherit; font-size: .85rem; font-weight: 600; color: var(--texto-2);
+  background: none; border: 0; border-radius: 99px; padding: 6px 16px; cursor: pointer;
+  transition: var(--transicion);
+}
+.conmutador button:hover { color: var(--texto); }
+.conmutador button.activo { background: var(--acento); color: #fff; }
+
+/* ───────────── Calendario de tres meses ───────────── */
+.meses { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
+.mes-rejilla { background: var(--panel); border: 1px solid var(--borde); border-radius: var(--radio); padding: 16px; }
+.mes-rejilla__titulo {
+  font-size: .82rem; font-weight: 700; text-transform: uppercase; letter-spacing: .07em;
+  color: var(--texto-2); text-align: center; margin-bottom: 12px;
+}
+.semana, .dias { display: grid; grid-template-columns: repeat(7, 1fr); gap: 4px; }
+.semana { margin-bottom: 4px; }
+.semana__dia { text-align: center; font-size: .68rem; font-weight: 700; color: var(--texto-3); }
+
+.dia {
+  position: relative; aspect-ratio: 1; display: flex; align-items: center; justify-content: center;
+  border-radius: 8px; font-size: .82rem; color: var(--texto-3);
+  background: none; border: 1px solid transparent; font-family: inherit; padding: 0;
+}
+.dia--vacio { visibility: hidden; }
+.dia--hoy { border-color: var(--texto-3); font-weight: 700; color: var(--texto); }
+.dia--conSalidas {
+  background: var(--acento-suave); border-color: color-mix(in srgb, var(--acento) 45%, transparent);
+  color: var(--texto); font-weight: 700; cursor: pointer; transition: var(--transicion);
+}
+.dia--conSalidas:hover { background: var(--acento); color: #fff; transform: scale(1.08); }
+.dia__marca {
+  position: absolute; top: -4px; right: -4px;
+  min-width: 16px; height: 16px; padding: 0 4px;
+  display: flex; align-items: center; justify-content: center;
+  background: var(--acento); color: #fff; border-radius: 99px;
+  font-size: .62rem; line-height: 1;
 }
 
 /* ───────────── Detalle de serie ───────────── */

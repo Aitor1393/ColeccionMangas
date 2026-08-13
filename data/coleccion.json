@@ -1,6 +1,9 @@
 {
   "version": 1,
   "actualizado": "2026-08-13",
+  "ajustes": {
+    "descuento": 5
+  },
   "series": [
     {
       "id": "369e2bb9-978f-488d-a78f-c480e6b81052",
@@ -1620,7 +1623,7 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 4.5,
           "notas": ""
         },
         {
@@ -1628,7 +1631,7 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 4.5,
           "notas": ""
         },
         {
@@ -1636,7 +1639,7 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 4.5,
           "notas": ""
         },
         {
@@ -1644,7 +1647,7 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 4.5,
           "notas": ""
         }
       ],
@@ -1672,7 +1675,7 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 10,
           "notas": ""
         }
       ],
@@ -2008,7 +2011,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 0,
           "notas": ""
         },
         {
@@ -2016,7 +2019,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 0,
           "notas": ""
         }
       ],

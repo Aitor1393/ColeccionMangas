@@ -226,8 +226,10 @@
       }
     });
 
-    // Al editar, arrancamos con el título de la serie ya escrito en el buscador.
-    if (serie && !serie.listadomangaId && serie.titulo) caja.value = serie.titulo;
+    // Al editar, arrancamos con la serie ya escrita en el buscador. Va con la
+    // edición: allí las colecciones se llaman «Bleach (Maximum)», y buscar
+    // «Bleach» a secas devolvería todas las ediciones mezcladas.
+    if (serie && !serie.listadomangaId && serie.titulo) caja.value = D.nombreCompleto(serie);
   }
 
   /**

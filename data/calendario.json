@@ -2307,6 +2307,304 @@
       "descargado": "2026-08-13",
       "sinopsis": "El instituto Fûrin se ha granjeado la peor reputación entre los centros de la zona por tener la media más baja y los alumnos más rebeldes. Haruka Sakura es un joven que acaba de llegar a la ciudad y busca ser el más fuerte para poder proteger a todos los que le importan.\n\r\n\n\r\nPara conseguir su propósito, lo primero que debe hacer es unirse a una pandilla llamada Wind Breaker, que representa a su instituto y cuyo objetivo es defender la ciudad del resto de bandas y maleantes. Sin embargo, ¡para que lo acepten deberá ganarse el respeto a base de puños!",
       "portada": "data/portadas/4562/1.jpg"
+    },
+    "2525": {
+      "titulo": "Fire Force",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2525",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2017-06-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2017-08-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2017-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2018-01-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2018-03-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2018-05-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2018-07-27",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2018-09-28",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2019-01-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2019-03-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2019-07-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2019-09-27",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2019-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2019-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2020-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2020-10-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2020-12-11",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2021-02-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2021-04-30",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2021-07-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2021-09-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2021-12-10",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2022-04-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2022-06-23",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2022-08-26",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2022-11-25",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2023-04-14",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2023-08-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2023-10-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2024-03-01",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": "2024-06-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": "2024-08-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": "2024-10-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": "2024-12-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2525/34.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Atsushi Ohkubo",
+      "totalNumeros": 34,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡EL NUEVO MANGA DEL AUTOR DE SOUL EATER!\n\r\n\n\r\nTokio se encuentra bajo un extraño fenómeno: ¡la gente entra, sin remedio, en combustión espontánea! Aunque, afortunadamente, hay un equipo a cargo de mantener a raya este particular infierno... ¡La Brigada Antiincendios, que, además ahora cuenta con un nuevo miembro: Shinra, un adolescente de sonrisa perturbadora, poder curioso y cuyo objetivo es convertirse en un héroe!",
+      "portada": "data/portadas/2525/1.jpg"
+    },
+    "5342": {
+      "titulo": "Alma",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5342",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-06-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5342/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-08-02",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5342/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-10-25",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5342/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2024-12-05",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5342/4.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Shinji Mito",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "PUEDE QUE SEAMOS LOS ÚNICOS QUE QUEDEN EN EL MUNDO\n\r\n\n\r\nEn una Tierra en ruinas, el joven Rei y su compañera Trice buscan a otros supervivientes como ellos. Cierto día entran en contacto con una extraña visitante que llega volando por el cielo. Y, a raíz de ese encuentro, la verdad tras el “secreto” que los había mantenido unidos durante quince años sale a la luz. Poco después, el joven Rei emprende un viaje impulsado por “cierta palabra”...\n\r\n\n\r\nAquí comienza esta historia protagonizada por humanos y máquinas ambientada en un futuro no tan lejano como pueda parecer.",
+      "portada": "data/portadas/5342/1.jpg"
     }
   },
   "sugerencias": {}

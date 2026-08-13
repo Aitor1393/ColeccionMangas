@@ -328,6 +328,23 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .resultado__titulo { font-weight: 600; font-size: .9rem; }
 .resultado__meta { font-size: .77rem; color: var(--texto-3); }
 
+/* ───────────── Tabla de precios ───────────── */
+.precios { max-height: 50vh; overflow-y: auto; border: 1px solid var(--borde); border-radius: var(--radio-s); }
+.precios table { width: 100%; border-collapse: collapse; font-size: .88rem; }
+.precios th {
+  position: sticky; top: 0; z-index: 1; text-align: left; font-size: .74rem;
+  text-transform: uppercase; letter-spacing: .05em; color: var(--texto-3);
+  background: var(--panel-2); padding: 8px 10px; border-bottom: 1px solid var(--borde);
+}
+.precios td { padding: 5px 10px; border-bottom: 1px solid var(--borde); vertical-align: middle; }
+.precios tr:last-child td { border-bottom: 0; }
+.precios td:first-child { font-weight: 700; color: var(--texto-2); width: 3.5em; }
+.precios__estimado { color: var(--texto-2); white-space: nowrap; }
+.precios__estimado small { color: var(--texto-3); }
+.precios input { padding: 5px 8px; font-size: .85rem; }
+.precios__input { max-width: 110px; }
+.precios__fecha { max-width: 155px; }
+
 /* ───────────── Ajustes ───────────── */
 .tarjeta { background: var(--panel); border: 1px solid var(--borde); border-radius: var(--radio); padding: 20px; margin-bottom: 18px; }
 .tarjeta h3 { margin-bottom: 6px; }

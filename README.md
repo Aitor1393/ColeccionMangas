@@ -93,7 +93,8 @@ En Ajustes tienes *Bloquear ahora*, que olvida el token descifrado sin borrarlo,
 - **Resumen** — cuántas series y tomos tienes, cuánto has invertido, qué te queda por
   leer, qué sale este mes y qué series tienes a medias.
 - **Biblioteca** — todas tus series con portada y progreso. Filtros por texto (título,
-  autor, editorial, etiqueta), estado, demografía y editorial, con varios criterios de orden.
+  autor, editorial, etiqueta), **comprados o solo leídos**, estado, demografía y editorial,
+  con varios criterios de orden.
 - **Pendientes** — todos los tomos que tienes en casa y no has leído, agrupados por serie.
 - **Próximas** — calendario de salidas agrupado por mes (con precio cuando se conoce),
   más un apartado de *«ya está a la venta y aún no lo tienes»*.
@@ -106,6 +107,21 @@ En Ajustes tienes *Bloquear ahora*, que olvida el token descifrado sin borrarlo,
   sinopsis, editorial, número de tomos, estado, fechas y precios. También puedes
   escribirlo todo a mano.
 - **Modo claro y oscuro**, y diseño adaptado a móvil.
+
+### Precios y gasto
+
+El gasto **no hay que teclearlo tomo a tomo**: se calcula con el PVP que publica
+ListadoManga aplicando tu **descuento habitual**, que configuras en Ajustes (5 % por
+defecto). El descuento se guarda en `coleccion.json`, no en el navegador, para que el
+total salga igual para quien visite la web.
+
+Cuando pagaste otra cosa —segunda mano, oferta, un pack— lo escribes tú: en el detalle de
+la serie, botón **💶 Precios**, con una fila por tomo. Ahí ves el estimado y su PVP al
+lado, y puedes anotar también la fecha de compra. **Un precio escrito manda tal cual y no
+lleva descuento**: es lo que pagaste.
+
+Bajo la cuadrícula, el detalle desglosa cuántos tomos van estimados y cuántos a precio
+tuyo, y las cifras aproximadas se marcan como tales.
 
 ### Lo que has leído sin tenerlo
 

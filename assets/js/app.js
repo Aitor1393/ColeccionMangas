@@ -108,7 +108,8 @@
       App.render();
     }, 250));
 
-    [['#fEstado', 'estado'], ['#fDemografia', 'demografia'], ['#fEditorial', 'editorial'], ['#fOrden', 'orden']]
+    [['#fEstado', 'estado'], ['#fDemografia', 'demografia'], ['#fEditorial', 'editorial'],
+     ['#fTenencia', 'tenencia'], ['#fOrden', 'orden']]
       .forEach(function (par) {
         var nodo = U.$(par[0]);
         if (nodo) nodo.addEventListener('change', function () { V.filtros[par[1]] = nodo.value; App.render(); });
@@ -207,12 +208,9 @@
       var s = D.serie(id);
       if (!s) return;
 
-      // Si ListadoManga conoce el precio, lo aprovechamos.
-      var campos = { tengo: true, fechaCompra: U.isoHoy() };
-      var lm = D.numeroLM(s, numero);
-      var yaTiene = D.tomo(s, numero, false);
-      if (lm && lm.precio && !(yaTiene && yaTiene.precio)) campos.precio = lm.precio;
-      D.marcarTomo(id, numero, campos);
+      // El precio no se fija aquí: se deja calcular con el PVP menos tu
+      // descuento, y solo lo escribes tú si pagaste otra cosa.
+      D.marcarTomo(id, numero, { tengo: true, fechaCompra: U.isoHoy() });
       // La salida ya se ha materializado: la quitamos del calendario
       D.actualizarSerie(id, {
         proximas: D.serie(id).proximas.filter(function (p) { return p.numero !== numero; })
@@ -231,6 +229,17 @@
         proximas: s.proximas.filter(function (p) { return p.numero !== numero; })
       });
       refrescarModalSerie();
+      App.render();
+    },
+
+    'precios': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (s) F.precios(s);
+    },
+
+    'guardar-descuento': function () {
+      D.guardarDescuento(U.$('#ajDescuento').value);
+      U.aviso('Descuento guardado: ' + D.descuento() + '%', 'ok');
       App.render();
     },
 

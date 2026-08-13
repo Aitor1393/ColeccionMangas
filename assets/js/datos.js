@@ -32,7 +32,7 @@
 
   /* ---------- Estado en memoria ---------- */
 
-  D.coleccion = { version: 1, actualizado: null, series: [] };
+  D.coleccion = { version: 1, actualizado: null, ajustes: { descuento: 5 }, series: [] };
   D.publicada = null;   // copia tal cual está en el repo
   D.sucia = false;      // hay cambios locales sin publicar
 
@@ -84,13 +84,33 @@
     };
   };
 
+  D.AJUSTES_POR_DEFECTO = { descuento: 5 };
+
   D.normalizarColeccion = function (bruto) {
     bruto = bruto || {};
+    var ajustes = bruto.ajustes || {};
     return {
       version: bruto.version || 1,
       actualizado: bruto.actualizado || null,
+      ajustes: {
+        // Descuento habitual sobre el PVP, en %. Se guarda en la colección y no
+        // en el navegador para que el gasto salga igual para quien la visite.
+        descuento: ajustes.descuento === undefined
+          ? D.AJUSTES_POR_DEFECTO.descuento
+          : Number(ajustes.descuento) || 0
+      },
       series: (Array.isArray(bruto.series) ? bruto.series : []).map(D.normalizarSerie)
     };
+  };
+
+  D.descuento = function () {
+    return (D.coleccion.ajustes && D.coleccion.ajustes.descuento) || 0;
+  };
+
+  D.guardarDescuento = function (porcentaje) {
+    if (!D.coleccion.ajustes) D.coleccion.ajustes = {};
+    D.coleccion.ajustes.descuento = Math.max(0, Math.min(100, Number(porcentaje) || 0));
+    D.guardar();
   };
 
   /* ---------- Carga ---------- */
@@ -274,13 +294,18 @@
   D.statsSerie = function (s) {
     var totalDeclarado = D.totalDe(s);
     var tengo = 0, leidos = 0, leidosSinTener = 0, gasto = 0;
+    var conPrecioManual = 0, estimados = 0, sinPrecio = 0;
     var maxTomo = totalDeclarado, ultimoQueTengo = 0;
     s.tomos.forEach(function (t) {
       if (t.numero > maxTomo) maxTomo = t.numero;
       if (t.tengo) {
         tengo++;
         if (t.numero > ultimoQueTengo) ultimoQueTengo = t.numero;
-        if (t.precio) gasto += t.precio;
+        var p = D.precioDe(s, t);
+        gasto += p.valor;
+        if (p.manual) conPrecioManual++;
+        else if (p.valor) estimados++;
+        else sinPrecio++;
         if (t.leido) leidos++;
       } else if (t.leido) {
         leidosSinTener++;
@@ -304,6 +329,9 @@
       maxTomo: maxTomo,
       ultimoQueTengo: ultimoQueTengo,
       gasto: gasto,
+      precioManual: conPrecioManual,   // precios que has escrito tú
+      precioEstimado: estimados,       // calculados desde el PVP de la ficha
+      sinPrecio: sinPrecio,            // ni uno ni otro
       huecos: huecos,
       totalDeclarado: totalDeclarado,
       completa: total > 0 && tengo >= total && D.estadoDe(s) === 'finalizada',
@@ -316,7 +344,8 @@
   D.statsGlobales = function () {
     var g = {
       series: D.coleccion.series.length, tomos: 0, leidos: 0, leidosSinTener: 0,
-      pendientes: 0, gasto: 0, seriesCompletas: 0, seriesAbiertas: 0, proximas30: 0
+      pendientes: 0, gasto: 0, precioEstimado: 0, sinPrecio: 0,
+      seriesCompletas: 0, seriesAbiertas: 0, proximas30: 0
     };
     D.coleccion.series.forEach(function (s) {
       var st = D.statsSerie(s);
@@ -325,6 +354,8 @@
       g.leidosSinTener += st.leidosSinTener;
       g.pendientes += st.pendientes;
       g.gasto += st.gasto;
+      g.precioEstimado += st.precioEstimado;
+      g.sinPrecio += st.sinPrecio;
       if (st.completa) g.seriesCompletas++;
       if (D.estadoDe(s) === 'en-publicacion') g.seriesAbiertas++;
     });
@@ -391,6 +422,22 @@
     if (serie.tomosTotales) return serie.tomosTotales;
     var ficha = D.fichaLM(serie);
     return (ficha && ficha.totalNumeros) || 0;
+  };
+
+  /**
+   * Precio de un tomo. Si lo has escrito tú, manda tal cual —es lo que pagaste,
+   * de segunda mano o donde sea—. Si no, se estima a partir del PVP de la ficha
+   * aplicando el descuento habitual.
+   */
+  D.precioDe = function (serie, tomo) {
+    if (tomo && tomo.precio !== null && tomo.precio !== undefined && tomo.precio !== '') {
+      return { valor: Number(tomo.precio) || 0, manual: true, pvp: null };
+    }
+    var lm = tomo ? D.numeroLM(serie, tomo.numero) : null;
+    if (lm && lm.precio) {
+      return { valor: lm.precio * (1 - D.descuento() / 100), manual: false, pvp: lm.precio };
+    }
+    return { valor: 0, manual: false, pvp: null };
   };
 
   /** Demografía efectiva: la tuya si la has puesto, si no la de la edición. */

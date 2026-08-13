@@ -314,6 +314,66 @@
   };
 
   /* ============================================================
+     Precios de los tomos
+     ============================================================ */
+  F.precios = function (serie) {
+    var tomos = serie.tomos.filter(function (t) { return t.tengo; })
+      .sort(function (a, b) { return a.numero - b.numero; });
+
+    var filas = tomos.map(function (t) {
+      var p = D.precioDe(serie, t);
+      return '<tr>' +
+        '<td>' + t.numero + '</td>' +
+        '<td class="precios__estimado">' +
+          (p.pvp ? U.euros(p.valor) + '<small> · PVP ' + U.euros(p.pvp) + '</small>' : '—') +
+        '</td>' +
+        '<td><input type="number" step="0.01" min="0" class="precios__input" ' +
+          'data-tomo="' + t.numero + '" value="' + (t.precio === null ? '' : t.precio) + '" ' +
+          'placeholder="' + (p.pvp ? p.valor.toFixed(2) : '') + '"></td>' +
+        '<td><input type="date" class="precios__fecha" data-tomo="' + t.numero + '" ' +
+          'value="' + U.esc(t.fechaCompra || '') + '"></td>' +
+      '</tr>';
+    }).join('');
+
+    U.abrirModal(
+      '<h2>Precios · ' + U.esc(serie.titulo) + '</h2>' +
+      '<p class="ayuda">Lo que dejes en blanco se calcula con el PVP menos tu descuento (' +
+      D.descuento() + '%). Escribe el precio solo si pagaste otra cosa: de segunda mano, ' +
+      'de oferta o en un pack.</p>' +
+      '<div class="precios">' +
+        '<table>' +
+          '<thead><tr><th>Tomo</th><th>Estimado</th><th>Lo que pagué</th><th>Fecha</th></tr></thead>' +
+          '<tbody>' + filas + '</tbody>' +
+        '</table>' +
+      '</div>' +
+      '<div class="form__acciones">' +
+        '<span class="izquierda"><button type="button" class="btn btn--peligro btn--pequeno" id="pVaciar">Vaciar todos</button></span>' +
+        '<button type="button" class="btn btn--fantasma" data-cerrar-modal>Cancelar</button>' +
+        '<button type="button" class="btn btn--primario" id="pGuardar">Guardar precios</button>' +
+      '</div>'
+    );
+
+    U.$('#pVaciar').addEventListener('click', function () {
+      U.$$('.precios__input').forEach(function (i) { i.value = ''; });
+    });
+
+    U.$('#pGuardar').addEventListener('click', function () {
+      var fechas = {};
+      U.$$('.precios__fecha').forEach(function (i) { fechas[i.dataset.tomo] = i.value; });
+
+      U.$$('.precios__input').forEach(function (i) {
+        var t = D.tomo(serie, Number(i.dataset.tomo), true);
+        var valor = i.value.trim();
+        t.precio = valor === '' ? null : (Number(valor) || 0);
+        t.fechaCompra = fechas[i.dataset.tomo] || '';
+      });
+      D.guardar();
+      U.aviso('Precios guardados', 'ok');
+      App.abrirSerie(serie.id);
+    });
+  };
+
+  /* ============================================================
      Publicar
      ============================================================ */
   F.publicar = function () {

@@ -92,7 +92,8 @@
 
     var stats = [
       { valor: g.series, etiqueta: 'Series', extra: g.seriesAbiertas + ' en publicación', icono: '📚' },
-      { valor: g.tomos, etiqueta: 'Tomos en casa', extra: U.euros(g.gasto) + ' invertidos', icono: '📦' },
+      { valor: g.tomos, etiqueta: 'Tomos en casa',
+        extra: U.euros(g.gasto) + ' invertidos' + (g.precioEstimado ? ' (aprox.)' : ''), icono: '📦' },
       { valor: g.leidos + g.leidosSinTener, etiqueta: 'Tomos leídos',
         extra: g.leidosSinTener
           ? g.leidosSinTener + ' sin tenerlos'
@@ -175,7 +176,7 @@
   /* ============================================================
      Vista: Biblioteca
      ============================================================ */
-  V.filtros = { texto: '', estado: '', demografia: '', editorial: '', orden: 'titulo', soloPendientes: false };
+  V.filtros = { texto: '', estado: '', demografia: '', editorial: '', tenencia: '', orden: 'titulo', soloPendientes: false };
 
   V.biblioteca = function () {
     var f = V.filtros;
@@ -189,6 +190,11 @@
 
     var barra = '<div class="filtros">' +
       '<div class="buscador"><input type="text" id="fTexto" placeholder="Buscar por título, autor, editorial o etiqueta…" value="' + U.esc(f.texto) + '"></div>' +
+      '<select id="fTenencia">' +
+        '<option value=""' + (f.tenencia ? '' : ' selected') + '>Comprados y leídos</option>' +
+        '<option value="comprados"' + (f.tenencia === 'comprados' ? ' selected' : '') + '>Solo comprados</option>' +
+        '<option value="leidos"' + (f.tenencia === 'leidos' ? ' selected' : '') + '>Solo leídos, sin comprar</option>' +
+      '</select>' +
       '<select id="fEstado"><option value="">Cualquier estado</option>' + opciones(Object.keys(D.ESTADOS), f.estado, D.ESTADOS) + '</select>' +
       '<select id="fDemografia"><option value="">Cualquier demografía</option>' + opciones(Object.keys(D.DEMOGRAFIAS), f.demografia, D.DEMOGRAFIAS) + '</select>' +
       '<select id="fEditorial"><option value="">Cualquier editorial</option>' + opciones(D.editoriales(), f.editorial) + '</select>' +
@@ -217,6 +223,11 @@
     var texto = U.normalizar(f.texto);
 
     var lista = series.filter(function (s) {
+      if (f.tenencia) {
+        var st = D.statsSerie(s);
+        if (f.tenencia === 'comprados' && !st.tengo) return false;
+        if (f.tenencia === 'leidos' && (st.tengo || !st.leidosTotal)) return false;
+      }
       if (f.estado && D.estadoDe(s) !== f.estado) return false;
       if (f.demografia && D.demografiaDe(s) !== f.demografia) return false;
       if (f.editorial && D.editorialDe(s) !== f.editorial) return false;
@@ -407,6 +418,22 @@
       '</div>' +
 
       '<div class="tarjeta">' +
+        '<h3>Precios y gasto</h3>' +
+        '<p>Cuando no escribes el precio de un tomo, se calcula a partir del PVP que ' +
+        'publica ListadoManga aplicando tu descuento habitual. Los precios que escribas ' +
+        'tú mandan siempre y se usan tal cual, sin descuento.</p>' +
+        '<div class="campos">' +
+          '<div><label for="ajDescuento">Descuento habitual (%)</label>' +
+            '<input type="number" id="ajDescuento" min="0" max="100" step="0.5" value="' + D.descuento() + '"></div>' +
+        '</div>' +
+        '<div class="ayuda">Ahora mismo: ' + U.plural(g.precioEstimado, 'tomo estimado', 'tomos estimados') +
+        (g.sinPrecio ? ' y ' + U.plural(g.sinPrecio, 'tomo sin precio conocido') : '') + '.</div>' +
+        '<div class="tarjeta__acciones">' +
+          '<button class="btn btn--primario" data-accion="guardar-descuento">Guardar</button>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="tarjeta">' +
         '<h3>Copia de seguridad</h3>' +
         '<p>Descarga un JSON con toda la colección o restaura desde uno anterior.</p>' +
         '<div class="tarjeta__acciones">' +
@@ -565,7 +592,8 @@
           (ficha && ficha.coleccion ? '<span class="chip">📚 ' + U.esc(ficha.coleccion) + '</span>' : '') +
           (autor ? '<span class="chip">✍ ' + U.esc(autor) + '</span>' : '') +
           (editorial ? '<span class="chip">🏢 ' + U.esc(editorial) + '</span>' : '') +
-          (st.gasto ? '<span class="chip">💶 ' + U.euros(st.gasto) + '</span>' : '') +
+          (st.gasto ? '<span class="chip">💶 ' + U.euros(st.gasto) +
+            (st.precioEstimado ? ' aprox.' : '') + '</span>' : '') +
         '</div>' +
 
         (sinopsis ? '<div class="detalle__sinopsis">' + U.esc(sinopsis) + '</div>' : '') +
@@ -593,8 +621,18 @@
           '<span><i style="border:1px dashed var(--verde);background:none"></i>Leído sin tenerlo</span>' +
         '</div>' +
         huecos +
+        (st.tengo
+          ? '<p class="ayuda">Gasto: <strong>' + U.euros(st.gasto) + '</strong>' +
+            (st.precioEstimado
+              ? ' · ' + U.plural(st.precioEstimado, 'tomo estimado', 'tomos estimados') +
+                ' con el PVP menos ' + D.descuento() + '%'
+              : '') +
+            (st.precioManual ? ' · ' + st.precioManual + ' a precio tuyo' : '') +
+            (st.sinPrecio ? ' · ' + U.plural(st.sinPrecio, 'tomo sin precio') : '') + '</p>'
+          : '') +
         '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">' +
           (puedeAmpliar ? '<button class="btn btn--pequeno" data-accion="anadir-tomo" data-serie-id="' + U.esc(serie.id) + '">+ Tomo ' + siguiente + '</button>' : '') +
+          (st.tengo ? '<button class="btn btn--pequeno" data-accion="precios" data-serie-id="' + U.esc(serie.id) + '">💶 Precios</button>' : '') +
           '<button class="btn btn--pequeno" data-accion="marcar-todo-leido" data-serie-id="' + U.esc(serie.id) + '">Marcar todo como leído</button>' +
         '</div>' +
 

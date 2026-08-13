@@ -403,10 +403,21 @@
         var t = D.tomo(serie, n.numero, false);
         return n.fecha && d !== null && d >= 0 && !(t && t.tengo);
       });
+      // ¿Difieren los datos de la ficha de los que tienes guardados?
+      var discrepa = (ficha.editorial && ficha.editorial !== serie.editorial) ||
+        (ficha.totalNumeros && ficha.totalNumeros !== serie.tomosTotales) ||
+        (ficha.estado && ficha.estado !== serie.estado);
+
       bloqueLM =
         '<p class="ayuda">Enlazada con <a href="' + U.esc(ficha.url) + '" target="_blank" rel="noopener">' +
           U.esc(ficha.titulo) + '</a>' +
+          (ficha.editorial ? ' · ' + U.esc(ficha.editorial) : '') +
+          (ficha.totalNumeros ? ' · ' + ficha.totalNumeros + ' tomos' : '') +
           (D.calendario.actualizado ? ' · datos del ' + U.fechaLarga(D.calendario.actualizado) : '') + '.</p>' +
+        (discrepa
+          ? '<p class="ayuda"><button class="btn btn--pequeno" data-accion="adoptar-lm" ' +
+            'data-serie-id="' + U.esc(serie.id) + '">Usar editorial, total de tomos y estado de esta edición</button></p>'
+          : '') +
         (futuros.length
           ? '<div class="lista" style="margin-top:10px">' + futuros.map(function (n) {
               return '<div class="fila">' +

@@ -348,6 +348,64 @@
     return D.numerosLM(serie).filter(function (n) { return n.numero === numero; })[0] || null;
   };
 
+  /**
+   * Catálogo completo de ListadoManga (~6.600 colecciones, 256 KB).
+   * Se descarga solo cuando hace falta —al abrir el selector de edición— y se
+   * queda en memoria: no penaliza la carga normal de la web.
+   */
+  var indice = null;
+  var promesaIndice = null;
+
+  D.cargarIndice = function () {
+    if (indice) return Promise.resolve(indice);
+    if (promesaIndice) return promesaIndice;
+
+    promesaIndice = fetch('data/listadomanga-indice.json', { cache: 'force-cache' })
+      .then(function (r) {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      })
+      .then(function (json) {
+        indice = (json.colecciones || []).map(function (fila) {
+          return { id: String(fila[0]), nombre: fila[1], busqueda: U.normalizar(fila[1]) };
+        });
+        indice.actualizado = json.actualizado || null;
+        return indice;
+      })
+      .catch(function (e) {
+        promesaIndice = null;      // permite reintentar
+        throw new Error('No se pudo cargar el catálogo de ListadoManga (' + e.message + ')');
+      });
+
+    return promesaIndice;
+  };
+
+  /**
+   * Busca ediciones en el catálogo. Prioriza las que empiezan por el texto
+   * buscado, para que «bleach» no entierre las ediciones de Bleach entre
+   * títulos que solo lo mencionan de pasada.
+   */
+  D.buscarEdiciones = function (texto, limite) {
+    if (!indice) return [];
+    var aguja = U.normalizar(texto).trim();
+    if (aguja.length < 2) return [];
+
+    var empiezan = [], contienen = [];
+    for (var i = 0; i < indice.length; i++) {
+      var pos = indice[i].busqueda.indexOf(aguja);
+      if (pos === 0) empiezan.push(indice[i]);
+      else if (pos > 0) contienen.push(indice[i]);
+    }
+
+    // Alfabético dentro de cada grupo: así las ediciones de una misma obra
+    // salen juntas y en un orden estable.
+    function porNombre(a, b) { return a.nombre.localeCompare(b.nombre, 'es'); }
+    empiezan.sort(porNombre);
+    contienen.sort(porNombre);
+
+    return empiezan.concat(contienen).slice(0, limite || 30);
+  };
+
   /** Candidatos de ListadoManga propuestos por el script para una serie sin enlazar. */
   D.sugerenciasLM = function (serie) {
     if (serie.listadomangaId) return [];

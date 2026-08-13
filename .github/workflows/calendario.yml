@@ -20,17 +20,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - name: Descargar el catálogo de ediciones
+        run: python3 scripts/actualizar_indice.py
+
       - name: Descargar las fechas
         run: python3 scripts/actualizar_calendario.py --verbose
 
       - name: Publicar los cambios
         run: |
-          if git diff --quiet -- data/calendario.json; then
-            echo "Sin cambios en el calendario."
+          if git diff --quiet -- data/calendario.json data/listadomanga-indice.json; then
+            echo "Sin cambios."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/calendario.json
-          git commit -m "Actualizar fechas de publicación desde ListadoManga"
+          git add data/calendario.json data/listadomanga-indice.json
+          git commit -m "Actualizar datos de ListadoManga"
           git push

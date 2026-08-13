@@ -112,6 +112,39 @@ def extraer_numeros(pagina):
     return sorted(porNumero.values(), key=lambda v: v['numero'])
 
 
+ESTADOS = {'abierta': 'en-publicacion', 'completa': 'finalizada',
+           'cancelada': 'cancelada', 'suspendida': 'pausada'}
+
+
+def metadatos(pagina):
+    """
+    Datos de cabecera de la ficha, que van como <b>Etiqueta:</b> valor<br/>:
+    editorial española, formato, autor y número de tomos en castellano.
+    """
+    cabecera = pagina.split('Números editados')[0].split('N&uacute;meros editados')[0]
+    campos = {}
+    for etiqueta, valor in re.findall(r'(?is)<b>(.*?):</b>(.*?)(?:<br\s*/?>|</td>)', cabecera):
+        clave = html.unescape(re.sub(r'<[^>]+>', '', etiqueta)).strip().lower()
+        texto = html.unescape(re.sub(r'<[^>]+>', ' ', valor))
+        campos[clave] = re.sub(r'\s+', ' ', texto).strip()
+
+    numeros_es = campos.get('números en castellano', '') or campos.get('números en catalán', '')
+    total = re.search(r'(\d+)', numeros_es)
+    estado = None
+    for palabra, valor in ESTADOS.items():
+        if palabra in numeros_es.lower():
+            estado = valor
+            break
+
+    return {
+        'editorial': campos.get('editorial española', ''),
+        'formato': campos.get('formato', ''),
+        'autor': campos.get('guion', '') or campos.get('dibujo', ''),
+        'totalNumeros': int(total.group(1)) if total else 0,
+        'estado': estado or '',
+    }
+
+
 def titulo_de(pagina):
     coincidencia = re.search(r'<title>([^<]+)</title>', pagina)
     if not coincidencia:
@@ -183,12 +216,12 @@ def main():
 
         numeros = extraer_numeros(pagina)
         conFecha = [n for n in numeros if n['fecha']]
-        colecciones[idlm] = {
-            'titulo': titulo_de(pagina),
-            'url': url,
-            'numeros': numeros,
-        }
-        log('    %d números (%d con fecha)' % (len(numeros), len(conFecha)))
+        ficha = {'titulo': titulo_de(pagina), 'url': url, 'numeros': numeros}
+        ficha.update(metadatos(pagina))
+        colecciones[idlm] = ficha
+        log('    %d números (%d con fecha) · %s · %s' % (
+            len(numeros), len(conFecha), ficha['editorial'] or 'editorial ?',
+            ('%d tomos' % ficha['totalNumeros']) if ficha['totalNumeros'] else 'total ?'))
         if args.verbose:
             for n in numeros:
                 log('      nº%-4d %-12s %s' % (n['numero'], n['fecha'] or '—',

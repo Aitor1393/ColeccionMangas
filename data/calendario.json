@@ -48,7 +48,12 @@
           "precio": 10.0,
           "aproximada": false
         }
-      ]
+      ],
+      "editorial": "Panini Manga",
+      "formato": "Tomo (130x183) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Kentaro Miura",
+      "totalNumeros": 43,
+      "estado": "en-publicacion"
     },
     "18": {
       "titulo": "Monster (Kanzenban)",
@@ -108,7 +113,12 @@
           "precio": 16.95,
           "aproximada": true
         }
-      ]
+      ],
+      "editorial": "Planeta Cómic",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Naoki Urasawa",
+      "totalNumeros": 9,
+      "estado": "finalizada"
     },
     "3485": {
       "titulo": "Chainsaw Man (Castellano)",
@@ -258,7 +268,12 @@
           "precio": null,
           "aproximada": false
         }
-      ]
+      ],
+      "editorial": "Norma Editorial",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Tatsuki Fujimoto",
+      "totalNumeros": 24,
+      "estado": "finalizada"
     }
   },
   "sugerencias": {}

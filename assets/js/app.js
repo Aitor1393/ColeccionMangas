@@ -170,6 +170,23 @@
       App.render();
     },
 
+    'adoptar-lm': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (!s) return;
+      var ficha = D.fichaLM(s);
+      if (!ficha) return;
+
+      var cambios = {};
+      if (ficha.editorial) cambios.editorial = ficha.editorial;
+      if (ficha.totalNumeros) cambios.tomosTotales = ficha.totalNumeros;
+      if (ficha.estado) cambios.estado = ficha.estado;
+      D.actualizarSerie(s.id, cambios);
+
+      U.aviso('Datos actualizados desde ListadoManga', 'ok');
+      refrescarModalSerie();
+      App.render();
+    },
+
     'enlazar-lm': function (el) {
       D.actualizarSerie(el.dataset.serieId, { listadomangaId: el.dataset.lm });
       U.aviso('Serie enlazada con ListadoManga. Las fechas llegarán en la próxima actualización.', 'ok');

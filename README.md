@@ -101,14 +101,31 @@ Las fechas vienen de dos sitios y se mezclan en la vista *Próximas*:
 En ambos casos, los tomos que ya tienes no aparecen: al marcar *«Ya lo tengo»*, la fecha
 desaparece del calendario y el tomo pasa a tu colección (con su precio, si se conoce).
 
-#### Cómo enlazar una serie
+#### Elegir la edición
 
-Busca la serie en [listadomanga.es](https://www.listadomanga.es/) y copia el número de la
-URL de su ficha —en `coleccion.php?id=2688` el ID es `2688`— en el campo *ID de
-ListadoManga* al editar la serie. A partir de ahí, `data/calendario.json` se actualiza solo.
+Un mismo manga tiene varias ediciones españolas y **cada una es una colección distinta**,
+con sus propios tomos, fechas y precios. Bleach, por ejemplo, tiene siete:
 
-Para las series **sin enlazar**, el script busca candidatos por título y los deja como
-sugerencias: en el detalle de la serie aparecen como botones y enlazas con un clic.
+```
+Bleach (Bestseller)                Bleach (Panini) (Castellano)
+Bleach (EDT/Glénat) (Castellano)   Bleach (Panini) (Català)
+Bleach (EDT/Glénat) (Català)       Bleach: El Alma de la Espada
+Bleach (Maximum)
+```
+
+Al añadir o editar una serie, el campo *Edición española (ListadoManga)* busca sobre el
+catálogo completo —6.600 colecciones— y las lista todas para que elijas la tuya. Al
+seleccionarla se rellenan el ID y el título.
+
+Puedes tener **varias ediciones del mismo manga** en la colección: son series
+independientes, cada una con sus tomos y su calendario.
+
+Una vez enlazada, el detalle de la serie ofrece *«Usar editorial, total de tomos y estado
+de esta edición»* para copiar esos datos de la ficha oficial.
+
+Si prefieres, también puedes pegar el ID a mano: es el número de la URL de la ficha, en
+`coleccion.php?id=2688`. Y para las series **sin enlazar**, el script busca candidatos por
+título y los deja como sugerencias, que aparecen en el detalle como botones de un clic.
 
 #### Cómo funciona por dentro
 
@@ -117,8 +134,12 @@ consultarlo** desde GitHub Pages. Lo hace un workflow programado:
 
 ```
 .github/workflows/calendario.yml   →  lunes a las 06:15 UTC (y a mano si quieres)
-scripts/actualizar_calendario.py   →  descarga, parsea y escribe data/calendario.json
+scripts/actualizar_indice.py       →  catálogo de ediciones  →  data/listadomanga-indice.json
+scripts/actualizar_calendario.py   →  fechas y precios       →  data/calendario.json
 ```
+
+El catálogo (256 KB) **no se descarga al abrir la web**: solo cuando escribes en el
+selector de edición.
 
 El script solo usa la biblioteca estándar de Python, se identifica con un `User-Agent`
 propio, espera 1,5 s entre peticiones y solo descarga la ficha de las series que tengas
@@ -159,7 +180,9 @@ assets/js/formularios.js   Altas, ediciones y diálogos
 assets/js/app.js           Rutas, eventos y arranque
 data/coleccion.json        Tu colección
 data/calendario.json       Fechas de ListadoManga (lo genera la Action, no lo edites)
-scripts/actualizar_calendario.py   Descarga de fechas
+data/listadomanga-indice.json      Catálogo de ediciones (ídem)
+scripts/actualizar_calendario.py   Descarga de fechas, precios y datos de la edición
+scripts/actualizar_indice.py       Descarga del catálogo de ediciones
 ```
 
 ### Formato de los datos

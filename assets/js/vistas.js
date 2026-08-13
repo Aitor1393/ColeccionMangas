@@ -393,6 +393,7 @@
           '<button class="btn btn--primario" data-accion="guardar-proxy">Guardar y probar</button>' +
           (FI.hayProxy() ? '<button class="btn btn--peligro" data-accion="quitar-proxy">Quitar proxy</button>' : '') +
         '</div>' +
+        '<div id="fiResultado"></div>' +
       '</div>' +
 
       '<div class="tarjeta">' +

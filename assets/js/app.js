@@ -302,16 +302,23 @@
       if (!url) { U.aviso('Escribe la URL del proxy', 'error'); return; }
 
       FI.guardarProxy(url);
-      U.aviso('Probando el proxy…');
+      var salida = U.$('#fiResultado');
+      salida.innerHTML = '<p class="ayuda">Probando…</p>';
 
       // Se prueba con una colección real: si devuelve una ficha, funciona.
       FI.traer('3000')
         .then(function (ficha) {
-          U.aviso('Proxy correcto: ha leído «' + ficha.titulo + '»', 'ok');
-          App.render();
+          U.aviso('Proxy correcto', 'ok');
+          salida.innerHTML = '<p class="ayuda">✓ Funciona: ha leído «' + U.esc(ficha.titulo) +
+            '» con ' + ficha.numeros.length + ' números.</p>';
         })
         .catch(function (e) {
-          U.aviso('No funciona: ' + e.message, 'error');
+          U.aviso('El proxy no funciona', 'error');
+          salida.innerHTML = '<div class="tarjeta" style="margin-top:14px">' +
+            '<h3>No funciona</h3><p>' + U.esc(e.message) + '</p>' +
+            '<p class="ayuda">Para descartar dudas, abre esta dirección en el navegador: ' +
+            '<code>' + U.esc(url.replace('{id}', '3000')) + '</code>. Debe salir HTML en bruto ' +
+            'de la ficha de Bleach.</p></div>';
         });
     },
 

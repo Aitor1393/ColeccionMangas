@@ -213,19 +213,39 @@
     };
   };
 
-  /** Descarga y analiza la ficha de una colección a través del proxy. */
+  /**
+   * Descarga y analiza la ficha de una colección a través del proxy.
+   * Los errores intentan decir qué revisar, porque las causas posibles
+   * (URL mal escrita, CORS, Worker sin desplegar) dan síntomas parecidos.
+   */
   FI.traer = function (idlm) {
     if (!FI.hayProxy()) return Promise.reject(new Error('No hay proxy configurado.'));
 
-    return fetch(urlDe(idlm), { headers: { Accept: 'text/html' } })
+    var url = urlDe(idlm);
+
+    return fetch(url, { headers: { Accept: 'text/html' } })
+      .catch(function () {
+        // fetch solo rechaza por red o por CORS; nunca por un código de error.
+        throw new Error(
+          'no se pudo conectar con ' + url + '. Comprueba que la URL es correcta y que ' +
+          'el Worker está desplegado. Si al abrirla en el navegador sí funciona, entonces ' +
+          'es el CORS: revisa que ORIGENES incluya ' + location.origin + '.');
+      })
       .then(function (r) {
-        if (!r.ok) throw new Error('el proxy respondió ' + r.status);
+        if (r.status === 400) {
+          throw new Error('el proxy dice que falta el id. ¿Has puesto {id} en la URL?');
+        }
+        if (!r.ok) throw new Error('el proxy respondió ' + r.status + ' ' + r.statusText);
         return r.text();
       })
       .then(function (texto) {
         var ficha = FI.analizar(texto, idlm);
         if (!ficha.numeros.length && !ficha.editorial) {
-          throw new Error('la respuesta no parece una ficha de ListadoManga');
+          var pista = /hello world/i.test(texto)
+            ? 'el Worker sigue con el código de ejemplo: falta pegar listadomanga-proxy.js y volver a desplegar'
+            : 'la respuesta no parece una ficha de ListadoManga (empieza por «' +
+              texto.slice(0, 40).replace(/\s+/g, ' ') + '…»)';
+          throw new Error(pista);
         }
         FI.guardarEnCache(idlm, ficha);
         D.calendario.colecciones[idlm] = ficha;

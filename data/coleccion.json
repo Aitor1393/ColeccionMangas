@@ -2925,6 +2925,90 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "5a3d74bf-65c5-42d1-9a05-b0893d4472d4",
+      "titulo": "Hinowa ga Crush!",
+      "tituloAlt": "",
+      "autor": "Takahiro",
+      "editorial": "Norma Editorial",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "tomosTotales": 8,
+      "portada": "",
+      "sinopsis": "¡VUELVE LA ASESINA DE OJOS ROJOS EN UNA NUEVA AVENTURA!\n\nTras derrocar al imperio y embarcarse en un viaje en solitario, Akame alcanza las lejanas islas del país de Wakoku donde conoce a Hinowa, una chica que anhela la unificación de su país. Akame decide luchar a su lado al conocer sus anhelos y aprovechar para buscar una cura a su maldición...",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3255",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

@@ -2145,6 +2145,146 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "df5c9705-afef-4a6f-be00-6dd185e6e806",
+      "titulo": "Wind Breaker (Castellano)",
+      "tituloAlt": "",
+      "autor": "Nii Satoru",
+      "editorial": "Distrito Manga",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "tomosTotales": 26,
+      "portada": "",
+      "sinopsis": "El instituto Fûrin se ha granjeado la peor reputación entre los centros de la zona por tener la media más baja y los alumnos más rebeldes. Haruka Sakura es un joven que acaba de llegar a la ciudad y busca ser el más fuerte para poder proteger a todos los que le importan.\n\nPara conseguir su propósito, lo primero que debe hacer es unirse a una pandilla llamada Wind Breaker, que representa a su instituto y cuyo objetivo es defender la ciudad del resto de bandas y maleantes. Sin embargo, ¡para que lo acepten deberá ganarse el respeto a base de puños!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4562",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

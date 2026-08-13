@@ -11,6 +11,7 @@
   var D = {};
 
   var RUTA_JSON = 'data/coleccion.json';
+  var RUTA_CALENDARIO = 'data/calendario.json';
   var CLAVE_LOCAL = 'cm:coleccion';
   var CLAVE_BASE = 'cm:base';       // sello de la versión publicada sobre la que editas
   var CLAVE_COPIA = 'cm:copia';     // copia de seguridad si el repo se adelanta
@@ -35,6 +36,9 @@
   D.publicada = null;   // copia tal cual está en el repo
   D.sucia = false;      // hay cambios locales sin publicar
 
+  // Fechas oficiales de ListadoManga, generadas por la GitHub Action semanal.
+  D.calendario = { actualizado: null, colecciones: {}, sugerencias: {} };
+
   var oyentes = [];
   D.alCambiar = function (fn) { oyentes.push(fn); };
   function notificar() { oyentes.forEach(function (fn) { fn(); }); }
@@ -57,6 +61,7 @@
       sinopsis: s.sinopsis || '',
       etiquetas: Array.isArray(s.etiquetas) ? s.etiquetas : [],
       mangadexId: s.mangadexId || '',
+      listadomangaId: s.listadomangaId ? String(s.listadomangaId) : '',
       notas: s.notas || '',
       anadida: s.anadida || U.isoHoy(),
       tomos: (Array.isArray(s.tomos) ? s.tomos : []).map(function (t) {
@@ -95,8 +100,25 @@
    * Devuelve una promesa con { conflicto: bool } por si el repo se ha
    * actualizado por debajo de unos cambios locales pendientes.
    */
+  /** Carga el calendario de ListadoManga. Es opcional: si no existe, se ignora. */
+  function cargarCalendario() {
+    return fetch(RUTA_CALENDARIO, { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (json) {
+        if (json) {
+          D.calendario = {
+            actualizado: json.actualizado || null,
+            colecciones: json.colecciones || {},
+            sugerencias: json.sugerencias || {}
+          };
+        }
+      });
+  }
+
   D.cargar = function () {
-    return fetch(RUTA_JSON, { cache: 'no-store' })
+    return cargarCalendario().then(function () {
+      return fetch(RUTA_JSON, { cache: 'no-store' })
       .then(function (r) {
         if (!r.ok) throw new Error('HTTP ' + r.status);
         return r.json();
@@ -130,6 +152,7 @@
         notificar();
         return resultado;
       });
+    });
   };
 
   D.clonar = function (obj) { return JSON.parse(JSON.stringify(obj)); };
@@ -307,20 +330,67 @@
     });
   };
 
+  /* ---------- ListadoManga ---------- */
+
+  /** Números publicados/anunciados de una serie según ListadoManga. */
+  D.numerosLM = function (serie) {
+    if (!serie.listadomangaId) return [];
+    var ficha = D.calendario.colecciones[serie.listadomangaId];
+    return ficha && Array.isArray(ficha.numeros) ? ficha.numeros : [];
+  };
+
+  D.fichaLM = function (serie) {
+    if (!serie.listadomangaId) return null;
+    return D.calendario.colecciones[serie.listadomangaId] || null;
+  };
+
+  D.numeroLM = function (serie, numero) {
+    return D.numerosLM(serie).filter(function (n) { return n.numero === numero; })[0] || null;
+  };
+
+  /** Candidatos de ListadoManga propuestos por el script para una serie sin enlazar. */
+  D.sugerenciasLM = function (serie) {
+    if (serie.listadomangaId) return [];
+    return D.calendario.sugerencias[serie.id] || [];
+  };
+
   /**
-   * Próximas publicaciones ordenadas por fecha.
+   * Próximas publicaciones ordenadas por fecha, fusionando dos fuentes:
+   *   - las fechas que has apuntado tú a mano (mandan siempre),
+   *   - las de ListadoManga para las series enlazadas.
+   * Se ignoran los tomos que ya tienes.
    * @param {number} [dias] si se indica, solo las que salen en los próximos N días.
    */
   D.proximasPublicaciones = function (dias) {
     var lista = [];
+
+    function cabe(d) {
+      return d !== null && d >= 0 && (dias === undefined || d <= dias);
+    }
+
     D.coleccion.series.forEach(function (s) {
+      var manuales = {};
+
       s.proximas.forEach(function (p) {
+        manuales[p.numero] = true;
         var d = U.diasHasta(p.fecha);
-        if (d === null || d < 0) return;              // ya salió: se ignora aquí
-        if (dias !== undefined && d > dias) return;
-        lista.push({ serie: s, salida: p, dias: d });
+        if (!cabe(d)) return;                          // ya salió: se trata aparte
+        lista.push({ serie: s, salida: p, dias: d, origen: 'manual' });
+      });
+
+      D.numerosLM(s).forEach(function (n) {
+        if (manuales[n.numero] || !n.fecha) return;    // lo tuyo tiene prioridad
+        var t = D.tomo(s, n.numero, false);
+        if (t && t.tengo) return;                      // ya lo tienes
+        var d = U.diasHasta(n.fecha);
+        if (!cabe(d)) return;
+        lista.push({
+          serie: s, dias: d, origen: 'listadomanga',
+          salida: { numero: n.numero, fecha: n.fecha, nota: '', precio: n.precio, aproximada: n.aproximada }
+        });
       });
     });
+
     return lista.sort(function (a, b) { return a.dias - b.dias; });
   };
 
@@ -333,7 +403,7 @@
         if (d === null || d >= 0) return;
         var t = D.tomo(s, p.numero, false);
         if (t && t.tengo) return;
-        lista.push({ serie: s, salida: p, dias: d });
+        lista.push({ serie: s, salida: p, dias: d, origen: 'manual' });
       });
     });
     return lista.sort(function (a, b) { return b.dias - a.dias; });

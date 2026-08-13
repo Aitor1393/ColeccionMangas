@@ -78,8 +78,8 @@ Si usas un ordenador compartido, usa la opción *Olvidar token* al terminar.
 - **Biblioteca** — todas tus series con portada y progreso. Filtros por texto (título,
   autor, editorial, etiqueta), estado, demografía y editorial, con varios criterios de orden.
 - **Pendientes** — todos los tomos que tienes en casa y no has leído, agrupados por serie.
-- **Próximas** — calendario de salidas agrupado por mes, más un apartado de *«ya está a
-  la venta y aún no lo tienes»*.
+- **Próximas** — calendario de salidas agrupado por mes (con precio cuando se conoce),
+  más un apartado de *«ya está a la venta y aún no lo tienes»*.
 - **Detalle de serie** — cuadrícula de tomos donde cada clic cicla el estado:
 
   > no lo tengo → **lo tengo** → **leído** → no lo tengo
@@ -90,13 +90,48 @@ Si usas un ordenador compartido, usa la opción *Olvidar token* al terminar.
   escribirlo todo a mano.
 - **Modo claro y oscuro**, y diseño adaptado a móvil.
 
-### Sobre las fechas de publicación
+### Fechas de publicación: automáticas desde ListadoManga
 
-Las fechas de salida se introducen **a mano** (detalle de la serie → *+ Fecha de salida*).
-No hay ninguna API pública que cubra de forma fiable el calendario de las ediciones
-españolas —Planeta, Norma, Ivrea, Panini…—, así que la alternativa sería inventarse los
-datos. Cuando marcas un tomo como *«Ya lo tengo»*, la fecha desaparece del calendario y
-el tomo pasa a tu colección automáticamente.
+Las fechas vienen de dos sitios y se mezclan en la vista *Próximas*:
+
+1. **ListadoManga**, automáticamente, para las series que enlaces.
+2. **A mano**, desde el detalle de la serie → *+ Fecha de salida*. Lo que apuntas tú
+   tiene prioridad sobre lo que diga ListadoManga para ese mismo tomo.
+
+En ambos casos, los tomos que ya tienes no aparecen: al marcar *«Ya lo tengo»*, la fecha
+desaparece del calendario y el tomo pasa a tu colección (con su precio, si se conoce).
+
+#### Cómo enlazar una serie
+
+Busca la serie en [listadomanga.es](https://www.listadomanga.es/) y copia el número de la
+URL de su ficha —en `coleccion.php?id=2688` el ID es `2688`— en el campo *ID de
+ListadoManga* al editar la serie. A partir de ahí, `data/calendario.json` se actualiza solo.
+
+Para las series **sin enlazar**, el script busca candidatos por título y los deja como
+sugerencias: en el detalle de la serie aparecen como botones y enlazas con un clic.
+
+#### Cómo funciona por dentro
+
+ListadoManga no tiene API pública ni envía cabeceras CORS, así que **el navegador no puede
+consultarlo** desde GitHub Pages. Lo hace un workflow programado:
+
+```
+.github/workflows/calendario.yml   →  lunes a las 06:15 UTC (y a mano si quieres)
+scripts/actualizar_calendario.py   →  descarga, parsea y escribe data/calendario.json
+```
+
+El script solo usa la biblioteca estándar de Python, se identifica con un `User-Agent`
+propio, espera 1,5 s entre peticiones y solo descarga la ficha de las series que tengas
+enlazadas —una petición por serie y semana—. Si una descarga falla, conserva los datos
+de la ejecución anterior en lugar de borrarlos. Puedes probarlo en local:
+
+```bash
+python3 scripts/actualizar_calendario.py --dry-run --verbose
+```
+
+Ten en cuenta que ListadoManga es un proyecto pequeño mantenido por aficionados: no bajes
+la pausa entre peticiones ni subas la frecuencia del cron. Las editoriales anuncian con
+meses de antelación, así que una vez por semana sobra.
 
 ---
 
@@ -123,6 +158,8 @@ assets/js/vistas.js        Render de cada pantalla
 assets/js/formularios.js   Altas, ediciones y diálogos
 assets/js/app.js           Rutas, eventos y arranque
 data/coleccion.json        Tu colección
+data/calendario.json       Fechas de ListadoManga (lo genera la Action, no lo edites)
+scripts/actualizar_calendario.py   Descarga de fechas
 ```
 
 ### Formato de los datos
@@ -144,6 +181,7 @@ data/coleccion.json        Tu colección
       "sinopsis": "…",
       "etiquetas": ["acción"],
       "notas": "Edición Deluxe",
+      "listadomangaId": "2688",       // enlaza con listadomanga.es para las fechas
       "tomos": [
         { "numero": 1, "tengo": true, "leido": true, "precio": 9.95, "fechaCompra": "2026-01-10" }
       ],

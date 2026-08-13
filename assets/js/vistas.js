@@ -129,20 +129,26 @@
 
   function filaSalida(item) {
     var pasada = item.dias < 0;
+    var s = item.salida;
+
+    var detalles = [item.serie.editorial || 'Editorial sin indicar'];
+    if (s.precio) detalles.push(U.euros(s.precio));
+    if (s.nota) detalles.push(U.esc(s.nota));
+    if (item.origen === 'listadomanga') detalles.push('vía ListadoManga');
+
     return '<div class="fila" data-serie="' + U.esc(item.serie.id) + '">' +
       miniPortada(item.serie) +
       '<div class="fila__cuerpo">' +
-        '<div class="fila__titulo">' + U.esc(item.serie.titulo) + ' <span class="chip">Tomo ' + item.salida.numero + '</span></div>' +
-        '<div class="fila__sub">' + U.esc(item.serie.editorial || 'Editorial sin indicar') +
-          (item.salida.nota ? ' · ' + U.esc(item.salida.nota) : '') + '</div>' +
+        '<div class="fila__titulo">' + U.esc(item.serie.titulo) + ' <span class="chip">Tomo ' + s.numero + '</span></div>' +
+        '<div class="fila__sub">' + detalles.join(' · ') + '</div>' +
       '</div>' +
       '<div class="fila__fecha">' +
-        '<strong>' + U.fechaCorta(item.salida.fecha) + '</strong>' +
-        '<span>' + U.cuando(item.salida.fecha) + '</span>' +
+        '<strong>' + (s.aproximada ? U.mesLargo(s.fecha) : U.fechaCorta(s.fecha)) + '</strong>' +
+        '<span>' + (s.aproximada ? 'fecha aproximada' : U.cuando(s.fecha)) + '</span>' +
       '</div>' +
       '<div class="fila__acciones">' +
         '<button class="btn btn--pequeno' + (pasada ? ' btn--primario' : '') + '" data-accion="comprado" ' +
-          'data-serie-id="' + U.esc(item.serie.id) + '" data-tomo="' + item.salida.numero + '">Ya lo tengo</button>' +
+          'data-serie-id="' + U.esc(item.serie.id) + '" data-tomo="' + s.numero + '">Ya lo tengo</button>' +
       '</div>' +
     '</div>';
   }
@@ -267,7 +273,10 @@
 
     var html = '<div class="vista__cabecera"><div class="crece">' +
       '<h1>Próximas publicaciones</h1>' +
-      '<p>Fechas de salida que has apuntado en cada serie. Añádelas desde el detalle de la serie.</p>' +
+      '<p>Fechas de ListadoManga para las series enlazadas, más las que apuntes tú a mano. ' +
+      'Los tomos que ya tienes no aparecen.' +
+      (D.calendario.actualizado ? ' Última descarga: ' + U.fechaLarga(D.calendario.actualizado) + '.' : '') +
+      '</p>' +
     '</div></div>';
 
     if (pasadas.length) {
@@ -370,9 +379,9 @@
     var st = D.statsSerie(serie);
     var total = Math.max(st.total, st.maxTomo, 1);
 
-    // Cuadrícula de tomos: hasta el total conocido, más un margen si sigue abierta
-    var hasta = st.total || st.maxTomo;
-    if (!hasta) hasta = 1;
+    // La cuadrícula llega hasta el mayor entre el total declarado y el tomo más
+    // alto que conste: si una serie se alarga más de lo previsto, no se ocultan.
+    var hasta = Math.max(st.maxTomo, st.total, 1);
     var celdas = '';
     for (var i = 1; i <= hasta; i++) {
       var t = D.tomo(serie, i, false);
@@ -382,6 +391,50 @@
       else if (t && t.tengo) { clase += ' tomo--tengo'; titulo = 'Tomo ' + i + ': lo tienes, sin leer'; }
       celdas += '<button class="' + clase + '" data-accion="ciclar-tomo" data-serie-id="' + U.esc(serie.id) + '" ' +
         'data-tomo="' + i + '" title="' + U.esc(titulo) + ' (clic para cambiar)">' + i + '</button>';
+    }
+
+    /* --- Bloque de ListadoManga --- */
+    var ficha = D.fichaLM(serie);
+    var bloqueLM;
+
+    if (ficha) {
+      var futuros = D.numerosLM(serie).filter(function (n) {
+        var d = U.diasHasta(n.fecha);
+        var t = D.tomo(serie, n.numero, false);
+        return n.fecha && d !== null && d >= 0 && !(t && t.tengo);
+      });
+      bloqueLM =
+        '<p class="ayuda">Enlazada con <a href="' + U.esc(ficha.url) + '" target="_blank" rel="noopener">' +
+          U.esc(ficha.titulo) + '</a>' +
+          (D.calendario.actualizado ? ' · datos del ' + U.fechaLarga(D.calendario.actualizado) : '') + '.</p>' +
+        (futuros.length
+          ? '<div class="lista" style="margin-top:10px">' + futuros.map(function (n) {
+              return '<div class="fila">' +
+                '<div class="fila__cuerpo">' +
+                  '<div class="fila__titulo">Tomo ' + n.numero + '</div>' +
+                  '<div class="fila__sub">' +
+                    (n.aproximada ? U.mesLargo(n.fecha) + ' (aproximada)' : U.fechaLarga(n.fecha) + ' · ' + U.cuando(n.fecha)) +
+                    (n.precio ? ' · ' + U.euros(n.precio) : '') + '</div>' +
+                '</div>' +
+                '<div class="fila__acciones">' +
+                  '<button class="btn btn--pequeno" data-accion="comprado" data-serie-id="' + U.esc(serie.id) + '" ' +
+                    'data-tomo="' + n.numero + '">Ya lo tengo</button>' +
+                '</div>' +
+              '</div>';
+            }).join('') + '</div>'
+          : '<p class="ayuda">No hay tomos anunciados pendientes.</p>');
+    } else if (serie.listadomangaId) {
+      bloqueLM = '<p class="ayuda">Enlazada con la colección <code>' + U.esc(serie.listadomangaId) + '</code>. ' +
+        'Las fechas aparecerán tras la próxima actualización automática.</p>';
+    } else {
+      var sugeridas = D.sugerenciasLM(serie);
+      bloqueLM = '<p class="ayuda">Sin enlazar. Si la enlazas con ListadoManga, las fechas de salida se actualizan solas cada semana.</p>' +
+        (sugeridas.length
+          ? '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:8px">' + sugeridas.map(function (c) {
+              return '<button class="btn btn--pequeno" data-accion="enlazar-lm" data-serie-id="' + U.esc(serie.id) + '" ' +
+                'data-lm="' + U.esc(c.id) + '">' + U.esc(c.nombre) + '</button>';
+            }).join('') + '</div>'
+          : '');
     }
 
     var salidas = serie.proximas.length
@@ -454,7 +507,9 @@
           '<button class="btn btn--pequeno" data-accion="marcar-todo-leido" data-serie-id="' + U.esc(serie.id) + '">Marcar todo como leído</button>' +
         '</div>' +
 
-        '<h3 style="margin-top:26px">Próximas salidas</h3>' + salidas +
+        '<h3 style="margin-top:26px">Fechas de ListadoManga</h3>' + bloqueLM +
+
+        '<h3 style="margin-top:26px">Fechas apuntadas a mano</h3>' + salidas +
 
         (serie.notas ? '<h3 style="margin-top:26px">Notas</h3><p class="ayuda">' + U.esc(serie.notas) + '</p>' : '') +
       '</div>' +

@@ -1,0 +1,36 @@
+name: Actualizar fechas desde ListadoManga
+
+on:
+  schedule:
+    # Lunes a las 06:15 UTC. Una vez por semana es de sobra: las editoriales
+    # anuncian con meses de antelación y así no se molesta al servidor.
+    - cron: '15 6 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+concurrency:
+  group: calendario
+  cancel-in-progress: false
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Descargar las fechas
+        run: python3 scripts/actualizar_calendario.py --verbose
+
+      - name: Publicar los cambios
+        run: |
+          if git diff --quiet -- data/calendario.json; then
+            echo "Sin cambios en el calendario."
+            exit 0
+          fi
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add data/calendario.json
+          git commit -m "Actualizar fechas de publicación desde ListadoManga"
+          git push

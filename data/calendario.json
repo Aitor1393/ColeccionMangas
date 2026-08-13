@@ -1,0 +1,265 @@
+{
+  "actualizado": "2026-08-13",
+  "fuente": "https://www.listadomanga.es/",
+  "colecciones": {
+    "2688": {
+      "titulo": "Berserk (Panini)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2688",
+      "numeros": [
+        {
+          "numero": 37,
+          "fecha": "2017-06-01",
+          "precio": 10.0,
+          "aproximada": true
+        },
+        {
+          "numero": 38,
+          "fecha": "2017-11-01",
+          "precio": 10.0,
+          "aproximada": true
+        },
+        {
+          "numero": 39,
+          "fecha": "2018-02-01",
+          "precio": 10.0,
+          "aproximada": true
+        },
+        {
+          "numero": 40,
+          "fecha": "2019-05-23",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 41,
+          "fecha": "2023-03-23",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 42,
+          "fecha": "2024-10-24",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 43,
+          "fecha": "2026-10-15",
+          "precio": 10.0,
+          "aproximada": false
+        }
+      ]
+    },
+    "18": {
+      "titulo": "Monster (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=18",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2009-05-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 2,
+          "fecha": "2009-06-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 3,
+          "fecha": "2009-08-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 4,
+          "fecha": "2009-10-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 5,
+          "fecha": "2009-12-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 6,
+          "fecha": "2010-02-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 7,
+          "fecha": "2010-04-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 8,
+          "fecha": "2010-06-01",
+          "precio": 16.95,
+          "aproximada": true
+        },
+        {
+          "numero": 9,
+          "fecha": "2010-08-01",
+          "precio": 16.95,
+          "aproximada": true
+        }
+      ]
+    },
+    "3485": {
+      "titulo": "Chainsaw Man (Castellano)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3485",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2020-09-04",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2020-11-13",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-01-15",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-03-05",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-05-14",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-07-09",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-08-06",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2021-09-03",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2021-10-08",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2021-12-10",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2022-02-04",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2022-12-08",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2023-04-14",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2023-08-04",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": "2023-12-07",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": "2024-06-07",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 17,
+          "fecha": "2024-09-06",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 18,
+          "fecha": "2025-05-09",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 19,
+          "fecha": "2025-08-08",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 20,
+          "fecha": "2025-10-03",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 21,
+          "fecha": "2026-03-06",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 22,
+          "fecha": "2026-06-05",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 23,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 24,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        }
+      ]
+    }
+  },
+  "sugerencias": {}
+}

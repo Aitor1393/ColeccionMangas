@@ -54,6 +54,10 @@
             '<input type="number" id="cTotales" min="0" step="1" value="' + (s.tomosTotales || '') + '" placeholder="0 = desconocido"></div>' +
           '<div><label for="cTengo">Ya tengo hasta el tomo…</label>' +
             '<input type="number" id="cTengo" min="0" step="1" placeholder="' + (edicion ? 'dejar vacío' : 'opcional') + '"></div>' +
+          '<div><label for="cListadoManga">ID de ListadoManga</label>' +
+            '<input type="text" id="cListadoManga" inputmode="numeric" value="' + U.esc(s.listadomangaId || '') + '" placeholder="Ej. 2688">' +
+            '<div class="ayuda">Busca la serie en listadomanga.es y copia el número de <code>coleccion.php?id=…</code>. ' +
+            'Con eso, las fechas de salida se actualizan solas cada semana.</div></div>' +
           '<div class="campo--ancho"><label for="cPortada">URL de la portada</label>' +
             '<input type="url" id="cPortada" value="' + U.esc(s.portada) + '" placeholder="https://…"></div>' +
           '<div class="campo--ancho"><label for="cSinopsis">Sinopsis</label>' +
@@ -133,6 +137,7 @@
         estado: U.$('#cEstado').value,
         tomosTotales: Number(U.$('#cTotales').value) || 0,
         portada: U.$('#cPortada').value.trim(),
+        listadomangaId: U.$('#cListadoManga').value.trim().replace(/\D/g, ''),
         sinopsis: U.$('#cSinopsis').value.trim(),
         notas: U.$('#cNotas').value.trim()
       };

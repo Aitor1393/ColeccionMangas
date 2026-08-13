@@ -340,7 +340,10 @@ def main():
         # esta comprobación se volvería a descargar todo cada vez que añades
         # una serie. Solo se baja lo que falte o esté caducado.
         anterior = previo.get('colecciones', {}).get(idlm)
-        if anterior and args.dias > 0 and reciente(anterior.get('descargado'), args.dias):
+        # Una ficha guardada antes de que existiera la portada por tomo no vale:
+        # hay que volver a bajarla aunque su fecha sea reciente.
+        completa = anterior and all('portada' in n for n in anterior.get('numeros', []))
+        if anterior and completa and args.dias > 0 and reciente(anterior.get('descargado'), args.dias):
             colecciones[idlm] = anterior
             log('    ya descargada el %s: se reutiliza' % anterior.get('descargado', '?'))
             continue

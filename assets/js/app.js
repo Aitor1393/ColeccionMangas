@@ -256,11 +256,6 @@
       App.render();
     },
 
-    'vistazo-gasto': function () {
-      D.alternarVistazoGasto();
-      App.render();
-    },
-
     'nueva-salida': function (el) {
       var s = D.serie(el.dataset.serieId);
       if (s) F.salida(s);

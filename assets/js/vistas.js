@@ -92,10 +92,12 @@
 
     var stats = [
       { valor: g.series, etiqueta: 'Series', extra: g.seriesAbiertas + ' en publicación', icono: '📚' },
-      { valor: g.tomos, etiqueta: 'Tomos en casa', accion: 'vistazo-gasto',
+      // Con el gasto oculto no se menciona el dinero de ninguna forma: ni el
+      // importe, ni un hueco tapado, ni nada en lo que pulsar.
+      { valor: g.tomos, etiqueta: 'Tomos en casa',
         extra: D.mostrarGasto()
           ? U.euros(g.gasto) + ' invertidos' + (g.precioEstimado ? ' (aprox.)' : '')
-          : '••••• € invertidos · pulsa para ver', icono: '📦' },
+          : 'en ' + U.plural(g.series, 'serie'), icono: '📦' },
       { valor: g.leidos + g.leidosSinTener, etiqueta: 'Tomos leídos',
         extra: g.leidosSinTener
           ? g.leidosSinTener + ' sin tenerlos'
@@ -105,7 +107,7 @@
     ];
 
     var html = '<div class="rejilla-stats">' + stats.map(function (s) {
-      return '<div class="stat' + (s.accion ? ' stat--pulsable" data-accion="' + s.accion : '') + '">' +
+      return '<div class="stat">' +
         '<span class="stat__icono">' + s.icono + '</span>' +
         '<div class="stat__valor">' + s.valor + '</div>' +
         '<div class="stat__etiqueta">' + s.etiqueta + '</div>' +
@@ -495,8 +497,9 @@
           '<input type="checkbox" id="ajMostrarGasto" style="width:auto"' +
           (D.coleccion.ajustes && D.coleccion.ajustes.mostrarGasto ? ' checked' : '') + '> ' +
           'Mostrar el dinero invertido en el resumen</label>' +
-          '<span class="ayuda">La web es pública, así que va oculto por defecto. Aun estando ' +
-          'oculto, puedes pulsar la tarjeta «Tomos en casa» para verlo un momento.</span></p>' +
+          '<span class="ayuda">La web es pública y cualquiera puede abrirla, así que va ' +
+          'oculto por defecto: con el interruptor apagado no se menciona el dinero en ' +
+          'ninguna parte del resumen.</span></p>' +
         '<p>Cuando no escribes el precio de un tomo, se calcula a partir del PVP que ' +
         'publica ListadoManga aplicando tu descuento habitual. Los precios que escribas ' +
         'tú mandan siempre y se usan tal cual, sin descuento.</p>' +

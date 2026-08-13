@@ -140,8 +140,6 @@ main { padding: 28px 0 60px; }
 .stat__etiqueta { font-size: .78rem; color: var(--texto-2); text-transform: uppercase; letter-spacing: .05em; margin-top: 4px; }
 .stat__extra { font-size: .8rem; color: var(--texto-3); margin-top: 6px; }
 .stat__icono { position: absolute; right: 12px; top: 12px; font-size: 1.3rem; opacity: .35; }
-.stat--pulsable { cursor: pointer; }
-.stat--pulsable:hover { border-color: var(--texto-3); }
 
 /* ───────────── Rejilla de series ───────────── */
 .rejilla-series { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 20px; }

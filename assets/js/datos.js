@@ -111,23 +111,14 @@
     return (D.coleccion.ajustes && D.coleccion.ajustes.descuento) || 0;
   };
 
-  /** ¿Se enseña el total invertido? Un vistazo puntual no cambia el ajuste. */
-  var gastoAlDescubierto = false;
-
+  /** ¿Se enseña el total invertido? Solo lo decide el ajuste de la colección. */
   D.mostrarGasto = function () {
-    return gastoAlDescubierto ||
-      !!(D.coleccion.ajustes && D.coleccion.ajustes.mostrarGasto);
-  };
-
-  D.alternarVistazoGasto = function () {
-    gastoAlDescubierto = !gastoAlDescubierto;
-    return gastoAlDescubierto;
+    return !!(D.coleccion.ajustes && D.coleccion.ajustes.mostrarGasto);
   };
 
   D.guardarMostrarGasto = function (valor) {
     if (!D.coleccion.ajustes) D.coleccion.ajustes = {};
     D.coleccion.ajustes.mostrarGasto = !!valor;
-    gastoAlDescubierto = false;
     D.guardar();
   };
 

@@ -41,7 +41,7 @@
     var edicion = !!serie;
     var s = serie || {
       titulo: '', edicion: '', autor: '', editorial: '', demografia: 'otro', estado: '',
-      tomosTotales: 0, portada: '', sinopsis: '', notas: '', etiquetas: []
+      abandonada: false, tomosTotales: 0, portada: '', sinopsis: '', notas: '', etiquetas: []
     };
 
     var html =
@@ -80,6 +80,12 @@
             '<input type="url" id="cPortada" value="' + U.esc(s.portada) + '" placeholder="https://…"></div>' +
           '<div class="campo--ancho"><label for="cSinopsis">Sinopsis</label>' +
             '<textarea id="cSinopsis">' + U.esc(s.sinopsis) + '</textarea></div>' +
+          '<div class="campo--ancho">' +
+            '<label style="display:flex;align-items:center;gap:8px;margin:0">' +
+              '<input type="checkbox" id="cAbandonada" style="width:auto"' +
+              (s.abandonada ? ' checked' : '') + '> He dejado de coleccionarla</label>' +
+            '<div class="ayuda">Sigue en tu biblioteca con los tomos que tengas, pero no ' +
+              'aparecerá en Próximas compras ni en Próximas publicaciones.</div></div>' +
           '<div class="campo--ancho"><label for="cNotas">Notas personales</label>' +
             '<textarea id="cNotas" placeholder="Edición, tomos dobles, dónde la compras…">' + U.esc(s.notas) + '</textarea></div>' +
         '</div>' +
@@ -102,6 +108,7 @@
         editorial: U.$('#cEditorial').value.trim(),
         demografia: U.$('#cDemografia').value,
         estado: U.$('#cEstado').value,
+        abandonada: U.$('#cAbandonada').checked,
         tomosTotales: Number(U.$('#cTotales').value) || 0,
         portada: U.$('#cPortada').value.trim(),
         listadomangaId: U.$('#cListadoManga').value.trim().replace(/\D/g, ''),

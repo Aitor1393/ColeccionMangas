@@ -110,7 +110,7 @@
     }, 250));
 
     [['#fEstado', 'estado'], ['#fDemografia', 'demografia'], ['#fEditorial', 'editorial'],
-     ['#fTenencia', 'tenencia'], ['#fOrden', 'orden']]
+     ['#fTenencia', 'tenencia'], ['#fSeguimiento', 'seguimiento'], ['#fOrden', 'orden']]
       .forEach(function (par) {
         var nodo = U.$(par[0]);
         if (nodo) nodo.addEventListener('change', function () { V.filtros[par[1]] = nodo.value; App.render(); });
@@ -239,6 +239,23 @@
       U.guardarLocal('cm:vistaProximas', V.modoProximas);
       App.render();
       window.scrollTo(0, 0);
+    },
+
+    'ver-abandonadas': function () {
+      V.filtros.seguimiento = 'abandonadas';
+      location.hash = '#/biblioteca';
+      App.render();
+    },
+
+    'abandonar': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (!s) return;
+      var dejada = D.alternarAbandonada(s.id);
+      U.aviso(dejada
+        ? '«' + s.titulo + '» marcada como abandonada'
+        : '«' + s.titulo + '» vuelve a tus colecciones', 'ok');
+      refrescarModalSerie();
+      App.render();
     },
 
     'modo-compras': function (el) {

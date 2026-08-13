@@ -69,9 +69,14 @@
     } else if (st.totalDeclarado) {
       insignia = '<span class="serie__insignia">' + st.tengo + '/' + st.totalDeclarado + '</span>';
     }
+    // La marca de abandonada manda sobre las demás: es lo que quieres ver.
+    if (serie.abandonada) {
+      insignia = '<span class="serie__insignia serie__insignia--abandonada">abandonada</span>';
+    }
 
     return '' +
-      '<article class="serie" data-serie="' + U.esc(serie.id) + '" tabindex="0" role="button">' +
+      '<article class="serie' + (serie.abandonada ? ' serie--abandonada' : '') + '" ' +
+        'data-serie="' + U.esc(serie.id) + '" tabindex="0" role="button">' +
         '<div class="serie__portada">' +
           portadaHTML(serie, '') + insignia +
           '<div class="serie__barra' + (!st.tengo && st.leidosTotal ? ' serie__barra--leida' : '') + '">' +
@@ -213,7 +218,7 @@
   /* ============================================================
      Vista: Biblioteca
      ============================================================ */
-  V.filtros = { texto: '', estado: '', demografia: '', editorial: '', tenencia: '', orden: 'titulo', soloPendientes: false };
+  V.filtros = { texto: '', estado: '', demografia: '', editorial: '', tenencia: '', seguimiento: '', orden: 'titulo', soloPendientes: false };
 
   V.biblioteca = function () {
     var f = V.filtros;
@@ -233,6 +238,11 @@
         '<option value="leidos"' + (f.tenencia === 'leidos' ? ' selected' : '') + '>Solo leídos, sin comprar</option>' +
       '</select>' +
       '<select id="fEstado"><option value="">Cualquier estado</option>' + opciones(Object.keys(D.ESTADOS), f.estado, D.ESTADOS) + '</select>' +
+      '<select id="fSeguimiento">' +
+        '<option value=""' + (f.seguimiento ? '' : ' selected') + '>Sigo y abandonadas</option>' +
+        '<option value="sigo"' + (f.seguimiento === 'sigo' ? ' selected' : '') + '>Solo las que sigo</option>' +
+        '<option value="abandonadas"' + (f.seguimiento === 'abandonadas' ? ' selected' : '') + '>Solo abandonadas</option>' +
+      '</select>' +
       '<select id="fDemografia"><option value="">Cualquier demografía</option>' + opciones(Object.keys(D.DEMOGRAFIAS), f.demografia, D.DEMOGRAFIAS) + '</select>' +
       '<select id="fEditorial"><option value="">Cualquier editorial</option>' + opciones(D.editoriales(), f.editorial) + '</select>' +
       '<select id="fOrden">' +
@@ -265,6 +275,8 @@
         if (f.tenencia === 'comprados' && !st.tengo) return false;
         if (f.tenencia === 'leidos' && (st.tengo || !st.leidosTotal)) return false;
       }
+      if (f.seguimiento === 'sigo' && s.abandonada) return false;
+      if (f.seguimiento === 'abandonadas' && !s.abandonada) return false;
       if (f.estado && D.estadoDe(s) !== f.estado) return false;
       if (f.demografia && D.demografiaDe(s) !== f.demografia) return false;
       if (f.editorial && D.editorialDe(s) !== f.editorial) return false;
@@ -360,7 +372,8 @@
     if (!tomos.length) {
       return html + '<div class="vacio"><h3>No te falta nada a la venta</h3>' +
         '<p>Tienes todos los tomos que han salido ya. Lo que aún no se ha publicado ' +
-        'lo verás en <a href="#/calendario">Próximas publicaciones</a>.</p></div>';
+        'lo verás en <a href="#/calendario">Próximas publicaciones</a>.</p></div>' +
+        avisoAbandonadas();
     }
 
     var modo = V.modoCompras;
@@ -374,11 +387,24 @@
       (hayOrden ? '<button class="btn btn--pequeno btn--fantasma" data-accion="orden-automatico" ' +
         'data-modo="' + modo + '">Volver al orden automático</button>'
         : '<span class="ayuda">Ordenados por el que lleva más tiempo esperando</span>') +
-    '</div>';
+    '</div>' + avisoAbandonadas();
 
     var filas = modo === 'series' ? grupos.map(filaCompraSerie) : tomos.map(filaCompraTomo);
     return html + '<div class="lista lista--ordenable">' + filas.join('') + '</div>';
   };
+
+  /**
+   * Las series abandonadas no entran ni aquí ni en Próximas publicaciones,
+   * pero eso no puede ser invisible: se dice cuántas quedan fuera y se enlaza
+   * al filtro que las enseña.
+   */
+  function avisoAbandonadas() {
+    var n = D.abandonadas().length;
+    if (!n) return '';
+    return '<p class="ayuda" style="margin:-6px 0 16px">' +
+      U.plural(n, 'serie abandonada queda', 'series abandonadas quedan') + ' fuera de esta cuenta. ' +
+      '<a href="#/biblioteca" data-accion="ver-abandonadas">Verlas</a></p>';
+  }
 
   /** Flechas para colocar un elemento donde quieras en la lista de compra. */
   function flechasOrden(clave, i, total) {
@@ -469,7 +495,8 @@
         '«Añadir fecha de salida» en el detalle de la serie.</p></div>';
     }
 
-    return html + (V.modoProximas === 'calendario' ? vistaMeses(proximas) : vistaLista(proximas));
+    return html + avisoAbandonadas() +
+      (V.modoProximas === 'calendario' ? vistaMeses(proximas) : vistaLista(proximas));
   };
 
   /** Modo lista: las salidas agrupadas por mes, una debajo de otra. */
@@ -797,6 +824,8 @@
         portadaHTML(serie, 'detalle__portada') +
         '<button class="btn btn--bloque" data-accion="editar-serie" data-serie-id="' + U.esc(serie.id) + '">Editar serie</button>' +
         '<button class="btn btn--bloque" data-accion="nueva-salida" data-serie-id="' + U.esc(serie.id) + '">+ Fecha de salida</button>' +
+        '<button class="btn btn--bloque" data-accion="abandonar" data-serie-id="' + U.esc(serie.id) + '">' +
+          (serie.abandonada ? '↩ Volver a coleccionarla' : '✕ La he dejado') + '</button>' +
         '<button class="btn btn--bloque btn--peligro" data-accion="borrar-serie" data-serie-id="' + U.esc(serie.id) + '">Eliminar</button>' +
       '</div>' +
 
@@ -808,6 +837,7 @@
         (serie.tituloAlt ? '<p class="detalle__alt">' + U.esc(serie.tituloAlt) + '</p>' : '') +
         '<div class="detalle__meta">' +
           chipEstado(serie) +
+          (serie.abandonada ? '<span class="chip chip--rojo">✕ La dejaste</span>' : '') +
           (demografia ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[demografia] || demografia) + '</span>' : '') +
           (ficha && ficha.coleccion ? '<span class="chip">📚 ' + U.esc(ficha.coleccion) + '</span>' : '') +
           (autor ? '<span class="chip">✍ ' + U.esc(autor) + '</span>' : '') +

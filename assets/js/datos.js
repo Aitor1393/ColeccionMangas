@@ -57,6 +57,9 @@
       editorial: s.editorial || '',
       demografia: s.demografia || 'otro',
       estado: D.ESTADOS[s.estado] ? s.estado : '',   // '' = el que diga la edición
+      // Cosa tuya, no de la edición: la serie puede estar en publicación y tú
+      // haberla dejado. Por eso va aparte del estado.
+      abandonada: !!s.abandonada,
       tomosTotales: Number(s.tomosTotales) || 0,   // 0 = desconocido / abierto
       portada: s.portada || '',
       sinopsis: s.sinopsis || '',
@@ -270,6 +273,21 @@
     return normalizada;
   };
 
+  /** Dejar de coleccionar una serie, o retomarla. Devuelve cómo queda. */
+  D.alternarAbandonada = function (id) {
+    var s = D.serie(id);
+    if (!s) return false;
+    // actualizarSerie escribe sobre el propio objeto, así que el valor nuevo
+    // hay que calcularlo antes de llamarla.
+    var ahora = !s.abandonada;
+    D.actualizarSerie(id, { abandonada: ahora });
+    return ahora;
+  };
+
+  D.abandonadas = function () {
+    return D.coleccion.series.filter(function (s) { return s.abandonada; });
+  };
+
   D.borrarSerie = function (id) {
     D.coleccion.series = D.coleccion.series.filter(function (s) { return s.id !== id; });
     D.guardar();
@@ -368,7 +386,7 @@
     var g = {
       series: D.coleccion.series.length, tomos: 0, leidos: 0, leidosSinTener: 0,
       pendientes: 0, gasto: 0, precioEstimado: 0, sinPrecio: 0,
-      seriesCompletas: 0, seriesAbiertas: 0, proximas30: 0
+      seriesCompletas: 0, seriesAbiertas: 0, seriesAbandonadas: 0, proximas30: 0
     };
     D.coleccion.series.forEach(function (s) {
       var st = D.statsSerie(s);
@@ -380,7 +398,8 @@
       g.precioEstimado += st.precioEstimado;
       g.sinPrecio += st.sinPrecio;
       if (st.completa) g.seriesCompletas++;
-      if (D.estadoDe(s) === 'en-publicacion') g.seriesAbiertas++;
+      if (s.abandonada) g.seriesAbandonadas++;
+      else if (D.estadoDe(s) === 'en-publicacion') g.seriesAbiertas++;
     });
     g.proximas30 = D.proximasPublicaciones(30).length;
     return g;
@@ -597,6 +616,7 @@
     }
 
     D.coleccion.series.forEach(function (s) {
+      if (s.abandonada) return;          // la dejaste: sus salidas no te interesan
       var manuales = {};
 
       s.proximas.forEach(function (p) {
@@ -639,6 +659,7 @@
     var lista = [];
 
     D.coleccion.series.forEach(function (s) {
+      if (s.abandonada) return;          // no vas a comprar más de esta
       var vistos = {};
 
       function anadir(numero, fecha, precio, origen) {

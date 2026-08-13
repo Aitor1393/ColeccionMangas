@@ -553,6 +553,825 @@
       "descargado": "2026-08-13",
       "sinopsis": "Coco, que vive en una pequeña aldea, siempre ha anhelado ser maga. Sin embargo, “solo aquellos que nacen con habilidad para la magia pueden llegar a ser magos”. Y ese no es su caso: ella es una niña normal y corriente. A pesar de esta ley inquebrantable, Coco intenta realizar un conjuro después de haber espiado al mago Qifrey cuando este visita el taller de costura de su madre y, sin esperarlo, el conjuro surte efecto… ¡y causa una desgracia!\n\r\n\n\r\nQifrey llega a tiempo de rescatarla y se la lleva a su atelier, donde la muchacha se convierte en su nueva aprendiz. Allí comparte el día a día con otras tres aprendices: la alegre Tetia, la práctica Riche y la estricta Agete. A partir de ese momento, Coco comienza a recorrer el arduo camino que le permita llegar a ser una gran hechicera. Un camino no exento de peligros… y enemigos…",
       "portada": "data/portadas/6242.jpg"
+    },
+    "4066": {
+      "titulo": "Rurouni Kenshin, La Epopeya del Guerrero Samurai (Maximum)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4066",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-05-26",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-01-26",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-03-23",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-05-25",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-07-27",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-09-28",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-11-23",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2024-01-25",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-03-27",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2024-06-27",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2024-08-22",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2024-10-24",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2024-12-19",
+          "precio": 16.95,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2025-02-27",
+          "precio": 16.95,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Nobuhiro Watsuki",
+      "totalNumeros": 14,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Un samurái vagabundo de la época Meiji intenta dejar atrás una carrera de asesino. Kenshin pone ahora su espada al servicio de los más débiles, una espada de filo invertido que le permite aplicar su poderosa y devastadora técnica de esgrima sin causar nuevas víctimas. A su alrededor pululan una serie de personajes inolvidables. Todos ellos gente sin familia ni hogar.",
+      "portada": "data/portadas/4066.jpg"
+    },
+    "5610": {
+      "titulo": "Wistoria - Wand & Sword",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5610",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-10-31",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-01-23",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-03-27",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-05-08",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2025-07-10",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-10-16",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2026-01-22",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2026-03-19",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2026-05-21",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-07-09",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2026-09-10",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2026-11-19",
+          "precio": 8.5,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Pika Ediciones",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (120x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Fujino Oomori",
+      "totalNumeros": 16,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "Will Serfort es un aspirante a mago poco habitual: ¡no tiene ni una pizca de magia! Aun así está resuelto a convertirse en el hechicero más poderoso que ha salido de la prestigiosa Academia Mágica Regarden. ¿Podrán sus habilidades como guerrero ayudarlo a conseguir tal fin?",
+      "portada": "data/portadas/5610.jpg"
+    },
+    "4099": {
+      "titulo": "Frieren",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4099",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-05-06",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2022-07-29",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2022-09-23",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2022-11-25",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-04-14",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-06-09",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-10-06",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2023-12-07",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-04-05",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2024-06-07",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2024-08-02",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2024-10-25",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2024-12-05",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2025-12-05",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": "2026-08-07",
+          "precio": 9.0,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Kanehito Yamada",
+      "totalNumeros": 15,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "LLEGA UNO DE LOS MANGAS MÁS VENDIDOS EN JAPÓN\n\r\n\n\r\nFrieren es una elfa, y como para todos los de su raza, los años pasan en un suspiro… pero no es así para sus antiguos compañeros de batalla, a los que Frieren verá morir y envejecer. De repente Frieren se da cuenta de que pese a que la vida avanza a un ritmo más lento para ella, las experiencias con sus seres queridos se le escapan de las manos. Un aire nostálgico envuelve a este manga fantástico tan entrañable que ha vendido ya más de 2,5 millones de copias en Japón.",
+      "portada": "data/portadas/4099.jpg"
+    },
+    "3700": {
+      "titulo": "Shaman King (Ivrea)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3700",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2020-12-03",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2020-12-31",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-02-11",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-04-01",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-05-27",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-07-01",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-07-29",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2021-09-16",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2022-03-03",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2022-05-05",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2022-08-11",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2022-09-15",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2023-01-19",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2023-04-20",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": "2023-06-22",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": "2023-08-31",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 17,
+          "fecha": "2023-12-28",
+          "precio": 19.0,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo doble B6 (128x180) rústica (tapa blanda) con sobrecubierta reversible",
+      "autor": "Hiroyuki Takei",
+      "totalNumeros": 17,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Los shamanes son personas que pueden interactuar con los dioses, los espíritus y las almas de los difuntos. Yoh tiene ese poder y quiere convertirse en el rey shaman, alguien capaz de establecer contacto con los Grandes Espíritus, lo que le permitiría cambiar el mundo a su antojo. Para conseguirlo, tendrá que hacerse con un espíritu que lo acompañe y participar en el Shaman Fight: un torneo que se celebra cada 500 años, consiguiendo por el camino un buen grupo de aliados y amigos. Aunque también encontrará rivales de lo más variopintos y siniestros, algunos con intenciones bastante diferentes a las de Yoh.",
+      "portada": "data/portadas/3700.jpg"
+    },
+    "6087": {
+      "titulo": "Shaman King: Flowers",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6087",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-07-31",
+          "precio": 17.0,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-10-16",
+          "precio": 17.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-12-11",
+          "precio": 17.0,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo doble B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hiroyuki Takei",
+      "totalNumeros": 3,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Una historia llena de acción protagonizada por Hana, el hijo de Yoh y Anna Asakura. 16 años después del torneo Shaman King, Hana ha crecido a la sombra de la leyenda de sus padres, convirtiéndolo en un chico vago y un poco bruto. Pero todo cambia cuando unos miembros de la familia Asakura vienen a tomar el lugar de él y su padre…",
+      "portada": "data/portadas/6087.jpg"
+    },
+    "6086": {
+      "titulo": "Shaman King: Zero",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6086",
+      "numeros": [],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo doble B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hiroyuki Takei",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "En el tomo ZERO se recogen 6 capítulos, 5 de ellos contando las historias previas al torneo Shaman King de los personajes más destacados. Unos capítulos que nos hacen conocer más los queridos personajes que nos hicieron disfrutar en una de las series más míticas de finales de los 90. Una lectura agradable, que gana muchos enteros después de acabar la serie porque nos hace empatizar mucho más con todos ellos.",
+      "portada": "data/portadas/6086.jpg"
+    },
+    "3780": {
+      "titulo": "Yu Yu Hakusho (Edición Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3780",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2020-12-24",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2021-02-18",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-04-29",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-06-24",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-07-29",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-10-21",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-12-23",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2022-04-07",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2022-06-09",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2022-10-27",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2023-02-09",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2023-07-06",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2023-10-05",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2023-12-28",
+          "precio": 14.0,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": "2024-03-07",
+          "precio": 15.0,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yoshihiro Togashi",
+      "totalNumeros": 15,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "La historia la protagoniza Yusuke Urameshi, un gamberrete de instituto que muere atropellado al intentar salvar a un niño. Al parecer, el pequeño no iba a morir y desde el mundo espiritual se sorprenden de su altruismo.\n\r\n\n\r\nBotan, una shinigami, le lleva hasta Koenma, hijo del Enma, el gobernante del mundo espiritual. Como su karma está completamente equilibrado, no pueden enviarlo al cielo y al infierno a la vez, así que Koenma decide darle una segunda oportunidad haciéndole cierto encargo para que pueda recuperar su vida.\n\r\n\n\r\nViendo la nobleza de su carácter, Koenma le da la oportunidad de recuperar su cuerpo convirtiéndose en un detective espiritual que tendrá que resolver casos de lo más peliagudos hasta para los seres del mundo espiritual, enfrentándose a demonios y seres de lo más formidables. Su antiguo rival por ser el más malote del instituto, Kuwabara, acabará siendo un gran amigo, junto a los carismáticos aliados del mundo de los demonios, Kurama y Hiei.",
+      "portada": "data/portadas/3780.jpg"
+    },
+    "4936": {
+      "titulo": "Angel (Edición Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4936",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-05-11",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-07-20",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-09-21",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-12-14",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2024-02-29",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2024-04-25",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2025-09-18",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2025-09-18",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2025-11-27",
+          "precio": 18.0,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2025-11-27",
+          "precio": 18.0,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shojo",
+      "demografia": "shoujo",
+      "formato": "Tomo A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yukiru Sugisaki",
+      "totalNumeros": 10,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Daisuke Niwa es un chaval de 14 años que es rechazado por Risa Harada en el día de su cumpleaños por ser alguien demasiado normal. La decepción hace que pase de su fiesta de cumpleaños y se vaya a su cuarto.\n\r\n\n\r\nPero ahí la historia dará un vuelco cuando Daisuke sufra una transformación genética causada por su enamoramiento que lo transforma en el ladrón Kaito Dark. Este hecho sucede en los varones de la familia Niwa y la única manera de revertirlo es conquistar a su enamorada.\n\r\n\n\r\nPara complicar las cosas, Kaito se siente atraído por la hermana mayor de Risa; y, encima, su compañero de clase, Satoshi, sufre otro cambio genético, ¡que lo transforma en su archienemigo!",
+      "portada": "data/portadas/4936.jpg"
+    },
+    "6335": {
+      "titulo": "Saiyuki: La edición definitiva (Distrito)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6335",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-04-09",
+          "precio": 23.95,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-07-02",
+          "precio": 23.95,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2026-11-05",
+          "precio": 23.95,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Distrito Manga",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo doble A5 (150x210) cartoné (tapa dura)",
+      "autor": "Kazuya Minekura",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡Un hombre, tres yokai y un dragón rumbo a la aventura! Regresa a España el shônen más gamberro y épico de los 90: ¡vuelve Saiyuki!\n\r\n\n\r\nGenjyo es un sacerdote budista en la ciudad de Tôgenkyô, que está siendo devastada por yokai que han desequilibrado el orden natural. Sus superiores lo envían en un viaje al lejano oeste para descubrir qué está causando este caos y cómo detenerlo. Sus compañeros son ni más ni menos que tres yokai con almas humanas, junto a los que Genjyo se topará con misterios y horrores a los que hacer frente mientras se pregunta si los humanos y los yokai realmente pueden convivir. ¡Comienza el viaje al oeste!",
+      "portada": "data/portadas/6335.jpg"
+    },
+    "4581": {
+      "titulo": "¡Zatch Bell! (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4581",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-12-12",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-06-26",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-09-25",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-12-11",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2024-09-09",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2024-12-16",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2026-01-26",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2026-04-27",
+          "precio": 17.95,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Kitsune Manga",
+      "coleccion": "Kitsune Manga",
+      "demografia": "",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Makoto Raiku",
+      "totalNumeros": 16,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡Vuelve uno de los mejores mangas de la historia! Ganador del premio Shogakukan al mejor manga shonen. \n\r\n\n\r\nKiyomaro no sabe qué hacer con su vida. Aburrido de la escuela y de todos los que le rodean, se limita a dejar pasar los días. Hasta que, sin previo aviso, su padre le envía un regalo de cumpleaños de lo más extraño: un niño llamado Zatch Bell que trae bajo el brazo un libro rojo aparentemente indescifrable… \n\r\n\n\r\n¿De dónde han salido? ¿Qué poder ocultan las páginas del libro? ¿Por qué de pronto le persiguen los problemas? Y, ¿cómo se convierte uno en un héroe de la noche a la mañana?\n\r\n\n\r\nLa batalla por ser el rey de los mamodos está a punto de empezar.",
+      "portada": "data/portadas/4581.jpg"
     }
   },
   "sugerencias": {}

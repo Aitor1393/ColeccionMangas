@@ -1372,6 +1372,293 @@
       "descargado": "2026-08-13",
       "sinopsis": "¡Vuelve uno de los mejores mangas de la historia! Ganador del premio Shogakukan al mejor manga shonen. \n\r\n\n\r\nKiyomaro no sabe qué hacer con su vida. Aburrido de la escuela y de todos los que le rodean, se limita a dejar pasar los días. Hasta que, sin previo aviso, su padre le envía un regalo de cumpleaños de lo más extraño: un niño llamado Zatch Bell que trae bajo el brazo un libro rojo aparentemente indescifrable… \n\r\n\n\r\n¿De dónde han salido? ¿Qué poder ocultan las páginas del libro? ¿Por qué de pronto le persiguen los problemas? Y, ¿cómo se convierte uno en un héroe de la noche a la mañana?\n\r\n\n\r\nLa batalla por ser el rey de los mamodos está a punto de empezar.",
       "portada": "data/portadas/4581.jpg"
+    },
+    "1798": {
+      "titulo": "Another",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1798",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2013-11-01",
+          "precio": 8.0,
+          "aproximada": true
+        },
+        {
+          "numero": 2,
+          "fecha": "2014-01-01",
+          "precio": 8.0,
+          "aproximada": true
+        },
+        {
+          "numero": 3,
+          "fecha": "2014-03-01",
+          "precio": 8.0,
+          "aproximada": true
+        },
+        {
+          "numero": 4,
+          "fecha": "2014-05-01",
+          "precio": 8.0,
+          "aproximada": true
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yukito Ayatsuji",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "En 1972, Misaki, un popular estudiante de la clase 3-3 de la Yomiyama North Middle School, murió repentinamente a mitad de curso. Impactados por la pérdida, sus compañeros y profesores siguieron actuando como si estuviera vivo. Tal es así que incluso pudo vislumbrarse una extraña presencia en la foto de graduación. En la primavera de 1998, un chico de 15 años llamado Koichi Sakakibara es trasladado a esa misma clase, ahí conoce a Mei Misaki, una chica bastante rara a la que tanto sus profesores como compañeros de clase ignoran. Inesperadamente una serie de asesinatos causa la desesperación entre los alumnos de la clase 3-3. Koichi y Mei descubren que esas muertes están relacionadas con la de Misaki en 1972 y se proponen descubrir qué las causa y cómo detenerlas antes de convertirse en las próximas víctimas.",
+      "portada": "data/portadas/1798.jpg"
+    },
+    "3029": {
+      "titulo": "Another 0",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3029",
+      "numeros": [],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con solapas",
+      "autor": "Yukito Ayatsuji",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡Por fin, tras una larga y ardua negociación de tiras y aflojas con Japón, llega el volumen 0 de Another, para cerrar la historia de los alumnos del instituto Yomiyama...! ¡¿O quizás reabrirla...?!\n\r\n\n\r\nEste tomo, que pone la guinda del pastel al gran éxito de Yukito Ayatsuji y Hiro Kiyohara, vendrá junto con una caja contenedora para que podáis exhibir los cinco tomos juntos: bonita, ordenada y al alcance de la mano.\n\r\n\n\r\nAnother 0 se publicó originalmente en Japón en 2012 como parte de un único paquete manga + anime. Explora parte del pasado de Reiko Mikami, que mejor no deciros quién es por si os da por leer antes el 0 que el resto de tomos. Ivrea publicará únicamente la parte manga de esa edición.",
+      "portada": "data/portadas/3029.jpg"
+    },
+    "3995": {
+      "titulo": "Fairy Tail (Edición Integral)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3995",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-01-10",
+          "precio": 3.99,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2022-01-24",
+          "precio": 8.99,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2022-02-07",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2022-02-22",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2022-03-08",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2022-03-22",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2022-04-05",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2022-04-19",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2022-05-03",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2022-05-17",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2022-05-31",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2022-06-14",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2022-06-28",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2022-07-12",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": "2022-07-26",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": "2022-08-09",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 17,
+          "fecha": "2022-08-23",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 18,
+          "fecha": "2022-09-06",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 19,
+          "fecha": "2022-09-20",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 20,
+          "fecha": "2022-10-04",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 21,
+          "fecha": "2022-10-18",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 22,
+          "fecha": "2022-11-01",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 23,
+          "fecha": "2022-11-15",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 24,
+          "fecha": "2022-11-29",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 25,
+          "fecha": "2022-12-13",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 26,
+          "fecha": "2022-12-27",
+          "precio": 12.99,
+          "aproximada": false
+        },
+        {
+          "numero": 27,
+          "fecha": "2023-01-10",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 28,
+          "fecha": "2023-01-24",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 29,
+          "fecha": "2023-02-07",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 30,
+          "fecha": "2023-02-21",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 31,
+          "fecha": "2023-03-07",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 32,
+          "fecha": "2023-03-21",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 33,
+          "fecha": "2023-04-04",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 34,
+          "fecha": "2023-04-18",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 35,
+          "fecha": "2023-05-02",
+          "precio": 13.99,
+          "aproximada": false
+        },
+        {
+          "numero": 36,
+          "fecha": "2023-05-16",
+          "precio": 13.99,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Editorial Salvat",
+      "coleccion": "Coleccionables",
+      "demografia": "",
+      "formato": "Tomo doble (177x266) rústica (tapa blanda)",
+      "autor": "Hiro Mashima",
+      "totalNumeros": 36,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "TODO EL MANGA DE CULTO.\n\r\n\n\r\nFairy Tail te sumerge en un universo fantástico imaginado por el autor Hiro Mashima.\n\r\n\n\r\n¡Sal al encuentro de cazadores de dragones, constelacionistas, magos de hielo, metamórficos o caballeros! Un mundo peligroso y fascinante, con una formidable galería de personajes: Natsu Dragneel, Lucy Heartfilia, Happy, Erza Scarlet, Gray Fullbuster, y muchos más…\n\r\n\n\r\n¡Aquí tienes la colección completa de las aventuras de Fairy Tail en gran formato!",
+      "portada": "data/portadas/3995.jpg"
     }
   },
   "sugerencias": {}

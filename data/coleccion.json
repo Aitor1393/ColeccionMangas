@@ -6,7 +6,33 @@
     "mostrarGasto": false
   },
   "compras": {
-    "series": [],
+    "series": [
+      "a9a3cdba-a5e4-4264-bf84-5d5ff65a72d5",
+      "861e5829-20c7-4056-bf4a-e46d24c616e5",
+      "15924990-5380-4d90-aec6-706db23aeef2",
+      "47a5d69a-d673-40f4-ac54-2e15a5fe524b",
+      "5c253bba-67ba-4051-bbd9-5b4b5282971c",
+      "97adbb24-5dd0-474f-87bc-86ebc4fb2dd4",
+      "698401dd-8f77-43dc-b071-f20fd4bae9ab",
+      "536b7f0f-7067-49fd-84b9-5f653033be1e",
+      "7dc5f709-27bb-4661-b6c2-f289cf50f2db",
+      "88452128-28d3-4ea7-b250-5336b7d5fe8c",
+      "15266614-3f59-4df7-bca7-4d6d4b894e57",
+      "72d41be3-9684-431f-b4f5-eea502439128",
+      "9dc15baa-8430-4171-b427-71e6d57c8e68",
+      "50b42fd0-f161-42d8-9be0-df15f3469e0e",
+      "aaf78387-00d3-482e-a986-ea72d49f48c9",
+      "90de5958-2f99-4c0c-91fa-aba5cec6b832",
+      "4a75ab81-f604-43da-a202-df5fdbd243db",
+      "96d22fa9-276d-487d-8319-f1db15440035",
+      "50c1608a-a58a-4dbb-bb67-b8df6014bfb7",
+      "732c53c1-7661-4a65-aec5-bba273787ec8",
+      "abe4c326-7561-4c44-bc11-aab95cadba6a",
+      "e1a5c0c9-4a84-49d9-b51e-fb284a8f8c62",
+      "659cc728-89b6-4cd9-b73e-7cf4de63a736",
+      "07061de8-085c-4ba6-9f90-614b23404f16",
+      "874f2521-5ead-483c-8898-ccb3128d52ab"
+    ],
     "tomos": []
   },
   "series": [
@@ -2060,6 +2086,14 @@
           "fechaCompra": "",
           "precio": 0,
           "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": false,
+          "leido": false,
+          "fechaCompra": "2026-08-13",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -3784,7 +3818,55 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4274,7 +4356,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4282,7 +4364,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4705,7 +4787,7 @@
       "editorial": "",
       "demografia": "otro",
       "estado": "",
-      "abandonada": false,
+      "abandonada": true,
       "tomosTotales": 0,
       "portada": "",
       "sinopsis": "",
@@ -4718,7 +4800,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4726,7 +4808,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4734,7 +4816,7 @@
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4881,7 +4963,7 @@
       "editorial": "",
       "demografia": "otro",
       "estado": "",
-      "abandonada": false,
+      "abandonada": true,
       "tomosTotales": 0,
       "portada": "",
       "sinopsis": "",
@@ -4894,7 +4976,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""

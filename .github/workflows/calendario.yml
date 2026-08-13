@@ -18,7 +18,7 @@ jobs:
   actualizar:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
 
       - name: Descargar el catálogo de ediciones
         run: python3 scripts/actualizar_indice.py

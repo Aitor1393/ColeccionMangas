@@ -344,6 +344,13 @@
     return D.calendario.colecciones[serie.listadomangaId] || null;
   };
 
+  /** Demografía efectiva: la tuya si la has puesto, si no la de la edición. */
+  D.demografiaDe = function (serie) {
+    if (serie.demografia && serie.demografia !== 'otro') return serie.demografia;
+    var ficha = D.fichaLM(serie);
+    return (ficha && ficha.demografia) || 'otro';
+  };
+
   D.numeroLM = function (serie, numero) {
     return D.numerosLM(serie).filter(function (n) { return n.numero === numero; })[0] || null;
   };

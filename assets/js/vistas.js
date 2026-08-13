@@ -208,7 +208,7 @@
 
     var lista = series.filter(function (s) {
       if (f.estado && s.estado !== f.estado) return false;
-      if (f.demografia && s.demografia !== f.demografia) return false;
+      if (f.demografia && D.demografiaDe(s) !== f.demografia) return false;
       if (f.editorial && s.editorial !== f.editorial) return false;
       if (f.soloPendientes && D.statsSerie(s).pendientes === 0) return false;
       if (texto) {
@@ -410,6 +410,8 @@
     var sinopsis = serie.sinopsis || (ficha && ficha.sinopsis) || '';
     var autor = serie.autor || (ficha && ficha.autor) || '';
     var editorial = serie.editorial || (ficha && ficha.editorial) || '';
+    var demografia = D.demografiaDe(serie);
+    if (demografia === 'otro') demografia = '';
 
     if (ficha) {
       var futuros = D.numerosLM(serie).filter(function (n) {
@@ -420,7 +422,8 @@
       // ¿Difieren los datos de la ficha de los que tienes guardados?
       var discrepa = (ficha.editorial && ficha.editorial !== serie.editorial) ||
         (ficha.totalNumeros && ficha.totalNumeros !== serie.tomosTotales) ||
-        (ficha.estado && ficha.estado !== serie.estado);
+        (ficha.estado && ficha.estado !== serie.estado) ||
+        (ficha.demografia && ficha.demografia !== serie.demografia);
 
       bloqueLM =
         '<p class="ayuda">Enlazada con <a href="' + U.esc(ficha.url) + '" target="_blank" rel="noopener">' +
@@ -430,7 +433,7 @@
           (D.calendario.actualizado ? ' · datos del ' + U.fechaLarga(D.calendario.actualizado) : '') + '.</p>' +
         (discrepa
           ? '<p class="ayuda"><button class="btn btn--pequeno" data-accion="adoptar-lm" ' +
-            'data-serie-id="' + U.esc(serie.id) + '">Usar editorial, total de tomos y estado de esta edición</button></p>'
+            'data-serie-id="' + U.esc(serie.id) + '">Usar los datos de esta edición</button></p>'
           : '') +
         (futuros.length
           ? '<div class="lista" style="margin-top:10px">' + futuros.map(function (n) {
@@ -499,7 +502,8 @@
         '<h2>' + U.esc(serie.titulo) + '</h2>' +
         '<div class="detalle__meta">' +
           chipEstado(serie) +
-          (serie.demografia && serie.demografia !== 'otro' ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[serie.demografia] || serie.demografia) + '</span>' : '') +
+          (demografia ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[demografia] || demografia) + '</span>' : '') +
+          (ficha && ficha.coleccion ? '<span class="chip">📚 ' + U.esc(ficha.coleccion) + '</span>' : '') +
           (autor ? '<span class="chip">✍ ' + U.esc(autor) + '</span>' : '') +
           (editorial ? '<span class="chip">🏢 ' + U.esc(editorial) + '</span>' : '') +
           (st.gasto ? '<span class="chip">💶 ' + U.euros(st.gasto) + '</span>' : '') +

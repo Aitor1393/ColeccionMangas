@@ -115,6 +115,31 @@ def extraer_numeros(pagina):
 ESTADOS = {'abierta': 'en-publicacion', 'completa': 'finalizada',
            'cancelada': 'cancelada', 'suspendida': 'pausada'}
 
+# El campo «Colección» de la ficha es la línea editorial, y suele —no siempre—
+# llevar dentro la demografía: «Shonen», «Panini Manga Shonen», «Shonen Manga»…
+# Pero también hay «Biblioteca Pachinco» o «RBA Coleccionables», que no dicen
+# nada de la demografía. Por eso se busca la palabra dentro del nombre y, si no
+# aparece ninguna, se deja sin asignar en vez de inventarla.
+DEMOGRAFIAS = [
+    (('shonen', 'shounen', 'shōnen'), 'shounen'),
+    (('shojo', 'shoujo', 'shōjo'), 'shoujo'),
+    (('seinen',), 'seinen'),
+    (('josei',), 'josei'),
+    (('kodomo', 'infantil'), 'kodomo'),
+]
+
+
+def demografia_de(coleccion):
+    """Deduce la demografía a partir del nombre de la línea editorial."""
+    texto = coleccion.lower()
+    texto = (texto.replace('ō', 'o').replace('á', 'a').replace('é', 'e')
+                  .replace('í', 'i').replace('ó', 'o').replace('ú', 'u'))
+    for variantes, valor in DEMOGRAFIAS:
+        for v in variantes:
+            if re.search(r'\b' + v.replace('ō', 'o') + r'\b', texto):
+                return valor
+    return ''
+
 
 def metadatos(pagina):
     """
@@ -136,8 +161,12 @@ def metadatos(pagina):
             estado = valor
             break
 
+    coleccion = campos.get('colección', '')
+
     return {
         'editorial': campos.get('editorial española', ''),
+        'coleccion': coleccion,
+        'demografia': demografia_de(coleccion),
         'formato': campos.get('formato', ''),
         'autor': campos.get('guion', '') or campos.get('dibujo', ''),
         'totalNumeros': int(total.group(1)) if total else 0,

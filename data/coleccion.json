@@ -1985,6 +1985,166 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "a9a3cdba-a5e4-4264-bf84-5d5ff65a72d5",
+      "titulo": "Death Note (Black Edition) (Castellano)",
+      "tituloAlt": "",
+      "autor": "Tsugumi Ohba",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "tomosTotales": 6,
+      "portada": "",
+      "sinopsis": "Death Note supuso toda una revolución en el manga: el protagonista, tras encontrar un objeto mágico de inmenso poder, lo utiliza no para hacer el bien… sino para convertirse en el gobernante supremo del mundo. Esta historia atípica, un verdadero thriller en viñetas, es un clásico moderno del manga, y como tal, ¡merece una edición a su altura! \n\nDe los autores de BAKUMAN. \n\nConsigue la serie completa de esta nueva edición en 6 volúmenes. \n\nLight Yagami es un empollón. Pero su vida da un vuelco cuando encuentra una libreta con el misterioso título Death Note en la portada y recibe la vista de un shinigami, quien le explica que la libreta sirve para matar a todo aquel cuyo nombre sea escrito en ella. A partir de entonces, Light utilizará la libreta para dar cuenta de cuanto criminal o espíritu maligno le pase por delante. Pero pronto sus actividades comenzarán a llamar la atención de la policía y otros investigadores.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "1674",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "846f45e6-fcdf-4b98-bf0f-4ffee420a0cf",
+      "titulo": "Kindergarten WARS",
+      "tituloAlt": "",
+      "autor": "You Chiba",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "tomosTotales": 18,
+      "portada": "",
+      "sinopsis": "¡LLEGA ESTA VIOLENTA COMEDIA ROMÁNTICA SITUADA EN LA GUARDERÍA MÁS SEGURA DEL MUNDO!\n\nRita, también conocida como “prisionera número 999”, es una exasesina legendaria que acaba de empezar a trabajar en una guardería a la que asisten los hijos de las personalidades más ricas e influyentes del mundo. Su trabajo consiste en proteger diariamente a estos niños de los crueles sicarios que intentan echarles las garras encima. Rita es la mejor en su trabajo, y es que a la hora de pelear, posee unas habilidades y una fuerza arrolladoras, pero esconde una debilidad secreta: le pierden los tíos buenos y se enamora enseguida cuando ve una cara bonita, aunque sea la de un sicario dispuesto a matar a alguno de sus pupilos. Por suerte, sus reflejos son más rápidos que su corazón y siempre acaba con la amenaza de turno.\n\nPero Rita lo tiene claro: está dispuesta por todos los medios a encontrar a su media naranja, incluso con este trabajo a tiempo completo a cuestas.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5517",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

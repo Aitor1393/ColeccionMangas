@@ -1,0 +1,358 @@
+#!/usr/bin/env python3
+"""
+Descarga la portada de cada serie desde la web de su editorial española.
+
+ListadoManga solo publica imágenes de unos 106x150 px y no tiene versión mayor,
+así que la rejilla de la biblioteca las amplía y se ven borrosas. Las editoriales
+sí publican la portada de su propia edición mucho más grande.
+
+Solo hace falta UNA imagen por serie: la rejilla enseña la portada de la serie,
+no la de cada tomo. Las de los tomos se ven a 52 px dentro de la ficha, donde las
+de ListadoManga ya sobran.
+
+Fuentes, elegidas por lo que cuestan y lo que cubren:
+
+  - Planeta Cómic: sus sitemaps de imágenes. Su robots.txt prohíbe el buscador,
+    pero publica sitemaps precisamente para esto. Dos peticiones traen las 66.000
+    entradas del catálogo, con título y portada original de 2000 px.
+  - Ivrea: su página de catálogo, que lista las 482 series de una vez.
+
+Norma queda fuera de momento: obliga a recorrer 63 páginas y sus series antiguas
+están descatalogadas, así que cubre bastante menos.
+
+Uso:
+    python3 scripts/actualizar_portadas.py [--forzar] [--verbose] [--dry-run]
+
+Pillow es opcional: si está, las imágenes se reducen a ANCHO px (una portada de
+Planeta pasa de ~800 KB a ~40 KB). Si no está, se guardan tal cual y se avisa.
+"""
+
+import argparse
+import difflib
+import html
+import json
+import os
+import re
+import sys
+import time
+import unicodedata
+import urllib.error
+import urllib.request
+
+RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+COLECCION = os.path.join(RAIZ, 'data', 'coleccion.json')
+CALENDARIO = os.path.join(RAIZ, 'data', 'calendario.json')
+SALIDA = os.path.join(RAIZ, 'data', 'portadas-editorial.json')
+DIR_IMG = os.path.join(RAIZ, 'data', 'portadas-serie')
+
+AGENTE = ('ColeccionMangas/1.0 (+https://github.com/Aitor1393/ColeccionMangas; '
+          'uso personal, una ejecución semanal)')
+PAUSA_PAGINA = 1.5     # entre peticiones a una web
+PAUSA_IMAGEN = 0.4     # entre descargas de imagen (van a CDN)
+TIEMPO_MAX = 90        # los sitemaps de Planeta pesan 20 MB
+ANCHO = 400            # suficiente para la rejilla en pantallas retina
+
+SITEMAPS_PLANETA = [
+    'https://www.planetadelibros.com/sitemap/sitemap-imagenes-catalogo-libros-1.xml',
+    'https://www.planetadelibros.com/sitemap/sitemap-imagenes-catalogo-libros-2.xml',
+]
+CATALOGO_IVREA = 'https://www.editorialivrea.com/ESP/catalogo/'
+
+
+def log(msg):
+    print(msg, flush=True)
+
+
+def pedir(url, binario=False, reintentos=3):
+    peticion = urllib.request.Request(url, headers={
+        'User-Agent': AGENTE,
+        'Accept-Encoding': 'gzip, deflate',
+    })
+    for intento in range(reintentos):
+        try:
+            with urllib.request.urlopen(peticion, timeout=TIEMPO_MAX) as r:
+                datos = r.read()
+                if r.headers.get('Content-Encoding') == 'gzip':
+                    import gzip
+                    datos = gzip.decompress(datos)
+                return datos if binario else datos.decode('utf-8', 'replace')
+        except Exception as e:
+            if intento == reintentos - 1:
+                raise
+            time.sleep(2 * (intento + 1))
+
+
+def normalizar(texto):
+    """Para comparar títulos: sin acentos, sin signos y en minúsculas."""
+    t = ''.join(c for c in unicodedata.normalize('NFD', str(texto).lower())
+                if unicodedata.category(c) != 'Mn')
+    return re.sub(r'[^a-z0-9]+', ' ', t).strip()
+
+
+# Marcas de edición que no distinguen una edición de otra: el idioma, y el
+# nombre de la editorial cuando lo usamos para desambiguar («Shaman King»
+# edición «Ivrea»). No cambian la portada.
+MARCAS_NEUTRAS = (
+    'castellano', 'catala', 'catalan', 'espanol', 'es',
+    'ivrea', 'planeta', 'planeta comic', 'norma', 'panini', 'distrito', 'ecc',
+)
+
+
+def claves_de(serie):
+    """
+    Cómo puede llamarse la serie en la web de la editorial, de más precisa a
+    menos.
+
+    La clave con edición va primero: Ivrea llama «Yu Yu Hakusho Edición
+    Kanzenban» a lo que aquí es «Yu Yu Hakusho» + edición «Edición Kanzenban».
+
+    Y cuando la edición dice algo de verdad —«Nueva Edición 3 en 1», «Legend»,
+    «Kanzenban»— el título a secas NO vale como respaldo: en Planeta «One Piece»
+    a secas es la edición normal, y traer esa portada para tu 3 en 1 sería poner
+    la de otro libro. Solo se admite el respaldo cuando la edición se limita al
+    idioma, que no cambia la imagen.
+    """
+    titulo = normalizar(serie.get('titulo', ''))
+    edicion = serie.get('edicion') or ''
+    # «Nueva Edición 3 en 1 · Castellano» → quitando el idioma queda algo; en
+    # «Castellano» a secas no queda nada.
+    resto = [p for p in re.split(r'[·,/]', edicion)
+             if p.strip() and normalizar(p) not in MARCAS_NEUTRAS]
+
+    claves = []
+    if edicion:
+        claves.append(normalizar(serie['titulo'] + ' ' + edicion))
+        if resto:
+            claves.append(normalizar(serie['titulo'] + ' ' + ' '.join(resto)))
+    claves.append(titulo)
+    # el bool dice si esa clave es el título pelado, que necesita comprobación
+    return [(c, c == titulo and bool(resto)) for c in dict.fromkeys(claves) if c]
+
+
+def buscar(indice, serie, total_lm=None, umbral=0.88):
+    """
+    Busca la serie en el índice de una editorial, de la clave más precisa a la
+    menos, y exacto antes que aproximado.
+
+    Cuando solo casa el título pelado y la serie tiene una edición de verdad, se
+    exige que cuadre el número de tomos. Sin esa comprobación, «One Piece» de tu
+    3 en 1 (39 tomos) se llevaría la portada de la edición normal, que en el
+    catálogo va sin total porque sigue abierta.
+    """
+    def valida(clave, entrada, generico):
+        if not generico:
+            return True
+        total = entrada.get('total')
+        if total and total_lm and total == total_lm:
+            return True
+        return False
+
+    for pasada in ('exacto', 'aprox'):
+        for clave, generico in claves_de(serie):
+            if pasada == 'exacto':
+                encontrada = clave if clave in indice else None
+            else:
+                cerca = difflib.get_close_matches(clave, list(indice), n=1, cutoff=umbral)
+                encontrada = cerca[0] if cerca else None
+            if not encontrada:
+                continue
+            entrada = indice[encontrada]
+            if not valida(clave, entrada, generico):
+                continue
+            como = pasada if pasada == 'exacto' else 'aprox (%s)' % encontrada[:40]
+            if generico:
+                como += ' · %d tomos, cuadra' % entrada['total']
+            return entrada['url'], como
+    return None, None
+
+
+# ---------------------------------------------------------------- Planeta
+
+def indice_planeta():
+    """{título normalizado: url de la portada del primer tomo}."""
+    indice = {}
+    for url in SITEMAPS_PLANETA:
+        log('  · descargando %s' % url.rsplit('/', 1)[-1])
+        xml = pedir(url)
+        entradas = re.findall(
+            r'image:loc><!\[CDATA\[([^\]]+)\]\].*?image:caption><!\[CDATA\[([^\]]*)\]\]',
+            xml, re.S)
+        for imagen, titulo in entradas:
+            # «Frieren nº 01/13» → («Frieren», tomo 1, 13 en total)
+            m = re.match(r'^(.*?)\s+n[ºo]\s*(\d+)\s*(?:/(\d+))?\s*$', titulo.strip(), re.I)
+            if not m:
+                continue
+            clave, numero = normalizar(m.group(1)), int(m.group(2))
+            total = int(m.group(3)) if m.group(3) else None
+            # Nos quedamos con el tomo más bajo: es la portada que representa la
+            # serie, y la misma que usa ListadoManga.
+            previo = indice.get(clave)
+            if previo is None or numero < previo['numero']:
+                indice[clave] = {'numero': numero, 'url': imagen, 'total': total}
+            elif total and not previo.get('total'):
+                previo['total'] = total
+        time.sleep(PAUSA_PAGINA)
+    return indice
+
+
+# ---------------------------------------------------------------- Ivrea
+
+def indice_ivrea():
+    """{título normalizado: url de la portada}."""
+    log('  · descargando el catálogo de Ivrea')
+    pagina = pedir(CATALOGO_IVREA)
+    indice = {}
+    for slug, titulo, resto in re.findall(
+            r'href="https://www\.editorialivrea\.com/ESP/titulo/([^"/]+)/"\s+title="([^"]*)"(.{0,900}?)</a>',
+            pagina, re.S):
+        m = re.search(r'data-src="([^"]+\.jpg)"', resto)
+        if not m:
+            continue
+        # El srcset da miniaturas; quitando el sufijo -175x238 sale la original.
+        original = re.sub(r'-\d+x\d+(\.jpg)$', r'\1', m.group(1))
+        # Ivrea no publica el total de tomos en el catálogo.
+        indice.setdefault(normalizar(html.unescape(titulo)), {'url': original, 'total': None})
+    return indice
+
+
+# ---------------------------------------------------------------- Imágenes
+
+def reducir(datos, ancho=ANCHO):
+    """Reduce la imagen si Pillow está disponible; si no, la deja como está."""
+    try:
+        from PIL import Image
+    except ImportError:
+        return datos, False
+    import io
+    img = Image.open(io.BytesIO(datos))
+    if img.width <= ancho:
+        return datos, False
+    alto = round(img.height * ancho / img.width)
+    img = img.convert('RGB').resize((ancho, alto), Image.LANCZOS)
+    salida = io.BytesIO()
+    img.save(salida, 'JPEG', quality=86, optimize=True)
+    return salida.getvalue(), True
+
+
+def main():
+    p = argparse.ArgumentParser(description=__doc__,
+                                formatter_class=argparse.RawDescriptionHelpFormatter)
+    p.add_argument('--forzar', action='store_true',
+                   help='vuelve a descargar aunque ya haya portada guardada')
+    p.add_argument('--verbose', action='store_true')
+    p.add_argument('--dry-run', action='store_true', help='no escribe nada')
+    args = p.parse_args()
+
+    with open(COLECCION, encoding='utf-8') as f:
+        coleccion = json.load(f)
+    calendario = {}
+    if os.path.exists(CALENDARIO):
+        with open(CALENDARIO, encoding='utf-8') as f:
+            calendario = json.load(f).get('colecciones', {})
+
+    previo = {}
+    if os.path.exists(SALIDA):
+        with open(SALIDA, encoding='utf-8') as f:
+            previo = json.load(f).get('portadas', {})
+
+    def editorial_de(s):
+        ficha = calendario.get(str(s.get('listadomangaId') or ''), {})
+        return s.get('editorial') or ficha.get('editorial') or ''
+
+    pendientes = {'Planeta': [], 'Ivrea': []}
+    for s in coleccion.get('series', []):
+        idlm = str(s.get('listadomangaId') or '')
+        if not idlm:
+            continue          # sin id no hay dónde guardarla de forma estable
+        ed = editorial_de(s)
+        cual = 'Planeta' if 'Planeta' in ed else ('Ivrea' if 'Ivrea' in ed else None)
+        if not cual:
+            continue
+        ruta = os.path.join(DIR_IMG, idlm + '.jpg')
+        if not args.forzar and idlm in previo and os.path.exists(ruta):
+            continue          # ya la tenemos
+        pendientes[cual].append(s)
+
+    total = sum(len(v) for v in pendientes.values())
+    if not total:
+        log('Todas las portadas de Planeta e Ivrea están al día.')
+        return 0
+
+    log('Portadas por descargar: Planeta %d · Ivrea %d' %
+        (len(pendientes['Planeta']), len(pendientes['Ivrea'])))
+
+    indices = {}
+    if pendientes['Planeta']:
+        indices['Planeta'] = indice_planeta()
+        log('  índice de Planeta: %d series' % len(indices['Planeta']))
+    if pendientes['Ivrea']:
+        indices['Ivrea'] = indice_ivrea()
+        log('  índice de Ivrea: %d series' % len(indices['Ivrea']))
+
+    if not args.dry_run:
+        os.makedirs(DIR_IMG, exist_ok=True)
+
+    portadas = dict(previo)
+    bajadas = fallos = 0
+    avisado_pillow = False
+
+    for cual, series in pendientes.items():
+        for s in series:
+            idlm = str(s['listadomangaId'])
+            ficha = calendario.get(idlm, {})
+            url, como = buscar(indices[cual], s, ficha.get('totalNumeros'))
+            if not url:
+                if args.verbose:
+                    log('  ✗ %-40s no está en el catálogo de %s' % (s['titulo'][:40], cual))
+                fallos += 1
+                continue
+            try:
+                datos = pedir(url, binario=True)
+                if not datos.startswith(b'\xff\xd8'):
+                    raise ValueError('no es un JPEG')
+                datos, reducida = reducir(datos)
+                if not reducida and not avisado_pillow:
+                    try:
+                        import PIL  # noqa: F401
+                    except ImportError:
+                        log('  ! Pillow no está instalado: las imágenes se guardan sin reducir')
+                        avisado_pillow = True
+                ruta_rel = 'data/portadas-serie/%s.jpg' % idlm
+                if not args.dry_run:
+                    with open(os.path.join(RAIZ, ruta_rel), 'wb') as f:
+                        f.write(datos)
+                portadas[idlm] = {
+                    'ruta': ruta_rel,
+                    'fuente': cual,
+                    'origen': url,
+                    'bytes': len(datos),
+                }
+                bajadas += 1
+                if args.verbose:
+                    log('  ✓ %-40s %s · %d KB · %s' %
+                        (s['titulo'][:40], cual, len(datos) // 1024, como))
+            except Exception as e:
+                fallos += 1
+                log('  ✗ %-40s error: %s' % (s['titulo'][:40], str(e)[:50]))
+            time.sleep(PAUSA_IMAGEN)
+
+    log('\nDescargadas %d · sin encontrar %d' % (bajadas, fallos))
+
+    if args.dry_run:
+        log('(--dry-run: no se ha escrito nada)')
+        return 0
+
+    with open(SALIDA, 'w', encoding='utf-8') as f:
+        json.dump({
+            'actualizado': time.strftime('%Y-%m-%d'),
+            'nota': 'Portadas de serie tomadas de la web de cada editorial. '
+                    'ListadoManga solo las tiene a 106x150.',
+            'portadas': portadas,
+        }, f, ensure_ascii=False, indent=1)
+        f.write('\n')
+    log('Escrito %s con %d portadas' % (os.path.relpath(SALIDA, RAIZ), len(portadas)))
+    return 0
+
+
+if __name__ == '__main__':
+    sys.exit(main())

@@ -1,0 +1,132 @@
+{
+ "actualizado": "2026-08-13",
+ "nota": "Portadas de serie tomadas de la web de cada editorial. ListadoManga solo las tiene a 106x150.",
+ "portadas": {
+  "4753": {
+   "ruta": "data/portadas-serie/4753.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/362/original/portada_inuyasha-n-0130_rumiko-takahashi_202309191333.jpg",
+   "bytes": 68394
+  },
+  "5620": {
+   "ruta": "data/portadas-serie/5620.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/402/original/portada_dragon-ball-legend-n-0103_akira-toriyama_202409271245.jpg",
+   "bytes": 62647
+  },
+  "1872": {
+   "ruta": "data/portadas-serie/1872.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/163/original/vinland-saga-n01_9788416051816.jpg",
+   "bytes": 73279
+  },
+  "3967": {
+   "ruta": "data/portadas-serie/3967.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/335/original/portada_haikyu-n-01__202105311344.jpg",
+   "bytes": 72343
+  },
+  "405": {
+   "ruta": "data/portadas-serie/405.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/57/original/portada_tutor-hitman-reborn-n-01_akira-amano_201412091609.jpg",
+   "bytes": 77394
+  },
+  "5395": {
+   "ruta": "data/portadas-serie/5395.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/408/original/407932_portada_gokurakugai-n-01-295a_blanca-mira_202407031145.jpg",
+   "bytes": 77413
+  },
+  "5903": {
+   "ruta": "data/portadas-serie/5903.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/422/original/421063_portada_kagurabachi-n-01_blanca-mira_202507071643.jpg",
+   "bytes": 94179
+  },
+  "5866": {
+   "ruta": "data/portadas-serie/5866.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/57/original/yu-gi-oh-n1_9788467465488.jpg",
+   "bytes": 64293
+  },
+  "4122": {
+   "ruta": "data/portadas-serie/4122.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/358/original/portada_stitch-y-el-samurai-n-0103_hiroto-wada_202210141354.jpg",
+   "bytes": 66240
+  },
+  "26": {
+   "ruta": "data/portadas-serie/26.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/240/original/portada_yaiba-n-0112-nueva-edicion_gosho-aoyama_201611301317.jpg",
+   "bytes": 43667
+  },
+  "1740": {
+   "ruta": "data/portadas-serie/1740.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/303/original/portada_magi-el-laberinto-de-la-magia-n-0137_shinobu-ohtaka_202009011455.jpg",
+   "bytes": 74685
+  },
+  "3700": {
+   "ruta": "data/portadas-serie/3700.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/07/shamanking_01.jpg",
+   "bytes": 108421
+  },
+  "6087": {
+   "ruta": "data/portadas-serie/6087.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2025/07/shamanflowers_01.jpg",
+   "bytes": 94641
+  },
+  "6086": {
+   "ruta": "data/portadas-serie/6086.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2025/07/shamanzero.jpg",
+   "bytes": 122702
+  },
+  "3780": {
+   "ruta": "data/portadas-serie/3780.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/07/yuyuhakusho01.jpg",
+   "bytes": 89075
+  },
+  "4936": {
+   "ruta": "data/portadas-serie/4936.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/07/DNAngel01.jpg",
+   "bytes": 79332
+  },
+  "1798": {
+   "ruta": "data/portadas-serie/1798.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/06/another1.jpg",
+   "bytes": 74678
+  },
+  "3029": {
+   "ruta": "data/portadas-serie/3029.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/06/another0.jpg",
+   "bytes": 48244
+  },
+  "6234": {
+   "ruta": "data/portadas-serie/6234.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2025/10/isekaisamurai_01.jpg",
+   "bytes": 131320
+  },
+  "4929": {
+   "ruta": "data/portadas-serie/4929.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/07/sanda01.jpg",
+   "bytes": 54569
+  },
+  "4655": {
+   "ruta": "data/portadas-serie/4655.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2024/06/basilisk01.jpg",
+   "bytes": 43092
+  }
+ }
+}

@@ -13,9 +13,14 @@
     return '<span class="chip ' + e.clase + '">' + e.etiqueta + '</span>';
   }
 
-  /** La portada propia manda; si no hay, la de la edición en ListadoManga. */
+  /**
+   * Por orden: la que hayas puesto tú, la grande de la editorial y, si no hay
+   * ninguna, la de ListadoManga.
+   */
   function urlPortada(serie) {
     if (serie.portada) return serie.portada;
+    var editorial = D.portadaEditorialDe(serie);
+    if (editorial) return editorial;
     var ficha = D.fichaLM(serie);
     return ficha && ficha.portada ? ficha.portada : '';
   }

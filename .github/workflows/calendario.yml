@@ -1,4 +1,4 @@
-name: Actualizar fechas desde ListadoManga
+name: Actualizar fechas y portadas
 
 on:
   schedule:
@@ -31,11 +31,20 @@ jobs:
       - name: Descargar las fechas
         run: python3 scripts/actualizar_calendario.py --verbose
 
+      # Pillow solo se usa para reducir las portadas de editorial: Planeta las
+      # sirve a 2000 px y sin reducir ocuparían 10 MB en el repo.
+      - name: Preparar Pillow
+        run: pip install --quiet Pillow
+
+      - name: Descargar las portadas de las editoriales
+        run: python3 scripts/actualizar_portadas.py --verbose
+
       - name: Publicar los cambios
         run: |
           # Las portadas van incluidas: calendario.json apunta a data/portadas/,
           # y si no se suben, la web queda con imágenes rotas.
-          git add -A data/calendario.json data/listadomanga-indice.json data/portadas
+          git add -A data/calendario.json data/listadomanga-indice.json data/portadas \
+                     data/portadas-editorial.json data/portadas-serie
           if git diff --cached --quiet; then
             echo "Sin cambios."
             exit 0

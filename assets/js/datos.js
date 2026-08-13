@@ -12,6 +12,7 @@
 
   var RUTA_JSON = 'data/coleccion.json';
   var RUTA_CALENDARIO = 'data/calendario.json';
+  var RUTA_PORTADAS = 'data/portadas-editorial.json';
   var CLAVE_LOCAL = 'cm:coleccion';
   var CLAVE_BASE = 'cm:base';       // sello de la versión publicada sobre la que editas
   var CLAVE_COPIA = 'cm:copia';     // copia de seguridad si el repo se adelanta
@@ -38,6 +39,10 @@
 
   // Fechas oficiales de ListadoManga, generadas por la GitHub Action semanal.
   D.calendario = { actualizado: null, colecciones: {}, sugerencias: {} };
+
+  // Portadas de serie traídas de la web de cada editorial: las de ListadoManga
+  // son de 106x150 y la rejilla las amplía. Va por id de colección.
+  D.portadasEditorial = {};
 
   var oyentes = [];
   D.alCambiar = function (fn) { oyentes.push(fn); };
@@ -165,8 +170,28 @@
         Object.keys(local).forEach(function (id) {
           if (!D.calendario.colecciones[id]) D.calendario.colecciones[id] = local[id];
         });
+      })
+      .then(cargarPortadas);
+  }
+
+  /** Portadas de editorial. Opcional: si falta el fichero, se sigue con las de LM. */
+  function cargarPortadas() {
+    return fetch(RUTA_PORTADAS, { cache: 'no-store' })
+      .then(function (r) { return r.ok ? r.json() : null; })
+      .catch(function () { return null; })
+      .then(function (json) {
+        if (json && json.portadas) D.portadasEditorial = json.portadas;
       });
   }
+
+  /**
+   * Portada grande de la serie, si su editorial la publica.
+   * Devuelve '' cuando no la hay, para que se use la de ListadoManga.
+   */
+  D.portadaEditorialDe = function (serie) {
+    var p = serie.listadomangaId && D.portadasEditorial[serie.listadomangaId];
+    return p && p.ruta ? p.ruta : '';
+  };
 
   D.cargar = function () {
     return cargarCalendario().then(function () {

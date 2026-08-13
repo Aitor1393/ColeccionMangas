@@ -1659,6 +1659,182 @@
       "descargado": "2026-08-13",
       "sinopsis": "TODO EL MANGA DE CULTO.\n\r\n\n\r\nFairy Tail te sumerge en un universo fantástico imaginado por el autor Hiro Mashima.\n\r\n\n\r\n¡Sal al encuentro de cazadores de dragones, constelacionistas, magos de hielo, metamórficos o caballeros! Un mundo peligroso y fascinante, con una formidable galería de personajes: Natsu Dragneel, Lucy Heartfilia, Happy, Erza Scarlet, Gray Fullbuster, y muchos más…\n\r\n\n\r\n¡Aquí tienes la colección completa de las aventuras de Fairy Tail en gran formato!",
       "portada": "data/portadas/3995.jpg"
+    },
+    "1674": {
+      "titulo": "Death Note (Black Edition) (Castellano)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1674",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2013-03-22",
+          "precio": 18.95,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2013-05-24",
+          "precio": 18.95,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2013-06-28",
+          "precio": 18.95,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2013-07-26",
+          "precio": 18.95,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2013-08-23",
+          "precio": 18.95,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2013-09-27",
+          "precio": 18.95,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Tsugumi Ohba",
+      "totalNumeros": 6,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Death Note supuso toda una revolución en el manga: el protagonista, tras encontrar un objeto mágico de inmenso poder, lo utiliza no para hacer el bien… sino para convertirse en el gobernante supremo del mundo. Esta historia atípica, un verdadero thriller en viñetas, es un clásico moderno del manga, y como tal, ¡merece una edición a su altura! \n\r\n\n\r\nDe los autores de BAKUMAN. \n\r\n\n\r\nConsigue la serie completa de esta nueva edición en 6 volúmenes. \n\r\n\n\r\nLight Yagami es un empollón. Pero su vida da un vuelco cuando encuentra una libreta con el misterioso título Death Note en la portada y recibe la vista de un shinigami, quien le explica que la libreta sirve para matar a todo aquel cuyo nombre sea escrito en ella. A partir de entonces, Light utilizará la libreta para dar cuenta de cuanto criminal o espíritu maligno le pase por delante. Pero pronto sus actividades comenzarán a llamar la atención de la policía y otros investigadores.",
+      "portada": "data/portadas/1674.jpg"
+    },
+    "5517": {
+      "titulo": "Kindergarten WARS",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5517",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-07-05",
+          "precio": 4.5,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-09-06",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-11-08",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-01-17",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2025-03-07",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-05-09",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2025-07-04",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2025-09-05",
+          "precio": 9.0,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2025-11-07",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-01-16",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2026-03-06",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2026-05-02",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2026-07-03",
+          "precio": 10.0,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "You Chiba",
+      "totalNumeros": 18,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡LLEGA ESTA VIOLENTA COMEDIA ROMÁNTICA SITUADA EN LA GUARDERÍA MÁS SEGURA DEL MUNDO!\n\r\n\n\r\nRita, también conocida como “prisionera número 999”, es una exasesina legendaria que acaba de empezar a trabajar en una guardería a la que asisten los hijos de las personalidades más ricas e influyentes del mundo. Su trabajo consiste en proteger diariamente a estos niños de los crueles sicarios que intentan echarles las garras encima. Rita es la mejor en su trabajo, y es que a la hora de pelear, posee unas habilidades y una fuerza arrolladoras, pero esconde una debilidad secreta: le pierden los tíos buenos y se enamora enseguida cuando ve una cara bonita, aunque sea la de un sicario dispuesto a matar a alguno de sus pupilos. Por suerte, sus reflejos son más rápidos que su corazón y siempre acaba con la amenaza de turno.\n\r\n\n\r\nPero Rita lo tiene claro: está dispuesta por todos los medios a encontrar a su media naranja, incluso con este trabajo a tiempo completo a cuestas.",
+      "portada": "data/portadas/5517.jpg"
     }
   },
   "sugerencias": {}

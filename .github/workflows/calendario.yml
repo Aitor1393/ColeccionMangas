@@ -33,12 +33,14 @@ jobs:
 
       - name: Publicar los cambios
         run: |
-          if git diff --quiet -- data/calendario.json data/listadomanga-indice.json; then
+          # Las portadas van incluidas: calendario.json apunta a data/portadas/,
+          # y si no se suben, la web queda con imágenes rotas.
+          git add -A data/calendario.json data/listadomanga-indice.json data/portadas
+          if git diff --cached --quiet; then
             echo "Sin cambios."
             exit 0
           fi
           git config user.name  "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add data/calendario.json data/listadomanga-indice.json
           git commit -m "Actualizar datos de ListadoManga"
           git push

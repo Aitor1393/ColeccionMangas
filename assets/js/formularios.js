@@ -171,18 +171,78 @@
       if (!c) return;
 
       campoId.value = c.id;
-      elegida.innerHTML = '✓ Se enlazará con <strong>' + U.esc(c.nombre) + '</strong>. ' +
-        'Las fechas llegarán en la próxima actualización automática.';
       resultados.innerHTML = '';
       caja.value = '';
 
       // Si aún no has puesto título, el de la edición es un buen punto de partida.
       var titulo = U.$('#cTitulo');
       if (!titulo.value.trim()) titulo.value = c.nombre;
+
+      var rellenados = precargarDesdeFicha(c.id);
+
+      if (rellenados === null) {
+        elegida.innerHTML = '✓ Se enlazará con <strong>' + U.esc(c.nombre) + '</strong>. ' +
+          'Aún no tenemos su ficha descargada: los datos y las fechas llegarán en la ' +
+          'próxima actualización automática.';
+      } else if (rellenados.length) {
+        elegida.innerHTML = '✓ <strong>' + U.esc(c.nombre) + '</strong> · rellenados desde la ficha: ' +
+          U.esc(rellenados.join(', ')) + '. Cámbialos si no cuadran con tu ejemplar.';
+      } else {
+        elegida.innerHTML = '✓ Enlazada con <strong>' + U.esc(c.nombre) + '</strong>. ' +
+          'No se ha tocado nada de lo que ya habías escrito.';
+      }
     });
 
     // Al editar, arrancamos con el título de la serie ya escrito en el buscador.
     if (serie && !serie.listadomangaId && serie.titulo) caja.value = serie.titulo;
+  }
+
+  /**
+   * Vuelca los datos de la ficha en el formulario al elegir una edición.
+   *
+   * Solo rellena lo que esté vacío o en su valor por defecto: si no, al
+   * guardar se escribían esos valores por defecto encima de lo que dice la
+   * ficha —una serie terminada se guardaba como «en publicación»—.
+   *
+   * @returns {string[]|null} campos rellenados, o null si no hay ficha aún.
+   */
+  function precargarDesdeFicha(idlm) {
+    var ficha = D.calendario.colecciones[idlm];
+    if (!ficha) return null;
+
+    var rellenados = [];
+
+    function texto(selector, valor, etiqueta) {
+      var campo = U.$(selector);
+      if (!valor || !campo || campo.value.trim()) return;
+      campo.value = valor;
+      rellenados.push(etiqueta);
+    }
+
+    texto('#cAutor', ficha.autor, 'autor');
+    texto('#cEditorial', ficha.editorial, 'editorial');
+    texto('#cSinopsis', ficha.sinopsis, 'sinopsis');
+
+    var totales = U.$('#cTotales');
+    if (ficha.totalNumeros && totales && !Number(totales.value)) {
+      totales.value = ficha.totalNumeros;
+      rellenados.push('tomos totales');
+    }
+
+    // En los desplegables, «por defecto» es el primer valor, no el vacío.
+    var demografia = U.$('#cDemografia');
+    if (ficha.demografia && demografia && demografia.value === 'otro') {
+      demografia.value = ficha.demografia;
+      rellenados.push('demografía');
+    }
+
+    var estado = U.$('#cEstado');
+    if (ficha.estado && estado && estado.value === 'en-publicacion') {
+      estado.value = ficha.estado;
+      if (ficha.estado !== 'en-publicacion') rellenados.push('estado');
+    }
+
+    return rellenados;
   }
 
   function rellenarHasta(serie, hasta) {

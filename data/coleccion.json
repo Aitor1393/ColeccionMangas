@@ -658,7 +658,944 @@
       "listadomangaId": "6242",
       "notas": "",
       "anadida": "2026-08-13",
-      "tomos": [],
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "39efcc45-62bb-4ae9-ae7b-8a37c923a3c7",
+      "titulo": "Rurouni Kenshin, La Epopeya del Guerrero Samurai (Maximum)",
+      "tituloAlt": "",
+      "autor": "Nobuhiro Watsuki",
+      "editorial": "Panini Manga",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "tomosTotales": 14,
+      "portada": "",
+      "sinopsis": "Un samurái vagabundo de la época Meiji intenta dejar atrás una carrera de asesino. Kenshin pone ahora su espada al servicio de los más débiles, una espada de filo invertido que le permite aplicar su poderosa y devastadora técnica de esgrima sin causar nuevas víctimas. A su alrededor pululan una serie de personajes inolvidables. Todos ellos gente sin familia ni hogar.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4066",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "921df649-bd36-4bcd-bbb3-ff5929f920bd",
+      "titulo": "Wistoria - Wand & Sword",
+      "tituloAlt": "",
+      "autor": "Fujino Oomori",
+      "editorial": "Pika Ediciones",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "tomosTotales": 16,
+      "portada": "",
+      "sinopsis": "Will Serfort es un aspirante a mago poco habitual: ¡no tiene ni una pizca de magia! Aun así está resuelto a convertirse en el hechicero más poderoso que ha salido de la prestigiosa Academia Mágica Regarden. ¿Podrán sus habilidades como guerrero ayudarlo a conseguir tal fin?",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5610",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "50b42fd0-f161-42d8-9be0-df15f3469e0e",
+      "titulo": "Frieren",
+      "tituloAlt": "",
+      "autor": "Kanehito Yamada",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "tomosTotales": 15,
+      "portada": "",
+      "sinopsis": "LLEGA UNO DE LOS MANGAS MÁS VENDIDOS EN JAPÓN\n\nFrieren es una elfa, y como para todos los de su raza, los años pasan en un suspiro… pero no es así para sus antiguos compañeros de batalla, a los que Frieren verá morir y envejecer. De repente Frieren se da cuenta de que pese a que la vida avanza a un ritmo más lento para ella, las experiencias con sus seres queridos se le escapan de las manos. Un aire nostálgico envuelve a este manga fantástico tan entrañable que ha vendido ya más de 2,5 millones de copias en Japón.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4099",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "0a64e58d-4fed-4c62-9db8-d962dea91300",
+      "titulo": "Shaman King (Ivrea)",
+      "tituloAlt": "",
+      "autor": "Hiroyuki Takei",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "tomosTotales": 17,
+      "portada": "",
+      "sinopsis": "Los shamanes son personas que pueden interactuar con los dioses, los espíritus y las almas de los difuntos. Yoh tiene ese poder y quiere convertirse en el rey shaman, alguien capaz de establecer contacto con los Grandes Espíritus, lo que le permitiría cambiar el mundo a su antojo. Para conseguirlo, tendrá que hacerse con un espíritu que lo acompañe y participar en el Shaman Fight: un torneo que se celebra cada 500 años, consiguiendo por el camino un buen grupo de aliados y amigos. Aunque también encontrará rivales de lo más variopintos y siniestros, algunos con intenciones bastante diferentes a las de Yoh.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3700",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 16,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 17,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "ef65148b-7530-452b-b7de-8de67889b104",
+      "titulo": "Shaman King: Flowers",
+      "tituloAlt": "",
+      "autor": "Hiroyuki Takei",
+      "editorial": "Editorial Ivrea",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "tomosTotales": 3,
+      "portada": "",
+      "sinopsis": "Una historia llena de acción protagonizada por Hana, el hijo de Yoh y Anna Asakura. 16 años después del torneo Shaman King, Hana ha crecido a la sombra de la leyenda de sus padres, convirtiéndolo en un chico vago y un poco bruto. Pero todo cambia cuando unos miembros de la familia Asakura vienen a tomar el lugar de él y su padre…",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6087",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "da777cc7-3098-4adb-b255-f712c1e219c4",
+      "titulo": "Shaman King: Zero",
+      "tituloAlt": "",
+      "autor": "Hiroyuki Takei",
+      "editorial": "Editorial Ivrea",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "tomosTotales": 1,
+      "portada": "",
+      "sinopsis": "En el tomo ZERO se recogen 6 capítulos, 5 de ellos contando las historias previas al torneo Shaman King de los personajes más destacados. Unos capítulos que nos hacen conocer más los queridos personajes que nos hicieron disfrutar en una de las series más míticas de finales de los 90. Una lectura agradable, que gana muchos enteros después de acabar la serie porque nos hace empatizar mucho más con todos ellos.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6086",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "e1062bb1-c81e-46f4-bc1f-ed2bfed882bb",
+      "titulo": "Yu Yu Hakusho (Edición Kanzenban)",
+      "tituloAlt": "",
+      "autor": "Yoshihiro Togashi",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "tomosTotales": 15,
+      "portada": "",
+      "sinopsis": "La historia la protagoniza Yusuke Urameshi, un gamberrete de instituto que muere atropellado al intentar salvar a un niño. Al parecer, el pequeño no iba a morir y desde el mundo espiritual se sorprenden de su altruismo.\n\nBotan, una shinigami, le lleva hasta Koenma, hijo del Enma, el gobernante del mundo espiritual. Como su karma está completamente equilibrado, no pueden enviarlo al cielo y al infierno a la vez, así que Koenma decide darle una segunda oportunidad haciéndole cierto encargo para que pueda recuperar su vida.\n\nViendo la nobleza de su carácter, Koenma le da la oportunidad de recuperar su cuerpo convirtiéndose en un detective espiritual que tendrá que resolver casos de lo más peliagudos hasta para los seres del mundo espiritual, enfrentándose a demonios y seres de lo más formidables. Su antiguo rival por ser el más malote del instituto, Kuwabara, acabará siendo un gran amigo, junto a los carismáticos aliados del mundo de los demonios, Kurama y Hiei.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3780",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "92079619-50d5-4302-bcbb-e2879dfc48a8",
+      "titulo": "D·N·Angel (Edición Kanzenban)",
+      "tituloAlt": "",
+      "autor": "Yukiru Sugisaki",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shoujo",
+      "estado": "finalizada",
+      "tomosTotales": 10,
+      "portada": "",
+      "sinopsis": "Daisuke Niwa es un chaval de 14 años que es rechazado por Risa Harada en el día de su cumpleaños por ser alguien demasiado normal. La decepción hace que pase de su fiesta de cumpleaños y se vaya a su cuarto.\n\nPero ahí la historia dará un vuelco cuando Daisuke sufra una transformación genética causada por su enamoramiento que lo transforma en el ladrón Kaito Dark. Este hecho sucede en los varones de la familia Niwa y la única manera de revertirlo es conquistar a su enamorada.\n\nPara complicar las cosas, Kaito se siente atraído por la hermana mayor de Risa; y, encima, su compañero de clase, Satoshi, sufre otro cambio genético, ¡que lo transforma en su archienemigo!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4936",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "d1a6e8d9-c2db-4af1-8606-4e959bb429bf",
+      "titulo": "Saiyuki: La edición definitiva (Distrito)",
+      "tituloAlt": "",
+      "autor": "Kazuya Minekura",
+      "editorial": "Distrito Manga",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "tomosTotales": 4,
+      "portada": "",
+      "sinopsis": "¡Un hombre, tres yokai y un dragón rumbo a la aventura! Regresa a España el shônen más gamberro y épico de los 90: ¡vuelve Saiyuki!\n\nGenjyo es un sacerdote budista en la ciudad de Tôgenkyô, que está siendo devastada por yokai que han desequilibrado el orden natural. Sus superiores lo envían en un viaje al lejano oeste para descubrir qué está causando este caos y cómo detenerlo. Sus compañeros son ni más ni menos que tres yokai con almas humanas, junto a los que Genjyo se topará con misterios y horrores a los que hacer frente mientras se pregunta si los humanos y los yokai realmente pueden convivir. ¡Comienza el viaje al oeste!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6335",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "998616a6-f1ed-4233-8b98-634e422dc1f2",
+      "titulo": "¡Zatch Bell! (Kanzenban)",
+      "tituloAlt": "",
+      "autor": "Makoto Raiku",
+      "editorial": "Kitsune Manga",
+      "demografia": "otro",
+      "estado": "finalizada",
+      "tomosTotales": 16,
+      "portada": "",
+      "sinopsis": "¡Vuelve uno de los mejores mangas de la historia! Ganador del premio Shogakukan al mejor manga shonen. \n\nKiyomaro no sabe qué hacer con su vida. Aburrido de la escuela y de todos los que le rodean, se limita a dejar pasar los días. Hasta que, sin previo aviso, su padre le envía un regalo de cumpleaños de lo más extraño: un niño llamado Zatch Bell que trae bajo el brazo un libro rojo aparentemente indescifrable… \n\n¿De dónde han salido? ¿Qué poder ocultan las páginas del libro? ¿Por qué de pronto le persiguen los problemas? Y, ¿cómo se convierte uno en un héroe de la noche a la mañana?\n\nLa batalla por ser el rey de los mamodos está a punto de empezar.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4581",
+      "notas": "",
+      "anadida": "2026-08-13",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     }
   ]

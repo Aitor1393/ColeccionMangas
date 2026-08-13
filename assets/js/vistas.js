@@ -342,21 +342,35 @@
 
       '<div class="tarjeta">' +
         '<h3>Guardar directamente en GitHub</h3>' +
-        '<p>Opcional. Con un token de acceso personal, el botón «Publicar» escribe el JSON en el repositorio y la web se actualiza sola en un minuto. ' +
-        'El token se queda solo en este navegador: no se sube a ningún sitio.</p>' +
+        '<p>Opcional. Con un token de acceso personal, el botón «Publicar» escribe el JSON en el repositorio y la web se actualiza sola en un minuto.</p>' +
+        '<p>El token se guarda <strong>cifrado con tu contraseña</strong> y solo en este navegador. ' +
+        'Sin la contraseña no se puede descifrar, así que nadie puede publicar aunque coja tu móvil ' +
+        'o mire el almacenamiento del navegador.</p>' +
+        (GH.configurado()
+          ? '<p class="ayuda">' + (GH.bloqueado()
+              ? '🔒 Hay un token guardado y bloqueado. Se te pedirá la contraseña al publicar.'
+              : '🔓 Token desbloqueado en esta pestaña.') + '</p>'
+          : '') +
         '<div class="campos">' +
           '<div><label for="ghOwner">Usuario u organización</label><input type="text" id="ghOwner" value="' + U.esc(cfg.owner) + '"></div>' +
           '<div><label for="ghRepo">Repositorio</label><input type="text" id="ghRepo" value="' + U.esc(cfg.repo) + '"></div>' +
           '<div><label for="ghRama">Rama</label><input type="text" id="ghRama" value="' + U.esc(cfg.rama) + '"></div>' +
           '<div class="campo--ancho">' +
             '<label for="ghToken">Token (fine-grained, permiso «Contents: Read and write» solo en este repo)</label>' +
-            '<input type="password" id="ghToken" placeholder="' + (cfg.token ? '•••••••• (guardado)' : 'github_pat_…') + '" autocomplete="off">' +
+            '<input type="password" id="ghToken" placeholder="' + (GH.configurado() ? '•••••••• (ya guardado, escribe uno nuevo para cambiarlo)' : 'github_pat_…') + '" autocomplete="off">' +
             '<div class="ayuda">Créalo en github.com → Settings → Developer settings → Personal access tokens → Fine-grained tokens.</div>' +
           '</div>' +
+          '<div><label for="ghClave">Contraseña para publicar</label>' +
+            '<input type="password" id="ghClave" autocomplete="new-password" placeholder="la que quieras"></div>' +
+          '<div><label for="ghClave2">Repite la contraseña</label>' +
+            '<input type="password" id="ghClave2" autocomplete="new-password"></div>' +
         '</div>' +
+        '<div class="ayuda">Apúntala donde no se te pierda: si la olvidas, hay que generar un token nuevo. ' +
+        'No se guarda en ningún sitio, ni siquiera cifrada.</div>' +
         '<div class="tarjeta__acciones">' +
           '<button class="btn btn--primario" data-accion="guardar-gh">Guardar y probar</button>' +
-          (cfg.token ? '<button class="btn btn--peligro" data-accion="olvidar-gh">Olvidar token</button>' : '') +
+          (GH.configurado() ? '<button class="btn btn--peligro" data-accion="olvidar-gh">Olvidar token</button>' : '') +
+          (GH.configurado() && !GH.bloqueado() ? '<button class="btn" data-accion="bloquear-gh">Bloquear ahora</button>' : '') +
         '</div>' +
       '</div>' +
 

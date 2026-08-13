@@ -254,24 +254,52 @@
 
     'guardar-gh': function () {
       var cfg = GH.config();
-      var token = U.$('#ghToken').value.trim();
-      GH.guardarConfig({
+      var datosRepo = {
         owner: U.$('#ghOwner').value.trim(),
         repo: U.$('#ghRepo').value.trim(),
         rama: U.$('#ghRama').value.trim() || 'main',
-        ruta: cfg.ruta,
-        token: token || cfg.token
-      });
-      if (!GH.configurado()) { U.aviso('Falta el token', 'error'); return; }
-      U.aviso('Comprobando el token…');
-      GH.probar()
-        .then(function (nombre) { U.aviso('Conectado con ' + nombre, 'ok'); App.render(); })
+        ruta: cfg.ruta
+      };
+      var token = U.$('#ghToken').value.trim();
+      var clave = U.$('#ghClave').value;
+      var clave2 = U.$('#ghClave2').value;
+
+      // Sin token nuevo, solo se actualizan los datos del repositorio.
+      if (!token) {
+        if (!GH.configurado()) { U.aviso('Falta el token', 'error'); return; }
+        GH.guardarRepo(datosRepo);
+        U.aviso('Repositorio actualizado', 'ok');
+        App.render();
+        return;
+      }
+
+      if (!C.disponible()) {
+        U.aviso('Este navegador no permite cifrar aquí (hace falta https).', 'error');
+        return;
+      }
+      if (clave.length < 8) { U.aviso('La contraseña debe tener al menos 8 caracteres', 'error'); return; }
+      if (clave !== clave2) { U.aviso('Las dos contraseñas no coinciden', 'error'); return; }
+
+      U.aviso('Cifrando y comprobando el token…');
+      GH.guardarConfig(datosRepo, token, clave)
+        .then(function () { return GH.probar(); })
+        .then(function (nombre) {
+          U.aviso('Conectado con ' + nombre + '. El token queda cifrado.', 'ok');
+          App.render();
+        })
         .catch(function (e) { U.aviso(e.message, 'error'); });
     },
 
     'olvidar-gh': function () {
+      if (!confirm('Se borrará el token cifrado de este navegador. ¿Seguro?')) return;
       GH.olvidar();
       U.aviso('Token olvidado');
+      App.render();
+    },
+
+    'bloquear-gh': function () {
+      GH.bloquear();
+      U.aviso('Bloqueado: se pedirá la contraseña al publicar');
       App.render();
     }
   };

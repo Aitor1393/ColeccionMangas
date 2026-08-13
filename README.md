@@ -57,8 +57,8 @@ Dos maneras, elige la que te resulte cómoda:
 Ajustes → *Descargar JSON* → sustituye `data/coleccion.json` en el repo y haz commit.
 
 **b) Publicar con un clic** (recomendado si vas a editar a menudo, sobre todo desde el móvil)
-Ajustes → *Guardar directamente en GitHub* → pega un token y listo. A partir de ahí,
-el botón **Publicar** escribe el JSON en el repositorio por ti.
+Ajustes → *Guardar directamente en GitHub* → pega un token y **elige una contraseña**.
+A partir de ahí, el botón **Publicar** te pide esa contraseña y escribe el JSON por ti.
 
 Para el token: GitHub → *Settings* → *Developer settings* → *Personal access tokens* →
 **Fine-grained tokens** → *Generate new token*, con:
@@ -66,8 +66,25 @@ Para el token: GitHub → *Settings* → *Developer settings* → *Personal acce
 - **Repository access**: solo `ColeccionMangas`
 - **Permissions → Repository permissions → Contents**: `Read and write`
 
-Nada más. El token se guarda **solo en el `localStorage` de tu navegador**, nunca en el repo.
-Si usas un ordenador compartido, usa la opción *Olvidar token* al terminar.
+Nada más. El token nunca se sube al repositorio.
+
+#### La contraseña de publicación
+
+El token se guarda **cifrado con una contraseña que eliges tú**, y solo en tu navegador:
+
+- Cifrado **AES-256-GCM** con clave derivada por **PBKDF2-SHA256** (250.000 iteraciones,
+  sal aleatoria por token). En `localStorage` solo queda el blob cifrado.
+- La contraseña **no se guarda en ninguna parte**, ni en el repo ni en el navegador. Se
+  pide al publicar y el token descifrado vive en memoria hasta que cierras la pestaña.
+- Si la olvidas no hay forma de recuperar el token: se genera otro y listo.
+
+Esto sí protege de verdad, a diferencia de una comprobación tipo «¿la contraseña es X?»:
+como el código de un sitio estático es público, esa comprobación se leería en el fuente y
+se saltaría desde la consola. Aquí, sin la contraseña no hay token, y sin token no se
+puede escribir en el repositorio.
+
+En Ajustes tienes *Bloquear ahora*, que olvida el token descifrado sin borrarlo, y
+*Olvidar token*, que borra el cifrado de este navegador.
 
 ---
 

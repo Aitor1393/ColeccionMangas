@@ -307,7 +307,11 @@
         ? '<div class="tarjeta" style="margin-top:16px">' +
             '<h3>Guardar en GitHub</h3>' +
             '<p>Se escribirá <code>' + U.esc(cfg.ruta) + '</code> en <code>' + U.esc(cfg.owner + '/' + cfg.repo) + '</code> (rama <code>' + U.esc(cfg.rama) + '</code>).</p>' +
-            '<label for="pMensaje">Mensaje del commit</label>' +
+            (GH.bloqueado()
+              ? '<label for="pClave">🔒 Contraseña</label>' +
+                '<input type="password" id="pClave" autocomplete="current-password" placeholder="la contraseña con la que cifraste el token">'
+              : '<p class="ayuda">🔓 Token desbloqueado en esta pestaña.</p>') +
+            '<label for="pMensaje" style="margin-top:10px">Mensaje del commit</label>' +
             '<input type="text" id="pMensaje" value="Actualizar colección de mangas">' +
             '<div class="tarjeta__acciones">' +
               '<button class="btn btn--primario" id="btnCommit">Publicar en GitHub</button>' +
@@ -329,9 +333,26 @@
 
     U.$('#btnCommit').addEventListener('click', function () {
       var boton = this;
+      var campoClave = U.$('#pClave');
+
+      if (GH.bloqueado() && (!campoClave || !campoClave.value)) {
+        U.aviso('Escribe la contraseña', 'error');
+        if (campoClave) campoClave.focus();
+        return;
+      }
+
       boton.disabled = true;
-      boton.textContent = 'Publicando…';
-      GH.publicar(D.exportar(), U.$('#pMensaje').value.trim())
+      boton.textContent = GH.bloqueado() ? 'Descifrando…' : 'Publicando…';
+
+      var desbloqueo = GH.bloqueado()
+        ? GH.desbloquear(campoClave.value)
+        : Promise.resolve();
+
+      desbloqueo
+        .then(function () {
+          boton.textContent = 'Publicando…';
+          return GH.publicar(D.exportar(), U.$('#pMensaje').value.trim());
+        })
         .then(function (urlCommit) {
           D.marcarPublicada();
           U.$('#pResultado').innerHTML = '<div class="tarjeta"><h3>✓ Publicado</h3>' +

@@ -149,9 +149,16 @@ por eso un valor *«Según la edición»*, que es el que trae por defecto.
 El botón *«Usar los datos de esta edición»* solo aparece cuando un valor tuyo choca con
 la ficha, para resolverlo de un clic.
 
-Las portadas se **descargan una vez** a `data/portadas/` y se sirven desde tu propio repo,
-para no cargar el ancho de banda de ListadoManga en cada visita. Vienen a 105×150 px, que
-es el tamaño que publican; si quieres una mejor, pega una URL en *URL de la portada*.
+**Cada tomo tiene su propia portada** en la cuadrícula del detalle: los que tienes salen a
+todo color, con el borde ámbar o verde según los hayas leído, y los que te faltan en gris.
+
+Las portadas se **descargan una vez** a `data/portadas/<colección>/<nº>.jpg` y se sirven
+desde tu propio repo, para no cargar el ancho de banda de ListadoManga en cada visita.
+Vienen a 105×150 px, que es el tamaño que publican; ocupan unos 10 KB cada una. Si un tomo
+no tiene imagen, esa casilla se queda con el número, como antes.
+
+Para la portada de la serie se usa la del primer tomo. Si prefieres otra, pega una URL en
+*URL de la portada* y esa manda.
 
 > No se usa MangaDex: su API solo envía cabeceras CORS a su propio dominio, así que un
 > sitio estático como este nunca puede consultarla desde el navegador.

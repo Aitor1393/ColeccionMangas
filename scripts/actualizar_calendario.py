@@ -98,6 +98,7 @@ def extraer_numeros(pagina):
             continue
         numero = int(coincidencia.group(1))
 
+        imagen = re.search(r'<img class="portada"[^>]*>', bloque)
         precio = re.search(r'(\d+,\d{2})\s*€', bloque)
         fecha_enlace = re.search(
             r'(?:(\d{1,2})\s*)?<a href="novedades\.php\?mes=(\d+)&(?:amp;)?ano=(\d+)"', bloque)
@@ -114,7 +115,8 @@ def extraer_numeros(pagina):
 
         registro = {'numero': numero, 'fecha': fecha,
                     'precio': float(precio.group(1).replace(',', '.')) if precio else None,
-                    'aproximada': aproximada}
+                    'aproximada': aproximada,
+                    'portada': url_de_imagen(imagen.group(0)) if imagen else ''}
 
         previo = porNumero.get(numero)
         if previo is None or (previo['fecha'] is None and fecha is not None):
@@ -198,26 +200,37 @@ def extraer_sinopsis(pagina):
     return re.sub(r'\n{3,}', '\n\n', texto).strip()
 
 
+def url_de_imagen(etiqueta):
+    """
+    URL real de un <img class="portada">. Cuando ListadoManga censura una
+    portada, sirve un marcador en src y deja el fichero real en data-portada.
+    """
+    real = re.search(r'data-portada="([^"]+)"', etiqueta)
+    if real:
+        return 'https://static.listadomanga.com/' + real.group(1)
+    src = re.search(r'src="([^"]+)"', etiqueta)
+    return src.group(1) if src else ''
+
+
 def extraer_portada(pagina):
     """
     URL de la portada del primer número. Cuando ListadoManga censura una
     portada, sirve un marcador en src y deja el fichero real en data-portada.
     """
     for etiqueta in re.findall(r'<img class="portada"[^>]*>', pagina):
-        real = re.search(r'data-portada="([^"]+)"', etiqueta)
-        if real:
-            return 'https://static.listadomanga.com/' + real.group(1)
-        src = re.search(r'src="([^"]+)"', etiqueta)
-        if src:
-            return src.group(1)
+        url = url_de_imagen(etiqueta)
+        if url:
+            return url
     return None
 
 
-def guardar_portada(url, idlm):
+PAUSA_IMAGEN = 0.2   # las imágenes salen de un CDN estático, no de la web
+
+def guardar_portada(url, idlm, numero=None):
     """
-    Descarga la portada una sola vez y la deja en data/portadas/.
-    Se sirve desde el propio repositorio para no cargar el ancho de banda
-    de ListadoManga en cada visita a la web.
+    Descarga una portada una sola vez y la deja en data/portadas/<coleccion>/.
+    Se sirven desde el propio repositorio para no cargar el ancho de banda de
+    ListadoManga cada vez que alguien abre la web.
     Devuelve la ruta relativa, o None si no se pudo.
     """
     if not url:
@@ -226,9 +239,10 @@ def guardar_portada(url, idlm):
     if extension not in ('.jpg', '.jpeg', '.png', '.webp', '.gif'):
         extension = '.jpg'
 
-    carpeta = os.path.join(RAIZ, 'data', 'portadas')
-    destino = os.path.join(carpeta, idlm + extension)
-    relativa = 'data/portadas/' + idlm + extension
+    nombre = ('%d' % numero) if numero is not None else 'serie'
+    carpeta = os.path.join(RAIZ, 'data', 'portadas', idlm)
+    destino = os.path.join(carpeta, nombre + extension)
+    relativa = 'data/portadas/' + idlm + '/' + nombre + extension
 
     if os.path.exists(destino):
         return relativa
@@ -249,7 +263,7 @@ def guardar_portada(url, idlm):
         os.makedirs(carpeta)
     with open(destino, 'wb') as f:
         f.write(datos)
-    log('    portada guardada (%.0f KB)' % (len(datos) / 1024.0))
+    time.sleep(PAUSA_IMAGEN)
     return relativa
 
 
@@ -340,7 +354,24 @@ def main():
         ficha.update(metadatos(pagina))
         ficha['descargado'] = time.strftime('%Y-%m-%d')
         ficha['sinopsis'] = extraer_sinopsis(pagina)
-        ficha['portada'] = guardar_portada(extraer_portada(pagina), idlm) or ''
+
+        # Una portada por tomo, para que la cuadrícula se vea de verdad.
+        bajadas = 0
+        for n in numeros:
+            if not n.get('portada'):
+                continue
+            local = guardar_portada(n['portada'], idlm, n['numero'])
+            if local:
+                if not os.path.exists(os.path.join(RAIZ, local.replace('/', os.sep))):
+                    bajadas += 1
+                n['portada'] = local
+            else:
+                n['portada'] = ''
+
+        # La de la serie es la del primer número que tenga imagen.
+        conPortada = [n['portada'] for n in numeros if n.get('portada')]
+        ficha['portada'] = conPortada[0] if conPortada else ''
+        log('    %d portadas de tomo' % len(conPortada))
         colecciones[idlm] = ficha
         log('    %d números (%d con fecha) · %s · %s' % (
             len(numeros), len(conFecha), ficha['editorial'] or 'editorial ?',

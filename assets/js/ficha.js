@@ -145,7 +145,10 @@
         numero: numero,
         fecha: fecha,
         precio: precio ? Number(precio[1] + '.' + precio[2]) : null,
-        aproximada: aproximada
+        aproximada: aproximada,
+        // En directo se apunta a la imagen de ListadoManga; cuando el Action
+        // la publique, pasará a ser la copia de data/portadas/.
+        portada: urlDeImagen(celda.querySelector('img.portada'))
       };
 
       // La ficha repite números en «portadas alternativas»: nos quedamos con
@@ -171,13 +174,16 @@
     return copia.textContent.replace(/\n{3,}/g, '\n\n').trim();
   }
 
-  function portada(doc) {
-    var img = doc.querySelector('img.portada');
+  /** URL real de una imagen: si está censurada, va en data-portada. */
+  function urlDeImagen(img) {
     if (!img) return '';
-    // Si está censurada, el fichero real va en data-portada.
     var real = img.getAttribute('data-portada');
     if (real) return 'https://static.listadomanga.com/' + real;
     return img.getAttribute('src') || '';
+  }
+
+  function portada(doc) {
+    return urlDeImagen(doc.querySelector('img.portada'));
   }
 
   /** Convierte el HTML de una ficha en la misma estructura que calendario.json. */

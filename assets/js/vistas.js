@@ -434,8 +434,16 @@
       var titulo = 'Tomo ' + i + ': no lo tienes';
       if (t && t.leido) { clase += ' tomo--leido'; titulo = 'Tomo ' + i + ': leído'; }
       else if (t && t.tengo) { clase += ' tomo--tengo'; titulo = 'Tomo ' + i + ': lo tienes, sin leer'; }
+
+      var nLM = D.numeroLM(serie, i);
+      var imagen = nLM && nLM.portada;
+      if (imagen) clase += ' tomo--conPortada';
+
       celdas += '<button class="' + clase + '" data-accion="ciclar-tomo" data-serie-id="' + U.esc(serie.id) + '" ' +
-        'data-tomo="' + i + '" title="' + U.esc(titulo) + ' (clic para cambiar)">' + i + '</button>';
+        'data-tomo="' + i + '" title="' + U.esc(titulo) + ' (clic para cambiar)">' +
+        (imagen ? '<img src="' + U.esc(imagen) + '" alt="" loading="lazy">' : '') +
+        '<span class="tomo__numero">' + i + '</span>' +
+        '</button>';
     }
 
     /* --- Bloque de ListadoManga --- */

@@ -243,13 +243,41 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
   aspect-ratio: 1; border-radius: 8px; border: 1px solid var(--borde); background: var(--panel-2);
   color: var(--texto-3); font-size: .85rem; font-weight: 700; cursor: pointer;
   display: flex; align-items: center; justify-content: center; position: relative;
-  transition: var(--transicion); font-family: inherit;
+  transition: var(--transicion); font-family: inherit; padding: 0; overflow: hidden;
 }
-.tomo:hover { transform: scale(1.07); border-color: var(--texto-2); }
+.tomo:hover { transform: scale(1.07); border-color: var(--texto-2); z-index: 1; }
 .tomo--tengo { background: color-mix(in srgb, var(--ambar) 22%, var(--panel)); border-color: color-mix(in srgb, var(--ambar) 55%, transparent); color: var(--texto); }
 .tomo--leido { background: color-mix(in srgb, var(--verde) 24%, var(--panel)); border-color: color-mix(in srgb, var(--verde) 60%, transparent); color: var(--texto); }
 .tomo--futuro { border-style: dashed; opacity: .65; }
 .tomo__punto { position: absolute; top: 3px; right: 4px; font-size: .55rem; }
+
+/* Con portada: la imagen manda y el estado se lee por el borde y el color */
+.tomos:has(.tomo--conPortada) { grid-template-columns: repeat(auto-fill, minmax(66px, 1fr)); }
+.tomo--conPortada { aspect-ratio: 2 / 3; border-width: 2px; }
+.tomo--conPortada img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  transition: var(--transicion);
+}
+/* Los que no tienes se ven apagados: se distinguen de un vistazo */
+.tomo--conPortada:not(.tomo--tengo):not(.tomo--leido) img { filter: grayscale(1) brightness(.55); }
+.tomo--conPortada:not(.tomo--tengo):not(.tomo--leido):hover img { filter: grayscale(.4) brightness(.8); }
+.tomo--conPortada.tomo--tengo { border-color: var(--ambar); }
+.tomo--conPortada.tomo--leido { border-color: var(--verde); }
+
+.tomo__numero {
+  position: absolute; left: 0; bottom: 0; z-index: 1;
+  min-width: 20px; padding: 1px 5px;
+  border-radius: 0 7px 0 6px;
+  background: rgba(8, 10, 14, .8); color: #fff;
+  font-size: .72rem; line-height: 1.5; backdrop-filter: blur(2px);
+}
+/* Sin portada, el número es el contenido: va centrado y sin fondo */
+.tomo:not(.tomo--conPortada) .tomo__numero {
+  position: static; background: none; color: inherit; font-size: .85rem;
+  backdrop-filter: none; padding: 0;
+}
+.tomo--conPortada.tomo--leido .tomo__numero { background: color-mix(in srgb, var(--verde) 82%, #000); }
+.tomo--conPortada.tomo--tengo .tomo__numero { background: color-mix(in srgb, var(--ambar) 82%, #000); color: #1a1200; }
 
 .leyenda { display: flex; gap: 14px; flex-wrap: wrap; font-size: .76rem; color: var(--texto-3); margin-top: 12px; }
 .leyenda i { display: inline-block; width: 11px; height: 11px; border-radius: 3px; margin-right: 5px; vertical-align: -1px; border: 1px solid var(--borde); }

@@ -52,6 +52,7 @@
       id: s.id || U.id(),
       titulo: s.titulo || 'Sin título',
       tituloAlt: s.tituloAlt || '',
+      edicion: s.edicion || '',       // «Maximum», «Kanzenban»… fuera del título
       autor: s.autor || '',
       editorial: s.editorial || '',
       demografia: s.demografia || 'otro',
@@ -408,6 +409,36 @@
     return D.calendario.colecciones[serie.listadomangaId] || null;
   };
 
+  /**
+   * Edición efectiva: la tuya si la has escrito, si no la que se deduzca del
+   * nombre que ListadoManga le da a la colección.
+   */
+  D.edicionDe = function (serie) {
+    if (serie.edicion) return serie.edicion;
+    var ficha = D.fichaLM(serie);
+    return ficha && ficha.titulo ? U.partirTitulo(ficha.titulo).edicion : '';
+  };
+
+  /** Nombre completo «Bleach (Maximum)»: para avisos, exportar y buscar. */
+  D.nombreCompleto = function (serie) {
+    var ed = D.edicionDe(serie);
+    return serie.titulo + (ed ? ' (' + ed + ')' : '');
+  };
+
+  /**
+   * ¿Hay otra serie con este mismo nombre a secas?
+   *
+   * Los listados enseñan solo el nombre, pero si tienes dos ediciones de la
+   * misma obra quedarían dos tarjetas idénticas; en ese caso —y solo en ese—
+   * se añade la edición para poder distinguirlas.
+   */
+  D.tituloAmbiguo = function (serie) {
+    var clave = U.normalizar(serie.titulo);
+    return D.coleccion.series.some(function (o) {
+      return o.id !== serie.id && U.normalizar(o.titulo) === clave;
+    });
+  };
+
   /** Estado efectivo: el tuyo si lo has puesto, si no el de la edición. */
   D.estadoDe = function (serie) {
     if (serie.estado) return serie.estado;
@@ -627,10 +658,13 @@
   D.importar = function (bruto, modo) {
     var entrante = D.normalizarColeccion(bruto);
     if (modo === 'fusionar') {
+      // La clave lleva la edición: si tienes dos ediciones de la misma obra,
+      // el nombre a secas las confundiría y una pisaría a la otra.
+      var claveDe = function (s) { return U.normalizar(s.titulo + '|' + (s.edicion || '')); };
       var porTitulo = {};
-      D.coleccion.series.forEach(function (s) { porTitulo[U.normalizar(s.titulo)] = s; });
+      D.coleccion.series.forEach(function (s) { porTitulo[claveDe(s)] = s; });
       entrante.series.forEach(function (s) {
-        var clave = U.normalizar(s.titulo);
+        var clave = claveDe(s);
         if (porTitulo[clave]) {
           var i = D.coleccion.series.indexOf(porTitulo[clave]);
           s.id = porTitulo[clave].id;

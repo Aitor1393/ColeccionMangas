@@ -132,7 +132,8 @@
     'borrar-serie': function (el) {
       var s = D.serie(el.dataset.serieId);
       if (!s) return;
-      if (!confirm('¿Eliminar «' + s.titulo + '» y todos sus tomos de la colección?')) return;
+      // Con la edición delante: si tienes dos de la misma obra, que se vea cuál se borra.
+      if (!confirm('¿Eliminar «' + D.nombreCompleto(s) + '» y todos sus tomos de la colección?')) return;
       D.borrarSerie(s.id);
       serieAbierta = null;
       U.cerrarModal();

@@ -40,7 +40,7 @@
   F.serie = function (serie) {
     var edicion = !!serie;
     var s = serie || {
-      titulo: '', autor: '', editorial: '', demografia: 'otro', estado: '',
+      titulo: '', edicion: '', autor: '', editorial: '', demografia: 'otro', estado: '',
       tomosTotales: 0, portada: '', sinopsis: '', notas: '', etiquetas: []
     };
 
@@ -48,8 +48,13 @@
       '<h2>' + (edicion ? 'Editar serie' : 'Añadir serie') + '</h2>' +
       '<form id="formSerie">' +
         '<div class="campos">' +
-          '<div class="campo--ancho"><label for="cTitulo">Título *</label>' +
-            '<input type="text" id="cTitulo" required value="' + U.esc(s.titulo) + '"></div>' +
+          '<div><label for="cTitulo">Título *</label>' +
+            '<input type="text" id="cTitulo" required value="' + U.esc(s.titulo) + '" ' +
+            'placeholder="Solo el nombre de la obra"></div>' +
+          '<div><label for="cEdicion">Edición</label>' +
+            '<input type="text" id="cEdicion" value="' + U.esc(s.edicion || '') + '" ' +
+            'placeholder="Maximum, Kanzenban, Integral…">' +
+            '<div class="ayuda">En los listados se ve solo el título; la edición sale al abrir la serie.</div></div>' +
           '<div><label for="cAutor">Autor</label><input type="text" id="cAutor" value="' + U.esc(s.autor) + '"></div>' +
           '<div><label for="cEditorial">Editorial</label><input type="text" id="cEditorial" value="' + U.esc(s.editorial) + '" placeholder="Planeta, Norma, Ivrea…"></div>' +
           '<div><label for="cDemografia">Demografía</label><select id="cDemografia">' + opcionesDemografia(s.demografia) + '</select></div>' +
@@ -92,6 +97,7 @@
       e.preventDefault();
       var datos = {
         titulo: U.$('#cTitulo').value.trim(),
+        edicion: U.$('#cEdicion').value.trim(),
         autor: U.$('#cAutor').value.trim(),
         editorial: U.$('#cEditorial').value.trim(),
         demografia: U.$('#cDemografia').value,
@@ -180,9 +186,13 @@
       resultados.innerHTML = '';
       caja.value = '';
 
-      // Si aún no has puesto título, el de la edición es un buen punto de partida.
+      // El nombre de la colección en ListadoManga trae obra y edición juntas
+      // («Bleach (Maximum)»): se reparten en sus dos campos.
+      var partes = U.partirTitulo(c.nombre);
       var titulo = U.$('#cTitulo');
-      if (!titulo.value.trim()) titulo.value = c.nombre;
+      var campoEdicion = U.$('#cEdicion');
+      if (!titulo.value.trim()) titulo.value = partes.titulo;
+      if (campoEdicion && !campoEdicion.value.trim()) campoEdicion.value = partes.edicion;
 
       var rellenados = precargarDesdeFicha(c.id);
 

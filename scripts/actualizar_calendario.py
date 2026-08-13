@@ -398,10 +398,14 @@ def main():
 
     # 2) Series sin enlazar: proponemos candidatos para que sea fácil rellenar el ID.
     for serie in sinId:
+        # La edición va en su propio campo, pero para buscar en ListadoManga
+        # interesa el nombre entero: allí las colecciones se llaman
+        # «Bleach (Maximum)», no «Bleach» a secas.
         titulo = serie.get('titulo', '').strip()
         if not titulo:
             continue
-        candidatos = buscar(titulo)
+        edicion = (serie.get('edicion') or '').strip()
+        candidatos = buscar('%s %s' % (titulo, edicion) if edicion else titulo)
         if candidatos:
             sugerencias[serie['id']] = candidatos
             log('· %s → sugerencias: %s' % (titulo, ', '.join(

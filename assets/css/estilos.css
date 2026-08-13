@@ -169,6 +169,8 @@ main { padding: 28px 0 60px; }
 .serie__barra { position: absolute; left: 0; right: 0; bottom: 0; height: 4px; background: rgba(0, 0, 0, .45); }
 .serie__barra span { display: block; height: 100%; background: var(--acento); }
 .serie__titulo { font-weight: 600; font-size: .92rem; line-height: 1.3; }
+/* Solo aparece cuando dos series comparten nombre y hay que distinguirlas */
+.serie__edicion { font-size: .74rem; color: var(--acento); line-height: 1.3; margin-top: 1px; }
 .serie__meta { font-size: .78rem; color: var(--texto-3); display: flex; gap: 6px; flex-wrap: wrap; }
 
 /* ───────────── Filtros ───────────── */
@@ -273,7 +275,9 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .detalle__portada { width: 100%; border-radius: var(--radio-s); border: 1px solid var(--borde); aspect-ratio: 2/3; object-fit: cover; background: var(--panel-2); }
 .detalle__lateral { display: flex; flex-direction: column; gap: 12px; }
 .detalle h2 { font-size: 1.45rem; }
-.detalle__meta { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 14px; }
+.detalle__edicion { font-size: .88rem; color: var(--acento); margin: 2px 0 0; }
+.detalle__alt { font-size: .84rem; color: var(--texto-3); margin: 2px 0 0; }
+.detalle__meta { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0 14px; }
 .detalle__sinopsis { color: var(--texto-2); font-size: .9rem; max-height: 160px; overflow-y: auto; margin-bottom: 18px; }
 
 .progreso { background: var(--panel-2); border-radius: 99px; height: 8px; overflow: hidden; margin: 6px 0 4px; }

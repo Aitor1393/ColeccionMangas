@@ -37,6 +37,26 @@
     return '<div class="fila__portada"></div>';
   }
 
+  /**
+   * Cómo se llama una serie en los listados: solo el nombre de la obra.
+   * La edición únicamente se añade si hay otra serie con el mismo nombre y
+   * sin ella no habría forma de saber cuál es cuál.
+   */
+  function nombreListado(serie) {
+    var ed = D.edicionDe(serie);
+    return serie.titulo + (ed && D.tituloAmbiguo(serie) ? ' (' + ed + ')' : '');
+  }
+  V.nombreListado = nombreListado;
+
+  /**
+   * Antepone «Edición» salvo que el propio nombre ya lo diga: así sale
+   * «Edición Maximum» pero también «Edición Grimorio» o «La edición
+   * definitiva», sin repetir la palabra.
+   */
+  function etiquetaEdicion(valor) {
+    return /edici[oó]n|edition/i.test(valor) ? valor : 'Edición ' + valor;
+  }
+
   V.tarjetaSerie = function (serie) {
     var st = D.statsSerie(serie);
     var insignia = '';
@@ -61,6 +81,10 @@
         '</div>' +
         '<div>' +
           '<div class="serie__titulo">' + U.esc(serie.titulo) + '</div>' +
+          // La edición vive en la ficha, no en el listado; solo asoma aquí
+          // cuando sin ella habría dos tarjetas con el mismo nombre.
+          (D.tituloAmbiguo(serie) && D.edicionDe(serie)
+            ? '<div class="serie__edicion">' + U.esc(D.edicionDe(serie)) + '</div>' : '') +
           '<div class="serie__meta">' +
             '<span>' + (st.tengo
               ? U.plural(st.tengo, 'tomo') + (st.totalDeclarado ? ' de ' + st.totalDeclarado : '')
@@ -163,7 +187,7 @@
     return '<div class="fila" data-serie="' + U.esc(item.serie.id) + '">' +
       miniPortada(item.serie) +
       '<div class="fila__cuerpo">' +
-        '<div class="fila__titulo">' + U.esc(item.serie.titulo) + ' <span class="chip">Tomo ' + s.numero + '</span></div>' +
+        '<div class="fila__titulo">' + U.esc(nombreListado(item.serie)) + ' <span class="chip">Tomo ' + s.numero + '</span></div>' +
         '<div class="fila__sub">' + detalles.join(' · ') + '</div>' +
       '</div>' +
       '<div class="fila__fecha">' +
@@ -193,7 +217,7 @@
     };
 
     var barra = '<div class="filtros">' +
-      '<div class="buscador"><input type="text" id="fTexto" placeholder="Buscar por título, autor, editorial o etiqueta…" value="' + U.esc(f.texto) + '"></div>' +
+      '<div class="buscador"><input type="text" id="fTexto" placeholder="Buscar por título, edición, autor, editorial o etiqueta…" value="' + U.esc(f.texto) + '"></div>' +
       '<select id="fTenencia">' +
         '<option value=""' + (f.tenencia ? '' : ' selected') + '>Comprados y leídos</option>' +
         '<option value="comprados"' + (f.tenencia === 'comprados' ? ' selected' : '') + '>Solo comprados</option>' +
@@ -237,7 +261,9 @@
       if (f.editorial && D.editorialDe(s) !== f.editorial) return false;
       if (f.soloPendientes && D.statsSerie(s).pendientes === 0) return false;
       if (texto) {
-        var heno = U.normalizar([s.titulo, s.tituloAlt, s.autor, s.editorial, s.etiquetas.join(' ')].join(' '));
+        // Se sigue pudiendo buscar «maximum» aunque ya no salga en el título.
+        var heno = U.normalizar([s.titulo, s.tituloAlt, D.edicionDe(s), s.autor,
+          s.editorial, s.etiquetas.join(' ')].join(' '));
         if (heno.indexOf(texto) === -1) return false;
       }
       return true;
@@ -284,7 +310,7 @@
       return '<div class="fila" data-serie="' + U.esc(g.serie.id) + '">' +
         miniPortada(g.serie) +
         '<div class="fila__cuerpo">' +
-          '<div class="fila__titulo">' + U.esc(g.serie.titulo) + '</div>' +
+          '<div class="fila__titulo">' + U.esc(nombreListado(g.serie)) + '</div>' +
           '<div class="fila__sub">Tomos ' + nums.join(', ') + '</div>' +
         '</div>' +
         '<div class="fila__acciones">' +
@@ -667,6 +693,10 @@
 
       '<div>' +
         '<h2>' + U.esc(serie.titulo) + '</h2>' +
+        // Aquí es donde se dice qué edición es la que tienes.
+        (D.edicionDe(serie)
+          ? '<p class="detalle__edicion">' + U.esc(etiquetaEdicion(D.edicionDe(serie))) + '</p>' : '') +
+        (serie.tituloAlt ? '<p class="detalle__alt">' + U.esc(serie.tituloAlt) + '</p>' : '') +
         '<div class="detalle__meta">' +
           chipEstado(serie) +
           (demografia ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[demografia] || demografia) + '</span>' : '') +

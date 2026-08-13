@@ -31,6 +31,31 @@
     return n + ' ' + (n === 1 ? singular : (plural || singular + 's'));
   };
 
+  /**
+   * Separa el nombre de una edición de ListadoManga en obra + edición.
+   *
+   * Allí las colecciones se llaman «Bleach (Maximum)» o «Death Note
+   * (Black Edition) (Castellano)»: el nombre de la obra y, entre paréntesis
+   * al final, de qué edición se trata. Nos quedamos con el nombre a secas
+   * para los listados y guardamos la edición aparte.
+   *
+   * Solo mira los paréntesis del final: «¡Zatch Bell!» o «Akame ga Kill! 1,5»
+   * salen intactos, y un paréntesis en mitad del título tampoco se toca.
+   *
+   * @returns {{titulo: string, edicion: string}}
+   */
+  U.partirTitulo = function (nombre) {
+    var resto = String(nombre || '').trim();
+    var partes = [];
+    var m;
+    // De derecha a izquierda: «A (B) (C)» deja titulo «A» y edición «B · C».
+    while ((m = /^(.*?)\s*\(([^()]+)\)$/.exec(resto)) && m[1].trim()) {
+      partes.unshift(m[2].trim());
+      resto = m[1].trim();
+    }
+    return { titulo: resto, edicion: partes.join(' · ') };
+  };
+
   /* ---------- Identificadores ---------- */
 
   U.id = function () {

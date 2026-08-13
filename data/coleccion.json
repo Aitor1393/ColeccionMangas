@@ -3210,7 +3210,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3218,7 +3218,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3226,7 +3226,7 @@
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3234,7 +3234,7 @@
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3242,7 +3242,7 @@
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3250,7 +3250,7 @@
         {
           "numero": 6,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3258,7 +3258,7 @@
         {
           "numero": 7,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3266,7 +3266,7 @@
         {
           "numero": 8,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3274,7 +3274,7 @@
         {
           "numero": 9,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3282,7 +3282,7 @@
         {
           "numero": 10,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3290,7 +3290,7 @@
         {
           "numero": 11,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3298,7 +3298,7 @@
         {
           "numero": 12,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3306,7 +3306,7 @@
         {
           "numero": 13,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3314,7 +3314,7 @@
         {
           "numero": 14,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -4404,81 +4404,81 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 6,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 7,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 8,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 9,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         },
         {
           "numero": 10,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 5.99,
           "notas": ""
         }
       ],
@@ -4508,7 +4508,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4516,7 +4516,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4524,7 +4524,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4532,7 +4532,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4540,7 +4540,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4548,7 +4548,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4556,7 +4556,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4564,7 +4564,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4572,7 +4572,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4580,7 +4580,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4588,7 +4588,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4596,7 +4596,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4604,7 +4604,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4612,7 +4612,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4620,7 +4620,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4628,7 +4628,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4636,7 +4636,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4644,7 +4644,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4652,7 +4652,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         },
         {
@@ -4660,7 +4660,7 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
-          "precio": null,
+          "precio": 7.45,
           "notas": ""
         }
       ],
@@ -4675,7 +4675,7 @@
       "editorial": "",
       "demografia": "otro",
       "estado": "",
-      "abandonada": false,
+      "abandonada": true,
       "tomosTotales": 0,
       "portada": "",
       "sinopsis": "",
@@ -4911,7 +4911,7 @@
       "editorial": "",
       "demografia": "otro",
       "estado": "",
-      "abandonada": false,
+      "abandonada": true,
       "tomosTotales": 0,
       "portada": "",
       "sinopsis": "",

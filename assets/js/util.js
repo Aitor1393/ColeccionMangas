@@ -117,15 +117,20 @@
     return Math.round((d - U.hoy()) / 86400000);
   };
 
-  /** "en 12 días" / "mañana" / "hace 3 días" */
+  /** "en 12 días" / "mañana" / "hace 3 meses" / "hace 13 años" */
   U.cuando = function (iso) {
     var dias = U.diasHasta(iso);
     if (dias === null) return 'sin fecha';
     if (dias === 0) return 'hoy';
     if (dias === 1) return 'mañana';
     if (dias === -1) return 'ayer';
-    if (dias > 1) return 'en ' + dias + ' días';
-    return 'hace ' + Math.abs(dias) + ' días';
+    // Pasados unos meses, contar días deja de decir nada: «hace 4794 días»
+    // no se entiende y «hace 13 años» sí.
+    var n = Math.abs(dias);
+    var cantidad = n < 60 ? U.plural(n, 'día')
+      : n < 365 ? U.plural(Math.round(n / 30), 'mes', 'meses')
+      : U.plural(Math.round(n / 365), 'año');
+    return (dias > 0 ? 'en ' : 'hace ') + cantidad;
   };
 
   /* ---------- Números ---------- */

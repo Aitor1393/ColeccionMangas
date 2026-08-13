@@ -150,13 +150,14 @@
       '</section>';
     }
 
-    // Salidas ya publicadas que aún no tienes
-    var pasadas = D.publicacionesPasadas().slice(0, 5);
-    if (pasadas.length) {
+    // Lo que ya está en las tiendas y todavía te falta: un avance de Compras.
+    var pendientesCompra = D.pendientesDeCompra();
+    if (pendientesCompra.length) {
       html += '<section class="seccion">' +
         '<div class="seccion__titulo"><h2>Ya a la venta y aún no lo tienes</h2>' +
-        '<span class="contador">' + pasadas.length + '</span></div>' +
-        '<div class="lista">' + pasadas.map(filaSalida).join('') + '</div>' +
+        '<span class="contador">' + pendientesCompra.length + '</span>' +
+        '<a href="#/compras" class="btn btn--pequeno btn--fantasma" style="margin-left:auto">Próximas compras</a></div>' +
+        '<div class="lista">' + pendientesCompra.slice(0, 5).map(comoSalida).map(filaSalida).join('') + '</div>' +
       '</section>';
     }
 
@@ -174,6 +175,14 @@
 
     return html;
   };
+
+  /** Un pendiente de compra con la forma que espera filaSalida. */
+  function comoSalida(t) {
+    return {
+      serie: t.serie, dias: U.diasHasta(t.fecha), origen: t.origen,
+      salida: { numero: t.numero, fecha: t.fecha, precio: t.precio, nota: '' }
+    };
+  }
 
   function filaSalida(item) {
     var pasada = item.dias < 0;
@@ -325,13 +334,110 @@
   };
 
   /* ============================================================
+     Vista: Próximas compras
+     ============================================================ */
+  V.modoCompras = U.leerLocal('cm:vistaCompras', 'series');
+
+  V.compras = function () {
+    var tomos = D.pendientesDeCompra();
+    var grupos = D.pendientesDeCompraPorSerie();
+    var coste = tomos.reduce(function (n, t) { return n + t.precio; }, 0);
+    var sinPrecio = tomos.filter(function (t) { return !t.precio; }).length;
+
+    var html = '<div class="vista__cabecera"><div class="crece">' +
+      '<h1>Próximas compras</h1>' +
+      '<p>Tomos que ya están a la venta y todavía no tienes, salieran cuando salieran. ' +
+      'Ponlos en el orden en que quieras comprarlos; al marcar uno como comprado ' +
+      'desaparece de aquí.</p>' +
+    '</div>' +
+    '<div class="conmutador">' +
+      '<button class="' + (V.modoCompras === 'series' ? 'activo' : '') + '" ' +
+        'data-accion="modo-compras" data-modo="series">Por serie</button>' +
+      '<button class="' + (V.modoCompras === 'tomos' ? 'activo' : '') + '" ' +
+        'data-accion="modo-compras" data-modo="tomos">Tomo a tomo</button>' +
+    '</div></div>';
+
+    if (!tomos.length) {
+      return html + '<div class="vacio"><h3>No te falta nada a la venta</h3>' +
+        '<p>Tienes todos los tomos que han salido ya. Lo que aún no se ha publicado ' +
+        'lo verás en <a href="#/calendario">Próximas publicaciones</a>.</p></div>';
+    }
+
+    var modo = V.modoCompras;
+    var hayOrden = ((D.coleccion.compras && D.coleccion.compras[modo]) || []).length > 0;
+
+    html += '<div class="resumen-compras">' +
+      '<span><strong>' + U.plural(tomos.length, 'tomo') + '</strong> en ' +
+        U.plural(grupos.length, 'serie') + '</span>' +
+      (coste ? '<span>≈ <strong>' + U.euros(coste) + '</strong> en total' +
+        (sinPrecio ? ' · ' + U.plural(sinPrecio, 'tomo sin precio') : '') + '</span>' : '') +
+      (hayOrden ? '<button class="btn btn--pequeno btn--fantasma" data-accion="orden-automatico" ' +
+        'data-modo="' + modo + '">Volver al orden automático</button>'
+        : '<span class="ayuda">Ordenados por el que lleva más tiempo esperando</span>') +
+    '</div>';
+
+    var filas = modo === 'series' ? grupos.map(filaCompraSerie) : tomos.map(filaCompraTomo);
+    return html + '<div class="lista lista--ordenable">' + filas.join('') + '</div>';
+  };
+
+  /** Flechas para colocar un elemento donde quieras en la lista de compra. */
+  function flechasOrden(clave, i, total) {
+    return '<div class="orden">' +
+      '<button class="orden__btn" data-accion="mover-compra" data-clave="' + U.esc(clave) + '" ' +
+        'data-dir="-1"' + (i === 0 ? ' disabled' : '') + ' aria-label="Comprar antes">▲</button>' +
+      '<span class="orden__num">' + (i + 1) + '</span>' +
+      '<button class="orden__btn" data-accion="mover-compra" data-clave="' + U.esc(clave) + '" ' +
+        'data-dir="1"' + (i === total - 1 ? ' disabled' : '') + ' aria-label="Comprar después">▼</button>' +
+    '</div>';
+  }
+
+  function filaCompraSerie(g, i, todos) {
+    var nums = g.tomos.map(function (t) {
+      return '<button class="tomo-chip' + (t.leido ? ' tomo-chip--leido' : '') + '" ' +
+        'data-accion="comprado" data-serie-id="' + U.esc(g.serie.id) + '" data-tomo="' + t.numero + '" ' +
+        'title="Marcar el tomo ' + t.numero + ' como comprado">' + t.numero + '</button>';
+    }).join('');
+
+    return '<div class="fila fila--compra">' +
+      flechasOrden(g.clave, i, todos.length) +
+      miniPortada(g.serie) +
+      '<div class="fila__cuerpo">' +
+        '<div class="fila__titulo" data-serie="' + U.esc(g.serie.id) + '">' +
+          U.esc(nombreListado(g.serie)) + '</div>' +
+        '<div class="fila__sub">' + U.plural(g.tomos.length, 'tomo') + ' a la venta' +
+          (g.coste ? ' · ≈ ' + U.euros(g.coste) : '') +
+          ' · el más antiguo salió ' + U.cuando(g.tomos[0].fecha) + '</div>' +
+        '<div class="tomo-chips">' + nums + '</div>' +
+      '</div>' +
+    '</div>';
+  }
+
+  function filaCompraTomo(t, i, todos) {
+    return '<div class="fila fila--compra">' +
+      flechasOrden(t.clave, i, todos.length) +
+      miniPortada(t.serie) +
+      '<div class="fila__cuerpo">' +
+        '<div class="fila__titulo" data-serie="' + U.esc(t.serie.id) + '">' +
+          U.esc(nombreListado(t.serie)) + ' <span class="chip">Tomo ' + t.numero + '</span>' +
+          (t.leido ? ' <span class="chip chip--verde">✓ leído</span>' : '') + '</div>' +
+        '<div class="fila__sub">Salió ' + U.cuando(t.fecha) + ' · ' + U.fechaCorta(t.fecha) +
+          (t.precio ? ' · ≈ ' + U.euros(t.precio) : ' · sin precio') + '</div>' +
+      '</div>' +
+      '<div class="fila__acciones">' +
+        '<button class="btn btn--pequeno" data-accion="comprado" ' +
+          'data-serie-id="' + U.esc(t.serie.id) + '" data-tomo="' + t.numero + '">Comprado</button>' +
+      '</div>' +
+    '</div>';
+  }
+
+  /* ============================================================
      Vista: Calendario de próximas publicaciones
      ============================================================ */
   V.modoProximas = U.leerLocal('cm:vistaProximas', 'lista');
 
   V.calendario = function () {
     var proximas = D.proximasPublicaciones();
-    var pasadas = D.publicacionesPasadas();
+    var pendientesCompra = D.pendientesDeCompra();
 
     var html = '<div class="vista__cabecera"><div class="crece">' +
       '<h1>Próximas publicaciones</h1>' +
@@ -347,11 +453,14 @@
         'data-accion="modo-proximas" data-modo="calendario">Calendario</button>' +
     '</div></div>';
 
-    if (pasadas.length) {
-      html += '<section class="seccion">' +
-        '<div class="seccion__titulo"><h2>Ya a la venta</h2><span class="contador">' + pasadas.length + '</span></div>' +
-        '<div class="lista">' + pasadas.map(filaSalida).join('') + '</div>' +
-      '</section>';
+    // Aquí solo va lo que está por salir. Lo que ya salió y te falta tiene su
+    // propia sección, así que se enlaza en vez de repetir la lista entera.
+    if (pendientesCompra.length) {
+      html += '<div class="resumen-compras">' +
+        '<span>Te faltan <strong>' + U.plural(pendientesCompra.length, 'tomo') +
+          '</strong> que ya están a la venta.</span>' +
+        '<a href="#/compras" class="btn btn--pequeno" style="margin-left:auto">Ver próximas compras</a>' +
+      '</div>';
     }
 
     if (!proximas.length) {

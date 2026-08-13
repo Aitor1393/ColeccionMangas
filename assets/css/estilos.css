@@ -223,6 +223,40 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .fila__fecha strong { display: block; font-size: .95rem; }
 .fila__fecha span { font-size: .76rem; color: var(--texto-3); }
 
+/* ───────────── Próximas compras ───────────── */
+.resumen-compras {
+  display: flex; align-items: center; gap: 16px; flex-wrap: wrap;
+  background: var(--panel); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: 10px 14px; margin-bottom: 16px; font-size: .85rem; color: var(--texto-2);
+}
+.resumen-compras .ayuda { margin-left: auto; }
+.resumen-compras .btn { margin-left: auto; }
+
+.fila--compra { align-items: flex-start; }
+.fila--compra .fila__titulo[data-serie] { cursor: pointer; }
+.fila--compra .fila__titulo[data-serie]:hover { color: var(--acento); }
+
+/* Columna de flechas para decidir qué compras antes */
+.orden { display: flex; flex-direction: column; align-items: center; gap: 2px; flex: none; padding-top: 2px; }
+.orden__btn {
+  background: none; border: 1px solid var(--borde); color: var(--texto-3);
+  border-radius: 6px; width: 26px; height: 20px; line-height: 1; font-size: .6rem;
+  cursor: pointer; transition: var(--transicion);
+}
+.orden__btn:hover:not(:disabled) { border-color: var(--acento); color: var(--acento); }
+.orden__btn:disabled { opacity: .25; cursor: default; }
+.orden__num { font-size: .72rem; font-weight: 700; color: var(--texto-3); }
+
+/* Los tomos que faltan, uno por pastilla: al pulsarla queda comprado */
+.tomo-chips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 8px; }
+.tomo-chip {
+  min-width: 32px; padding: 4px 8px; border-radius: 7px; cursor: pointer;
+  background: var(--panel-2); border: 1px solid var(--borde); color: var(--texto-2);
+  font-size: .8rem; font-weight: 600; transition: var(--transicion);
+}
+.tomo-chip:hover { border-color: var(--verde); color: var(--verde); }
+.tomo-chip--leido { border-style: dashed; border-color: color-mix(in srgb, var(--verde) 45%, transparent); }
+
 .mes { margin-bottom: 26px; }
 .mes__titulo {
   font-size: .8rem; font-weight: 700; text-transform: uppercase; letter-spacing: .08em;

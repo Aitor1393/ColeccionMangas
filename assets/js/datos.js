@@ -104,6 +104,13 @@
           ? D.AJUSTES_POR_DEFECTO.mostrarGasto
           : !!ajustes.mostrarGasto
       },
+      // Orden de compra que has decidido tú, uno por cada forma de mirar la
+      // lista: por series enteras o tomo a tomo. Se guarda en la colección
+      // porque es una decisión tuya, no una preferencia del navegador.
+      compras: {
+        series: Array.isArray((bruto.compras || {}).series) ? (bruto.compras || {}).series.slice() : [],
+        tomos: Array.isArray((bruto.compras || {}).tomos) ? (bruto.compras || {}).tomos.slice() : []
+      },
       series: (Array.isArray(bruto.series) ? bruto.series : []).map(D.normalizarSerie)
     };
   };
@@ -615,19 +622,124 @@
     return lista.sort(function (a, b) { return a.dias - b.dias; });
   };
 
-  /** Salidas cuya fecha ya pasó y que aún no has marcado como compradas. */
-  D.publicacionesPasadas = function () {
+  /* ---------- Próximas compras ---------- */
+
+  /**
+   * Tomos que ya están a la venta y todavía no tienes, sin límite de fecha.
+   *
+   * «Ya ha salido» es tener fecha y que esa fecha haya pasado. Los tomos sin
+   * fecha NO cuentan: en ListadoManga viven bajo «Números no editados», o sea
+   * anunciados pero aún sin publicar, y meterlos aquí llenaría la lista de
+   * cosas que no se pueden comprar.
+   *
+   * En cuanto marcas un tomo como que lo tienes, deja de aparecer.
+   */
+  D.pendientesDeCompra = function () {
+    var hoy = U.isoHoy();
     var lista = [];
+
     D.coleccion.series.forEach(function (s) {
-      s.proximas.forEach(function (p) {
-        var d = U.diasHasta(p.fecha);
-        if (d === null || d >= 0) return;
-        var t = D.tomo(s, p.numero, false);
-        if (t && t.tengo) return;
-        lista.push({ serie: s, salida: p, dias: d, origen: 'manual' });
-      });
+      var vistos = {};
+
+      function anadir(numero, fecha, precio, origen) {
+        if (!fecha || fecha > hoy || vistos[numero]) return;
+        var t = D.tomo(s, numero, false);
+        if (t && t.tengo) return;                  // ya lo tienes: fuera
+        vistos[numero] = true;
+        // El precio sale de la misma regla que el resto de la web: el que
+        // hayas escrito tú, y si no el PVP menos tu descuento habitual.
+        var p = D.precioDe(s, t || { numero: numero, precio: null });
+        lista.push({
+          serie: s, numero: numero, fecha: fecha, origen: origen,
+          precio: p.valor, precioManual: p.manual, pvp: p.pvp,
+          leido: !!(t && t.leido),                 // lo leíste prestado y no lo tienes
+          clave: s.id + '#' + numero
+        });
+      }
+
+      // Lo que apuntes a mano manda sobre la ficha.
+      s.proximas.forEach(function (p) { anadir(p.numero, p.fecha, null, 'manual'); });
+      D.numerosLM(s).forEach(function (n) { anadir(n.numero, n.fecha, n.precio, 'listadomanga'); });
     });
-    return lista.sort(function (a, b) { return b.dias - a.dias; });
+
+    return D.ordenarCompras(lista, 'tomos', function (a, b) {
+      // Por defecto, lo que lleva más tiempo a la venta va primero.
+      return String(a.fecha).localeCompare(String(b.fecha)) || a.numero - b.numero;
+    });
+  };
+
+  /** Los mismos tomos, agrupados por serie. */
+  D.pendientesDeCompraPorSerie = function () {
+    var grupos = [];
+    var indice = {};
+
+    D.pendientesDeCompra().forEach(function (item) {
+      if (!indice[item.serie.id]) {
+        indice[item.serie.id] = { serie: item.serie, clave: item.serie.id, tomos: [], coste: 0 };
+        grupos.push(indice[item.serie.id]);
+      }
+      var g = indice[item.serie.id];
+      g.tomos.push(item);
+      g.coste += item.precio;
+    });
+
+    grupos.forEach(function (g) {
+      g.tomos.sort(function (a, b) { return a.numero - b.numero; });
+    });
+
+    return D.ordenarCompras(grupos, 'series', function (a, b) {
+      // Sin orden tuyo, primero la serie con el tomo más antiguo esperando.
+      return String(a.tomos[0].fecha).localeCompare(String(b.tomos[0].fecha));
+    });
+  };
+
+  /**
+   * Aplica tu orden manual: lo que hayas colocado va primero y en tu orden;
+   * lo que aún no has tocado va detrás, con el criterio por defecto.
+   */
+  D.ordenarCompras = function (lista, modo, porDefecto) {
+    var orden = (D.coleccion.compras && D.coleccion.compras[modo]) || [];
+    var puesto = {};
+    orden.forEach(function (clave, i) { puesto[clave] = i; });
+
+    return lista.slice().sort(function (a, b) {
+      var pa = puesto[a.clave], pb = puesto[b.clave];
+      if (pa !== undefined && pb !== undefined) return pa - pb;
+      if (pa !== undefined) return -1;
+      if (pb !== undefined) return 1;
+      return porDefecto(a, b);
+    });
+  };
+
+  /**
+   * Sube o baja un elemento en tu orden de compra.
+   *
+   * El orden guardado solo tiene lo que has movido, así que antes de mover
+   * hay que fijar la lista tal y como se está viendo; si no, subir el tercero
+   * lo colocaría por delante de dos elementos que ni siquiera estaban puestos.
+   */
+  D.moverCompra = function (modo, clave, direccion) {
+    var visible = (modo === 'series' ? D.pendientesDeCompraPorSerie() : D.pendientesDeCompra())
+      .map(function (x) { return x.clave; });
+
+    var i = visible.indexOf(clave);
+    var j = i + direccion;
+    if (i === -1 || j < 0 || j >= visible.length) return false;
+
+    visible[i] = visible[j];
+    visible[j] = clave;
+
+    if (!D.coleccion.compras) D.coleccion.compras = { series: [], tomos: [] };
+    D.coleccion.compras[modo] = visible;
+    D.guardar();
+    return true;
+  };
+
+  /** Olvida el orden manual y vuelve al automático. */
+  D.limpiarOrdenCompras = function (modo) {
+    if (!D.coleccion.compras) return;
+    D.coleccion.compras[modo] = [];
+    D.guardar();
   };
 
   /** Series empezadas y no terminadas de leer, para "continuar leyendo". */

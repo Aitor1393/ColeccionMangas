@@ -5,7 +5,7 @@
   'use strict';
 
   var App = {};
-  var VISTAS = ['resumen', 'biblioteca', 'pendientes', 'calendario', 'ajustes'];
+  var VISTAS = ['resumen', 'biblioteca', 'pendientes', 'compras', 'calendario', 'ajustes'];
   var vistaActual = 'resumen';
   var serieAbierta = null;
 
@@ -45,6 +45,7 @@
     switch (vistaActual) {
       case 'biblioteca': contenido = V.biblioteca(); break;
       case 'pendientes': contenido = V.pendientes(); break;
+      case 'compras': contenido = V.compras(); break;
       case 'calendario': contenido = V.calendario(); break;
       case 'ajustes': contenido = V.ajustes(); break;
       default: contenido = V.resumen();
@@ -238,6 +239,29 @@
       U.guardarLocal('cm:vistaProximas', V.modoProximas);
       App.render();
       window.scrollTo(0, 0);
+    },
+
+    'modo-compras': function (el) {
+      V.modoCompras = el.dataset.modo;
+      U.guardarLocal('cm:vistaCompras', V.modoCompras);
+      App.render();
+      window.scrollTo(0, 0);
+    },
+
+    'mover-compra': function (el) {
+      // El scroll se conserva a mano: al repintar la lista entera el navegador
+      // salta arriba y perderías de vista lo que acabas de mover.
+      var y = window.scrollY;
+      if (D.moverCompra(V.modoCompras, el.dataset.clave, Number(el.dataset.dir))) {
+        App.render();
+        window.scrollTo(0, y);
+      }
+    },
+
+    'orden-automatico': function (el) {
+      D.limpiarOrdenCompras(el.dataset.modo);
+      U.aviso('Orden automático restaurado', 'ok');
+      App.render();
     },
 
     'ver-dia': function (el) {

@@ -151,10 +151,11 @@ main { padding: 28px 0 60px; }
 .stat__icono { position: absolute; right: 12px; top: 12px; font-size: 1.3rem; opacity: .35; }
 
 /* ───────────── Rejilla de series ───────────── */
-/* 132px de mínimo dejan la portada en ~133px reales: ListadoManga solo sirve
-   imágenes de 106×150, así que a este tamaño apenas se amplían y se ven
-   nítidas. A 168 salían a 183px —1,7×— y se notaban borrosas. */
-.rejilla-series { display: grid; grid-template-columns: repeat(auto-fill, minmax(132px, 1fr)); gap: 16px; }
+/* Vuelve a 168px de mínimo —la portada sale a ~183px— ahora que la mayoría de
+   las series traen la imagen de su editorial a 400px: a 183 en pantalla retina
+   se piden 366, así que siguen nítidas. Las que aún dependen de ListadoManga
+   (106px) se amplían, pero ya son la minoría. */
+.rejilla-series { display: grid; grid-template-columns: repeat(auto-fill, minmax(168px, 1fr)); gap: 20px; }
 
 .serie { cursor: pointer; display: flex; flex-direction: column; gap: 9px; }
 .serie__portada {
@@ -355,10 +356,10 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 
 /* ───────────── Detalle de serie ───────────── */
 .detalle { display: grid; grid-template-columns: 210px 1fr; gap: 26px; }
-/* Se limita la imagen, no la columna: los botones del lateral necesitan los
-   210px («Volver a coleccionarla» no cabe en menos) pero la portada a ese
-   ancho se ampliaba 2× y era la más borrosa de la web. */
-.detalle__portada { width: 100%; max-width: 150px; border-radius: var(--radio-s); border: 1px solid var(--borde); aspect-ratio: 2/3; object-fit: cover; background: var(--panel-2); }
+/* Vuelve a ocupar la columna entera: con la portada de la editorial a 400px,
+   210 en pantalla retina pide 420 y sale nítida. Se limitó a 150 cuando la
+   única fuente era ListadoManga y a ese ancho se ampliaba al doble. */
+.detalle__portada { width: 100%; border-radius: var(--radio-s); border: 1px solid var(--borde); aspect-ratio: 2/3; object-fit: cover; background: var(--panel-2); }
 .detalle__lateral { display: flex; flex-direction: column; gap: 12px; }
 .detalle h2 { font-size: 1.45rem; }
 .detalle__edicion { font-size: .88rem; color: var(--acento); margin: 2px 0 0; }

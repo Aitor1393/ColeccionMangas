@@ -2605,6 +2605,259 @@
       "descargado": "2026-08-13",
       "sinopsis": "PUEDE QUE SEAMOS LOS ÚNICOS QUE QUEDEN EN EL MUNDO\n\r\n\n\r\nEn una Tierra en ruinas, el joven Rei y su compañera Trice buscan a otros supervivientes como ellos. Cierto día entran en contacto con una extraña visitante que llega volando por el cielo. Y, a raíz de ese encuentro, la verdad tras el “secreto” que los había mantenido unidos durante quince años sale a la luz. Poco después, el joven Rei emprende un viaje impulsado por “cierta palabra”...\n\r\n\n\r\nAquí comienza esta historia protagonizada por humanos y máquinas ambientada en un futuro no tan lejano como pueda parecer.",
       "portada": "data/portadas/5342/1.jpg"
+    },
+    "2211": {
+      "titulo": "Akame ga Kill!",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2211",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2015-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2015-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2016-01-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2016-03-18",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2016-06-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2016-07-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2016-09-30",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2016-12-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2017-02-24",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2017-04-28",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2017-06-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2017-08-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2017-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2017-12-05",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2018-02-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2211/15.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takahiro",
+      "totalNumeros": 15,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡¡LLEGA AKAME, LA ASESINA DE OJOS ROJOS MÁS ESPERADA!!\n\r\n\n\r\nTatsumi viaja a la capital en busca de fortuna, pero tras caer en manos de unos villanos, un grupo de asesinos, el Night Raid, le rescata. Y es entonces cuando decide que podría estar bien unirse a ellos para luchar contra la injusticia...",
+      "portada": "data/portadas/2211/1.jpg"
+    },
+    "2943": {
+      "titulo": "Akame ga Kill! 1,5 Historias del Night Raid y epílogo",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2943",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2018-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2943/1.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takahiro",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "VUELVE EL NIGHT RAID CON ESTE VOLUMEN INÉDITO DE HISTORIAS CORTAS\n\r\n\n\r\nEn el Imperio, un lugar azotado por el mal, existe una banda de asesinos profesionales que castigan a los enemigos del pueblo. Su nombre es Night Raid. ¡No te pierdas el epílogo de la historia y los capítulos extra recogidos en este tomo!",
+      "portada": "data/portadas/2943/1.jpg"
+    },
+    "2645": {
+      "titulo": "Akame ga Kill! Zero",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2645",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2018-03-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2018-04-12",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2018-06-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2018-08-24",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2018-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2019-01-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2019-04-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2019-06-21",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2019-08-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2019-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2645/10.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takahiro",
+      "totalNumeros": 10,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡¡LA ESPERADA PRECUELA DE AKAME GA KILL!!\n\r\n\n\r\nAntes de convertirse en miembro del Night Raid Akame se entrenó con cuerpos de élite del Imperio para convertirse en una asesina despiadada. En esta nueva serie conocemos a una joven Akame que mata pensando que así trae la felicidad a todos los habitantes...",
+      "portada": "data/portadas/2645/1.jpg"
+    },
+    "2944": {
+      "titulo": "Akame ga Kill! Memorial FanBook",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2944",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-07-05",
+          "precio": 11.0,
+          "aproximada": false,
+          "portada": "data/portadas/2944/1.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takahiro",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡NO TE PIERDAS ESTE LIBRO CONMEMORATIVO DE AKAME GA KILL!!\n\r\n\n\r\nYa está aquí el esperado libro conmemorativo de Akame ga Kill! con toda la información que necesitas para completar el universo creado por Takahiro y Tetsuya Tashiro, desde detalles de los personajes, curiosidades de la obra hasta comentarios de ambos autores sobre sus pensamientos y opiniones de esta obra creada a cuatro manos.\n\r\n\n\r\nCon este volumen único podrás completar finalmente la franquicia de Akame ga Kill! disponible en catálogo, empezando por la serie principal homónima, pasando por la precuela Akame ga Kill! Zero, el volumen recopilatorio de historias cortas Akame ga Kill! 1,5, la secuela Hinowa ga Crush! y la guía oficial. ¡No te lo pierdas!",
+      "portada": "data/portadas/2944/1.jpg"
     }
   },
   "sugerencias": {}

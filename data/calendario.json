@@ -2858,6 +2858,78 @@
       "descargado": "2026-08-13",
       "sinopsis": "¡NO TE PIERDAS ESTE LIBRO CONMEMORATIVO DE AKAME GA KILL!!\n\r\n\n\r\nYa está aquí el esperado libro conmemorativo de Akame ga Kill! con toda la información que necesitas para completar el universo creado por Takahiro y Tetsuya Tashiro, desde detalles de los personajes, curiosidades de la obra hasta comentarios de ambos autores sobre sus pensamientos y opiniones de esta obra creada a cuatro manos.\n\r\n\n\r\nCon este volumen único podrás completar finalmente la franquicia de Akame ga Kill! disponible en catálogo, empezando por la serie principal homónima, pasando por la precuela Akame ga Kill! Zero, el volumen recopilatorio de historias cortas Akame ga Kill! 1,5, la secuela Hinowa ga Crush! y la guía oficial. ¡No te lo pierdas!",
       "portada": "data/portadas/2944/1.jpg"
+    },
+    "3255": {
+      "titulo": "Hinowa ga Crush!",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3255",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2019-07-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2019-09-27",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2020-02-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-05-14",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2022-02-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2022-07-15",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-08-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2024-03-01",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3255/8.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takahiro",
+      "totalNumeros": 8,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡VUELVE LA ASESINA DE OJOS ROJOS EN UNA NUEVA AVENTURA!\n\r\n\n\r\nTras derrocar al imperio y embarcarse en un viaje en solitario, Akame alcanza las lejanas islas del país de Wakoku donde conoce a Hinowa, una chica que anhela la unificación de su país. Akame decide luchar a su lado al conocer sus anhelos y aprovechar para buscar una cura a su maldición...",
+      "portada": "data/portadas/3255/1.jpg"
     }
   },
   "sugerencias": {}

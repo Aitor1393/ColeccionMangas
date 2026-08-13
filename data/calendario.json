@@ -7986,6 +7986,173 @@
       "descargado": "2026-08-13",
       "sinopsis": "¡ACCIÓN, ELEMENTOS SOBRENATURALES, HUMOR Y UNA PIZCA DE ROMANCE EN EL MANGA MÁS ESPERADO!\n\r\n\n\r\nHiyori, una joven humana, arriesga su vida para salvar a un chico de un atropello. Lo que no sabe es que se trata de Yato, una deidad menor que desea convertirse en dios, y tras su sacrificio la chica adquiere el poder de abandonar su cuerpo casi a voluntad... lo que la liga a Yato y a su misión.",
       "portada": "data/portadas/2159/1.jpg"
+    },
+    "6324": {
+      "titulo": "Galaxias",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6324",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-11-05",
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6324/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6324/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6324/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6324/4.jpg"
+        }
+      ],
+      "editorial": "Pika Ediciones",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (120x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Ao Hatezaka",
+      "totalNumeros": 4,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "",
+      "portada": "data/portadas/6324/1.jpg"
+    },
+    "6446": {
+      "titulo": "Ichi the Witch",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6446",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-05-02",
+          "precio": 4.5,
+          "aproximada": false,
+          "portada": "data/portadas/6446/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-07-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/6446/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2026-09-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/6446/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6446/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6446/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6446/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6446/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6446/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6446/9.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Osamu Nishi",
+      "totalNumeros": 9,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "EL NACIMIENTO DEL PRIMER BRUJO\n\r\n\n\r\nLlega al catálogo de Norma Editorial Ichi the Witch, el nuevo éxito de Shueisha creado por Osamu Nishi y Shiro Usazaki, que aglutina casi dos millones de copias vendidas solo en Japón y ha quedado en primer lugar en los Next Manga Awards 2025 y décimo en los 19.º Manga Taishô 2025.\n\r\n\n\r\nEn este mundo, la magia se materializa en unos seres vivos llamados mágidos. Sus “cazadoras”, llamadas “brujas”, obtienen su poder tras superar las arduas pruebas que estos establecen. Un día, en las profundidades de una montaña fronteriza, tiene lugar un duelo entre el temible rey de la magia y la bruja más poderosa del momento. No obstante, un joven llamado Ichi se ve envuelto en la refriega. La implicación de este cazador que vive apartado en el monte y que nunca había tenido ninguna relación con las brujas o la magia revolucionará por completo la lógica preconcebida hasta el momento. ¡Se abre el telón de esta aventura de cacería fantástica!",
+      "portada": "data/portadas/6446/1.jpg"
+    },
+    "5844": {
+      "titulo": "Hara Hara Sensei: La profesora detonadora",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5844",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-03-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5844/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-05-09",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5844/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-08-08",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5844/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-10-03",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5844/4.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yanagi Takakuchi",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "UNA PROFESORA DE QUÍMICA CONTRA LA YAKUZA\n\r\n\n\r\n¿Buscas un thriller trepidante, bien cargado de acción y adrenalina? No te pierdas esta novedad de tan solo 4 tomos donde una profesora de química será la peor pesadilla para la yakuza. Azusa Tsukumo, una profesora de química, ve cómo su vida cambia por completo cuando su hermana menor, Ruca, desaparece. Azusa se dirige a Tokio siguiendo la única pista que puede encontrar, donde conoce a un miembro de la yakuza ¿Qué será ahora de Azusa, que usa sus conocimientos químicos como arma para adentrarse en el mundo de la violencia con el fin de recuperar a su amada hermana?",
+      "portada": "data/portadas/5844/1.jpg"
     }
   },
   "sugerencias": {}

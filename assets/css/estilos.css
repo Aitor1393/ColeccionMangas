@@ -189,6 +189,14 @@ main { padding: 28px 0 60px; }
 }
 .filtros .buscador { flex: 1 1 240px; min-width: 0; }
 .filtros select { flex: 0 1 auto; width: auto; min-width: 150px; }
+/* El panel va oculto hasta que lo pides con el botón */
+.filtros[hidden] { display: none; }
+.acciones-vista { display: flex; gap: 8px; align-items: center; flex: none; }
+.contador-filtros {
+  display: inline-flex; align-items: center; justify-content: center;
+  min-width: 18px; height: 18px; padding: 0 5px; margin-left: 4px;
+  border-radius: 99px; background: rgba(0, 0, 0, .28); font-size: .72rem; line-height: 1;
+}
 @media (max-width: 640px) {
   .filtros .buscador, .filtros select { flex: 1 1 100%; width: 100%; }
 }

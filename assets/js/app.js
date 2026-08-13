@@ -241,8 +241,29 @@
       window.scrollTo(0, 0);
     },
 
+    'alternar-filtros': function () {
+      V.filtrosAbiertos = !V.filtrosAbiertos;
+      U.guardarLocal('cm:filtrosBiblioteca', V.filtrosAbiertos);
+      App.render();     // conectarFiltros deja el cursor en el buscador
+    },
+
+    'limpiar-filtros': function () {
+      V.filtros.texto = '';
+      V.filtros.tenencia = '';
+      V.filtros.seguimiento = '';
+      V.filtros.estado = '';
+      V.filtros.demografia = '';
+      V.filtros.editorial = '';
+      V.filtros.soloPendientes = false;
+      App.render();
+    },
+
     'ver-abandonadas': function () {
       V.filtros.seguimiento = 'abandonadas';
+      // Al llegar desde otra vista, el panel se abre para que se vea de dónde
+      // sale el recorte; si no, verías 7 series de 62 sin explicación.
+      V.filtrosAbiertos = true;
+      U.guardarLocal('cm:filtrosBiblioteca', true);
       location.hash = '#/biblioteca';
       App.render();
     },

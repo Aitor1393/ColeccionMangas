@@ -220,6 +220,23 @@
      ============================================================ */
   V.filtros = { texto: '', estado: '', demografia: '', editorial: '', tenencia: '', seguimiento: '', orden: 'titulo', soloPendientes: false };
 
+  // El panel arranca cerrado: lo normal al entrar en la Biblioteca es mirar
+  // las portadas, no filtrar. Se abre con el botón y se recuerda abierto.
+  V.filtrosAbiertos = U.leerLocal('cm:filtrosBiblioteca', false);
+
+  /**
+   * Cuántos filtros están puestos ahora mismo.
+   *
+   * El orden no cuenta: cambia cómo se ven las series, no cuáles. Sirve para
+   * avisar en el botón de que la lista está recortada aunque el panel esté
+   * cerrado; si no, verías menos series sin saber por qué.
+   */
+  function filtrosPuestos() {
+    var f = V.filtros;
+    return ['texto', 'tenencia', 'seguimiento', 'estado', 'demografia', 'editorial']
+      .filter(function (k) { return f[k]; }).length + (f.soloPendientes ? 1 : 0);
+  }
+
   V.biblioteca = function () {
     var f = V.filtros;
 
@@ -230,7 +247,7 @@
       }).join('');
     };
 
-    var barra = '<div class="filtros">' +
+    var barra = '<div class="filtros" id="panelFiltros"' + (V.filtrosAbiertos ? '' : ' hidden') + '>' +
       '<div class="buscador"><input type="text" id="fTexto" placeholder="Buscar por título, edición, autor, editorial o etiqueta…" value="' + U.esc(f.texto) + '"></div>' +
       '<select id="fTenencia">' +
         '<option value=""' + (f.tenencia ? '' : ' selected') + '>Comprados y leídos</option>' +
@@ -257,11 +274,19 @@
     '</div>';
 
     var series = V.filtrar(D.coleccion.series);
+    var puestos = filtrosPuestos();
+
+    var boton = '<button class="btn' + (puestos ? ' btn--primario' : '') + '" ' +
+        'data-accion="alternar-filtros" aria-expanded="' + (V.filtrosAbiertos ? 'true' : 'false') + '" ' +
+        'aria-controls="panelFiltros">🔍 Buscar y filtrar' +
+        (puestos ? ' <span class="contador-filtros">' + puestos + '</span>' : '') + '</button>' +
+      (puestos ? '<button class="btn btn--fantasma btn--pequeno" data-accion="limpiar-filtros">Quitar filtros</button>' : '');
 
     return '<div class="vista__cabecera"><div class="crece">' +
         '<h1>Biblioteca</h1>' +
-        '<p>' + U.plural(series.length, 'serie') + ' de ' + D.coleccion.series.length + '</p>' +
-      '</div></div>' + barra +
+        '<p>' + U.plural(series.length, 'serie') + ' de ' + D.coleccion.series.length +
+          (puestos && !V.filtrosAbiertos ? ' · lista filtrada' : '') + '</p>' +
+      '</div><div class="acciones-vista">' + boton + '</div></div>' + barra +
       rejilla(series, '<h3>Ningún resultado</h3><p>Prueba a aflojar los filtros.</p>');
   };
 

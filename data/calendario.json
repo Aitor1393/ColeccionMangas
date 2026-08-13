@@ -2930,6 +2930,5062 @@
       "descargado": "2026-08-13",
       "sinopsis": "¡VUELVE LA ASESINA DE OJOS ROJOS EN UNA NUEVA AVENTURA!\n\r\n\n\r\nTras derrocar al imperio y embarcarse en un viaje en solitario, Akame alcanza las lejanas islas del país de Wakoku donde conoce a Hinowa, una chica que anhela la unificación de su país. Akame decide luchar a su lado al conocer sus anhelos y aprovechar para buscar una cura a su maldición...",
       "portada": "data/portadas/3255/1.jpg"
+    },
+    "4753": {
+      "titulo": "InuYasha (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4753",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-03-22",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-04-26",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-05-24",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-06-14",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-07-05",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-09-13",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-10-18",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2023-11-22",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-01-10",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2024-03-06",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2024-05-15",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2024-07-03",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2024-09-10",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2024-11-13",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2025-01-15",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2025-03-12",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2025-05-21",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2025-07-09",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2025-10-08",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2026-01-28",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2026-04-29",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2026-05-06",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2026-07-08",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2026-09-09",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4753/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2026-11-01",
+          "precio": 16.95,
+          "aproximada": true,
+          "portada": "data/portadas/4753/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4753/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4753/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4753/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4753/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4753/30.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Rumiko Takahashi",
+      "totalNumeros": 30,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "De la creadora de Ranma.\n\r\n\n\r\nKagome es una estudiante de secundaria cuya familia dirige un santuario sintoísta. En su decimoquinto cumpleaños, es atacada repentinamente por un demonio terrible, que la succiona a un pozo cerca del santuario, catapultándola varios siglos atrás en el tiempo, hasta la era Sengoku. En un intento por escapar de la criatura, la niña busca refugio en un bosque, y allí se encuentra con un encantador medio-demonio de largo cabello blanco cautivo por un sello mágico. Despertado por Kagome para defenderla del monstruo que la amenaza, Inu-yasha la reconoce como la reencarnación de la sacerdotisa Kikyô, guardiana de la preciada Joya de los Cuatro Almas...",
+      "portada": "data/portadas/4753/1.jpg"
+    },
+    "1482": {
+      "titulo": "Blue Exorcist",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1482",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2011-09-23",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2011-10-28",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2011-12-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2012-02-24",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2012-05-03",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2012-06-22",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2012-08-24",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2012-10-31",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2013-02-22",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2013-07-26",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2014-03-21",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2014-10-30",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2015-04-16",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2015-10-29",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2016-05-05",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2016-10-29",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2017-04-28",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2017-08-25",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2018-02-23",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2018-06-22",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2018-12-05",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2019-08-23",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/1482/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2020-01-24",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2020-11-13",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2021-04-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2021-09-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2022-06-10",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2024-05-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2024-10-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2025-02-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": "2025-06-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": "2026-05-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": "2026-09-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/1482/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/1482/34.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Kazue Kato",
+      "totalNumeros": 34,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡LLEGA EL SHONEN MÁS FRESCO, LLENO DE  ACCIÓN Y HUMOR!\n\r\n\n\r\nPor las venas de Rin Okumura corre sangre de demonio, pero cuando Satán en persona aparece ante él para llevárselo al mundo de los demonios,  Rin se niega. Su padre adoptivo, un prestigioso exorcista, logra salvar al chico a cambio de su vida... ¡¡por lo que Rin toma la decisión de aprender el oﬁcio de exorcista para luchar contra el maligno ángel caído!!",
+      "portada": "data/portadas/1482/1.jpg"
+    },
+    "5620": {
+      "titulo": "Dragon Ball (Legend)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5620",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5620/18.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (175x255) rústica (tapa blanda) en cofre",
+      "autor": "Akira Toriyama",
+      "totalNumeros": 18,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Una edición especial del mítico manga de Akira Toriyama.\n\r\n\n\r\nEdición especial creada durante el 30 aniversario de la serie Dragon Ball, relanzando el manga Dragon Ball de la misma manera que fue serializado originalmente en la revista Weekly Shōnen Jump, con características como colores originales, texto promocional y vistas previas del próximamente al final de cada capítulo.\n\r\n\n\r\nCada volumen de Dragon Ball Legend, cubre un arco argumental diferente. Estos volúmenes son del mismo tamaño que la revista Weekly Shonen Jump, y también tienen muchas más páginas que los lanzamientos tankoubon y kanzenban, lo que significa más capítulos en menos volúmenes.",
+      "portada": "data/portadas/5620/1.jpg"
+    },
+    "5343": {
+      "titulo": "Espíritus malévolos. Mononogatari",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5343",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-07-05",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-10-04",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-12-05",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-02-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2025-04-04",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-06-06",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2025-08-08",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2025-11-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2026-02-06",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-05-02",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2026-08-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/5343/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5343/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5343/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5343/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5343/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5343/16.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Onigunsou",
+      "totalNumeros": 16,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "HUMANOS Y TSUKUMOGAMI\n\r\n\n\r\nTsukumogami... Tal es el nombre que se les da a los espíritus que poseen artefactos antiguos. Los mismos que le arrebataron sus seres queridos a Hyôma Kunato, heredero de un clan que justamente se encarga de eliminar a estos espíritus. Para que pueda verlos desde otra perspectiva, se le envía a vivir junto a Botan Nagatsuki, una muchacha que convive con varios tsukumogami que la quieren como si fueran familia. Así, ambos empezarán a vivir bajo un mismo techo en la ciudad milenaria de Kioto junto a los Tsukumogami, aunque no sin dificultades.",
+      "portada": "data/portadas/5343/1.jpg"
+    },
+    "3898": {
+      "titulo": "Solo Leveling (Manwha)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3898",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2021-06-11",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2021-08-06",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-10-29",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2022-01-28",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2022-04-29",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-03-31",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-12-07",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2024-05-03",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-07-05",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2025-04-04",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2025-06-06",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2025-12-05",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2026-03-06",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2026-05-02",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2026-09-04",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/3898/15.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Manhwa",
+      "demografia": "",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con solapas",
+      "autor": "DUBU (REDICE STUDIO)",
+      "totalNumeros": 15,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡NO TE PIERDAS SOLO LEVELING, EL MANHWA QUE ESTÁ CAUSANDO FUROR!\n\r\n\n\r\nSung Jinwoo es un cazador de rango E, considerado como el nivel más bajo dentro de la Asociación de cazadores, por lo que se le conoce como “El cazador más débil”. Día tras día pone en peligro su vida y se embarca en misiones del rango más bajo para poder sufragar los gastos de su madre enferma; sin embargo, en una de esas misiones, lo que en un principio parecía un raid de rango D termina por ser una mazmorra de un nivel inusitado y las cosas empiezan a torcerse… ¿Lograrán Sung y sus compañeros salir con vida? ¡Una historia llena de acción y monstruos al más puro estilo RPG!",
+      "portada": "data/portadas/3898/1.jpg"
+    },
+    "4288": {
+      "titulo": "Neon Genesis Evangelion (Edición Coleccionista) (Castellano)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4288",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-05-06",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2022-07-08",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2022-09-23",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2022-11-11",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-02-17",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-04-14",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-11-10",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/4288/7.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Gainax , Khara",
+      "totalNumeros": 7,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "UNA EDICIÓN DE LUJO PARA UNA SERIE CLAVE.\n\r\n\n\r\nVuelve Neon Genesis Evangelion, uno de los mangas de culto más populares, pero esta vez lo hace en una fantástica edición coleccionista que los fans de la serie no podrán dejar escapar. Esta revolucionaria saga que marcó un antes y un después en su género mezcla ciencia ficción con un diseccionado análisis del alma humana que no deja indiferente a sus lectores...",
+      "portada": "data/portadas/4288/1.jpg"
+    },
+    "4289": {
+      "titulo": "Dan Da Dan",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4289",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-10-11",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-10-11",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2022-07-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2022-11-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-02-17",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-06-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2023-08-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2023-10-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2023-12-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2024-06-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2024-08-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2024-10-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2024-12-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2025-02-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2025-05-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2025-07-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2025-10-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2025-12-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2026-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2026-05-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2026-07-03",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/4289/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4289/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4289/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4289/24.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yukinobu Tatsu",
+      "totalNumeros": 24,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡HAZTE CON EL MANGA QUE ESTARÁ EN BOCA DE TODOS!\n\r\n\n\r\nEsta entretenida historia de extraterrestres y fantasmas te dejará con ganas de más desde su primer capítulo. Oculto, un friki que cree en los ovnis, y Ayase, su compañera criada por una abuela médium, vivirán una historia que les hará cuestionarse todo lo que han creído hasta el momento... Comedia y romance se unen en este singular manga del que todo el mundo habla en Japón ¿te lo vas a perder?",
+      "portada": "data/portadas/4289/1.jpg"
+    },
+    "5666": {
+      "titulo": "Soul Eater (Perfect Edition)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5666",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-12-05",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-02-07",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-04-04",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-06-06",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2025-08-22",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-11-07",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2026-02-06",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2026-04-02",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2026-06-05",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-09-04",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/5666/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5666/17.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con doble sobrecubierta",
+      "autor": "Atsushi Ohkubo",
+      "totalNumeros": 17,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡REDESCUBRE LA SERIE SUPERVENTAS DE OHKUBO EN ESTA EXCLUSIVA EDICIÓN!\n\r\n\n\r\nPara convertirse en un arma definitiva, Death Scythe, la maestra de guadaña Maka debe hacer que su arma, Soul Eater, engulla 99 almas humanas… y la de una bruja. Pero no es tan sencillo, porque de todos es sabido que las brujas son duras de pelar. ¿Podrán derrotar a la terrible (y sexy) Blair?",
+      "portada": "data/portadas/5666/1.jpg"
+    },
+    "1872": {
+      "titulo": "Vinland Saga",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1872",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2014-10-01",
+          "precio": 12.95,
+          "aproximada": true,
+          "portada": "data/portadas/1872/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2014-12-01",
+          "precio": 12.95,
+          "aproximada": true,
+          "portada": "data/portadas/1872/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2015-02-01",
+          "precio": 12.95,
+          "aproximada": true,
+          "portada": "data/portadas/1872/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2015-04-01",
+          "precio": 12.95,
+          "aproximada": true,
+          "portada": "data/portadas/1872/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2015-06-01",
+          "precio": 12.95,
+          "aproximada": true,
+          "portada": "data/portadas/1872/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2015-10-01",
+          "precio": 12.95,
+          "aproximada": true,
+          "portada": "data/portadas/1872/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2016-01-12",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2016-03-01",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2016-04-28",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2016-07-05",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2016-10-04",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2017-01-24",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2017-04-11",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2017-07-25",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2017-10-03",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2017-11-28",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2018-01-23",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2018-05-24",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2019-01-22",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2019-10-08",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2020-01-23",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2020-11-17",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2021-05-19",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2022-04-27",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2022-11-23",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2023-03-22",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2024-06-12",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2025-06-11",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2026-04-15",
+          "precio": 12.95,
+          "aproximada": false,
+          "portada": "data/portadas/1872/29.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Makoto Yukimura",
+      "totalNumeros": 29,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Thors, es un gran guerrero vikingo que escapa de la brutal vida que llevaba para estar con su familia. Al ser descubierto, será perseguido por un mercenario y caerá junto a su tripulación en una trampa. A pesar de vencer a sus captores, Thors se sacrificará para que el resto de la expedición, incluido su hijo Thorfi nn, vivan. Entonces Thorfinn, hijo de Thors, jura vengarse. Askeladd le atrapa y lo une a su tripulación. Thorfinn, para ganarse el derecho de retar en duelo a Askeladd, debe ejecutar difíciles trabajos, como asesinar a generales enemigos.",
+      "portada": "data/portadas/1872/1.jpg"
+    },
+    "6234": {
+      "titulo": "Isekai Samurai",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6234",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-11-27",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/6234/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-01-29",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/6234/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2026-04-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/6234/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2026-06-18",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/6234/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2026-09-01",
+          "precio": 9.0,
+          "aproximada": true,
+          "portada": "data/portadas/6234/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6234/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6234/7.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Keigo Saito",
+      "totalNumeros": 7,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "A finales del período Sengoku, Ginko se alza como la espadachina más poderosa de todo Japón. Tras haber derrotado sin apenas esfuerzo a cientos de adversarios, cae presa de la desesperación al no encontrar un rival capaz de saciar su sed de un combate a la altura de su habilidad, ni la posibilidad de lograr una muerte honorable.\n\r\n\n\r\nPero, cuando todo parece perdido, es transportada repentinamente a otro mundo, donde lo primero que se encuentra es, nada más y nada menos, que un dragón. En este nuevo mundo, donde la magia, los monstruos y los peligros mortales son el pan de cada día, la sed de combate de Ginko volverá a arder, y a golpe de katana se abrirá paso en busca de esa ansiada muerte en batalla.",
+      "portada": "data/portadas/6234/1.jpg"
+    },
+    "4290": {
+      "titulo": "Shangri-La Frontier: Expansion Pass",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4290",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-06-10",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2022-08-26",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2022-11-11",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-03-03",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-06-09",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-10-06",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2024-04-05",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2024-09-06",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2025-02-07",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2025-11-07",
+          "precio": 15.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2026-06-05",
+          "precio": 16.0,
+          "aproximada": false,
+          "portada": "data/portadas/4290/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4290/27.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Katarina",
+      "totalNumeros": 27,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "EL MANGA IDEAL PARA CUALQUIER GAMER.\n\r\n\n\r\nLa realidad virtual le parece a Rakuro, un cazador de «videojuegos retro basura» mucho más interesante que la física y es que los años que ha dedicado a descifrar los bugs de algunos de sus «mejores/peores» videojuegos favoritos, le servirán esta vez para jugar a Shangri-La Frontier. ¿Será capaz de descifrar el protagonista todos los secretos de este nuevo videojuego? Hazte con este manga del que pronto tendremos un asombroso anime.",
+      "portada": "data/portadas/4290/1.jpg"
+    },
+    "4336": {
+      "titulo": "As the Gods Will. From the new world",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4336",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-07-07",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4336/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2022-10-06",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4336/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2022-12-01",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4336/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-02-02",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4336/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-03-30",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4336/5.jpg"
+        }
+      ],
+      "editorial": "Distrito Manga",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Muneyuki Kaneshiro",
+      "totalNumeros": 5,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Muneyuki Kaneshiro y Akeji Fujimura presentan su ópera prima: un shônen en el que un grupo de estudiantes deberá participar en unos juegos sórdidos donde solo uno podrá sobrevivir...\n\r\n\n\r\nShun Takahata está harto de la monotonía de la vida, pero las cosas cambian de repente un día cuando, en plena clase y sin previo aviso, él y sus compañeros de instituto son testigos de cómo al profesor le estalla la cabeza. En ese instante, un misterioso muñeco daruma aparece ante ellos y los obliga a participar en lo que a primera vista son unos inocentes juegos infantiles. Sin embargo, la realidad los dejará atónitos: quienes no sigan las reglas del juego o quienes pierdan la partida morirán en el acto de forma atroz. Desconcertados y sin entender los motivos de ese sádico plan, los estudiantes arriesgarán sus vidas para sobrevivir, aunque ello implique dejar de lado su humanidad y traicionar a sus amigos de la infancia.",
+      "portada": "data/portadas/4336/1.jpg"
+    },
+    "3967": {
+      "titulo": "Haikyû!! (Castellano)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3967",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2021-10-20",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2021-11-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-12-01",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2022-01-26",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2022-02-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2022-03-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2022-04-27",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2022-05-25",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2022-06-15",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2022-07-06",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2022-07-13",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2022-09-14",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2022-10-19",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2022-11-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2022-11-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2023-01-25",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2023-02-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2023-03-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2023-04-26",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2023-05-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2023-06-14",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2023-07-05",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2023-09-13",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2023-10-18",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2023-11-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2024-01-10",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2024-02-07",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2024-03-06",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2024-04-03",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2024-06-12",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": "2024-09-10",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": "2024-11-13",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": "2025-01-15",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": "2025-03-12",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": "2025-05-21",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": "2025-07-09",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/36.jpg"
+        },
+        {
+          "numero": 37,
+          "fecha": "2025-09-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/37.jpg"
+        },
+        {
+          "numero": 38,
+          "fecha": "2025-11-19",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/38.jpg"
+        },
+        {
+          "numero": 39,
+          "fecha": "2026-03-25",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/39.jpg"
+        },
+        {
+          "numero": 40,
+          "fecha": "2026-05-20",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/40.jpg"
+        },
+        {
+          "numero": 41,
+          "fecha": "2026-07-01",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/41.jpg"
+        },
+        {
+          "numero": 42,
+          "fecha": "2026-09-16",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3967/42.jpg"
+        },
+        {
+          "numero": 43,
+          "fecha": "2026-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/3967/43.jpg"
+        },
+        {
+          "numero": 44,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/3967/44.jpg"
+        },
+        {
+          "numero": 45,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/3967/45.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (111x177) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Haruichi Furudate",
+      "totalNumeros": 45,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡¡Puedo saltar!! A Shôyô Hinata le fascina el vóleibol, así que, en la escuela media, participa su primer y último partido oficial de la temporada. Sin embargo, sufre una derrota aplastante a manos de la joven promesa Tobio Kageyama, apodado el “Rey de la cancha”. Así pues, ¡Hinata jura vengarse y solicita plaza para entrar en el Club de vóleibol de la escuela superior Karasuno!",
+      "portada": "data/portadas/3967/1.jpg"
+    },
+    "5200": {
+      "titulo": "Magic: The Gathering. Destruye a toda la humanidad. No puede ser regenerada.",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5200",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-10-24",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-12-19",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-02-27",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-04-24",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2025-08-28",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-10-23",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2025-12-04",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2026-02-26",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2026-04-23",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-06-25",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2026-08-27",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2026-10-22",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5200/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5200/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5200/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5200/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5200/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5200/17.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (130x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Katsura Ise",
+      "totalNumeros": 18,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Año 1998. Hajime es un estudiante de instituto que saca muy buenas notas y que es un fan incondicional de Magic: The Gathering, al que juega con sus amigos cada vez que tiene ocasión. Sin embargo tiene una gran rival, su compañera Emi, que siempre saca las mejores notas y que le afea que juegue a las cartas entre clases. Las personalidades de ambos chocan constantemente, hasta que Hajime descubre a Emi en una tienda de cartas, donde ella está aniquilando a todos los que se están enfrentando a ella en partidas de Magic. Será entonces cuando él la rete a un duelo y la relación entre ambos cambie para siempre.\n\r\n\n\r\n“Si el mundo se acaba, quiero que...”. Hajime Kanô se acerca cada vez más a Emi Sawatari, una estudiante modelo de su mismo instituto a la que no soporta, gracias a Magic: The Gathering, el juego de cartas que se ha puesto de moda. Comienza la adolescencia... ¡Una historia ambientada en la segunda mitad de la década de los noventa, justo antes del cambio de siglo! Destruye a toda la humanidad. No puede ser regenerada.",
+      "portada": "data/portadas/5200/1.jpg"
+    },
+    "405": {
+      "titulo": "Tutor Hitman Reborn!",
+      "url": "https://www.listadomanga.es/coleccion.php?id=405",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2007-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2007-12-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2008-01-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2008-02-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2008-03-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2008-05-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2008-06-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2008-07-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2008-08-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2008-09-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2008-10-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2008-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2008-12-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2009-01-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2009-02-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2009-04-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2009-06-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2009-08-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2013-09-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2013-10-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2013-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2014-01-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2014-02-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2014-03-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2014-04-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2014-05-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2014-06-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2014-07-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2014-09-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2014-10-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": "2015-01-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": "2015-02-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": "2015-03-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": "2015-04-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": "2015-05-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": "2015-06-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/36.jpg"
+        },
+        {
+          "numero": 37,
+          "fecha": "2015-07-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/37.jpg"
+        },
+        {
+          "numero": 38,
+          "fecha": "2015-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/38.jpg"
+        },
+        {
+          "numero": 39,
+          "fecha": "2015-12-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/405/39.jpg"
+        },
+        {
+          "numero": 40,
+          "fecha": "2016-01-12",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/405/40.jpg"
+        },
+        {
+          "numero": 41,
+          "fecha": "2016-03-01",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/405/41.jpg"
+        },
+        {
+          "numero": 42,
+          "fecha": "2016-04-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/405/42.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (111x177) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Akira Amano",
+      "totalNumeros": 42,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Tsunayoshi \"Tsuna\" Sawada era un chico normal y corriente, un adolescente japonés con los problemas típicos de un chico de su edad. Sabía que uno de sus antepasados llegó desde Italia, pero no es que tuvieran mucho contacto con la rama europea de la familia... hasta que su pariente Timoteo le comunica que es su sucesor. Eso no sería tan grave si Timoteo no fuera conocido como Vongola IX... ¡un capo de la mafia italiana! \n\r\n\n\r\nNaturalmente, el actual capo es consciente de que Tsuna no tiene las capacidades ni los conocimientos necesarios para sucederle, pero tiene la solución: enviarle un tutor, un mafioso experimentado para que le enseñe de qué va el oficio. El escogido es Reborn, la mano derecha de Vongola IX, un mafioso de lo más experimentado... y que resulta ser un niño de un año de edad, armado con una pistola cuyas balas pueden conceder todo tipo de poderes.\n\r\n\n\r\nActualmente, este popular manga de Akira Amano es una de las series de referencia obligada de la revista Shonen Jump, y llega a nuesto país por partida doble: en manga, a un precio de lo más competitivo, y en anime, que veremos próximamente en nuestras pantallas.",
+      "portada": "data/portadas/405/1.jpg"
+    },
+    "5567": {
+      "titulo": "After God",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5567",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-03-06",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-06-05",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-10-02",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2026-01-08",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2026-04-16",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2026-07-09",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2026-11-12",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5567/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5567/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5567/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5567/10.jpg"
+        }
+      ],
+      "editorial": "Distrito Manga",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Eno Sumi",
+      "totalNumeros": 10,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "Japón ha sido invadido por dioses que solo han dejado muerte y destrucción a su paso. Con ciudades enteras clasificadas como zonas de peligro inhabitables, el investigador Sachiyuki Tokinaga está decidido a encontrar una forma de acabar con los dioses y salvar a la humanidad. Desesperada por obtener respuestas sobre la desaparición de su amiga, Waka se adentra en la zona peligrosa de Tokio en busca de pistas. En su lugar, encuentra a Tokinaga, y mientras Waka trata de decidir si debe confiar en él, el investigador no tarda en darse cuenta de que Waka oculta un peligroso secreto, uno que podría ser la clave para terminar con los dioses de una vez por todas, y puede que ambos acaben cambiando el destino del mundo para siempre.",
+      "portada": "data/portadas/5567/1.jpg"
+    },
+    "3254": {
+      "titulo": "Final Fantasy: Lost Stranger",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3254",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2019-05-24",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2019-07-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2020-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-05-14",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-10-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2022-01-28",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2022-05-27",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2023-08-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-02-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2024-07-05",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2025-03-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2025-11-07",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2026-09-04",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/3254/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/3254/14.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hazuki Minase",
+      "totalNumeros": 14,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡UNA HISTORIA FANTÁSTICA QUE MEZCLA EL UNIVERSO FINAL FANTASY CON LAS REENCARNACIONES EN MUNDOS PARALELOS!\n\r\n\n\r\nShôgo Sasaki, un fanático seguidor de la saga Final Fantasy, dio el primer paso para conseguir su sueño cuando entró en Square Enix como diseñador de videojuegos. Su hermana Yûko siguió sus pasos y también trabaja en la misma empresa, y ambos se esfuerzan día a día para intentar ingresar en los equipos que desarrollan ese universo. Pero un viaje interdimensional pondrá a prueba sus conocimientos sobre ese mundo...",
+      "portada": "data/portadas/3254/1.jpg"
+    },
+    "5395": {
+      "titulo": "Gokurakugai",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5395",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-11-27",
+          "precio": 2.95,
+          "aproximada": false,
+          "portada": "data/portadas/5395/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-01-15",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/5395/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-04-09",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/5395/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2025-10-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/5395/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2026-03-11",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/5395/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2026-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/5395/6.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (111x177) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yuto Sano",
+      "totalNumeros": 6,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡Llega el nuevo shonen que triunfa en Japón!\n\r\n\n\r\n¡Los solucionadores de problemas de Gokurakugai están abiertos al público! En una ciudad decadente sin ley ni orden, Tao y Alma aceptan trabajo de clientes de todos los credos y culturas, y siempre están listos para impartir justicia contra los monstruos hambrientos de humanos que acechan en las sombras. Aceptarán cualquier caso, ¡siempre que el precio sea razonable!\n\r\n\n\r\nNunca falta el crimen en la ciudad, y un joven que busca a su amigo hombre bestia es solo otra entrada en una larga lista de informes de personas desaparecidas. Sin embargo, Tao y Alma se dan cuenta de que son los únicos capaces de resolver este caso y destruir a los feroces monstruos que acechan en cada esquina.",
+      "portada": "data/portadas/5395/1.jpg"
+    },
+    "5903": {
+      "titulo": "Kagurabachi",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5903",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-12-03",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5903/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-01-08",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5903/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2026-03-04",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5903/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2026-05-06",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5903/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2026-07-01",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5903/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2026-09-02",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/5903/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2026-11-01",
+          "precio": 8.95,
+          "aproximada": true,
+          "portada": "data/portadas/5903/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5903/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5903/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5903/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5903/11.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (111x177) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takeru Hokazono",
+      "totalNumeros": 11,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡Por fin llega la nueva sensación shonen del Japón!\n\r\n\n\r\nChihiro, un joven aprendiz de herrero, vivía feliz trabajando junto a su padre, un hombre alegre y bromista. Aunque Chihiro era más reservado, ambos disfrutaban de días llenos de risas, convencidos de que siempre sería así. Pero todo cambia cuando una tragedia irrumpe en sus vidas, tiñéndolas de sangre, dolor y odio. Impulsado por la venganza, Chihiro decide forjar un nuevo camino.",
+      "portada": "data/portadas/5903/1.jpg"
+    },
+    "4750": {
+      "titulo": "Gachiakuta",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4750",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-09-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-11-10",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-03-01",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2024-05-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2024-07-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2024-09-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2024-11-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2025-03-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2025-05-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2025-07-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2025-09-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2025-11-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2026-01-16",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2026-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2026-05-15",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2026-07-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2026-09-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4750/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4750/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4750/19.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Kei Urana",
+      "totalNumeros": 19,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "NO SIEMPRE EL LUGAR DONDE HAS NACIDO DETERMINA TU VIDA…\n\r\n\n\r\nRudo es un joven que sufre una tremenda discriminación y se dedica a hurgar en la basura. Habita en una barriada, hogar de los descendientes de los delincuentes de la ciudad. Un día, es acusado de un delito que no ha cometido y lo arrojan al temido Abismo. Allí abajo conoce a Enjin, miembro de Los Limpiadores, y atisba la verdadera cara de la sociedad; además, aprende que puede extraer el poder de los objetos imbuidos de vida. ¡Es momento de cambiar esta porquería de mundo!",
+      "portada": "data/portadas/4750/1.jpg"
+    },
+    "5866": {
+      "titulo": "Yu-Gi-Oh! (Nueva Edición)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5866",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-12-03",
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/5866/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-02-04",
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/5866/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2026-05-20",
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/5866/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2026-10-21",
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/5866/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/5866/22.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Kazuki Takahashi",
+      "totalNumeros": 22,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Nueva edición recopilatoria de este manga shonen mítico.\n\r\n\n\r\nEl Rompecabezas Milenario es un juego misterioso procedente de la Antigüedad que nadie ha logrado completar jamás. Pero Yugi, que siempre sufre las burlas de sus compañeros de clase, lo consigue y justo en ese momento, se presenta un joven que será su compañero de juegos.\n\r\n\n\r\nCuidado, porque no jugarán a un juego cualquiera. ¡Empieza el Juego de las Tinieblas, que acabará con el mal!",
+      "portada": "data/portadas/5866/1.jpg"
+    },
+    "4747": {
+      "titulo": "Neko Soccer!",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4747",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-07-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4747/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-09-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4747/2.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Kodomo",
+      "demografia": "kodomo",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con solapas",
+      "autor": "Atsushi Ooba",
+      "totalNumeros": 2,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "GATOS, FÚTBOL, VIDEOJUEGOS Y HUMOR: ¡ESTE MANGA LO TIENE TODO!\n\r\n\n\r\n¡En el mundo de los gatos, desconocido para los seres humanos, el fútbol causa furor! ¡El equipo del genio delantero Miaussi y del centrocampista humano Kanta aspira a ser el mejor del mundo futbolero gatuno! ¡¡Que dé comienzo el partido!!",
+      "portada": "data/portadas/4747/1.jpg"
+    },
+    "4122": {
+      "titulo": "Stitch y el Samurái",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4122",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-10-19",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4122/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-05-24",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4122/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-10-18",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/4122/3.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Disney Manga",
+      "demografia": "",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hiroto Wada",
+      "totalNumeros": 3,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Mientras trataba de huir de la Federación Galáctica, la nave espacial de Stitch sufre una avería y acaba teniendo que hacer un aterrizaje de emergencia… pero no en Hawái, ¡sino en el Japón del período Sengoku! Tras ser encontrado por un implacable caudillo militar, el señor Yamato, y su clan, el encanto adorable de Stitch acaba ganándose al líder que, cansado ya de la guerra, decide llevarse a ese “mapache azul” a casa con él. ¿Se convertirá el amor por el caos y la destrucción de Stitch en una formidable herramienta para el samurái? ¿O su adorable y peludo aspecto acabará desarmando la seria fachada del guerrero?",
+      "portada": "data/portadas/4122/1.jpg"
+    },
+    "2690": {
+      "titulo": "JoJo's Bizarre Adventure Part I: Phantom Blood",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2690",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2017-06-01",
+          "precio": 12.0,
+          "aproximada": true,
+          "portada": "data/portadas/2690/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2017-07-01",
+          "precio": 12.0,
+          "aproximada": true,
+          "portada": "data/portadas/2690/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2017-08-01",
+          "precio": 12.0,
+          "aproximada": true,
+          "portada": "data/portadas/2690/3.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hirohiko Araki",
+      "totalNumeros": 3,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Jonathan es el hijo único de los Joestar, una familia noble ingles. Llevaba una vida sencilla y aspiraba a convertirse en caballero. Sin embargo, su estilo de vida cambió por completo con la llegada de Dio Brando, el invasor. Sus constantes peleas y una extraña máscara de piedra no auguran nada bueno.",
+      "portada": "data/portadas/2690/1.jpg"
+    },
+    "1415": {
+      "titulo": "Defense Devil",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1415",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2011-05-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2011-06-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2011-08-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2011-10-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2011-12-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2012-05-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2012-06-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2012-07-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2012-09-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2012-11-01",
+          "precio": 7.95,
+          "aproximada": true,
+          "portada": "data/portadas/1415/10.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x170) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Youn In-wan",
+      "totalNumeros": 10,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Kucabara es un demonio desterrado del Reino de los Infiernos debido a su buen corazón. Para resarcirse y tratar de restaurar su antigua posición, decide convertirse en el “abogado de los condenados” que van injustamente al infierno. ¿Logrará demostrar la inocencia de sus clientes antes de que se los lleven los shinigami, enviados del averno?",
+      "portada": "data/portadas/1415/1.jpg"
+    },
+    "2857": {
+      "titulo": "The Promised Neverland",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2857",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2018-04-12",
+          "precio": 4.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2018-06-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2018-08-24",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2018-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2019-01-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2019-03-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2019-05-24",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2019-07-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2019-09-27",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2020-02-07",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2020-05-15",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2020-07-17",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2020-09-04",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2020-10-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2020-11-13",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2020-12-11",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2021-03-05",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2021-04-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2021-05-14",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2021-07-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2857/20.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Kaiu Shirai",
+      "totalNumeros": 20,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡EL THRILLER QUE ESTÁ ARRASANDO EN LA SHONEN JUMP!\n\r\n\n\r\nEmma, Norman y Ray son tres huérfanos que viven felices en el idílico orfanato Grace Field House, esperando el momento en el que se les asignará una familia adoptiva. Todo cambia cuando descubren accidentalmente la horrorosa realidad de su existencia, así que deciden rebelarse y luchar hasta las últimas consecuencias en una oscura y aterradora aventura. Pero su tiempo se acaba...",
+      "portada": "data/portadas/2857/1.jpg"
+    },
+    "4758": {
+      "titulo": "Dai Dark (ECC)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4758",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-04-18",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/4758/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-06-13",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/4758/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-08-08",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/4758/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-10-10",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/4758/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-12-14",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/4758/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2024-03-13",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/4758/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4758/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4758/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4758/9.jpg"
+        }
+      ],
+      "editorial": "ECC Ediciones",
+      "coleccion": "Manga",
+      "demografia": "",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Q-Hayashida",
+      "totalNumeros": 6,
+      "estado": "cancelada",
+      "descargado": "2026-08-13",
+      "sinopsis": "En algún lugar de la oscuridad infinita del universo… Zaka Sanko, de 14 años, de quien se dice que quien consiga sus huesos hará realidad cualquier deseo, y su compañero, el equipaje de la Oscuridad Avakian, están amenazados por todos los habitantes del universo. Igualmente odiado por todos está el dios de la Muerte, Shimada Muerte, que junto a Sanko y demás son considerados como los “cuatro Males” por la poderosa compañía Fotomasa cuya influencia se extiende por todo el universo. Sanko continuará deshuesando a aquellos que vengan a atacarle mientras sigue viajando para cumplir su objetivo ¡pero…!",
+      "portada": "data/portadas/4758/1.jpg"
+    },
+    "4766": {
+      "titulo": "One Piece (Nueva Edición 3 en 1) (Castellano)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4766",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-04-26",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-06-14",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-09-13",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-11-29",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2024-01-10",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2024-03-06",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2024-06-12",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2024-09-10",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-11-27",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2025-03-12",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2025-06-25",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2025-12-03",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2026-03-04",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2026-06-03",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2026-09-09",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/4766/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/36.jpg"
+        },
+        {
+          "numero": 37,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/37.jpg"
+        },
+        {
+          "numero": 38,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/38.jpg"
+        },
+        {
+          "numero": 39,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4766/39.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo triple B6 (128x180) rústica (tapa blanda) con solapas",
+      "autor": "Eiichiro Oda",
+      "totalNumeros": 39,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "Es la era de los grandes piratas. Con sus banderas ondeando al viento, luchan entre ellos con el fin de llegar hasta el gran tesoro One Piece, el legado del legendario rey de los piratas Gold Roger. Ese gran pirata es el objeto de admiración de un muchacho llamado Luffy, que se ha hecho amigo de Shanks el Pelirrojo, capitán de una banda pirata que suele amarrar el barco en el muelle de su aldea. Un buen día, Luffy se come una fruta demoníaca, botín que había conseguido la banda de Shanks, y su cuerpo adquiere las propiedades de la goma elástica.\n\r\n\n\r\nA cambio, pierde la capacidad de flotar en el agua y, por lo tanto, de nadar. Mientras la banda se encuentra fuera de la aldea, Luffy provoca a unos bandoleros de montaña cuyo líder lo secuestra y lo lanza en medio del mar. Mientras bracea para no hundirse, una bestia marina llega para engullirlo... ¡pero Shanks acude a nado y le salva! Luffy sobrevive, pero a cambio el pirata pierde el brazo izquierdo.\n\r\n\n\r\n10 años después de despedirse de Shanks y los suyos, con el sombrero de paja que el Pelirrojo le prestó como marca distintiva, Luffy se hace a la mar en solitario. ¡Comienza su viaje con la meta puesta en llegar a ser el rey de los piratas!",
+      "portada": "data/portadas/4766/1.jpg"
+    },
+    "3548": {
+      "titulo": "Horion",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3548",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2020-05-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3548/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-02-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3548/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-09-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3548/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/3548/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/3548/5.jpg"
+        }
+      ],
+      "editorial": "LetraBlanka",
+      "coleccion": "Kanji",
+      "demografia": "",
+      "formato": "Tomo (115x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Aienkei",
+      "totalNumeros": 5,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "A la ciudad de Landgrave se la conoce como la ciudad prohibida. Se dice que sus habitantes tienen habilidades extraordinarias, y que para ingresar en ella hay que estar dispuesto a arriesgar la propia vida. Vika Akorani ha desaparecido. Su hermano menor, Koza, junto con su mejor amigo Valyu y su guardaespaldas Palk escapan de casa para ir en su busca, sin saber que van tras los pasos de una fantasma.",
+      "portada": "data/portadas/3548/1.jpg"
+    },
+    "26": {
+      "titulo": "Yaiba",
+      "url": "https://www.listadomanga.es/coleccion.php?id=26",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2006-06-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2006-07-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2006-08-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2006-09-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2006-10-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2006-11-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2006-12-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2007-01-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2007-02-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2007-03-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2007-04-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2007-05-01",
+          "precio": 9.95,
+          "aproximada": true,
+          "portada": "data/portadas/26/12.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Gosho Aoyama",
+      "totalNumeros": 12,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Yaiba ansía en convertirse en el mejor espadachín de todos los tiempos, y por eso viaja a Tokio para seguir con su entrenamiento. Allí su rivalidad con Takashi convertirá a su rival en el Dios del Viento, y para detener su maléfico poder Yaiba deberá encontrar y dominar la Espada del Trueno...",
+      "portada": "data/portadas/26/1.jpg"
+    },
+    "2808": {
+      "titulo": "JoJo's Bizarre Adventure Part VI: Stone Ocean",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2808",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2020-10-08",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2020-12-10",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-01-21",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-02-04",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-03-04",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-04-08",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-05-06",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2021-06-24",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2021-07-08",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2021-08-12",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2021-09-30",
+          "precio": 12.0,
+          "aproximada": false,
+          "portada": "data/portadas/2808/11.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hirohiko Araki",
+      "totalNumeros": 11,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Año 2011, Estados Unidos. Jolyne Cujoh se encontraba en un coche con su novio Romeo cuando sufren un accidente de tráfico. Tras ser engañada por Romeo y su abogado, es condenada a pasar 15 años en prisión. Su madre le envía un colgante que le ha dejado su padre, Jotaro, y algo cambia dentro de ella en cuanto lo toca.",
+      "portada": "data/portadas/2808/1.jpg"
+    },
+    "4929": {
+      "titulo": "Sanda",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4929",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-05-18",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-07-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-09-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2024-01-25",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2024-03-28",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-12-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2025-12-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2026-04-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2026-04-02",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-06-25",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2026-06-25",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4929/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4929/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4929/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4929/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4929/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/4929/16.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x170) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Paru Itagaki",
+      "totalNumeros": 16,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Sanda es un chico normal de secundaria que ve su vida cambiar el día en que Fuyumura, una compañera de clase, intenta atacarlo con un cuchillo de cocina en pleno instituto. Pese a que no entiende el motivo del ataque, Sanda empieza a pensar que todo es un acto de maldad provocado por una fase de rebeldía adolescente.\n\r\n\n\r\nDías después del suceso, se reúne nuevamente con su compañera para hablar. Al estar delante de Fuyumura, Sanda se siente raro y empieza a sospechar que, tras el incidente, siente algo por ella, y espera que a esta le esté pasando lo mismo.\n\r\n\n\r\nPero, por el contrario, Fuyumura está segura de que Sanda es el descendiente de cierto linaje maldito y que debe realizar un “ritual” para traer su verdadero ser a este mundo.",
+      "portada": "data/portadas/4929/1.jpg"
+    },
+    "4655": {
+      "titulo": "Basilisk: The Kouga Ninja Scrolls",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4655",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-01-19",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4655/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-02-23",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4655/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-03-30",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4655/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-04-27",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4655/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-06-01",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4655/5.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yamada Futârô",
+      "totalNumeros": 5,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Los clanes Kouga Manjidani e Iga Tsubagakure llevan siglos enfrentados y sólo el pacto Hattori Hanzo mantiene la paz entre ellos. Pero cuando el antiguo shogun, Ieyasu Tokugawa, tiene que decidir quién de sus nietos será el sucesor de su hijo, no se le ocurre mejor manera que con una lucha a muerte entre los dos clanes ninja.\n\r\n\n\r\nCada uno de los clanes selecciona a sus 10 mejores miembros y los enfrentamientos más despiadados entre las dos facciones están servidos, dando por concluido el pacto de no agresión. Cada enfrentamiento se salda con la sangre del perdedor en un pergamino.\n\r\n\n\r\nGennosuke del clan Kouga y Oboro del clan Iga estaban destinados a casarse para mantener la paz entre ambos clanes, pero no era sólo un matrimonio de conveniencia, sino que los dos están enamoradísimos. Con la rotura del pacto y con un sangriento enfrentamiento, ¿estarán dispuestos a luchar o bien triunfará el amor por encima de la terrible disputa?",
+      "portada": "data/portadas/4655/1.jpg"
+    },
+    "2315": {
+      "titulo": "Tomodachi Game, Los juegos de la amistad",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2315",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2016-03-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2016-05-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2016-07-26",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2016-09-27",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2016-11-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2017-01-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2017-03-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2017-05-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2017-07-27",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2018-03-27",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2018-11-29",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2019-07-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2019-12-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2020-05-19",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2021-03-29",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2021-09-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2022-04-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2022-06-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2024-09-25",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2024-12-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2025-02-27",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2025-04-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2025-06-26",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2025-08-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2025-10-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2025-12-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/2315/26.jpg"
+        }
+      ],
+      "editorial": "Milky Way Ediciones",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x170) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Mikoto Yamaguchi",
+      "totalNumeros": 26,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¿Qué es más importante, la amistad o el dinero? Yuichi no tiene duda alguna de que sus amigos son lo más importante para él, sin embargo, bien conoce las dificultades de no tener dinero. Trabaja muy duro para pagarse el viaje de estudios y poder compartir la experiencia con su pandilla. Pero algo terrible sucede: Yuichi y sus amigos son secuestrados y despiertan en medio de una habitación junto a un extraño personaje que les obliga a participar en una extraña competición.\n\r\n\n\r\nAl parecer, uno de ellos ha entrado en un peligroso juego para pagar una deuda y ha involucrado al resto del grupo... ¿Quién es el culpable de esta locura? En medio de mentiras, engaños, traiciones y bizarras pruebas, Yuichi deberá enfrentarse a sus amigos en una lucha donde el dinero pondrá a prueba el lazo de amistad entre los jóvenes.",
+      "portada": "data/portadas/2315/1.jpg"
+    },
+    "1740": {
+      "titulo": "Magi, El Laberinto de la Magia",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1740",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2013-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2014-01-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2014-02-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2014-03-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2014-04-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2014-05-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2014-06-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2014-07-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2014-09-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2014-10-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2015-02-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2015-04-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2015-06-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2015-11-01",
+          "precio": 8.5,
+          "aproximada": true,
+          "portada": "data/portadas/1740/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2016-02-02",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2016-05-31",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2016-10-04",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2017-01-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2017-03-21",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2017-06-20",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2017-10-03",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2017-11-28",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2018-01-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2018-03-20",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2018-06-19",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2018-10-02",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2019-01-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2019-06-18",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2019-09-17",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2019-11-12",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": "2019-11-19",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": "2020-01-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": "2020-06-23",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": "2020-09-22",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": "2020-11-10",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": "2020-11-17",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/36.jpg"
+        },
+        {
+          "numero": 37,
+          "fecha": "2021-01-27",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/1740/37.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (111x177) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Shinobu Ohtaka",
+      "totalNumeros": 37,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "Nueva serie de aventuras que contiene todos los ingredientes para el éxito: innumerables encuentros y despedidas, misterios ocultos en un mundo desconocido... \n\r\n\n\r\n¡¡Aquí empieza esta gran historia, llena de magia y tesoros secretos, del extraño Aladdin!! Llega el primer tomo de esta refrescante epopeya mágica. Todo ello acompañado por unas bellas ilustraciones que trasladarán a los lectores a lugares de ensueño.",
+      "portada": "data/portadas/1740/1.jpg"
+    },
+    "2159": {
+      "titulo": "Noragami",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2159",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2015-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2015-12-04",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2016-02-19",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2016-04-11",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2016-06-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2016-08-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2016-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2017-01-20",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2017-03-30",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2017-05-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2017-07-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2017-09-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2018-01-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2018-03-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2018-06-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2018-09-28",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2019-01-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2019-04-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2019-06-21",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2019-10-31",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2020-10-29",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2021-10-29",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2022-05-27",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2022-10-28",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2023-07-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2024-01-19",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2025-04-04",
+          "precio": 10.0,
+          "aproximada": false,
+          "portada": "data/portadas/2159/27.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Adachitoka",
+      "totalNumeros": 27,
+      "estado": "finalizada",
+      "descargado": "2026-08-13",
+      "sinopsis": "¡ACCIÓN, ELEMENTOS SOBRENATURALES, HUMOR Y UNA PIZCA DE ROMANCE EN EL MANGA MÁS ESPERADO!\n\r\n\n\r\nHiyori, una joven humana, arriesga su vida para salvar a un chico de un atropello. Lo que no sabe es que se trata de Yato, una deidad menor que desea convertirse en dios, y tras su sacrificio la chica adquiere el poder de abandonar su cuerpo casi a voluntad... lo que la liga a Yato y a su misión.",
+      "portada": "data/portadas/2159/1.jpg"
     }
   },
   "sugerencias": {}

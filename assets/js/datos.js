@@ -55,7 +55,7 @@
       autor: s.autor || '',
       editorial: s.editorial || '',
       demografia: s.demografia || 'otro',
-      estado: D.ESTADOS[s.estado] ? s.estado : 'en-publicacion',
+      estado: D.ESTADOS[s.estado] ? s.estado : '',   // '' = el que diga la edición
       tomosTotales: Number(s.tomosTotales) || 0,   // 0 = desconocido / abierto
       portada: s.portada || '',
       sinopsis: s.sinopsis || '',
@@ -262,7 +262,8 @@
   /* ---------- Estadísticas ---------- */
 
   D.statsSerie = function (s) {
-    var tengo = 0, leidos = 0, gasto = 0, maxTomo = s.tomosTotales || 0, ultimoQueTengo = 0;
+    var totalDeclarado = D.totalDe(s);
+    var tengo = 0, leidos = 0, gasto = 0, maxTomo = totalDeclarado, ultimoQueTengo = 0;
     s.tomos.forEach(function (t) {
       if (t.numero > maxTomo) maxTomo = t.numero;
       if (t.tengo) {
@@ -272,7 +273,7 @@
         if (t.leido) leidos++;
       }
     });
-    var total = s.tomosTotales || maxTomo;
+    var total = totalDeclarado || maxTomo;
     // Huecos = tomos que te faltan por debajo del último que tienes.
     // Los que aún no han salido no son un hueco, son futuro.
     var huecos = [];
@@ -289,7 +290,8 @@
       ultimoQueTengo: ultimoQueTengo,
       gasto: gasto,
       huecos: huecos,
-      completa: total > 0 && tengo >= total && s.estado === 'finalizada',
+      totalDeclarado: totalDeclarado,
+      completa: total > 0 && tengo >= total && D.estadoDe(s) === 'finalizada',
       alDia: leidos === tengo && tengo > 0,
       progresoTengo: U.porcentaje(tengo, total),
       progresoLeido: U.porcentaje(leidos, tengo || 1)
@@ -308,7 +310,7 @@
       g.pendientes += st.pendientes;
       g.gasto += st.gasto;
       if (st.completa) g.seriesCompletas++;
-      if (s.estado === 'en-publicacion') g.seriesAbiertas++;
+      if (D.estadoDe(s) === 'en-publicacion') g.seriesAbiertas++;
     });
     g.proximas30 = D.proximasPublicaciones(30).length;
     return g;
@@ -342,6 +344,37 @@
   D.fichaLM = function (serie) {
     if (!serie.listadomangaId) return null;
     return D.calendario.colecciones[serie.listadomangaId] || null;
+  };
+
+  /** Estado efectivo: el tuyo si lo has puesto, si no el de la edición. */
+  D.estadoDe = function (serie) {
+    if (serie.estado) return serie.estado;
+    var ficha = D.fichaLM(serie);
+    return (ficha && ficha.estado) || 'en-publicacion';
+  };
+
+  /** Editorial efectiva: la tuya si la has puesto, si no la de la edición. */
+  D.editorialDe = function (serie) {
+    if (serie.editorial) return serie.editorial;
+    var ficha = D.fichaLM(serie);
+    return (ficha && ficha.editorial) || '';
+  };
+
+  /** Editoriales presentes en la colección, contando las heredadas. */
+  D.editoriales = function () {
+    var vistas = {};
+    D.coleccion.series.forEach(function (s) {
+      var e = D.editorialDe(s);
+      if (e) vistas[e] = true;
+    });
+    return Object.keys(vistas).sort(function (a, b) { return a.localeCompare(b, 'es'); });
+  };
+
+  /** Tomos totales efectivos: 0 si nadie lo sabe. */
+  D.totalDe = function (serie) {
+    if (serie.tomosTotales) return serie.tomosTotales;
+    var ficha = D.fichaLM(serie);
+    return (ficha && ficha.totalNumeros) || 0;
   };
 
   /** Demografía efectiva: la tuya si la has puesto, si no la de la edición. */

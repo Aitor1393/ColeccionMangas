@@ -5,6 +5,11 @@ on:
     # Lunes a las 06:15 UTC. Una vez por semana es de sobra: las editoriales
     # anuncian con meses de antelación y así no se molesta al servidor.
     - cron: '15 6 * * 1'
+  push:
+    # Al publicar la colección, para traer la ficha de las series nuevas sin
+    # esperar al lunes. Solo se descargan las que falten o estén caducadas.
+    branches: [main]
+    paths: ['data/coleccion.json']
   workflow_dispatch:
 
 permissions:

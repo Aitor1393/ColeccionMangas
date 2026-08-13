@@ -39,6 +39,17 @@ TIEMPO_MAX = 30      # timeout por petición
 REINTENTOS = 3
 
 
+def reciente(fecha, dias):
+    """¿La ficha se descargó hace menos de N días?"""
+    if not fecha:
+        return False
+    try:
+        cuando = time.mktime(time.strptime(fecha, '%Y-%m-%d'))
+    except ValueError:
+        return False
+    return (time.time() - cuando) < dias * 86400
+
+
 def log(mensaje):
     print(mensaje, flush=True)
 
@@ -273,6 +284,8 @@ def main():
     parser.add_argument('--dry-run', action='store_true', help='no escribe el fichero de salida')
     parser.add_argument('--limite', type=int, default=0, help='procesa como mucho N series')
     parser.add_argument('--verbose', action='store_true', help='muestra cada número encontrado')
+    parser.add_argument('--dias', type=int, default=7,
+                        help='reutiliza las fichas descargadas hace menos de N días (0 = todas)')
     args = parser.parse_args()
 
     coleccion = cargar_json(COLECCION, {'series': []})
@@ -298,6 +311,16 @@ def main():
         idlm = str(serie['listadomangaId'])
         url = '%s/coleccion.php?id=%s' % (BASE, idlm)
         log('· %s (id %s)' % (serie.get('titulo', '?'), idlm))
+
+        # Este workflow también corre al publicar la colección, así que sin
+        # esta comprobación se volvería a descargar todo cada vez que añades
+        # una serie. Solo se baja lo que falte o esté caducado.
+        anterior = previo.get('colecciones', {}).get(idlm)
+        if anterior and args.dias > 0 and reciente(anterior.get('descargado'), args.dias):
+            colecciones[idlm] = anterior
+            log('    ya descargada el %s: se reutiliza' % anterior.get('descargado', '?'))
+            continue
+
         try:
             pagina = descargar(url)
         except RuntimeError as e:
@@ -315,6 +338,7 @@ def main():
         conFecha = [n for n in numeros if n['fecha']]
         ficha = {'titulo': titulo_de(pagina), 'url': url, 'numeros': numeros}
         ficha.update(metadatos(pagina))
+        ficha['descargado'] = time.strftime('%Y-%m-%d')
         ficha['sinopsis'] = extraer_sinopsis(pagina)
         ficha['portada'] = guardar_portada(extraer_portada(pagina), idlm) or ''
         colecciones[idlm] = ficha

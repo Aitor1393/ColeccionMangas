@@ -120,9 +120,16 @@ seleccionarla se rellenan el ID y el título.
 Puedes tener **varias ediciones del mismo manga** en la colección: son series
 independientes, cada una con sus tomos y su calendario.
 
-Una vez enlazada, la serie hereda de la ficha oficial la **portada, el autor y la
-sinopsis en castellano**, y el detalle ofrece *«Usar editorial, total de tomos y estado de
-esta edición»* para copiar también esos campos. Lo que rellenes tú siempre manda.
+Al elegir la edición se **precarga el formulario** con autor, editorial, sinopsis, tomos
+totales, demografía y estado, y se te dice qué campos se han rellenado. Solo se toca lo
+que esté vacío: lo que escribas tú nunca se pisa.
+
+Si la ficha aún no está descargada, no pasa nada: los campos que dejes en blanco se
+**heredan de la edición** en cuanto llegue, sin tener que tocar la serie. El estado tiene
+por eso un valor *«Según la edición»*, que es el que trae por defecto.
+
+El botón *«Usar los datos de esta edición»* solo aparece cuando un valor tuyo choca con
+la ficha, para resolverlo de un clic.
 
 Las portadas se **descargan una vez** a `data/portadas/` y se sirven desde tu propio repo,
 para no cargar el ancho de banda de ListadoManga en cada visita. Vienen a 105×150 px, que
@@ -141,7 +148,7 @@ ListadoManga no tiene API pública ni envía cabeceras CORS, así que **el naveg
 consultarlo** desde GitHub Pages. Lo hace un workflow programado:
 
 ```
-.github/workflows/calendario.yml   →  lunes a las 06:15 UTC (y a mano si quieres)
+.github/workflows/calendario.yml   →  lunes a las 06:15 UTC, y al publicar la colección
 scripts/actualizar_indice.py       →  catálogo de ediciones  →  data/listadomanga-indice.json
 scripts/actualizar_calendario.py   →  fechas y precios       →  data/calendario.json
 ```
@@ -149,9 +156,13 @@ scripts/actualizar_calendario.py   →  fechas y precios       →  data/calenda
 El catálogo (256 KB) **no se descarga al abrir la web**: solo cuando escribes en el
 selector de edición.
 
+Al publicar una serie nueva, el workflow se dispara solo y trae su ficha en un minuto:
+no hay que esperar al lunes. Para no repetir descargas, **reutiliza las fichas bajadas
+hace menos de 7 días** (`--dias N` lo ajusta), así una publicación solo descarga lo nuevo.
+
 El script solo usa la biblioteca estándar de Python, se identifica con un `User-Agent`
 propio, espera 1,5 s entre peticiones y solo descarga la ficha de las series que tengas
-enlazadas —una petición por serie y semana—. Si una descarga falla, conserva los datos
+enlazadas. Si una descarga falla, conserva los datos
 de la ejecución anterior en lugar de borrarlos. Puedes probarlo en local:
 
 ```bash

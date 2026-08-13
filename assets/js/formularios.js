@@ -7,9 +7,10 @@
   var F = {};
 
   function opcionesEstado(sel) {
-    return Object.keys(D.ESTADOS).map(function (k) {
-      return '<option value="' + k + '"' + (sel === k ? ' selected' : '') + '>' + D.ESTADOS[k].etiqueta + '</option>';
-    }).join('');
+    return '<option value=""' + (sel ? '' : ' selected') + '>Según la edición</option>' +
+      Object.keys(D.ESTADOS).map(function (k) {
+        return '<option value="' + k + '"' + (sel === k ? ' selected' : '') + '>' + D.ESTADOS[k].etiqueta + '</option>';
+      }).join('');
   }
 
   function opcionesDemografia(sel) {
@@ -39,7 +40,7 @@
   F.serie = function (serie) {
     var edicion = !!serie;
     var s = serie || {
-      titulo: '', autor: '', editorial: '', demografia: 'otro', estado: 'en-publicacion',
+      titulo: '', autor: '', editorial: '', demografia: 'otro', estado: '',
       tomosTotales: 0, portada: '', sinopsis: '', notas: '', etiquetas: []
     };
 
@@ -237,9 +238,9 @@
     }
 
     var estado = U.$('#cEstado');
-    if (ficha.estado && estado && estado.value === 'en-publicacion') {
+    if (ficha.estado && estado && !estado.value) {
       estado.value = ficha.estado;
-      if (ficha.estado !== 'en-publicacion') rellenados.push('estado');
+      rellenados.push('estado');
     }
 
     return rellenados;

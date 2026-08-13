@@ -9,7 +9,7 @@
   /* ---------- Piezas reutilizables ---------- */
 
   function chipEstado(serie) {
-    var e = D.ESTADOS[serie.estado];
+    var e = D.ESTADOS[D.estadoDe(serie)];
     return '<span class="chip ' + e.clase + '">' + e.etiqueta + '</span>';
   }
 
@@ -44,8 +44,8 @@
       insignia = '<span class="serie__insignia serie__insignia--pendiente">' + st.pendientes + ' sin leer</span>';
     } else if (st.completa) {
       insignia = '<span class="serie__insignia serie__insignia--completa">✓ completa</span>';
-    } else if (serie.tomosTotales) {
-      insignia = '<span class="serie__insignia">' + st.tengo + '/' + serie.tomosTotales + '</span>';
+    } else if (st.totalDeclarado) {
+      insignia = '<span class="serie__insignia">' + st.tengo + '/' + st.totalDeclarado + '</span>';
     }
 
     return '' +
@@ -57,7 +57,7 @@
         '<div>' +
           '<div class="serie__titulo">' + U.esc(serie.titulo) + '</div>' +
           '<div class="serie__meta">' +
-            '<span>' + U.plural(st.tengo, 'tomo') + (serie.tomosTotales ? ' de ' + serie.tomosTotales : '') + '</span>' +
+            '<span>' + U.plural(st.tengo, 'tomo') + (st.totalDeclarado ? ' de ' + st.totalDeclarado : '') + '</span>' +
           '</div>' +
         '</div>' +
       '</article>';
@@ -140,7 +140,7 @@
     var pasada = item.dias < 0;
     var s = item.salida;
 
-    var detalles = [item.serie.editorial || 'Editorial sin indicar'];
+    var detalles = [D.editorialDe(item.serie) || 'Editorial sin indicar'];
     if (s.precio) detalles.push(U.euros(s.precio));
     if (s.nota) detalles.push(U.esc(s.nota));
     if (item.origen === 'listadomanga') detalles.push('vía ListadoManga');
@@ -181,7 +181,7 @@
       '<div class="buscador"><input type="text" id="fTexto" placeholder="Buscar por título, autor, editorial o etiqueta…" value="' + U.esc(f.texto) + '"></div>' +
       '<select id="fEstado"><option value="">Cualquier estado</option>' + opciones(Object.keys(D.ESTADOS), f.estado, D.ESTADOS) + '</select>' +
       '<select id="fDemografia"><option value="">Cualquier demografía</option>' + opciones(Object.keys(D.DEMOGRAFIAS), f.demografia, D.DEMOGRAFIAS) + '</select>' +
-      '<select id="fEditorial"><option value="">Cualquier editorial</option>' + opciones(D.valoresDe('editorial'), f.editorial) + '</select>' +
+      '<select id="fEditorial"><option value="">Cualquier editorial</option>' + opciones(D.editoriales(), f.editorial) + '</select>' +
       '<select id="fOrden">' +
         '<option value="titulo"' + (f.orden === 'titulo' ? ' selected' : '') + '>Ordenar: título</option>' +
         '<option value="pendientes"' + (f.orden === 'pendientes' ? ' selected' : '') + '>Ordenar: más pendientes</option>' +
@@ -207,9 +207,9 @@
     var texto = U.normalizar(f.texto);
 
     var lista = series.filter(function (s) {
-      if (f.estado && s.estado !== f.estado) return false;
+      if (f.estado && D.estadoDe(s) !== f.estado) return false;
       if (f.demografia && D.demografiaDe(s) !== f.demografia) return false;
-      if (f.editorial && s.editorial !== f.editorial) return false;
+      if (f.editorial && D.editorialDe(s) !== f.editorial) return false;
       if (f.soloPendientes && D.statsSerie(s).pendientes === 0) return false;
       if (texto) {
         var heno = U.normalizar([s.titulo, s.tituloAlt, s.autor, s.editorial, s.etiquetas.join(' ')].join(' '));
@@ -420,10 +420,14 @@
         return n.fecha && d !== null && d >= 0 && !(t && t.tengo);
       });
       // ¿Difieren los datos de la ficha de los que tienes guardados?
-      var discrepa = (ficha.editorial && ficha.editorial !== serie.editorial) ||
-        (ficha.totalNumeros && ficha.totalNumeros !== serie.tomosTotales) ||
-        (ficha.estado && ficha.estado !== serie.estado) ||
-        (ficha.demografia && ficha.demografia !== serie.demografia);
+      // El botón solo tiene sentido si has puesto un valor propio que no cuadra
+      // con la ficha. Lo que dejaste en blanco ya se hereda solo, sin pulsar nada.
+      function chocan(mio, suyo) { return !!(suyo && mio && mio !== suyo); }
+
+      var discrepa = chocan(serie.editorial, ficha.editorial) ||
+        chocan(serie.tomosTotales, ficha.totalNumeros) ||
+        chocan(serie.estado, ficha.estado) ||
+        chocan(serie.demografia === 'otro' ? '' : serie.demografia, ficha.demografia);
 
       bloqueLM =
         '<p class="ayuda">Enlazada con <a href="' + U.esc(ficha.url) + '" target="_blank" rel="noopener">' +

@@ -1835,6 +1835,178 @@
       "descargado": "2026-08-13",
       "sinopsis": "¡LLEGA ESTA VIOLENTA COMEDIA ROMÁNTICA SITUADA EN LA GUARDERÍA MÁS SEGURA DEL MUNDO!\n\r\n\n\r\nRita, también conocida como “prisionera número 999”, es una exasesina legendaria que acaba de empezar a trabajar en una guardería a la que asisten los hijos de las personalidades más ricas e influyentes del mundo. Su trabajo consiste en proteger diariamente a estos niños de los crueles sicarios que intentan echarles las garras encima. Rita es la mejor en su trabajo, y es que a la hora de pelear, posee unas habilidades y una fuerza arrolladoras, pero esconde una debilidad secreta: le pierden los tíos buenos y se enamora enseguida cuando ve una cara bonita, aunque sea la de un sicario dispuesto a matar a alguno de sus pupilos. Por suerte, sus reflejos son más rápidos que su corazón y siempre acaba con la amenaza de turno.\n\r\n\n\r\nPero Rita lo tiene claro: está dispuesta por todos los medios a encontrar a su media naranja, incluso con este trabajo a tiempo completo a cuestas.",
       "portada": "data/portadas/5517.jpg"
+    },
+    "4562": {
+      "titulo": "Wind Breaker (Castellano)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4562",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-03-16",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 2,
+          "fecha": "2023-03-16",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 3,
+          "fecha": "2023-05-04",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 4,
+          "fecha": "2023-07-06",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 5,
+          "fecha": "2023-10-05",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 6,
+          "fecha": "2023-12-05",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 7,
+          "fecha": "2024-03-07",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 8,
+          "fecha": "2024-06-06",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 9,
+          "fecha": "2024-10-03",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 10,
+          "fecha": "2025-01-09",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 11,
+          "fecha": "2025-04-03",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 12,
+          "fecha": "2025-07-17",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 13,
+          "fecha": "2025-11-20",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 14,
+          "fecha": "2026-03-12",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 15,
+          "fecha": "2026-06-11",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 16,
+          "fecha": "2026-10-08",
+          "precio": 9.95,
+          "aproximada": false
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 19,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 20,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 21,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 22,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 23,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 24,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 25,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        },
+        {
+          "numero": 26,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false
+        }
+      ],
+      "editorial": "Distrito Manga",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Nii Satoru",
+      "totalNumeros": 26,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-13",
+      "sinopsis": "El instituto Fûrin se ha granjeado la peor reputación entre los centros de la zona por tener la media más baja y los alumnos más rebeldes. Haruka Sakura es un joven que acaba de llegar a la ciudad y busca ser el más fuerte para poder proteger a todos los que le importan.\n\r\n\n\r\nPara conseguir su propósito, lo primero que debe hacer es unirse a una pandilla llamada Wind Breaker, que representa a su instituto y cuyo objetivo es defender la ciudad del resto de bandas y maleantes. Sin embargo, ¡para que lo acepten deberá ganarse el respeto a base de puños!",
+      "portada": "data/portadas/4562.jpg"
     }
   },
   "sugerencias": {}

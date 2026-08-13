@@ -381,20 +381,34 @@
   };
 
   /**
-   * Busca ediciones en el catálogo. Prioriza las que empiezan por el texto
-   * buscado, para que «bleach» no entierre las ediciones de Bleach entre
-   * títulos que solo lo mencionan de pasada.
+   * Busca ediciones en el catálogo.
+   *
+   * Se buscan todas las palabras por separado, no la cadena entera: los
+   * nombres llevan la edición entre paréntesis —«Bleach (Maximum)»— y una
+   * búsqueda literal de «bleach maximum» no encontraría nada.
+   *
+   * Prioriza las que empiezan por la primera palabra, para que «bleach» no
+   * entierre las ediciones de Bleach entre títulos que solo lo mencionan.
    */
   D.buscarEdiciones = function (texto, limite) {
     if (!indice) return [];
     var aguja = U.normalizar(texto).trim();
     if (aguja.length < 2) return [];
 
+    var palabras = aguja.split(/\s+/).filter(function (p) { return p; });
+
     var empiezan = [], contienen = [];
     for (var i = 0; i < indice.length; i++) {
-      var pos = indice[i].busqueda.indexOf(aguja);
-      if (pos === 0) empiezan.push(indice[i]);
-      else if (pos > 0) contienen.push(indice[i]);
+      var nombre = indice[i].busqueda;
+
+      var todas = true;
+      for (var j = 0; j < palabras.length; j++) {
+        if (nombre.indexOf(palabras[j]) === -1) { todas = false; break; }
+      }
+      if (!todas) continue;
+
+      if (nombre.indexOf(palabras[0]) === 0) empiezan.push(indice[i]);
+      else contienen.push(indice[i]);
     }
 
     // Alfabético dentro de cada grupo: así las ediciones de una misma obra

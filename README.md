@@ -85,8 +85,8 @@ Si usas un ordenador compartido, usa la opción *Olvidar token* al terminar.
   > no lo tengo → **lo tengo** → **leído** → no lo tengo
 
   Además: huecos de la colección, gasto acumulado, fechas de salida y notas.
-- **Añadir serie** — buscador contra la API pública de [MangaDex](https://api.mangadex.org/docs/)
-  que rellena título, autor, portada, sinopsis, estado y número de tomos. También puedes
+- **Añadir serie** — eliges tu edición española y se rellenan solos portada, autor,
+  sinopsis, editorial, número de tomos, estado, fechas y precios. También puedes
   escribirlo todo a mano.
 - **Modo claro y oscuro**, y diseño adaptado a móvil.
 
@@ -120,8 +120,16 @@ seleccionarla se rellenan el ID y el título.
 Puedes tener **varias ediciones del mismo manga** en la colección: son series
 independientes, cada una con sus tomos y su calendario.
 
-Una vez enlazada, el detalle de la serie ofrece *«Usar editorial, total de tomos y estado
-de esta edición»* para copiar esos datos de la ficha oficial.
+Una vez enlazada, la serie hereda de la ficha oficial la **portada, el autor y la
+sinopsis en castellano**, y el detalle ofrece *«Usar editorial, total de tomos y estado de
+esta edición»* para copiar también esos campos. Lo que rellenes tú siempre manda.
+
+Las portadas se **descargan una vez** a `data/portadas/` y se sirven desde tu propio repo,
+para no cargar el ancho de banda de ListadoManga en cada visita. Vienen a 105×150 px, que
+es el tamaño que publican; si quieres una mejor, pega una URL en *URL de la portada*.
+
+> No se usa MangaDex: su API solo envía cabeceras CORS a su propio dominio, así que un
+> sitio estático como este nunca puede consultarla desde el navegador.
 
 Si prefieres, también puedes pegar el ID a mano: es el número de la URL de la ficha, en
 `coleccion.php?id=2688`. Y para las series **sin enlazar**, el script busca candidatos por
@@ -173,7 +181,6 @@ index.html                 Estructura y navegación
 assets/css/estilos.css     Estilos (tema claro/oscuro con variables CSS)
 assets/js/util.js          Utilidades: fechas en español, escapado, modal, avisos
 assets/js/datos.js         Modelo, cálculos y persistencia
-assets/js/mangadex.js      Búsqueda de metadatos en MangaDex
 assets/js/github.js        Publicación vía API de contenidos de GitHub
 assets/js/vistas.js        Render de cada pantalla
 assets/js/formularios.js   Altas, ediciones y diálogos
@@ -181,6 +188,7 @@ assets/js/app.js           Rutas, eventos y arranque
 data/coleccion.json        Tu colección
 data/calendario.json       Fechas de ListadoManga (lo genera la Action, no lo edites)
 data/listadomanga-indice.json      Catálogo de ediciones (ídem)
+data/portadas/             Portadas descargadas una vez por el Action
 scripts/actualizar_calendario.py   Descarga de fechas, precios y datos de la edición
 scripts/actualizar_indice.py       Descarga del catálogo de ediciones
 ```

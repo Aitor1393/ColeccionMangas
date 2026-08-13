@@ -180,6 +180,8 @@
       if (ficha.editorial) cambios.editorial = ficha.editorial;
       if (ficha.totalNumeros) cambios.tomosTotales = ficha.totalNumeros;
       if (ficha.estado) cambios.estado = ficha.estado;
+      if (ficha.autor && !s.autor) cambios.autor = ficha.autor;
+      if (ficha.sinopsis && !s.sinopsis) cambios.sinopsis = ficha.sinopsis;
       D.actualizarSerie(s.id, cambios);
 
       U.aviso('Datos actualizados desde ListadoManga', 'ok');

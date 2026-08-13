@@ -145,6 +145,74 @@ def metadatos(pagina):
     }
 
 
+def extraer_sinopsis(pagina):
+    """La sinopsis en castellano que ListadoManga publica al pie de la ficha."""
+    corte = re.split(r'(?i)<h2>\s*Sinopsis de', pagina)
+    if len(corte) < 2:
+        return ''
+    trozo = corte[1]
+    trozo = re.split(r'(?i)</table>', trozo)[0]
+    trozo = re.sub(r'(?is)^[^<]*</h2>', '', trozo)          # resto del título
+    texto = html.unescape(re.sub(r'(?i)<br\s*/?>', '\n', trozo))
+    texto = re.sub(r'<[^>]+>', '', texto)
+    return re.sub(r'\n{3,}', '\n\n', texto).strip()
+
+
+def extraer_portada(pagina):
+    """
+    URL de la portada del primer número. Cuando ListadoManga censura una
+    portada, sirve un marcador en src y deja el fichero real en data-portada.
+    """
+    for etiqueta in re.findall(r'<img class="portada"[^>]*>', pagina):
+        real = re.search(r'data-portada="([^"]+)"', etiqueta)
+        if real:
+            return 'https://static.listadomanga.com/' + real.group(1)
+        src = re.search(r'src="([^"]+)"', etiqueta)
+        if src:
+            return src.group(1)
+    return None
+
+
+def guardar_portada(url, idlm):
+    """
+    Descarga la portada una sola vez y la deja en data/portadas/.
+    Se sirve desde el propio repositorio para no cargar el ancho de banda
+    de ListadoManga en cada visita a la web.
+    Devuelve la ruta relativa, o None si no se pudo.
+    """
+    if not url:
+        return None
+    extension = os.path.splitext(url.split('?')[0])[1].lower()
+    if extension not in ('.jpg', '.jpeg', '.png', '.webp', '.gif'):
+        extension = '.jpg'
+
+    carpeta = os.path.join(RAIZ, 'data', 'portadas')
+    destino = os.path.join(carpeta, idlm + extension)
+    relativa = 'data/portadas/' + idlm + extension
+
+    if os.path.exists(destino):
+        return relativa
+
+    try:
+        peticion = urllib.request.Request(url, headers={'User-Agent': AGENTE})
+        with urllib.request.urlopen(peticion, timeout=TIEMPO_MAX) as respuesta:
+            datos = respuesta.read()
+    except (urllib.error.URLError, OSError) as e:
+        log('    no se pudo bajar la portada: %s' % e)
+        return None
+
+    if len(datos) > 2 * 1024 * 1024:
+        log('    portada descartada por tamaño (%.1f MB)' % (len(datos) / 1048576.0))
+        return None
+
+    if not os.path.isdir(carpeta):
+        os.makedirs(carpeta)
+    with open(destino, 'wb') as f:
+        f.write(datos)
+    log('    portada guardada (%.0f KB)' % (len(datos) / 1024.0))
+    return relativa
+
+
 def titulo_de(pagina):
     coincidencia = re.search(r'<title>([^<]+)</title>', pagina)
     if not coincidencia:
@@ -218,6 +286,8 @@ def main():
         conFecha = [n for n in numeros if n['fecha']]
         ficha = {'titulo': titulo_de(pagina), 'url': url, 'numeros': numeros}
         ficha.update(metadatos(pagina))
+        ficha['sinopsis'] = extraer_sinopsis(pagina)
+        ficha['portada'] = guardar_portada(extraer_portada(pagina), idlm) or ''
         colecciones[idlm] = ficha
         log('    %d números (%d con fecha) · %s · %s' % (
             len(numeros), len(conFecha), ficha['editorial'] or 'editorial ?',

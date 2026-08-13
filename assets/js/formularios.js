@@ -43,20 +43,8 @@
       tomosTotales: 0, portada: '', sinopsis: '', notas: '', etiquetas: []
     };
 
-    var buscador = edicion ? '' :
-      '<div style="margin-bottom:20px;padding-bottom:20px;border-bottom:1px solid var(--borde)">' +
-        '<label for="mdBuscar">Buscar en MangaDex y rellenar automáticamente</label>' +
-        '<div style="display:flex;gap:8px">' +
-          '<input type="text" id="mdBuscar" placeholder="Ej. Berserk, Chainsaw Man, Monster…">' +
-          '<button class="btn" id="mdBtn" type="button">Buscar</button>' +
-        '</div>' +
-        '<div class="ayuda">Opcional: rellena título, autor, portada, sinopsis y nº de tomos. Siempre puedes escribirlo a mano.</div>' +
-        '<div class="resultados" id="mdResultados"></div>' +
-      '</div>';
-
     var html =
       '<h2>' + (edicion ? 'Editar serie' : 'Añadir serie') + '</h2>' +
-      buscador +
       '<form id="formSerie">' +
         '<div class="campos">' +
           '<div class="campo--ancho"><label for="cTitulo">Título *</label>' +
@@ -94,60 +82,6 @@
 
     U.abrirModal(html);
 
-    var datosMD = {};   // metadatos extra de la búsqueda (etiquetas, id…)
-
-    if (!edicion) {
-      var input = U.$('#mdBuscar');
-      var boton = U.$('#mdBtn');
-      var caja = U.$('#mdResultados');
-      var ultimos = [];
-
-      var buscar = function () {
-        var texto = input.value.trim();
-        if (texto.length < 2) return;
-        caja.innerHTML = '<div class="ayuda">Buscando…</div>';
-        MD.buscar(texto).then(function (series) {
-          ultimos = series;
-          if (!series.length) { caja.innerHTML = '<div class="ayuda">Sin resultados. Rellena el formulario a mano.</div>'; return; }
-          caja.innerHTML = series.map(function (r, i) {
-            return '<button type="button" class="resultado" data-idx="' + i + '">' +
-              (r.portadaMini ? '<img src="' + U.esc(r.portadaMini) + '" alt="" referrerpolicy="no-referrer">' : '<div class="fila__portada" style="width:44px;height:64px"></div>') +
-              '<div class="resultado__cuerpo">' +
-                '<div class="resultado__titulo">' + U.esc(r.titulo) + '</div>' +
-                '<div class="resultado__meta">' + U.esc(r.autor || 'Autor desconocido') +
-                  (r.anio ? ' · ' + r.anio : '') +
-                  ' · ' + U.esc(D.ESTADOS[r.estado].etiqueta) +
-                  (r.tomosTotales ? ' · ' + r.tomosTotales + ' tomos' : '') + '</div>' +
-              '</div>' +
-            '</button>';
-          }).join('');
-        }).catch(function (e) {
-          caja.innerHTML = '<div class="ayuda">No se pudo consultar MangaDex (' + U.esc(e.message) + '). Rellena el formulario a mano.</div>';
-        });
-      };
-
-      boton.addEventListener('click', buscar);
-      input.addEventListener('keydown', function (e) {
-        if (e.key === 'Enter') { e.preventDefault(); buscar(); }
-      });
-
-      caja.addEventListener('click', function (e) {
-        var nodo = e.target.closest('.resultado');
-        if (!nodo) return;
-        var r = ultimos[Number(nodo.dataset.idx)];
-        if (!r) return;
-        U.$('#cTitulo').value = r.titulo;
-        U.$('#cAutor').value = r.autor;
-        U.$('#cSinopsis').value = r.sinopsis;
-        U.$('#cPortada').value = r.portada;
-        U.$('#cEstado').value = r.estado;
-        U.$('#cDemografia').value = D.DEMOGRAFIAS[r.demografia] ? r.demografia : 'otro';
-        if (r.tomosTotales) U.$('#cTotales').value = r.tomosTotales;
-        datosMD = { etiquetas: r.etiquetas, mangadexId: r.mangadexId, tituloAlt: r.tituloAlt };
-        caja.innerHTML = '<div class="ayuda">✓ Datos de «' + U.esc(r.titulo) + '» cargados. Revísalos y ajusta lo que quieras.</div>';
-      });
-    }
-
     conectarSelectorEdicion(s);
 
     U.$('#formSerie').addEventListener('submit', function (e) {
@@ -174,9 +108,6 @@
         U.aviso('Serie actualizada', 'ok');
         App.abrirSerie(serie.id);
       } else {
-        datos.etiquetas = datosMD.etiquetas || [];
-        datos.mangadexId = datosMD.mangadexId || '';
-        datos.tituloAlt = datosMD.tituloAlt || '';
         datos.tomos = [];
         for (var i = 1; i <= hasta; i++) {
           datos.tomos.push({ numero: i, tengo: true, leido: false });

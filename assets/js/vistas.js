@@ -13,17 +13,26 @@
     return '<span class="chip ' + e.clase + '">' + e.etiqueta + '</span>';
   }
 
+  /** La portada propia manda; si no hay, la de la edición en ListadoManga. */
+  function urlPortada(serie) {
+    if (serie.portada) return serie.portada;
+    var ficha = D.fichaLM(serie);
+    return ficha && ficha.portada ? ficha.portada : '';
+  }
+
   function portadaHTML(serie, clase) {
-    if (serie.portada) {
-      return '<img class="' + clase + '" src="' + U.esc(serie.portada) + '" alt="Portada de ' +
-        U.esc(serie.titulo) + '" loading="lazy" referrerpolicy="no-referrer">';
+    var url = urlPortada(serie);
+    if (url) {
+      return '<img class="' + clase + '" src="' + U.esc(url) + '" alt="Portada de ' +
+        U.esc(serie.titulo) + '" loading="lazy">';
     }
     return '<div class="' + clase + ' serie__portada--sin">' + U.esc(serie.titulo) + '</div>';
   }
 
   function miniPortada(serie) {
-    if (serie.portada) {
-      return '<img class="fila__portada" src="' + U.esc(serie.portada) + '" alt="" loading="lazy" referrerpolicy="no-referrer">';
+    var url = urlPortada(serie);
+    if (url) {
+      return '<img class="fila__portada" src="' + U.esc(url) + '" alt="" loading="lazy">';
     }
     return '<div class="fila__portada"></div>';
   }
@@ -69,7 +78,7 @@
       return '' +
         '<div class="vacio">' +
           '<h3>Aún no hay nada en la colección</h3>' +
-          '<p>Empieza añadiendo tu primera serie: busca por título y se rellenan solos autor, portada y número de tomos.</p>' +
+          '<p>Empieza añadiendo tu primera serie: elige tu edición española y se rellenan solos portada, autor, sinopsis, fechas y precios.</p>' +
           '<p><button class="btn btn--primario" data-accion="nueva-serie">+ Añadir mi primera serie</button></p>' +
         '</div>';
     }
@@ -397,6 +406,11 @@
     var ficha = D.fichaLM(serie);
     var bloqueLM;
 
+    // Lo tuyo manda; lo que no hayas rellenado, lo pone la edición española.
+    var sinopsis = serie.sinopsis || (ficha && ficha.sinopsis) || '';
+    var autor = serie.autor || (ficha && ficha.autor) || '';
+    var editorial = serie.editorial || (ficha && ficha.editorial) || '';
+
     if (ficha) {
       var futuros = D.numerosLM(serie).filter(function (n) {
         var d = U.diasHasta(n.fecha);
@@ -486,12 +500,12 @@
         '<div class="detalle__meta">' +
           chipEstado(serie) +
           (serie.demografia && serie.demografia !== 'otro' ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[serie.demografia] || serie.demografia) + '</span>' : '') +
-          (serie.autor ? '<span class="chip">✍ ' + U.esc(serie.autor) + '</span>' : '') +
-          (serie.editorial ? '<span class="chip">🏢 ' + U.esc(serie.editorial) + '</span>' : '') +
+          (autor ? '<span class="chip">✍ ' + U.esc(autor) + '</span>' : '') +
+          (editorial ? '<span class="chip">🏢 ' + U.esc(editorial) + '</span>' : '') +
           (st.gasto ? '<span class="chip">💶 ' + U.euros(st.gasto) + '</span>' : '') +
         '</div>' +
 
-        (serie.sinopsis ? '<div class="detalle__sinopsis">' + U.esc(serie.sinopsis) + '</div>' : '') +
+        (sinopsis ? '<div class="detalle__sinopsis">' + U.esc(sinopsis) + '</div>' : '') +
 
         '<div style="display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-bottom:18px">' +
           '<div>' +

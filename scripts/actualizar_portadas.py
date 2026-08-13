@@ -16,9 +16,15 @@ Fuentes, elegidas por lo que cuestan y lo que cubren:
     pero publica sitemaps precisamente para esto. Dos peticiones traen las 66.000
     entradas del catálogo, con título y portada original de 2000 px.
   - Ivrea: su página de catálogo, que lista las 482 series de una vez.
+  - Norma: su índice de series, 6 páginas que traen nombre, portada y número de
+    álbumes. Su catálogo de productos tiene 63 páginas, pero para una portada por
+    serie no hace falta.
 
-Norma queda fuera de momento: obliga a recorrer 63 páginas y sus series antiguas
-están descatalogadas, así que cubre bastante menos.
+Solo Planeta va por sitemap, que es un estándar y no cambia de forma. Las otras
+dos dependen del HTML de su web, así que si la rediseñan dejarían de encontrar
+nada. Por eso, si una fuente devuelve cero series, el script termina con error:
+más vale que la Action salga en rojo a seguir publicando portadas viejas en
+silencio.
 
 Uso:
     python3 scripts/actualizar_portadas.py [--forzar] [--verbose] [--dry-run]
@@ -57,6 +63,8 @@ SITEMAPS_PLANETA = [
     'https://www.planetadelibros.com/sitemap/sitemap-imagenes-catalogo-libros-2.xml',
 ]
 CATALOGO_IVREA = 'https://www.editorialivrea.com/ESP/catalogo/'
+INDICE_NORMA = 'https://www.normaeditorial.com/catalogo/manga/series'
+PAGINAS_NORMA = 8      # ahora son 6; el margen evita quedarse corto si crecen
 
 
 def log(msg):
@@ -215,6 +223,36 @@ def indice_ivrea():
     return indice
 
 
+# ---------------------------------------------------------------- Norma
+
+def indice_norma():
+    """{título normalizado: portada y número de álbumes}."""
+    indice = {}
+    for pagina in range(1, PAGINAS_NORMA + 1):
+        url = INDICE_NORMA + ('' if pagina == 1 else '?p=%d' % pagina)
+        log('  · índice de Norma, página %d' % pagina)
+        s = pedir(url)
+        # El menú desplegable repite enlaces a series; solo vale el listado.
+        lista = s[s.find('<div id="list"'):] or s
+        encontradas = 0
+        for m in re.finditer(
+                r'data-src="(/upload/[^"]+)".*?class="caption"><h2>(.*?)</h2>\s*'
+                r'<span class="caption-count">\((\d+)',
+                lista, re.S):
+            ruta, nombre = m.group(1), html.unescape(m.group(2)).strip()
+            # La miniatura del índice es «_medium» (326 px); «_big» da 650.
+            grande = 'https://www.normaeditorial.com' + re.sub(r'_medium\.', '_big.', ruta)
+            # Sin total a propósito: Norma cuenta «álbumes», que incluye artbooks
+            # y guías, así que no sirve para saber si es la misma edición. Sin
+            # total, el título pelado nunca vale de respaldo, que es lo prudente.
+            indice.setdefault(normalizar(nombre), {'url': grande, 'total': None})
+            encontradas += 1
+        if not encontradas:
+            break          # se acabaron las páginas
+        time.sleep(PAUSA_PAGINA)
+    return indice
+
+
 # ---------------------------------------------------------------- Imágenes
 
 def reducir(datos, ancho=ANCHO):
@@ -259,13 +297,13 @@ def main():
         ficha = calendario.get(str(s.get('listadomangaId') or ''), {})
         return s.get('editorial') or ficha.get('editorial') or ''
 
-    pendientes = {'Planeta': [], 'Ivrea': []}
+    pendientes = {'Planeta': [], 'Ivrea': [], 'Norma': []}
     for s in coleccion.get('series', []):
         idlm = str(s.get('listadomangaId') or '')
         if not idlm:
             continue          # sin id no hay dónde guardarla de forma estable
         ed = editorial_de(s)
-        cual = 'Planeta' if 'Planeta' in ed else ('Ivrea' if 'Ivrea' in ed else None)
+        cual = next((k for k in pendientes if k in ed), None)
         if not cual:
             continue
         ruta = os.path.join(DIR_IMG, idlm + '.jpg')
@@ -278,16 +316,21 @@ def main():
         log('Todas las portadas de Planeta e Ivrea están al día.')
         return 0
 
-    log('Portadas por descargar: Planeta %d · Ivrea %d' %
-        (len(pendientes['Planeta']), len(pendientes['Ivrea'])))
+    log('Portadas por descargar: ' +
+        ' · '.join('%s %d' % (k, len(v)) for k, v in pendientes.items() if v))
 
+    constructores = {'Planeta': indice_planeta, 'Ivrea': indice_ivrea, 'Norma': indice_norma}
     indices = {}
-    if pendientes['Planeta']:
-        indices['Planeta'] = indice_planeta()
-        log('  índice de Planeta: %d series' % len(indices['Planeta']))
-    if pendientes['Ivrea']:
-        indices['Ivrea'] = indice_ivrea()
-        log('  índice de Ivrea: %d series' % len(indices['Ivrea']))
+    fuentes_rotas = []
+    for cual, series in pendientes.items():
+        if not series:
+            continue
+        indices[cual] = constructores[cual]()
+        log('  índice de %s: %d series' % (cual, len(indices[cual])))
+        if not indices[cual]:
+            # Si la web cambia de estructura no encontraremos nada, y callarlo
+            # dejaría las portadas viejas para siempre sin que se note.
+            fuentes_rotas.append(cual)
 
     if not args.dry_run:
         os.makedirs(DIR_IMG, exist_ok=True)
@@ -337,6 +380,10 @@ def main():
             time.sleep(PAUSA_IMAGEN)
 
     log('\nDescargadas %d · sin encontrar %d' % (bajadas, fallos))
+    if fuentes_rotas:
+        log('\n¡AVISO! Estas fuentes no han devuelto ninguna serie: %s.\n'
+            'Lo normal es que hayan rediseñado su web y haya que revisar el script.'
+            % ', '.join(fuentes_rotas))
 
     if args.dry_run:
         log('(--dry-run: no se ha escrito nada)')
@@ -351,7 +398,7 @@ def main():
         }, f, ensure_ascii=False, indent=1)
         f.write('\n')
     log('Escrito %s con %d portadas' % (os.path.relpath(SALIDA, RAIZ), len(portadas)))
-    return 0
+    return 1 if fuentes_rotas else 0
 
 
 if __name__ == '__main__':

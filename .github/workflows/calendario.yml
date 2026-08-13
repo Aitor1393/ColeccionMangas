@@ -36,7 +36,10 @@ jobs:
       - name: Preparar Pillow
         run: pip install --quiet Pillow
 
+      # Sale en rojo si alguna editorial deja de devolver series —señal de que
+      # ha rediseñado su web—, pero sin abortar: lo demás debe publicarse igual.
       - name: Descargar las portadas de las editoriales
+        continue-on-error: true
         run: python3 scripts/actualizar_portadas.py --verbose
 
       - name: Publicar los cambios

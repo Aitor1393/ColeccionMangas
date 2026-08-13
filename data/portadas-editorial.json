@@ -127,6 +127,114 @@
    "fuente": "Ivrea",
    "origen": "https://www.editorialivrea.com/ESP/storage/2024/06/basilisk01.jpg",
    "bytes": 43092
+  },
+  "4099": {
+   "ruta": "data/portadas-serie/4099.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44699_albumes_big.jpeg",
+   "bytes": 82468
+  },
+  "1674": {
+   "ruta": "data/portadas-serie/1674.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/20/thumb_19140_albumes_big.jpeg",
+   "bytes": 50298
+  },
+  "5517": {
+   "ruta": "data/portadas-serie/5517.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44277_albumes_big.jpeg",
+   "bytes": 87590
+  },
+  "2525": {
+   "ruta": "data/portadas-serie/2525.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/35/thumb_34004_albumes_big.jpeg",
+   "bytes": 92639
+  },
+  "5342": {
+   "ruta": "data/portadas-serie/5342.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/35/thumb_34016_albumes_big.jpeg",
+   "bytes": 80021
+  },
+  "2211": {
+   "ruta": "data/portadas-serie/2211.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/06/thumb_5712_albumes_big.jpeg",
+   "bytes": 62593
+  },
+  "2645": {
+   "ruta": "data/portadas-serie/2645.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/07/thumb_6381_albumes_big.jpeg",
+   "bytes": 62632
+  },
+  "3255": {
+   "ruta": "data/portadas-serie/3255.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/30/thumb_29292_albumes_big.jpeg",
+   "bytes": 50042
+  },
+  "1482": {
+   "ruta": "data/portadas-serie/1482.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/44/thumb_43065_albumes_big.jpeg",
+   "bytes": 80699
+  },
+  "4288": {
+   "ruta": "data/portadas-serie/4288.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/28/thumb_27705_albumes_big.jpeg",
+   "bytes": 69103
+  },
+  "4289": {
+   "ruta": "data/portadas-serie/4289.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44269_albumes_big.jpeg",
+   "bytes": 90145
+  },
+  "5666": {
+   "ruta": "data/portadas-serie/5666.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/44/thumb_43613_albumes_big.jpeg",
+   "bytes": 43146
+  },
+  "3254": {
+   "ruta": "data/portadas-serie/3254.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/41/thumb_40032_albumes_big.jpeg",
+   "bytes": 94826
+  },
+  "4750": {
+   "ruta": "data/portadas-serie/4750.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44268_albumes_big.jpeg",
+   "bytes": 70529
+  },
+  "4747": {
+   "ruta": "data/portadas-serie/4747.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/27/thumb_26814_albumes_big.jpeg",
+   "bytes": 58890
+  },
+  "2857": {
+   "ruta": "data/portadas-serie/2857.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/31/thumb_30472_albumes_big.jpeg",
+   "bytes": 102609
+  },
+  "2159": {
+   "ruta": "data/portadas-serie/2159.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/37/thumb_36209_albumes_big.jpeg",
+   "bytes": 76733
+  },
+  "6446": {
+   "ruta": "data/portadas-serie/6446.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44266_albumes_big.jpeg",
+   "bytes": 90132
   }
  }
 }

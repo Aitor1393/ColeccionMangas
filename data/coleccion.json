@@ -7659,6 +7659,36 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "e8700981-b510-4e58-bf81-924c440f36a2",
+      "titulo": "Shinobi Undercover",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Ippon Takegushi",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "tomosTotales": 9,
+      "portada": "",
+      "sinopsis": "DESCUBRE LA FUERZA SHINOBI DE SEGURIDAD PÚBLICA\n\nSi siempre te ha llamado la atención la figura del ninja y cómo sería su presencia en la sociedad actual, no te pierdas esta nueva obra de Ippon Takeshi y Santa Mitarashi, que aterrizan en España con una hilarante obra donde los shinobi están entre nosotros.\n\nYodaka, miembro de la Fuerza Shinobi de Seguridad Pública cuyo deber es camuflarse entre la sociedad y acabar con el mal, recibe la orden de proteger a la alumna de bachillerato Aoi Mukai. El plan consiste en que Yodaka, un chico al que se le da fatal la interacción social, se matricule en el instituto sin llamar la atención y defienda a Aoi, pero ¡sin comerlo ni beberlo, acaba haciéndose amigo de ella!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6440",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

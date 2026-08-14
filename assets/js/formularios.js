@@ -427,59 +427,92 @@
       U.$$('.precios__input').forEach(function (i) { i.value = ''; });
     });
 
-    if (U.$('#rRepartir')) {
-      U.$('#rRepartir').addEventListener('click', function () {
-        var aviso = U.$('#rAviso');
-        var importe = U.aNumero(U.$('#rImporte').value);
-        var desde = Number(U.$('#rDesde').value);
-        var hasta = Number(U.$('#rHasta').value);
-        var fecha = U.$('#rFecha').value;
+    // Qué reparto se ha volcado ya en la tabla, para no repetirlo ni pisar lo
+    // que hayas retocado a mano después.
+    var repartoAplicado = '';
 
-        if (desde > hasta) { var v = desde; desde = hasta; hasta = v; }
+    function firmaReparto() {
+      if (!U.$('#rImporte')) return '';
+      var v = U.$('#rImporte').value.trim();
+      return v ? [v, U.$('#rDesde').value, U.$('#rHasta').value, U.$('#rFecha').value].join('|') : '';
+    }
 
-        var elegidos = U.$$('.precios__input').filter(function (i) {
-          var n = Number(i.dataset.tomo);
-          return n >= desde && n <= hasta;
-        });
+    /**
+     * Vuelca el importe en la tabla, a partes iguales entre el tramo elegido.
+     *
+     * @param {boolean} callado no protesta si no hay importe, para poder
+     *   llamarlo desde «Guardar precios» sin molestar a quien no lo use.
+     * @returns {boolean} si ha repartido algo
+     */
+    function aplicarReparto(callado) {
+      var aviso = U.$('#rAviso');
+      if (!aviso) return false;
+      var importe = U.aNumero(U.$('#rImporte').value);
+      var desde = Number(U.$('#rDesde').value);
+      var hasta = Number(U.$('#rHasta').value);
+      var fecha = U.$('#rFecha').value;
 
-        if (importe === null) {
+      if (desde > hasta) { var v = desde; desde = hasta; hasta = v; }
+
+      if (importe === null) {
+        if (!callado) {
           aviso.innerHTML = '<strong>Escribe primero cuánto pagaste.</strong>';
           U.$('#rImporte').focus();
-          return;
         }
-        if (!(importe > 0)) {
-          aviso.innerHTML = '<strong>«' + U.esc(U.$('#rImporte').value) +
-            '» no es un importe.</strong> Puedes escribirlo con coma: 50,25';
-          U.$('#rImporte').focus();
-          return;
-        }
-        if (!elegidos.length) { aviso.innerHTML = '<strong>Ese tramo no tiene tomos.</strong>'; return; }
+        return false;
+      }
+      if (!(importe > 0)) {
+        aviso.innerHTML = '<strong>«' + U.esc(U.$('#rImporte').value) +
+          '» no es un importe.</strong> Puedes escribirlo con coma: 50,25';
+        if (!callado) U.$('#rImporte').focus();
+        return false;
+      }
 
-        // En céntimos para que la suma cuadre exactamente: 10 € entre 3 son
-        // 3,34 + 3,33 + 3,33, no tres veces 3,33.
-        var centimos = Math.round(importe * 100);
-        var base = Math.floor(centimos / elegidos.length);
-        var sobran = centimos - base * elegidos.length;
+      var elegidos = U.$$('.precios__input').filter(function (i) {
+        var n = Number(i.dataset.tomo);
+        return n >= desde && n <= hasta;
+      });
+      if (!elegidos.length) { aviso.innerHTML = '<strong>Ese tramo no tiene tomos.</strong>'; return false; }
 
-        elegidos.forEach(function (input, n) {
-          input.value = ((base + (n < sobran ? 1 : 0)) / 100).toFixed(2).replace('.', ',');
+      // En céntimos para que la suma cuadre exactamente: 10 € entre 3 son
+      // 3,34 + 3,33 + 3,33, no tres veces 3,33.
+      var centimos = Math.round(importe * 100);
+      var base = Math.floor(centimos / elegidos.length);
+      var sobran = centimos - base * elegidos.length;
+
+      elegidos.forEach(function (input, n) {
+        input.value = ((base + (n < sobran ? 1 : 0)) / 100).toFixed(2).replace('.', ',');
+      });
+
+      if (fecha) {
+        U.$$('.precios__fecha').forEach(function (i) {
+          var n = Number(i.dataset.tomo);
+          if (n >= desde && n <= hasta) i.value = fecha;
         });
+      }
 
-        if (fecha) {
-          U.$$('.precios__fecha').forEach(function (i) {
-            var n = Number(i.dataset.tomo);
-            if (n >= desde && n <= hasta) i.value = fecha;
-          });
+      repartoAplicado = firmaReparto();
+      aviso.innerHTML = '✓ ' + U.euros(importe) + ' repartidos entre ' +
+        U.plural(elegidos.length, 'tomo') + ': ' + U.euros(base / 100) +
+        (sobran ? ' cada uno, y ' + U.plural(sobran, 'tomo') + ' con un céntimo más para que cuadre' : ' cada uno') +
+        '.';
+      return true;
+    }
+
+    if (U.$('#rRepartir')) {
+      U.$('#rRepartir').addEventListener('click', function () {
+        if (aplicarReparto(false)) {
+          U.$('#rAviso').innerHTML += ' Revísalo y dale a «Guardar precios».';
         }
-
-        aviso.innerHTML = '✓ ' + U.euros(importe) + ' repartidos entre ' +
-          U.plural(elegidos.length, 'tomo') + ': ' + U.euros(base / 100) +
-          (sobran ? ' cada uno, y ' + U.plural(sobran, 'tomo') + ' con un céntimo más para que cuadre' : ' cada uno') +
-          '. Revísalo y dale a «Guardar precios».';
       });
     }
 
     U.$('#pGuardar').addEventListener('click', function () {
+      // Si has dejado un importe escrito arriba y no llegaste a pulsar
+      // «Repartir», se reparte ahora: guardar sin hacerle caso era la forma más
+      // fácil de creer que habías guardado un precio que nunca se escribió.
+      if (firmaReparto() && firmaReparto() !== repartoAplicado) aplicarReparto(true);
+
       var fechas = {};
       U.$$('.precios__fecha').forEach(function (i) { fechas[i.dataset.tomo] = i.value; });
 

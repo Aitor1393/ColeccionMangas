@@ -4,7 +4,7 @@
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
-    "proxy": ""
+    "proxy": "https://listadomanga.aitor1393.workers.dev/?id={id}"
   },
   "compras": {
     "series": [
@@ -6395,28 +6395,28 @@
       "proximas": []
     },
     {
-      "id": "9d857112-80c4-4a0d-b4f8-799a168a6701",
-      "titulo": "Kaijin Reijoh",
+      "id": "9b6f9474-53e6-48ac-9589-2407e3141d4e",
+      "titulo": "Farewell, My dear Cramer",
       "tituloAlt": "",
       "edicion": "",
-      "autor": "Tetsuya Tashiro",
-      "editorial": "Norma Editorial",
+      "autor": "Naoshi Arakawa",
+      "editorial": "Distrito Manga",
       "demografia": "shounen",
-      "estado": "en-publicacion",
+      "estado": "finalizada",
       "abandonada": false,
-      "tomosTotales": 15,
+      "tomosTotales": 7,
       "portada": "",
-      "sinopsis": "¡YA ESTÁ AQUÍ LO NUEVO DEL DIBUJANTE DE AKAME GA KILL!, ¡LLEGA KAIJIN REIJOH!\n\n En un mundo en el que los humanos se transforman en monstruos cuando caen en la desesperación y se dejan llevar por sus deseos más escabrosos, Asuma Sudô vive felizmente desentendido de estos problemas y su única motivación en la vida es manosear a las chicas del instituto. Sin embargo, todo cambia cuando un día le llega una petición para ingresar en el Instituto de chicas Meidô: es un sueño hecho realidad! Pero lo que él ignora es que ese instituto, en realidad, es una organización secreta para exterminar a los monstruos!",
+      "sinopsis": "Nozomi siempre ha jugado en el equipo masculino y es un prodigio con el balón. Sumire es la joven promesa de su instituto, pero las demás no están a la altura. Cuando sus caminos se crucen ¿Serán capaces de abrirse paso hasta la victoria y devolverle la fama al fútbol femenino?",
       "etiquetas": [],
       "mangadexId": "",
-      "listadomangaId": "3893",
+      "listadomangaId": "4398",
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -6424,7 +6424,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -6432,7 +6432,7 @@
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -6440,7 +6440,7 @@
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -6448,7 +6448,7 @@
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -6456,7 +6456,15 @@
         {
           "numero": 6,
           "tengo": true,
-          "leido": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""

@@ -369,9 +369,11 @@
         '<td class="precios__estimado">' +
           (p.pvp ? U.euros(p.valor) + '<small> · PVP ' + U.euros(p.pvp) + '</small>' : '—') +
         '</td>' +
-        '<td><input type="number" step="0.01" min="0" class="precios__input" ' +
-          'data-tomo="' + t.numero + '" value="' + (t.precio === null ? '' : t.precio) + '" ' +
-          'placeholder="' + (p.pvp ? p.valor.toFixed(2) : '') + '"></td>' +
+        // De texto, no type="number": ese se come la coma decimal sin avisar
+        // y «7,50» acababa guardándose como 750.
+        '<td><input type="text" inputmode="decimal" class="precios__input" ' +
+          'data-tomo="' + t.numero + '" value="' + U.esc(U.numeroTexto(t.precio)) + '" ' +
+          'placeholder="' + (p.pvp ? U.euros(p.valor).replace(' €', '') : '') + '"></td>' +
         '<td><input type="date" class="precios__fecha" data-tomo="' + t.numero + '" ' +
           'value="' + U.esc(t.fechaCompra || '') + '"></td>' +
       '</tr>';
@@ -389,7 +391,7 @@
       '<div class="reparto">' +
         '<div class="reparto__campos">' +
           '<label for="rImporte">Pagué en total</label>' +
-          '<input type="number" step="0.01" min="0" id="rImporte" placeholder="0,00">' +
+          '<input type="text" inputmode="decimal" id="rImporte" placeholder="0,00">' +
           '<span>€ por los tomos</span>' +
           '<select id="rDesde">' + opcionesTomo(tomos[0].numero) + '</select>' +
           '<span>a</span>' +
@@ -428,7 +430,7 @@
     if (U.$('#rRepartir')) {
       U.$('#rRepartir').addEventListener('click', function () {
         var aviso = U.$('#rAviso');
-        var importe = Number(U.$('#rImporte').value);
+        var importe = U.aNumero(U.$('#rImporte').value);
         var desde = Number(U.$('#rDesde').value);
         var hasta = Number(U.$('#rHasta').value);
         var fecha = U.$('#rFecha').value;
@@ -440,8 +442,14 @@
           return n >= desde && n <= hasta;
         });
 
-        if (!(importe > 0)) {
+        if (importe === null) {
           aviso.innerHTML = '<strong>Escribe primero cuánto pagaste.</strong>';
+          U.$('#rImporte').focus();
+          return;
+        }
+        if (!(importe > 0)) {
+          aviso.innerHTML = '<strong>«' + U.esc(U.$('#rImporte').value) +
+            '» no es un importe.</strong> Puedes escribirlo con coma: 50,25';
           U.$('#rImporte').focus();
           return;
         }
@@ -454,7 +462,7 @@
         var sobran = centimos - base * elegidos.length;
 
         elegidos.forEach(function (input, n) {
-          input.value = ((base + (n < sobran ? 1 : 0)) / 100).toFixed(2);
+          input.value = ((base + (n < sobran ? 1 : 0)) / 100).toFixed(2).replace('.', ',');
         });
 
         if (fecha) {
@@ -475,14 +483,25 @@
       var fechas = {};
       U.$$('.precios__fecha').forEach(function (i) { fechas[i.dataset.tomo] = i.value; });
 
+      var ilegibles = [];
       U.$$('.precios__input').forEach(function (i) {
         var t = D.tomo(serie, Number(i.dataset.tomo), true);
         var valor = i.value.trim();
-        t.precio = valor === '' ? null : (Number(valor) || 0);
+        var n = U.aNumero(valor);
+        // Vacío borra el precio; lo que no se entiende se deja como estaba y se
+        // avisa, en vez de guardar un 0 a traición.
+        if (valor === '') t.precio = null;
+        else if (n === null) ilegibles.push(i.dataset.tomo);
+        else t.precio = n;
         t.fechaCompra = fechas[i.dataset.tomo] || '';
       });
       D.guardar();
-      U.aviso('Precios guardados', 'ok');
+      if (ilegibles.length) {
+        U.aviso('No se entienden los precios de los tomos ' + ilegibles.join(', ') +
+          ': se han dejado como estaban', 'error');
+      } else {
+        U.aviso('Precios guardados', 'ok');
+      }
       App.abrirSerie(serie.id);
     });
   };

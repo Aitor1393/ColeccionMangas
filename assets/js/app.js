@@ -357,7 +357,8 @@
 
     'guardar-precios-ajustes': function () {
       D.guardarMostrarGasto(U.$('#ajMostrarGasto').checked);
-      D.guardarDescuento(U.$('#ajDescuento').value);
+      // Con U.aNumero para que «5,5» valga tanto como «5.5»; null deja el 0.
+      D.guardarDescuento(U.aNumero(U.$('#ajDescuento').value) || 0);
       U.aviso('Guardado: descuento ' + D.descuento() + '%, gasto ' +
         (D.mostrarGasto() ? 'visible' : 'oculto'), 'ok');
       App.render();

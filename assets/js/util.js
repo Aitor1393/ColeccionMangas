@@ -135,6 +135,30 @@
 
   /* ---------- Números ---------- */
 
+  /**
+   * Lee un número escrito a mano aceptando la coma decimal española.
+   *
+   * <input type="number"> se come la coma sin avisar: escribir «50,25» acaba
+   * valiendo 5025. Por eso esos campos son de texto y pasan por aquí.
+   *
+   * Entiende «7,50», «7.50» y «1.234,56». Devuelve null si no hay nada que leer
+   * o si no es un número, para poder distinguir «vacío» de «cero».
+   */
+  U.aNumero = function (texto) {
+    var t = String(texto === null || texto === undefined ? '' : texto).trim().replace(/\s/g, '');
+    if (!t) return null;
+    // Con coma, los puntos solo pueden ser separadores de millares.
+    if (t.indexOf(',') !== -1) t = t.replace(/\./g, '').replace(',', '.');
+    var n = Number(t);
+    return isNaN(n) ? null : n;
+  };
+
+  /** Un número para meterlo en un campo de texto, con coma decimal. */
+  U.numeroTexto = function (n) {
+    if (n === null || n === undefined || n === '') return '';
+    return String(n).replace('.', ',');
+  };
+
   U.euros = function (n) {
     var num = Number(n) || 0;
     return num.toFixed(2).replace('.', ',') + ' €';

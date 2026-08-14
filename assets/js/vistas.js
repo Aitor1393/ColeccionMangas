@@ -756,7 +756,7 @@
         'tú mandan siempre y se usan tal cual, sin descuento.</p>' +
         '<div class="campos">' +
           '<div><label for="ajDescuento">Descuento habitual (%)</label>' +
-            '<input type="number" id="ajDescuento" min="0" max="100" step="0.5" value="' + D.descuento() + '"></div>' +
+            '<input type="text" id="ajDescuento" inputmode="decimal" value="' + U.numeroTexto(D.descuento()) + '"></div>' +
         '</div>' +
         '<div class="ayuda">Ahora mismo: ' + U.plural(g.precioEstimado, 'tomo estimado', 'tomos estimados') +
         (g.sinPrecio ? ' y ' + U.plural(g.sinPrecio, 'tomo sin precio conocido') : '') + '.</div>' +

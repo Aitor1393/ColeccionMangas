@@ -110,7 +110,11 @@
         // El total invertido va oculto por defecto: la web es pública.
         mostrarGasto: ajustes.mostrarGasto === undefined
           ? D.AJUSTES_POR_DEFECTO.mostrarGasto
-          : !!ajustes.mostrarGasto
+          : !!ajustes.mostrarGasto,
+        // URL del proxy que lee las fichas de ListadoManga. Guardarla aquí es
+        // opcional y la decides tú: viaja a todos tus dispositivos, pero queda
+        // a la vista en el repositorio, que es público.
+        proxy: ajustes.proxy || ''
       },
       // Orden de compra que has decidido tú, uno por cada forma de mirar la
       // lista: por series enteras o tomo a tomo. Se guarda en la colección
@@ -135,6 +139,13 @@
   D.guardarMostrarGasto = function (valor) {
     if (!D.coleccion.ajustes) D.coleccion.ajustes = {};
     D.coleccion.ajustes.mostrarGasto = !!valor;
+    D.guardar();
+  };
+
+  /** Guarda la URL del proxy en la colección, para que viaje entre dispositivos. */
+  D.guardarProxyEnColeccion = function (url) {
+    if (!D.coleccion.ajustes) D.coleccion.ajustes = {};
+    D.coleccion.ajustes.proxy = url || '';
     D.guardar();
   };
 

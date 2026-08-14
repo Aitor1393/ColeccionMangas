@@ -22,7 +22,16 @@
 
   /* ---------- Configuración del proxy ---------- */
 
-  FI.proxy = function () { return U.leerLocal(CLAVE_PROXY, '') || ''; };
+  /**
+   * URL del proxy. Manda la de este navegador, y si no hay, la que lleve la
+   * colección: así puedes tener una distinta en un dispositivo concreto sin
+   * perder la que viaja con la colección.
+   */
+  FI.proxy = function () {
+    var local = U.leerLocal(CLAVE_PROXY, '') || '';
+    if (local) return local;
+    return (global.D && D.coleccion.ajustes && D.coleccion.ajustes.proxy) || '';
+  };
   FI.guardarProxy = function (url) {
     if (url) U.guardarLocal(CLAVE_PROXY, url); else U.borrarLocal(CLAVE_PROXY);
   };

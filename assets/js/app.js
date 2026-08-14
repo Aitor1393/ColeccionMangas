@@ -435,6 +435,11 @@
       if (!url) { U.aviso('Escribe la URL del proxy', 'error'); return; }
 
       FI.guardarProxy(url);
+      // La casilla decide si además viaja con la colección. Se guarda antes de
+      // probar para que quede aunque la prueba falle por un problema puntual.
+      var viaja = U.$('#fiViaja') && U.$('#fiViaja').checked;
+      D.guardarProxyEnColeccion(viaja ? url : '');
+
       var salida = U.$('#fiResultado');
       salida.innerHTML = '<p class="ayuda">Probando…</p>';
 
@@ -457,6 +462,7 @@
 
     'quitar-proxy': function () {
       FI.guardarProxy('');
+      D.guardarProxyEnColeccion('');
       FI.limpiarCache();
       U.aviso('Proxy quitado');
       App.render();

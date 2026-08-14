@@ -724,6 +724,16 @@
             'placeholder="https://mi-proxy.workers.dev/?id={id}">' +
             '<div class="ayuda">Puedes usar <code>{id}</code> donde vaya el número de la ' +
             'colección; si no lo pones, se añade como parámetro <code>id</code>.</div></div>' +
+          '<div class="campo--ancho">' +
+            '<label style="display:flex;align-items:center;gap:8px;margin:0">' +
+              '<input type="checkbox" id="fiViaja" style="width:auto"' +
+              (D.coleccion.ajustes && D.coleccion.ajustes.proxy ? ' checked' : '') + '> ' +
+              'Guardarla en la colección para usarla en todos mis dispositivos</label>' +
+            '<div class="ayuda">Sin marcar, la URL se queda solo en este navegador y hay que ' +
+              'volver a ponerla en cada dispositivo. Marcada, viaja con la colección al ' +
+              'publicar — pero el repositorio es público y quedará a la vista. El Worker solo ' +
+              'deja leer fichas de ListadoManga y solo responde a tu web, así que lo único ' +
+              'que arriesgas es que alguien te gaste cuota de Cloudflare.</div></div>' +
         '</div>' +
         '<div class="tarjeta__acciones">' +
           '<button class="btn btn--primario" data-accion="guardar-proxy">Guardar y probar</button>' +

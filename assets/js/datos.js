@@ -282,7 +282,14 @@
       if (previas[s.id] !== JSON.stringify(s)) n++;
       delete previas[s.id];
     });
-    return n + Object.keys(previas).length; // + las eliminadas
+    n += Object.keys(previas).length;      // + las eliminadas
+
+    // Los ajustes y el orden de compra viajan en el mismo JSON que las series.
+    // Sin contarlos, cambiarlos no ofrecía publicar: se guardaban en este
+    // navegador y no había manera de subirlos nunca al repositorio.
+    if (JSON.stringify(D.publicada.ajustes) !== JSON.stringify(D.coleccion.ajustes)) n++;
+    if (JSON.stringify(D.publicada.compras || {}) !== JSON.stringify(D.coleccion.compras || {})) n++;
+    return n;
   };
 
   /* ---------- Consultas y mutaciones ---------- */

@@ -102,7 +102,9 @@
     var aviso = U.$('#avisoCambios');
     var n = D.sucia ? D.numCambios() : 0;
     if (n > 0) {
-      U.$('#avisoNum').textContent = n;
+      U.$('#avisoTexto').innerHTML = 'Tienes <strong id="avisoNum">' + n + '</strong> ' +
+        (n === 1 ? 'cambio' : 'cambios') + ' sin publicar. Solo ' +
+        (n === 1 ? 'lo ves' : 'los ves') + ' tú en este dispositivo.';
       aviso.classList.remove('oculto');
     } else {
       aviso.classList.add('oculto');

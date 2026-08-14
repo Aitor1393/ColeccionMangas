@@ -241,6 +241,48 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44728_albumes_big.jpeg",
    "bytes": 68396
+  },
+  "5878": {
+   "ruta": "data/portadas-serie/5878.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/422/original/portada_adios-mi-odin-n-0103_chihiro-yoshioka_202505230757.jpg",
+   "bytes": 76207
+  },
+  "1647": {
+   "ruta": "data/portadas-serie/1647.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/93/original/portada_naruto-n-0172_masashi-kishimoto_202211031033.jpg",
+   "bytes": 89916
+  },
+  "5399": {
+   "ruta": "data/portadas-serie/5399.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/398/original/397577_portada_eyeshield-21-n-01_riichiro-inagaki_202402090844.jpg",
+   "bytes": 98688
+  },
+  "6347": {
+   "ruta": "data/portadas-serie/6347.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2026/03/fantasmassinimagen01.jpg",
+   "bytes": 107305
+  },
+  "6029": {
+   "ruta": "data/portadas-serie/6029.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2025/04/phantombusters_01.jpg",
+   "bytes": 109564
+  },
+  "5357": {
+   "ruta": "data/portadas-serie/5357.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44272_albumes_big.jpeg",
+   "bytes": 103571
+  },
+  "6440": {
+   "ruta": "data/portadas-serie/6440.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44693_albumes_big.jpeg",
+   "bytes": 68703
   }
  }
 }

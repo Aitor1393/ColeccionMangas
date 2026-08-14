@@ -6471,6 +6471,60 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "6ced951a-f379-47fe-968c-38c43a9c91ee",
+      "titulo": "Buscadores de cadáveres",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Housui Yamazaki",
+      "editorial": "Arechi Manga",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 4,
+      "portada": "",
+      "sinopsis": "Un día de verano cualquiera, el jovencito Isshin emprende un viaje con sus amigos del instituto. Su objetivo: encontrar a una compañera desaparecida un par de años atrás.\n\nAl parecer, el caso está relacionado con una serie de secuestros infantiles, algo que ha sucedido demasiadas veces en la zona...\n\n¡Una historia de suspense juvenil que te dejará sin uñas!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5416",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

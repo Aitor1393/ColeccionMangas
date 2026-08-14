@@ -128,7 +128,7 @@
         App.abrirSerie(serie.id);
       } else {
         datos.tomos = [];
-        for (var i = 1; i <= Math.max(hasta, leidoHasta); i++) {
+        for (var i = D.primerNumeroDe(datos); i <= Math.max(hasta, leidoHasta); i++) {
           datos.tomos.push({ numero: i, tengo: i <= hasta, leido: i <= leidoHasta });
         }
         var nueva = D.anadirSerie(datos);
@@ -288,7 +288,8 @@
   }
 
   function rellenarHasta(serie, hasta, campo) {
-    for (var i = 1; i <= hasta; i++) {
+    // «Tengo hasta el 5» en una serie con tomo 0 son seis tomos, del 0 al 5.
+    for (var i = D.primerNumeroDe(serie); i <= hasta; i++) {
       D.tomo(serie, i, true)[campo || 'tengo'] = true;
     }
   }

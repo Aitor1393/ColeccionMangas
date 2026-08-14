@@ -377,9 +377,13 @@
 
   D.statsSerie = function (s) {
     var totalDeclarado = D.totalDe(s);
+    // Casi todas empiezan por el 1, pero unas pocas tienen un tomo 0. Ahí el
+    // número del último tomo ya no coincide con cuántos son: 31 tomos del 0 al 30.
+    var primerNumero = D.primerNumeroDe(s);
     var tengo = 0, leidos = 0, leidosSinTener = 0, gasto = 0;
     var conPrecioManual = 0, estimados = 0, sinPrecio = 0;
-    var maxTomo = totalDeclarado, ultimoQueTengo = 0;
+    var maxTomo = totalDeclarado ? totalDeclarado + primerNumero - 1 : 0;
+    var ultimoQueTengo = 0;
     s.tomos.forEach(function (t) {
       if (t.numero > maxTomo) maxTomo = t.numero;
       if (t.tengo) {
@@ -395,11 +399,13 @@
         leidosSinTener++;
       }
     });
-    var total = totalDeclarado || maxTomo;
+    var total = totalDeclarado || (maxTomo ? maxTomo - primerNumero + 1 : 0);
     // Huecos = tomos que te faltan por debajo del último que tienes.
     // Los que aún no han salido no son un hueco, son futuro.
+    // Los huecos se buscan desde el primer tomo que conste: con un tomo 0, no
+    // tenerlo también es un hueco.
     var huecos = [];
-    for (var i = 1; i < ultimoQueTengo; i++) {
+    for (var i = primerNumero; i < ultimoQueTengo; i++) {
       var t = D.tomo(s, i, false);
       if (!t || !t.tengo) huecos.push(i);
     }
@@ -417,6 +423,7 @@
       precioEstimado: estimados,       // calculados desde el PVP de la ficha
       sinPrecio: sinPrecio,            // ni uno ni otro
       huecos: huecos,
+      primerNumero: primerNumero,
       totalDeclarado: totalDeclarado,
       completa: total > 0 && tengo >= total && D.estadoDe(s) === 'finalizada',
       alDia: leidos === tengo && tengo > 0,
@@ -534,9 +541,34 @@
 
   /** Tomos totales efectivos: 0 si nadie lo sabe. */
   D.totalDe = function (serie) {
-    if (serie.tomosTotales) return serie.tomosTotales;
-    var ficha = D.fichaLM(serie);
-    return (ficha && ficha.totalNumeros) || 0;
+    var declarado = serie.tomosTotales;
+    if (!declarado) {
+      var ficha = D.fichaLM(serie);
+      declarado = (ficha && ficha.totalNumeros) || 0;
+    }
+    // Hay series con un tomo 0 —Jujutsu Kaisen— y ese total no lo cuenta:
+    // ListadoManga dice 30 y luego lista del 0 al 30, que son 31.
+    return declarado && D.hayTomoCero(serie) ? declarado + 1 : declarado;
+  };
+
+  /** ¿La serie tiene un tomo 0, en tu colección o en la ficha? */
+  D.hayTomoCero = function (serie) {
+    return (serie.tomos || []).some(function (t) { return t.numero === 0; }) ||
+      D.numerosLM(serie).some(function (n) { return n.numero === 0; });
+  };
+
+  /** Por qué número empieza la serie: 1 casi siempre, 0 en las que traen tomo 0. */
+  D.primerNumeroDe = function (serie) { return D.hayTomoCero(serie) ? 0 : 1; };
+
+  /**
+   * Del primer tomo al último que hay que pintar.
+   *
+   * Casi siempre empieza en 1, pero con un tomo 0 la cuadrícula tiene que
+   * llegar hasta él o no habría forma de marcarlo.
+   */
+  D.rangoTomos = function (serie) {
+    var st = D.statsSerie(serie);
+    return { desde: st.primerNumero, hasta: Math.max(st.maxTomo, 1) };
   };
 
   /**

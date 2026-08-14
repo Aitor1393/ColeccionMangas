@@ -795,9 +795,10 @@
 
     // La cuadrícula llega hasta el mayor entre el total declarado y el tomo más
     // alto que conste: si una serie se alarga más de lo previsto, no se ocultan.
-    var hasta = Math.max(st.maxTomo, st.total, 1);
+    // Y empieza en 0 cuando la serie tiene tomo 0, o no habría dónde marcarlo.
+    var rango = D.rangoTomos(serie);
     var celdas = '';
-    for (var i = 1; i <= hasta; i++) {
+    for (var i = rango.desde; i <= rango.hasta; i++) {
       var t = D.tomo(serie, i, false);
       var clase = 'tomo';
       var titulo = 'Tomo ' + i + ': no lo tienes';

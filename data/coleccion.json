@@ -7763,268 +7763,6 @@
       "proximas": []
     },
     {
-      "id": "7f5e6399-070c-44ea-bfdc-a1d5a9a4663c",
-      "titulo": "Jujutsu Kaisen",
-      "tituloAlt": "",
-      "edicion": "Guerra de Hechiceros",
-      "autor": "Gege Akutami",
-      "editorial": "Norma Editorial",
-      "demografia": "shounen",
-      "estado": "finalizada",
-      "abandonada": false,
-      "tomosTotales": 30,
-      "portada": "",
-      "sinopsis": "¡LLEGA JUJUTSU KAISEN, EL SHÔNEN QUE ESTÁ CAUSANDO FUROR EN JAPÓN!\n\nYûji Itadori es un estudiante con unas habilidades físicas excepcionales. Todos los días, como rutina, va al hospital a visitar a su abuelo enfermo y decide apuntarse al club de ocultismo del instituto para no dar un palo al agua... Sin embargo, un buen día el sello del talismán que se hallaba escondido en su instituto se rompe, y comienzan a aparecer unos monstruos. Ante este giro de los acontecimientos, Itadori decide adentrarse en el instituto para salvar a sus compañeros. ¿Qué le deparará el destino?",
-      "etiquetas": [],
-      "mangadexId": "",
-      "listadomangaId": "3404",
-      "notas": "",
-      "anadida": "2026-08-14",
-      "tomos": [
-        {
-          "numero": 1,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 2,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 3,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 4,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 5,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 6,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 7,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 8,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 9,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 10,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 11,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 12,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 13,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 14,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 15,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 16,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 17,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 18,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 19,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 20,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 21,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 22,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 23,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 24,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 25,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 26,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 27,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 28,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 29,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        },
-        {
-          "numero": 30,
-          "tengo": true,
-          "leido": true,
-          "fechaCompra": "",
-          "precio": null,
-          "notas": ""
-        }
-      ],
-      "proximas": []
-    },
-    {
       "id": "5c16abbf-bb33-4374-bc3d-9f5e4480cd00",
       "titulo": "Dig It",
       "tituloAlt": "",
@@ -8397,6 +8135,276 @@
           "leido": true,
           "fechaCompra": "",
           "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "24bcf07d-d63d-46aa-9794-b8d99fb79a50",
+      "titulo": "Jujutsu Kaisen",
+      "tituloAlt": "",
+      "edicion": "Guerra de Hechiceros",
+      "autor": "Gege Akutami",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 30,
+      "portada": "",
+      "sinopsis": "¡LLEGA JUJUTSU KAISEN, EL SHÔNEN QUE ESTÁ CAUSANDO FUROR EN JAPÓN!\n\n\n\nYûji Itadori es un estudiante con unas habilidades físicas excepcionales. Todos los días, como rutina, va al hospital a visitar a su abuelo enfermo y decide apuntarse al club de ocultismo del instituto para no dar un palo al agua... Sin embargo, un buen día el sello del talismán que se hallaba escondido en su instituto se rompe, y comienzan a aparecer unos monstruos. Ante este giro de los acontecimientos, Itadori decide adentrarse en el instituto para salvar a sus compañeros. ¿Qué le deparará el destino?",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3404",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 0,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.87,
+          "notas": ""
+        },
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.87,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.87,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.87,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.87,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.87,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 16,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 17,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 18,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 19,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 20,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 21,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 22,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 23,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 24,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 25,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 26,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 27,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 28,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-01-18",
+          "precio": 5.86,
+          "notas": ""
+        },
+        {
+          "numero": 29,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-03-06",
+          "precio": 8.55,
+          "notas": ""
+        },
+        {
+          "numero": 30,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-03-06",
+          "precio": 8.55,
           "notas": ""
         }
       ],

@@ -9636,239 +9636,6 @@
       "sinopsis": "¡Esta vez los fantasmas son los que tienen miedo que se los coman en Phantom Busters!\n\r\n\n\r\nEugene Korikishi es un chico con ascendencia japonesa que se ha criado en Londres y que se ha trasladado a Kamakura, en Japón, a estudiar bachillerato. Su abuela le prometió de pequeño que una vez falleciera lo vendría a visitar en forma de fantasma, pero eso jamás ha sucedido y por lo tanto no cree en su existencia.\n\r\n\n\r\nUn día mientras va a clase, se encuentra a un chaval bastante alocado que se está ahogando en el mar y decide ayudarlo ante el pasotismo del resto de estudiantes. El chico se llama Mogari Shishikuno y estudia en su instituto. Como en el rescate Eugene ha perdido una pulsera recuerdo de su abuela, Mogari decide ayudarlo a buscarla y de pronto, son arrastrados por algo hacia el mar. Un chico con cierto poder espiritual llamado Kaoru los ve, les echa una mano y su poder le permite a Mogari ver a un espíritu que tira de ellos, ¡ante lo cual desvela que se puede comer aquellos espíritus que ve!",
       "portada": "data/portadas/6029/1.jpg"
     },
-    "3404": {
-      "titulo": "Jujutsu Kaisen (Guerra de Hechiceros)",
-      "url": "https://www.listadomanga.es/coleccion.php?id=3404",
-      "numeros": [
-        {
-          "numero": 0,
-          "fecha": "2020-10-09",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/0.jpg"
-        },
-        {
-          "numero": 1,
-          "fecha": "2020-03-06",
-          "precio": 4.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/1.jpg"
-        },
-        {
-          "numero": 2,
-          "fecha": "2020-05-15",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/2.jpg"
-        },
-        {
-          "numero": 3,
-          "fecha": "2020-08-07",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/3.jpg"
-        },
-        {
-          "numero": 4,
-          "fecha": "2020-11-13",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/4.jpg"
-        },
-        {
-          "numero": 5,
-          "fecha": "2021-01-15",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/5.jpg"
-        },
-        {
-          "numero": 6,
-          "fecha": "2021-04-09",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/6.jpg"
-        },
-        {
-          "numero": 7,
-          "fecha": "2021-05-14",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/7.jpg"
-        },
-        {
-          "numero": 8,
-          "fecha": "2021-06-11",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/8.jpg"
-        },
-        {
-          "numero": 9,
-          "fecha": "2021-07-09",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/9.jpg"
-        },
-        {
-          "numero": 10,
-          "fecha": "2021-08-06",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/10.jpg"
-        },
-        {
-          "numero": 11,
-          "fecha": "2021-09-03",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/11.jpg"
-        },
-        {
-          "numero": 12,
-          "fecha": "2021-10-29",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/12.jpg"
-        },
-        {
-          "numero": 13,
-          "fecha": "2021-12-10",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/13.jpg"
-        },
-        {
-          "numero": 14,
-          "fecha": "2022-02-25",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/14.jpg"
-        },
-        {
-          "numero": 15,
-          "fecha": "2022-03-04",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/15.jpg"
-        },
-        {
-          "numero": 16,
-          "fecha": "2022-04-29",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/16.jpg"
-        },
-        {
-          "numero": 17,
-          "fecha": "2022-06-23",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/17.jpg"
-        },
-        {
-          "numero": 18,
-          "fecha": "2022-08-26",
-          "precio": 8.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/18.jpg"
-        },
-        {
-          "numero": 19,
-          "fecha": "2022-11-25",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/19.jpg"
-        },
-        {
-          "numero": 20,
-          "fecha": "2023-05-12",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/20.jpg"
-        },
-        {
-          "numero": 21,
-          "fecha": "2023-08-04",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/21.jpg"
-        },
-        {
-          "numero": 22,
-          "fecha": "2023-09-08",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/22.jpg"
-        },
-        {
-          "numero": 23,
-          "fecha": "2024-03-01",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/23.jpg"
-        },
-        {
-          "numero": 24,
-          "fecha": "2024-06-07",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/24.jpg"
-        },
-        {
-          "numero": 25,
-          "fecha": "2024-09-06",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/25.jpg"
-        },
-        {
-          "numero": 26,
-          "fecha": "2024-12-05",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/26.jpg"
-        },
-        {
-          "numero": 27,
-          "fecha": "2025-02-07",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/27.jpg"
-        },
-        {
-          "numero": 28,
-          "fecha": "2025-04-04",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/28.jpg"
-        },
-        {
-          "numero": 29,
-          "fecha": "2026-03-06",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/29.jpg"
-        },
-        {
-          "numero": 30,
-          "fecha": "2026-03-06",
-          "precio": 9.0,
-          "aproximada": false,
-          "portada": "data/portadas/3404/30.jpg"
-        }
-      ],
-      "editorial": "Norma Editorial",
-      "coleccion": "Shonen",
-      "demografia": "shounen",
-      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
-      "autor": "Gege Akutami",
-      "totalNumeros": 30,
-      "estado": "finalizada",
-      "descargado": "2026-08-14",
-      "sinopsis": "¡LLEGA JUJUTSU KAISEN, EL SHÔNEN QUE ESTÁ CAUSANDO FUROR EN JAPÓN!\n\r\n\n\r\nYûji Itadori es un estudiante con unas habilidades físicas excepcionales. Todos los días, como rutina, va al hospital a visitar a su abuelo enfermo y decide apuntarse al club de ocultismo del instituto para no dar un palo al agua... Sin embargo, un buen día el sello del talismán que se hallaba escondido en su instituto se rompe, y comienzan a aparecer unos monstruos. Ante este giro de los acontecimientos, Itadori decide adentrarse en el instituto para salvar a sus compañeros. ¿Qué le deparará el destino?",
-      "portada": "data/portadas/3404/0.jpg"
-    },
     "6458": {
       "titulo": "Dig It",
       "url": "https://www.listadomanga.es/coleccion.php?id=6458",
@@ -10203,6 +9970,239 @@
       "descargado": "2026-08-14",
       "sinopsis": "Un manga deportivo sobre fútbol americano.\n\r\n\n\r\nSena Kobayakawa está a punto de comenzar su primer año en la escuela secundaria y ha prometido no permitir que lo molesten más, después de haber sufrido acoso en el colegio. Desgraciadamente, el sádico capitán del equipo de fútbol ya tiene el ojo puesto en Sena y en su vertiginosa velocidad. Con un extravagante elenco de personajes que incluye al capitán del equipo Hiruma, que tiene un extraño parecido a un demonio, y a un chico de buen carácter que, inexplicablemente, tiene una cabeza con forma de castaña, disfruta de esta combinación de acción y comedia que te atrapará.",
       "portada": "data/portadas/5399/1.jpg"
+    },
+    "3404": {
+      "titulo": "Jujutsu Kaisen (Guerra de Hechiceros)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3404",
+      "numeros": [
+        {
+          "numero": 0,
+          "fecha": "2020-10-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/0.jpg"
+        },
+        {
+          "numero": 1,
+          "fecha": "2020-03-06",
+          "precio": 4.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2020-05-15",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2020-08-07",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2020-11-13",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-01-15",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-04-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-05-14",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2021-06-11",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2021-07-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2021-08-06",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2021-09-03",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2021-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2021-12-10",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2022-02-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2022-03-04",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2022-04-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2022-06-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2022-08-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2022-11-25",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2023-05-12",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2023-08-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2023-09-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2024-03-01",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2024-06-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2024-09-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2024-12-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2025-02-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2025-04-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2026-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2026-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3404/30.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Gege Akutami",
+      "totalNumeros": 30,
+      "estado": "finalizada",
+      "descargado": "2026-08-14",
+      "sinopsis": "¡LLEGA JUJUTSU KAISEN, EL SHÔNEN QUE ESTÁ CAUSANDO FUROR EN JAPÓN!\n\r\n\n\r\nYûji Itadori es un estudiante con unas habilidades físicas excepcionales. Todos los días, como rutina, va al hospital a visitar a su abuelo enfermo y decide apuntarse al club de ocultismo del instituto para no dar un palo al agua... Sin embargo, un buen día el sello del talismán que se hallaba escondido en su instituto se rompe, y comienzan a aparecer unos monstruos. Ante este giro de los acontecimientos, Itadori decide adentrarse en el instituto para salvar a sus compañeros. ¿Qué le deparará el destino?",
+      "portada": "data/portadas/3404/0.jpg"
     }
   },
   "sugerencias": {}

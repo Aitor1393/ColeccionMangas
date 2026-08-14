@@ -7339,6 +7339,326 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "149e67e4-2c7b-4bba-a915-01a16456f3dc",
+      "titulo": "Tougen Anki: La leyenda de la sangre maldita",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Yura Urushibara",
+      "editorial": "Distrito Manga",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "tomosTotales": 15,
+      "portada": "",
+      "sinopsis": "Cuenta la leyenda que de un melocotón nació un niño muy fuerte: Momotarô. Cuando se hizo grande y poderoso, este valiente guerrero ahuyentó a los Oni que saqueaban las aldeas. Sus descendientes aún están entre nosotros y la batalla entre el clan Momotarô y el clan Oni aún perdura.\n\nShiki Ichinose, un joven que posee sangre Oni, siempre había vivido ajeno a este hecho. Pero, cuando un hombre desconocido entra corriendo a su casa en un intento de asesinarlo, su padre adoptivo finalmente le revela la verdad. \n\n¡El clan Momotarô lo busca y quiere eliminarlo!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5795",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "7f2ad6cb-1c97-40ed-b46a-8101aaaf41ac",
+      "titulo": "Guardianes de la Noche",
+      "tituloAlt": "",
+      "edicion": "Kimetsu no Yaiba",
+      "autor": "Koyoharu Gotouge",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 23,
+      "portada": "",
+      "sinopsis": "¡SHÔNEN FANTÁSTICO AMBIENTADO EN EL JAPÓN FEUDAL!\n\nTanjirou Kamado es un chico alegre y trabajador que vive felizmente junto a su familia, hasta que un fatídico día un demonio llamado Muzan irrumpe en su vida matando a sus padres y maldice a su hermana pequeña convirtiéndola en demonio. Tras este incidente, y con el propósito de vengar a sus padres y devolver a su hermana Nezuko a la normalidad, decide convertirse en un asesino de demonios. Para ello, acude en ayuda de Sakonji Urokodaki, uno de los asesinos de demonios más fuertes del mundo...\n\nEntre samuráis, afiladas katanas, demonios y otros seres mitológicos del folclore japonés, este manga es una apuesta segura para los amantes del género.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3101",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 16,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 17,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 18,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 19,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 20,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 21,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 22,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 23,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "ab935eb6-665e-4375-bf67-923e06f9bac9",
+      "titulo": "Magical Girl Holy Shit",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Souryu",
+      "editorial": "Arechi Manga",
+      "demografia": "seinen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "tomosTotales": 13,
+      "portada": "",
+      "sinopsis": "¡Las magical girl son unas chicas encantadoras dotadas de grandes poderes dispuestas a defender la humanidad de la invasión de demonios terroríficos! Bueno, no todas son así, pues en Magical Girl Holy Shit por error esos grandes poderes los recibe una macarra de instituto que los usará solo para su beneficio. ¡Risas y acción a mogollón en esta serie que solo se puede definir como la hija bastarda de One Punch Man y Sailor Moon!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3623",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "785bdb10-0be1-442f-aede-1865e1ebc73d",
+      "titulo": "Fantasmas sin imagen",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Ruka Konoshima",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "tomosTotales": 9,
+      "portada": "",
+      "sinopsis": "Makoto es un chico solitario que sólo desea llevar una vida normal, pero su gran sensibilidad espiritual lo convierte en un imán para todo tipo de seres sobrenaturales. Por su parte, Michiru, miembro del club de ocultismo, posee —sin saberlo— la habilidad de exorcizar espíritus al intentar captarlos con su cámara. Pero cuando estos dos polos opuestos se conozcan, nacerá una amistad que dará pie a las más divertidas aventuras paranormales.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6347",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

@@ -8029,6 +8029,258 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "5c16abbf-bb33-4374-bc3d-9f5e4480cd00",
+      "titulo": "Dig It",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Yoshidamaru",
+      "editorial": "Milky Way Ediciones",
+      "demografia": "seinen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "tomosTotales": 4,
+      "portada": "",
+      "sinopsis": "Gaku Shishiya es un alumno de secundaria cuyo padre fue el as de la selección masculina de voleibol de Japón. A pesar de que en su club le han asignado el puesto de atacante, el propio Gaku duda de si realmente tiene lo necesario para ser un buen jugador ofensivo.\n\nUn día, su padre, Kei, acude a presenciar un entrenamiento y conoce a Noboru, un chico de la misma edad que Gaku. Ese encuentro marca el inicio de un destino que transformará por completo la vida voleibolística de Gaku. ¡Cuando el escudo perfora el muro! ¡Una historia de voleibol que narra la rebelión de la segunda generación!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6458",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "9f8c110b-d52c-4180-86b3-26461e28a3b8",
+      "titulo": "Slam Dunk",
+      "tituloAlt": "",
+      "edicion": "Edición Kanzenban",
+      "autor": "Takehiko Inoue",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 24,
+      "portada": "",
+      "sinopsis": "Slam Dunk, el mega éxito de Takehiko Inoue trata sobre la vida de Hanamichi Sakuragi, un pandillero que se convierte en un gran jugador de baloncesto, sólo para tratar de ligar con una chica de su secundaria. Una compleja historia con ingredientes románticos, cómicos y de autosuperación, en el cual el protagonista poco a poco irá descubriendo que siente cierta pasión por este deporte, más allá de las razones por las que se inscribió inicialmente en el equipo.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "342",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 16,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 17,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 18,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 19,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 20,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 21,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 22,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 23,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 24,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

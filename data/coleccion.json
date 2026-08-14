@@ -8281,6 +8281,132 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "3f359922-c3ee-450d-95b2-59171cbb41dc",
+      "titulo": "Eyeshield 21",
+      "tituloAlt": "",
+      "edicion": "Edición 3 en 1",
+      "autor": "Riichiro Inagaki",
+      "editorial": "Planeta Cómic",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 13,
+      "portada": "",
+      "sinopsis": "Un manga deportivo sobre fútbol americano.\n\nSena Kobayakawa está a punto de comenzar su primer año en la escuela secundaria y ha prometido no permitir que lo molesten más, después de haber sufrido acoso en el colegio. Desgraciadamente, el sádico capitán del equipo de fútbol ya tiene el ojo puesto en Sena y en su vertiginosa velocidad. Con un extravagante elenco de personajes que incluye al capitán del equipo Hiruma, que tiene un extraño parecido a un demonio, y a un chico de buen carácter que, inexplicablemente, tiene una cabeza con forma de castaña, disfruta de esta combinación de acción y comedia que te atrapará.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5399",
+      "notas": "",
+      "anadida": "2026-08-14",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

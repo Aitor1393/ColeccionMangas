@@ -310,6 +310,10 @@ def main():
     parser.add_argument('--verbose', action='store_true', help='muestra cada número encontrado')
     parser.add_argument('--dias', type=int, default=7,
                         help='reutiliza las fichas descargadas hace menos de N días (0 = todas)')
+    parser.add_argument('--extra', default='',
+                        help='ids de colección sueltos, separados por comas, que no están '
+                             'todavía en la colección. Sirve para dejar la ficha lista antes '
+                             'de añadir la serie desde la web, que no puede pedirla por CORS.')
     args = parser.parse_args()
 
     coleccion = cargar_json(COLECCION, {'series': []})
@@ -325,6 +329,12 @@ def main():
 
     conId = [s for s in series if s.get('listadomangaId')]
     sinId = [s for s in series if not s.get('listadomangaId')]
+
+    # Los ids sueltos van como si fueran series, para reutilizar el mismo camino.
+    ya = {str(s['listadomangaId']) for s in conId}
+    for idlm in [x.strip() for x in args.extra.split(',') if x.strip()]:
+        if idlm not in ya:
+            conId.append({'titulo': '(suelta)', 'listadomangaId': idlm})
     if args.limite:
         conId, sinId = conId[:args.limite], sinId[:args.limite]
 

@@ -8218,6 +8218,50 @@
       "descargado": "2026-08-14",
       "sinopsis": "Nozomi siempre ha jugado en el equipo masculino y es un prodigio con el balón. Sumire es la joven promesa de su instituto, pero las demás no están a la altura. Cuando sus caminos se crucen ¿Serán capaces de abrirse paso hasta la victoria y devolverle la fama al fútbol femenino?",
       "portada": "data/portadas/4398/1.jpg"
+    },
+    "5416": {
+      "titulo": "Buscadores de cadáveres",
+      "url": "https://www.listadomanga.es/coleccion.php?id=5416",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2024-02-08",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5416/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-04-25",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5416/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-09-12",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5416/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2024-12-05",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/5416/4.jpg"
+        }
+      ],
+      "editorial": "Arechi Manga",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Housui Yamazaki",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-08-14",
+      "sinopsis": "Un día de verano cualquiera, el jovencito Isshin emprende un viaje con sus amigos del instituto. Su objetivo: encontrar a una compañera desaparecida un par de años atrás.\n\r\n\n\r\nAl parecer, el caso está relacionado con una serie de secuestros infantiles, algo que ha sucedido demasiadas veces en la zona...\n\r\n\n\r\n¡Una historia de suspense juvenil que te dejará sin uñas!",
+      "portada": "data/portadas/5416/1.jpg"
     }
   },
   "sugerencias": {}

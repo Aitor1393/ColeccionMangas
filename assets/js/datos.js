@@ -822,6 +822,22 @@
   };
 
   /**
+   * Los pendientes de compra, uno a uno, en el mismo orden en que los enseña
+   * la pestaña de Compras.
+   *
+   * Allí hay dos formas de ordenarlos y cada una guarda su lista: agrupando
+   * por serie manda el orden de las series (y dentro, por número), y tomo a
+   * tomo manda el de los tomos. Quien pregunta por «lo que toca comprar»
+   * —el resumen, por ejemplo— tiene que ver lo mismo que la pestaña.
+   */
+  D.compraOrdenada = function (modo) {
+    if (modo === 'tomos') return D.pendientesDeCompra();
+    return D.pendientesDeCompraPorSerie().reduce(function (lista, g) {
+      return lista.concat(g.tomos);
+    }, []);
+  };
+
+  /**
    * Aplica tu orden manual: lo que hayas colocado va primero y en tu orden;
    * lo que aún no has tocado va detrás, con el criterio por defecto.
    */

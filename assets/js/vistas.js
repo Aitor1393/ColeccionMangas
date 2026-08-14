@@ -181,8 +181,9 @@
         '<div class="lista">' + proximas.map(filaSalida).join('') + '</div>');
     }
 
-    // Lo que ya está en las tiendas y todavía te falta: un avance de Compras.
-    var pendientesCompra = D.pendientesDeCompra();
+    // Lo que ya está en las tiendas y todavía te falta: un avance de Compras,
+    // en el orden de prioridad que le hayas dado allí.
+    var pendientesCompra = D.compraOrdenada(V.modoCompras);
     if (pendientesCompra.length) {
       html += seccionPlegable('venta', 'Ya a la venta y aún no lo tienes', pendientesCompra.length,
         '<a href="#/compras" class="btn btn--pequeno btn--fantasma" style="margin-left:auto">Próximas compras</a>',

@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-08-14",
+  "actualizado": "2026-08-15",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -47,6 +47,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3000",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -365,6 +368,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1594",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -691,6 +697,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6242",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -737,6 +746,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4066",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -871,6 +883,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5610",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -973,6 +988,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4099",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1067,6 +1085,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3700",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1225,6 +1246,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6087",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1271,6 +1295,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6086",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1301,6 +1328,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3780",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1443,6 +1473,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4936",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1545,6 +1578,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6335",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1583,6 +1619,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4581",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1669,6 +1708,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1798",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1723,6 +1765,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3029",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -1753,6 +1798,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3995",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2063,6 +2111,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1674",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2109,6 +2160,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5517",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2235,6 +2289,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4562",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2377,6 +2434,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2525",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2671,6 +2731,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5342",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2725,6 +2788,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2211",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2867,6 +2933,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2943",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2897,6 +2966,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2645",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -2999,6 +3071,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2944",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3029,6 +3104,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3255",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3115,6 +3193,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4753",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3249,6 +3330,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1482",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Por ahora no han salido 28, 29 y 30, la serie está sin acabar aunque pronto van a sacar un anime que hará que los publiquen.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3415,6 +3499,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5620",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Van a ser tres lanzamientos de 6 mangas cada uno. Ya he reservado el primero habrá que estar atento al resto de reservas para no quedarme sin ellos. El lanzamiento es semestral. El segundo cofre saldría en mayo de 2025 y el tercero en noviembre de 2025",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3485,6 +3572,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5343",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3635,6 +3725,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3898",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Hasta el 13 realmente está acabado a partir de ese tomo empieza la historia del hijo que es una especie de spin off",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3777,6 +3870,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4288",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3807,6 +3903,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4289",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3845,6 +3944,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5666",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Sale el 5 de diciembre le primer tomo, es una reedición de una serie que salió hace muchos años y tengo ganas de leer.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3939,6 +4041,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1872",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -3993,6 +4098,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6234",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4039,6 +4147,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4290",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Me gusta la edición Expansion Pass porque viene con la novela del manga. Serie abierta todavía.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4149,6 +4260,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4336",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "En Akira faltan el 2 y 3",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4179,6 +4293,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3967",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Sale mensualmente.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4561,6 +4678,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5200",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4727,6 +4847,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "405",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4757,6 +4880,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5567",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4819,6 +4945,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3254",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4905,6 +5034,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5395",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -4967,6 +5099,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5903",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5029,6 +5164,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4750",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5115,6 +5253,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5866",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5313,6 +5454,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4747",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Finalizado",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5351,6 +5495,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4122",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Finalizado",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5397,6 +5544,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2690",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Finalizado",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5443,6 +5593,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1415",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Finalizado",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5545,6 +5698,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2857",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Finalizado",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5727,6 +5883,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4758",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Serie abierta, bimensual. Es el que menos me interesa de los que tengo iniciados.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5757,6 +5916,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4766",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Por ahora 36 en español, en japonés hay 106, es posible que luego haya que pasar a la edición pequeña si cancelan esta (obviamente no está acabado)",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5803,6 +5965,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3548",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5833,6 +5998,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "26",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5903,6 +6071,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2808",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5933,6 +6104,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4929",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5963,6 +6137,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4655",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Serie acabada. Tiene un spin off",
       "anadida": "2026-08-13",
       "tomos": [
@@ -5993,6 +6170,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2315",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Está en emisión todavía. No tiene una publicación regular.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -6223,6 +6403,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1740",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "Tengo el primer tomo, tiene una serie secundaria, que trata la vida de Simbad (el antagonista) Probablemente lo lea en TMO si está finalizado.",
       "anadida": "2026-08-13",
       "tomos": [
@@ -6253,6 +6436,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "2159",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -6291,6 +6477,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6324",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [],
@@ -6312,6 +6501,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6446",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -6350,6 +6542,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5844",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
       "tomos": [
@@ -6404,6 +6599,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "4398",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -6482,6 +6680,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5416",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -6536,6 +6737,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5302",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -6582,6 +6786,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5878",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -6628,6 +6835,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6261",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -6658,6 +6868,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5357",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -6752,6 +6965,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "1647",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7350,6 +7566,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5795",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7404,6 +7623,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3101",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7610,6 +7832,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3623",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7640,6 +7865,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6347",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7670,6 +7898,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6440",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7700,6 +7931,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6029",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7778,6 +8012,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "6458",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -7816,6 +8053,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "342",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -8030,6 +8270,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "5399",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -8156,6 +8399,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3404",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -8426,6 +8672,9 @@
       "etiquetas": [],
       "mangadexId": "",
       "listadomangaId": "3893",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",
       "tomos": [
@@ -8475,6 +8724,113 @@
           "leido": false,
           "fechaCompra": "2026-08-04",
           "precio": 5.24,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "800e0b54-50d2-4452-b21d-857b8daed2ab",
+      "titulo": "666 Satan",
+      "tituloAlt": "",
+      "edicion": "Maximum",
+      "autor": "Seishi Kishimoto",
+      "editorial": "Panini Manga",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 9,
+      "portada": "https://www.panini.es/media/catalog/product/s/s/ssata001_1.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
+      "sinopsis": "Askard, un mundo en que la gente se disputa vestigios de una civilización antigua, unos objetos llamados O-Parts. Corren rumores sobre un monstruo temido por los más poderosos. Todos los que se han topado con él han visto el 666, el número de la bestia, grabado en su frente. Esta es la historia de JioFreed, un chaval que sueña con conquistar el mundo y su búsqueda de las O-Parts que le hagan el más fuerte.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "3829",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-08-15",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-15",
+          "precio": 7.98,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-15",
+          "precio": 7.97,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "ecfe8f81-92d6-48c2-8f86-0fadd3e3c43e",
+      "titulo": "Super String. El viaje de Marco Polo al multiverso",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Youn In-wan",
+      "editorial": "Panini Manga",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 4,
+      "portada": "https://libris.to/media/jacket/49093665o.jpg",
+      "sinopsis": "La familia de Marco Polo ha caído en la ruina después de ofender a la realeza de Venecia, y tras la muerte de sus padres, él es el único que puede cuidar y alimentar a sus hermanos pequeños. Por eso, al ser imposible encontrar un trabajo en su ciudad natal, decide convertirse en grumete de un barco mercante. Sin embargo, tras el ataque de un horrible monstruo, naufraga y acaba despertándose en un lugar indeterminado de Asia. Lo que no se puede imaginar es que ese será el primer paso en una aventura sin igual que lo llevará a salvar su propio universo… y quizá algo más.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6199",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "El primer tomo incluye una postal del protagonista en formato cuadrado.",
+      "anadida": "2026-08-15",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-15",
+          "precio": 8.95,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "3a71fea0-59d8-4ca8-8f03-399799ee68eb",
+      "titulo": "El gran Gaea-Tima",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "KENT",
+      "editorial": "Panini Manga",
+      "demografia": "seinen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "tomosTotales": 9,
+      "portada": "https://www.panini.es/media/catalog/product/s/g/sgaea001_0.jpg?quality=80&bg-color=255,255,255&fit=bounds&height=700&width=700&canvas=700:700",
+      "sinopsis": "Un monstruo ha aparecido de repente en la ciudad costera de Sukuba y, tras destruir con sus olas la localidad, se detiene repentinamente y se disuelve en el mar. Esto provoca que la cantidad y calidad de la pesca de la zona aumente en gran medida, y convierte el sitio en un reclamo turístico muy próspero. Diez años después del suceso, Miyako, una de las supervivientes, se gana bien la vida gracias a los muñecos que hace de aquel monstruo, bautizado como Gaea-Tima y convertido en mascota. Sin embargo, de repente aparece otra criatura gigante en la ciudad y, cuando parece que la tragedia se repetirá, Miyako es capaz de invocar a Gaea-Tima, ¡que esta vez se dedica a proteger el lugar!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6074",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-08-15",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-15",
+          "precio": 8.95,
           "notas": ""
         }
       ],

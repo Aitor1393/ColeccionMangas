@@ -529,6 +529,21 @@
     return ficha && ficha.titulo ? U.partirTitulo(ficha.titulo).edicion : '';
   };
 
+  /**
+   * Cuántos tomos de la edición original mete tu edición en cada uno.
+   *
+   * Lo dice el propio nombre cuando es de las que lo dicen: «Edición 3 en 1»,
+   * «Nueva Edición 3 en 1». Las kanzenban, las Maximum y las integrales suelen
+   * ser de dos en dos pero no lo declaran, y además reparten los capítulos a su
+   * aire, así que ahí devuelve 0 y hay que deducirlo por otro lado.
+   *
+   * @returns {number} el número que diga la edición, o 0.
+   */
+  D.tomosPorTomo = function (serie) {
+    var m = /(\d+)\s*en\s*1/i.exec(D.edicionDe(serie) || '');
+    return m ? Number(m[1]) : 0;
+  };
+
   /** Nombre completo «Bleach (Maximum)»: para avisos, exportar y buscar. */
   D.nombreCompleto = function (serie) {
     var ed = D.edicionDe(serie);

@@ -27,6 +27,7 @@
 
   var WIKIS = ['es', 'en'];
   var LIMITE_CANDIDATAS = 6;
+  var LIMITE_TROZOS = 8;
 
   function api(wiki, params) {
     params.format = 'json';
@@ -108,14 +109,60 @@
       if (cuantos) tomos[Number(vol[1])] = cuantos;
     }
 
-    var numeros = Object.keys(tomos);
+    return WK.resumir(tomos, inicio);
+  };
+
+  /** Cierra un conjunto de tomos: totales y si la lista está entera. */
+  WK.resumir = function (tomos, inicio) {
+    var numeros = Object.keys(tomos).map(Number).sort(function (a, b) { return a - b; });
     return {
       tomos: tomos,
-      inicio: inicio === null ? 1 : inicio,
+      inicio: inicio === null || inicio === undefined ? 1 : inicio,
       total: numeros.length,
+      primerTomo: numeros.length ? numeros[0] : 0,
+      // Una lista partida en varios artículos deja fragmentos sueltos —los
+      // tomos 49 al 74 de Bleach, por ejemplo—. Si no empieza en 1 o le faltan
+      // números por medio, no vale para calcular nada.
+      completa: !!numeros.length && numeros[0] === 1 &&
+        numeros[numeros.length - 1] === numeros.length,
       capitulos: numeros.reduce(function (n, k) { return n + tomos[k]; }, 0)
     };
   };
+
+  /**
+   * Otras páginas en las que puede continuar una lista larga.
+   *
+   * Las series largas no caben en un artículo y Wikipedia las parte en
+   * «List of Bleach chapters (1–187)» y compañía. Unas veces el artículo madre
+   * las transcluye —{{:Página}}— y otras solo las enlaza; se recogen las dos.
+   */
+  function subpaginas(pagina, wikitexto) {
+    var base = String(pagina).replace(/\s*\([^)]*\)\s*$/, '').trim().toLowerCase();
+    var vistas = {};
+    var fuera = [];
+
+    // Transcluidas: son contenido de este mismo artículo, se siguen sin más.
+    // El nombre puede no parecerse en nada al de la página —«List of Bleach
+    // volumes» transcluye «List of Bleach chapters (1–187)»—, así que aquí no
+    // vale filtrar por parecido.
+    // Enlazadas: esas sí hay que acotarlas al mismo artículo con un tramo
+    // entre paréntesis, o acabaríamos leyendo media Wikipedia.
+    [
+      { re: /\{\{:([^|{}\n]+)\}\}/g, propias: true },
+      { re: /\[\[([^\]|#\n]+)(?:\||\]\])/g, propias: false }
+    ].forEach(function (patron) {
+      var m;
+      while ((m = patron.re.exec(wikitexto))) {
+        var nombre = m[1].trim();
+        var k = nombre.toLowerCase();
+        if (k === base || vistas[k]) continue;
+        if (!patron.propias && k.indexOf(base + ' (') !== 0) continue;
+        vistas[k] = true;
+        fuera.push(nombre);
+      }
+    });
+    return fuera.slice(0, LIMITE_TROZOS);
+  }
 
   /* ---------- Búsqueda ---------- */
 
@@ -126,15 +173,44 @@
   }
 
   /**
+   * El nombre de la obra dentro del título de una página de lista:
+   * «List of Bleach volumes» → «bleach».
+   */
+  function nucleo(pagina) {
+    return clave(String(pagina)
+      .replace(/^Anexo:\s*/i, '')
+      .replace(/^Lista de cap[íi]tulos de\s+/i, '')
+      .replace(/^Lists? of\s+/i, '')
+      .replace(/\s*\([^)]*\)\s*$/, '')
+      .replace(/\s+(chapters|volumes|cap[íi]tulos|tomos)$/i, ''));
+  }
+
+  /** ¿La página es un trozo de una lista, «… (1–198)»? */
+  function esTrozo(pagina) {
+    return /\([^)]*\d[^)]*\)\s*$/.test(pagina);
+  }
+
+  /**
+   * ¿Esta página habla de ESTA serie?
+   *
+   * No basta con que el nombre aparezca dentro: «List of Fairy Tail: 100 Years
+   * Quest chapters» contiene «Fairy Tail» y es la secuela. Tiene que ser el
+   * mismo nombre, o el principio del tuyo, que en español suelen llevar
+   * subtítulo pegado —«Tomodachi Game, Los juegos de la amistad»—.
+   */
+  function esDeLaSerie(pagina, titulo) {
+    var n = nucleo(pagina), k = clave(titulo);
+    return !!n && (n === k || k.indexOf(n) === 0);
+  }
+
+  /**
    * Páginas candidatas para una serie, en los dos idiomas.
    *
    * El buscador de Wikipedia devuelve lo que le suena, y lo que le suena a
-   * «Solo Leveling chapters» incluye «List of Hunter × Hunter chapters». Por eso
-   * solo pasa la página cuyo nombre contenga el de la serie: más vale no
-   * encontrar nada que rellenar una serie con los capítulos de otra.
+   * «Solo Leveling chapters» incluye «List of Hunter × Hunter chapters». Más
+   * vale no encontrar nada que rellenar una serie con los capítulos de otra.
    */
   function candidatas(titulo) {
-    var k = clave(titulo);
     var busquedas = WIKIS.map(function (wiki) {
       var q = wiki === 'es'
         ? 'Anexo lista de capítulos de ' + titulo
@@ -147,37 +223,97 @@
         })
         .catch(function () { return []; });
     });
+    // Wikipedia bautiza estas páginas siempre igual, así que se prueban por su
+    // nombre además de buscarlas: el buscador no siempre las saca —para Fairy
+    // Tail devolvía antes la serie de televisión y la secuela—, y probar un
+    // nombre que quizá no exista no cuesta ninguna búsqueda.
+    var directas = [
+      { wiki: 'en', pagina: 'List of ' + titulo + ' chapters' },
+      { wiki: 'en', pagina: 'List of ' + titulo + ' volumes' },
+      { wiki: 'es', pagina: 'Anexo:Lista de capítulos de ' + titulo }
+    ];
+
     return Promise.all(busquedas).then(function (listas) {
-      var todas = [].concat.apply([], listas).filter(function (p) {
-        return k && clave(p.pagina).indexOf(k) !== -1;
+      var todas = directas.concat([].concat.apply([], listas)).filter(function (p) {
+        return esDeLaSerie(p.pagina, titulo);
       });
-      // Primero lo que se llame explícitamente «lista de capítulos»: si existe,
-      // es la página buena, y la del artículo general suele venir vacía.
+      var vistas = {};
+      todas = todas.filter(function (p) {
+        var k = p.wiki + ':' + p.pagina.toLowerCase();
+        if (vistas[k]) return false;
+        vistas[k] = true;
+        return true;
+      });
       return todas.sort(function (a, b) {
         return prioridad(b.pagina) - prioridad(a.pagina);
       }).slice(0, LIMITE_CANDIDATAS);
     });
   }
 
+  /**
+   * Primero las que se llamen «lista de capítulos», que son las que traen el
+   * dato; y de esas, antes el artículo madre que uno de sus trozos: la lista de
+   * InuYasha empieza por «(1–198)», que son 20 tomos de los 56 que tiene.
+   */
   function prioridad(pagina) {
-    return /lista de cap[íi]tulos|list of .* chapters/i.test(pagina) ? 1 : 0;
+    return (/lista de cap[íi]tulos|list of .*(chapters|volumes)/i.test(pagina) ? 2 : 0) +
+      (esTrozo(pagina) ? -1 : 0);
   }
 
   /* ---------- API pública ---------- */
 
-  /** Lee una página candidata. null si no trae capítulos. */
-  function leerPagina(p) {
-    return api(p.wiki, { action: 'parse', page: p.pagina, prop: 'wikitext', redirects: 1 })
+  function wikitexto(wiki, pagina) {
+    return api(wiki, { action: 'parse', page: pagina, prop: 'wikitext', redirects: 1 })
       .then(function (d) {
-        var leido = WK.leerTomos((d.parse && d.parse.wikitext) || '');
-        if (!leido.total) return null;
-        return {
-          wiki: p.wiki, pagina: (d.parse && d.parse.title) || p.pagina,
-          total: leido.total, capitulos: leido.capitulos,
-          inicio: leido.inicio, tomos: leido.tomos
-        };
-      })
-      .catch(function () { return null; });
+        return { titulo: (d.parse && d.parse.title) || pagina, texto: (d.parse && d.parse.wikitext) || '' };
+      });
+  }
+
+  /**
+   * Lee una página candidata, siguiéndole los trozos si está partida.
+   *
+   * @returns {Promise<Object|null>} null si no trae capítulos.
+   */
+  function leerPagina(p) {
+    return wikitexto(p.wiki, p.pagina).then(function (d) {
+      var leido = WK.leerTomos(d.texto);
+
+      // Si el artículo apunta a sus trozos, se leen todos y se juntan, tenga o
+      // no tomos por sí mismo. No vale conformarse con lo que traiga la madre:
+      // la de InuYasha lista los tomos 1 al 18 y parece entera, pero los otros
+      // 38 están en los artículos que transcluye.
+      var trozos = subpaginas(d.titulo, d.texto);
+      if (!trozos.length) return leido.total ? armar(p.wiki, d.titulo, leido) : null;
+
+      return trozos.reduce(function (cadena, sub) {
+        return cadena.then(function (acc) {
+          return wikitexto(p.wiki, sub)
+            .then(function (t) { return juntar(acc, WK.leerTomos(t.texto)); })
+            .catch(function () { return acc; });
+        });
+      }, Promise.resolve(leido)).then(function (todo) {
+        return todo.total ? armar(p.wiki, d.titulo, todo) : null;
+      });
+    }).catch(function () { return null; });
+  }
+
+  /** Suma un trozo al conjunto: los tomos no se solapan entre artículos. */
+  function juntar(acc, trozo) {
+    var tomos = {};
+    Object.keys(acc.tomos).forEach(function (k) { tomos[k] = acc.tomos[k]; });
+    Object.keys(trozo.tomos).forEach(function (k) { tomos[k] = trozo.tomos[k]; });
+    // El capítulo de partida lo dice quien tenga el tomo más bajo.
+    var inicio = (!acc.total || (trozo.total && trozo.primerTomo < acc.primerTomo))
+      ? trozo.inicio : acc.inicio;
+    return WK.resumir(tomos, inicio);
+  }
+
+  function armar(wiki, pagina, leido) {
+    return {
+      wiki: wiki, pagina: pagina,
+      total: leido.total, capitulos: leido.capitulos, inicio: leido.inicio,
+      tomos: leido.tomos, completa: leido.completa, primerTomo: leido.primerTomo
+    };
   }
 
   /**
@@ -195,11 +331,60 @@
   WK.buscarCapitulos = function (titulo) {
     return candidatas(titulo).then(function (paginas) {
       return paginas.reduce(function (cadena, p) {
-        return cadena.then(function (hallado) {
-          return hallado || leerPagina(p);
+        return cadena.then(function (mejor) {
+          // Solo se para en seco ante una lista entera que venga del artículo
+          // madre. Un trozo puede parecer completo —los tomos 1 al 20, seguidos
+          // y sin huecos— y no serlo, así que ahí se sigue mirando y se queda
+          // la que más tomos traiga.
+          if (mejor && mejor.completa && !esTrozo(mejor.pagina)) return mejor;
+          return leerPagina(p).then(function (r) {
+            if (!r) return mejor;
+            return (!mejor || r.total > mejor.total) ? r : mejor;
+          });
         });
       }, Promise.resolve(null));
     });
+  };
+
+  /**
+   * Junta los tomos de la edición original de n en n.
+   *
+   * Un «3 en 1» trae los tomos 1, 2 y 3 originales dentro de su tomo 1, así que
+   * sus capítulos son la suma de los tres. Sale exacto, no una media: cada tomo
+   * tuyo acaba justo donde acaba el último original que lleva dentro.
+   *
+   * El último puede quedar corto —37 originales de tres en tres son doce tomos
+   * y una cola de uno— y así es como salen las ediciones de verdad.
+   */
+  WK.agrupar = function (tomos, n) {
+    if (!(n > 1)) return tomos;
+    var nums = Object.keys(tomos).map(Number).sort(function (a, b) { return a - b; });
+    var out = {};
+    nums.forEach(function (num, i) {
+      var destino = Math.floor(i / n) + 1;
+      out[destino] = (out[destino] || 0) + tomos[num];
+    });
+    return out;
+  };
+
+  /**
+   * Deduce de cuántos en cuántos agrupa tu edición, y comprueba que cuadre.
+   *
+   * Primero se cree lo que diga el nombre —«3 en 1» es difícil de discutir— y
+   * si no dice nada, prueba con la proporción entre los dos totales. Sea cual
+   * sea, solo vale si al agrupar salen exactamente los tomos que tú tienes:
+   * las kanzenban rebarajan los capítulos y no hay factor que las describa.
+   *
+   * @returns {{factor: number, cuadra: boolean, declarado: boolean}}
+   */
+  WK.deducirFactor = function (totalOriginal, totalTuyo, declarado) {
+    var factor = declarado || (totalTuyo ? Math.round(totalOriginal / totalTuyo) : 1);
+    if (!(factor > 1)) factor = 1;
+    return {
+      factor: factor,
+      declarado: !!declarado,
+      cuadra: !!totalTuyo && Math.ceil(totalOriginal / factor) === totalTuyo
+    };
   };
 
   WK.url = function (r) {

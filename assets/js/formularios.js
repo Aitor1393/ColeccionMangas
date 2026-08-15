@@ -677,6 +677,12 @@
         '<button type="button" class="btn btn--pequeno" id="kWiki">📖 Buscarlo en Wikipedia</button>' +
         '<span class="ayuda" id="kWikiAviso">Cuando el artículo lo tiene, trae los capítulos ' +
           'exactos de cada tomo. Muchas series no lo tienen puesto.</span>' +
+        '<div class="wiki__factor oculto" id="kFactorCaja">' +
+          '<label for="kFactor">Cada tomo tuyo lleva</label>' +
+          '<input type="number" id="kFactor" min="1" max="20" step="1" value="1">' +
+          '<span>de la edición original</span>' +
+          '<span class="ayuda" id="kFactorAviso"></span>' +
+        '</div>' +
       '</div>' +
 
       '<div id="kPreview" class="ayuda" style="margin-top:14px"></div>' +
@@ -739,6 +745,33 @@
     });
     pintarPreview();
 
+    // Lo último que trajo Wikipedia, en tomos de la edición original: la tabla
+    // que se guarda sale de agruparlo, y el agrupado se puede cambiar a mano.
+    var wiki = null;
+
+    /** Rehace la tabla juntando los tomos originales de `factor` en `factor`. */
+    function aplicarFactor() {
+      if (!wiki) return;
+      var factor = Math.max(1, Number(U.$('#kFactor').value) || 1);
+      var agrupado = WK.agrupar(wiki.tomos, factor);
+      var salen = Object.keys(agrupado).length;
+
+      tabla = {};
+      Object.keys(agrupado).forEach(function (k) { tabla[k] = agrupado[k]; });
+      U.$('#kPorTomo').value = Math.round(wiki.capitulos / salen);
+
+      U.$('#kFactorAviso').innerHTML = factor === 1
+        ? (total ? (salen === total ? '✓ salen tus ' + total + ' tomos'
+                                    : '⚠ salen ' + salen + ', y tú tienes ' + total) : '')
+        : (salen === total ? '✓ agrupando de ' + factor + ' en ' + factor +
+              ' salen justo tus ' + total + ' tomos'
+            : '⚠ agrupando de ' + factor + ' en ' + factor + ' salen ' + salen +
+              ' tomos, y tú tienes ' + total);
+      pintarPreview();
+    }
+
+    U.$('#kFactor').addEventListener('input', aplicarFactor);
+
     U.$('#kWiki').addEventListener('click', function () {
       var boton = U.$('#kWiki'), aviso = U.$('#kWikiAviso');
       boton.disabled = true;
@@ -750,24 +783,34 @@
             'Ponlos a mano: con la media de capítulos por tomo ya sale bien.';
           return;
         }
-        tabla = {};
-        Object.keys(r.tomos).forEach(function (k) { tabla[k] = r.tomos[k]; });
+        wiki = r;
         c.fuente = 'wikipedia';
         U.$('#kInicio').value = r.inicio;
-        U.$('#kPorTomo').value = Math.round(r.capitulos / r.total);
 
-        // Los tomos de Wikipedia son los de la edición original. Si la tuya
-        // agrupa varios en uno, los números no valen y hay que decirlo.
-        var desajuste = total && Math.abs(r.total - total) > 1;
+        // Wikipedia cuenta los tomos de la edición original. La tuya puede
+        // meter dos o tres en cada uno, así que antes de nada hay que saber
+        // de cuántos en cuántos van.
+        var d = WK.deducirFactor(r.total, total, D.tomosPorTomo(serie));
+        U.$('#kFactorCaja').classList.remove('oculto');
+        U.$('#kFactor').value = d.cuadra ? d.factor : 1;
+
         aviso.innerHTML = 'De <a href="' + U.esc(WK.url(r)) + '" target="_blank" rel="noopener">' +
-          U.esc(r.pagina) + '</a>: ' + U.plural(r.total, 'tomo') + ' y ' +
+          U.esc(r.pagina) + '</a>: ' + U.plural(r.total, 'tomo') + ' de la edición original y ' +
           U.plural(r.capitulos, 'capítulo') + '.' +
-          (desajuste
-            ? ' <strong>Ojo:</strong> son los de la edición original y la tuya tiene ' +
-              total + '. Los capítulos sí valen, pero repartidos en tomos que no son los ' +
-              'tuyos: revisa la media antes de guardar.'
-            : ' Encaja con tus ' + total + ' tomos.');
-        pintarPreview();
+          (!r.completa
+            ? ' <strong>Ojo:</strong> la lista está incompleta, le faltan tomos por medio, ' +
+              'así que los números no van a cuadrar.'
+            : d.cuadra && d.factor > 1
+              ? ' Tu edición mete ' + d.factor + ' en cada tomo' +
+                (d.declarado ? ', como dice su nombre' : ', que es lo que cuadra con tus ' + total) +
+                ': los capítulos se reparten ya según eso.'
+              : d.cuadra ? ' Encaja con tus ' + total + ' tomos.'
+                : ' <strong>Ojo:</strong> no hay forma de repartir esos ' + r.total +
+                  ' tomos en tus ' + total + '. Las kanzenban y las integrales rebarajan ' +
+                  'los capítulos y no siguen ninguna proporción; prueba a cambiar el ' +
+                  'agrupado o quédate con la media.');
+
+        aplicarFactor();
       }).catch(function (e) {
         boton.disabled = false;
         aviso.textContent = 'No se pudo consultar Wikipedia: ' + e.message;

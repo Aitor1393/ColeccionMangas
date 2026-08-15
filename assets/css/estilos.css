@@ -271,6 +271,12 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
   margin-top: 14px; padding-top: 14px; border-top: 1px solid var(--borde);
 }
 .wiki .ayuda { margin: 0; flex: 1; min-width: 220px; }
+.wiki__factor {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap;
+  width: 100%; font-size: .87rem;
+}
+.wiki__factor label { margin: 0; white-space: nowrap; }
+.wiki__factor input { width: 70px; }
 
 /* ───────────── Próximas compras ───────────── */
 .resumen-compras {

@@ -522,7 +522,7 @@
     return '<div class="fila fila--ranking" data-accion="abrir-serie" data-serie-id="' + U.esc(serie.id) + '">' +
       '<span class="puesto">' + puesto + '</span>' +
       (portada ? '<img class="fila__portada" src="' + U.esc(portada) + '" alt="" loading="lazy">' : '') +
-      '<div class="crece">' +
+      '<div class="fila__cuerpo">' +
         '<div class="fila__titulo">' + U.esc(nombreListado(serie)) + '</div>' +
         '<div class="fila__sub">' + (desglose || 'Sin desglose') +
           (aparte ? '<span class="critica critica--aparte">' + aparte + '</span>' : '') +

@@ -305,14 +305,18 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 
 /* ───────────── Ranking ───────────── */
 .fila--ranking { cursor: pointer; }
+/* Puesto y nota son columnas de ancho fijo, no cajas que crezcan con su
+   contenido: si no, un «10» en cualquier apartado ensancha la fila y las notas
+   de unas filas y otras dejan de estar en la misma vertical. */
 .puesto {
   font-variant-numeric: tabular-nums; font-weight: 700; color: var(--texto-3);
-  min-width: 2.2em; text-align: right; font-size: .95rem;
+  width: 2.2em; text-align: right; font-size: .95rem; flex: none;
 }
 .fila--ranking .nota {
   font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.25rem;
-  min-width: 2.4em; text-align: right;
+  width: 2.6em; text-align: right; flex: none;
 }
+.fila--ranking .btn { flex: none; }
 .critica {
   display: inline-flex; align-items: baseline; gap: 4px; margin-right: 10px;
   font-variant-numeric: tabular-nums;

@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-14",
+  "actualizado": "2026-08-15",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -10324,6 +10324,208 @@
       "descargado": "2026-08-14",
       "sinopsis": "¡YA ESTÁ AQUÍ LO NUEVO DEL DIBUJANTE DE AKAME GA KILL!, ¡LLEGA KAIJIN REIJOH!\n\r\n\n\r\n En un mundo en el que los humanos se transforman en monstruos cuando caen en la desesperación y se dejan llevar por sus deseos más escabrosos, Asuma Sudô vive felizmente desentendido de estos problemas y su única motivación en la vida es manosear a las chicas del instituto. Sin embargo, todo cambia cuando un día le llega una petición para ingresar en el Instituto de chicas Meidô: es un sueño hecho realidad! Pero lo que él ignora es que ese instituto, en realidad, es una organización secreta para exterminar a los monstruos!",
       "portada": "data/portadas/3893/1.jpg"
+    },
+    "3829": {
+      "titulo": "666 Satan (Maximum)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3829",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2021-04-22",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2021-06-23",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-08-26",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-10-28",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-12-16",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2022-02-24",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2022-05-26",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2022-06-23",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2022-08-25",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/3829/9.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo doble A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Seishi Kishimoto",
+      "totalNumeros": 9,
+      "estado": "finalizada",
+      "descargado": "2026-08-15",
+      "sinopsis": "Askard, un mundo en que la gente se disputa vestigios de una civilización antigua, unos objetos llamados O-Parts. Corren rumores sobre un monstruo temido por los más poderosos. Todos los que se han topado con él han visto el 666, el número de la bestia, grabado en su frente. Esta es la historia de JioFreed, un chaval que sueña con conquistar el mundo y su búsqueda de las O-Parts que le hagan el más fuerte.",
+      "portada": "data/portadas/3829/1.jpg"
+    },
+    "6199": {
+      "titulo": "Super String. El viaje de Marco Polo al multiverso",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6199",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-12-04",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6199/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-02-26",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6199/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2026-04-23",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6199/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2026-06-25",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6199/4.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (130x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Youn In-wan",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-08-15",
+      "sinopsis": "La familia de Marco Polo ha caído en la ruina después de ofender a la realeza de Venecia, y tras la muerte de sus padres, él es el único que puede cuidar y alimentar a sus hermanos pequeños. Por eso, al ser imposible encontrar un trabajo en su ciudad natal, decide convertirse en grumete de un barco mercante. Sin embargo, tras el ataque de un horrible monstruo, naufraga y acaba despertándose en un lugar indeterminado de Asia. Lo que no se puede imaginar es que ese será el primer paso en una aventura sin igual que lo llevará a salvar su propio universo… y quizá algo más.",
+      "portada": "data/portadas/6199/1.jpg"
+    },
+    "6074": {
+      "titulo": "El gran Gaea-Tima",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6074",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2025-07-24",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2025-09-25",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2025-11-27",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2026-01-29",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2026-03-26",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2026-06-25",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2026-08-27",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2026-10-22",
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/6074/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6074/9.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "KENT",
+      "totalNumeros": 9,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-15",
+      "sinopsis": "Un monstruo ha aparecido de repente en la ciudad costera de Sukuba y, tras destruir con sus olas la localidad, se detiene repentinamente y se disuelve en el mar. Esto provoca que la cantidad y calidad de la pesca de la zona aumente en gran medida, y convierte el sitio en un reclamo turístico muy próspero. Diez años después del suceso, Miyako, una de las supervivientes, se gana bien la vida gracias a los muñecos que hace de aquel monstruo, bautizado como Gaea-Tima y convertido en mascota. Sin embargo, de repente aparece otra criatura gigante en la ciudad y, cuando parece que la tragedia se repetirá, Miyako es capaz de invocar a Gaea-Tima, ¡que esta vez se dedica a proteger el lugar!",
+      "portada": "data/portadas/6074/1.jpg"
     }
   },
   "sugerencias": {}

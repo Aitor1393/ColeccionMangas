@@ -408,6 +408,95 @@
   };
 
   /* ============================================================
+     Vista: Ranking
+     ============================================================ */
+  V.modoRanking = U.leerLocal('cm:vistaRanking', 'nota');
+
+  V.ranking = function () {
+    var porDisfrute = V.modoRanking === 'disfrute';
+    var lista = D.ranking(porDisfrute);
+    var pendientes = D.sinValorar();
+    var duelo = D.duelo();
+
+    var html = '<div class="vista__cabecera"><div class="crece">' +
+      '<h1>Ranking</h1>' +
+      '<p>Tus series puntuadas de mejor a peor. Puedes valorar todo lo que hayas ' +
+      'leído, lo tengas o no.</p>' +
+    '</div>' +
+    '<div class="conmutador">' +
+      '<button class="' + (porDisfrute ? '' : 'activo') + '" ' +
+        'data-accion="modo-ranking" data-modo="nota">Por nota</button>' +
+      '<button class="' + (porDisfrute ? 'activo' : '') + '" ' +
+        'data-accion="modo-ranking" data-modo="disfrute">Por disfrute</button>' +
+    '</div></div>';
+
+    if (!lista.length) {
+      return html + '<div class="vacio"><h3>Aún no has valorado nada</h3>' +
+        '<p>' + (pendientes.length
+          ? 'Tienes ' + U.plural(pendientes.length, 'serie leída', 'series leídas') +
+            ' esperando nota. Empieza por una:</p>' +
+            '<button class="btn btn--primario" data-accion="valorar" data-serie-id="' +
+            U.esc(pendientes[0].id) + '">Valorar «' + U.esc(pendientes[0].titulo) + '»</button>'
+          : 'Marca algún tomo como leído y podrás puntuar esa serie.</p>') +
+        '</div>' + avisoFuera();
+    }
+
+    // El duelo solo aparece cuando de verdad hay un empate que romper.
+    if (duelo && !porDisfrute) {
+      html += '<div class="duelo-aviso">' +
+        '<span>⚔ <strong>' + U.esc(duelo[0].titulo) + '</strong> y <strong>' +
+          U.esc(duelo[1].titulo) + '</strong> están empatadas a ' + U.esc(String(D.notaDe(duelo[0]))) +
+          '. ¿Cuál es mejor?</span>' +
+        '<button class="btn btn--pequeno" data-accion="duelo">Desempatar</button>' +
+      '</div>';
+    }
+
+    if (pendientes.length) {
+      html += '<div class="resumen-compras">' +
+        '<span>' + U.plural(pendientes.length, 'serie leída sin nota', 'series leídas sin nota') + '</span>' +
+        '<button class="btn btn--pequeno" style="margin-left:auto" ' +
+          'data-accion="valorar" data-serie-id="' + U.esc(pendientes[0].id) + '">' +
+          'Valorar «' + U.esc(pendientes[0].titulo) + '»</button>' +
+      '</div>';
+    }
+
+    html += '<div class="lista">' + lista.map(function (s, i) {
+      return filaRanking(s, i + 1, porDisfrute);
+    }).join('') + '</div>';
+
+    return html + avisoFuera();
+  };
+
+  function filaRanking(serie, puesto, porDisfrute) {
+    var v = serie.valoracion;
+    var nota = D.notaDe(serie);
+    var destacada = porDisfrute ? v.disfrute : nota;
+    var portada = urlPortada(serie);
+
+    var desglose = D.CRITERIOS.filter(function (c) { return v.criterios[c.id]; })
+      .map(function (c) {
+        return '<span class="critica"><i>' + U.esc(c.nombre) + '</i>' + v.criterios[c.id] + '</span>';
+      }).join('');
+
+    var aparte = porDisfrute
+      ? (nota !== null ? 'Nota ' + nota : '')
+      : (v.disfrute ? 'Disfrute ' + v.disfrute : '');
+
+    return '<div class="fila fila--ranking" data-accion="abrir-serie" data-serie-id="' + U.esc(serie.id) + '">' +
+      '<span class="puesto">' + puesto + '</span>' +
+      (portada ? '<img class="fila__portada" src="' + U.esc(portada) + '" alt="" loading="lazy">' : '') +
+      '<div class="crece">' +
+        '<div class="fila__titulo">' + U.esc(nombreListado(serie)) + '</div>' +
+        '<div class="fila__sub">' + (desglose || 'Sin desglose') +
+          (aparte ? '<span class="critica critica--aparte">' + aparte + '</span>' : '') +
+        '</div>' +
+      '</div>' +
+      '<span class="nota">' + (destacada === null || destacada === undefined ? '—' : destacada) + '</span>' +
+      '<button class="btn btn--pequeno" data-accion="valorar" data-serie-id="' + U.esc(serie.id) + '">Cambiar</button>' +
+    '</div>';
+  }
+
+  /* ============================================================
      Vista: Próximas compras
      ============================================================ */
   V.modoCompras = U.leerLocal('cm:vistaCompras', 'series');
@@ -971,6 +1060,7 @@
         '</div>' +
         huecos +
         resumenCapitulos(serie, mapaCaps) +
+        resumenValoracion(serie) +
         (st.tengo
           ? '<p class="ayuda">Gasto: <strong>' + U.euros(st.gasto) + '</strong>' +
             (st.precioEstimado
@@ -984,6 +1074,10 @@
           (puedeAmpliar ? '<button class="btn btn--pequeno" data-accion="anadir-tomo" data-serie-id="' + U.esc(serie.id) + '">+ Tomo ' + siguiente + '</button>' : '') +
           (st.tengo ? '<button class="btn btn--pequeno" data-accion="precios" data-serie-id="' + U.esc(serie.id) + '">💶 Precios</button>' : '') +
           '<button class="btn btn--pequeno" data-accion="capitulos" data-serie-id="' + U.esc(serie.id) + '">📖 Capítulos</button>' +
+          (D.esValorable(serie)
+            ? '<button class="btn btn--pequeno" data-accion="valorar" data-serie-id="' + U.esc(serie.id) + '">⭐ ' +
+              (D.notaDe(serie) === null ? 'Valorar' : 'Nota ' + D.notaDe(serie)) + '</button>'
+            : '') +
           '<button class="btn btn--pequeno" data-accion="marcar-todo-leido" data-serie-id="' + U.esc(serie.id) + '">Marcar todo como leído</button>' +
         '</div>' +
 
@@ -1023,7 +1117,28 @@
     return '<p class="ayuda">📖 ' + texto + '</p>';
   }
 
+  /** El desglose de la nota en la ficha, con su puesto en el ranking. */
+  function resumenValoracion(serie) {
+    var nota = D.notaDe(serie);
+    var v = serie.valoracion;
+    if (nota === null && !(v && v.disfrute)) return '';
+
+    var puesto = 0;
+    D.ranking().forEach(function (s, i) { if (s.id === serie.id) puesto = i + 1; });
+    var desglose = D.CRITERIOS.filter(function (c) { return v.criterios[c.id]; })
+      .map(function (c) { return U.esc(c.nombre) + ' ' + v.criterios[c.id]; }).join(' · ');
+
+    return '<p class="ayuda">⭐ ' +
+      (nota === null ? '' : '<strong>' + nota + '</strong>' +
+        (puesto ? ' · nº ' + puesto + ' del <a href="#/ranking">ranking</a>' : '') + '<br>') +
+      (desglose || '') +
+      (v.disfrute ? (desglose ? ' · ' : '') + 'Disfrute ' + v.disfrute : '') +
+      (v.notas ? '<br><em>' + U.esc(v.notas) + '</em>' : '') +
+    '</p>';
+  }
+
   V.filaSalida = filaSalida;
+  V.urlPortada = urlPortada;
 
   global.V = V;
 })(window);

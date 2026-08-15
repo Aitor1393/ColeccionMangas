@@ -5,7 +5,7 @@
   'use strict';
 
   var App = {};
-  var VISTAS = ['resumen', 'biblioteca', 'pendientes', 'compras', 'calendario', 'ajustes'];
+  var VISTAS = ['resumen', 'biblioteca', 'pendientes', 'compras', 'ranking', 'calendario', 'ajustes'];
   var vistaActual = 'resumen';
   var serieAbierta = null;
 
@@ -59,6 +59,7 @@
       case 'biblioteca': contenido = V.biblioteca(); break;
       case 'pendientes': contenido = V.pendientes(); break;
       case 'compras': contenido = V.compras(); break;
+      case 'ranking': contenido = V.ranking(); break;
       case 'calendario': contenido = V.calendario(); break;
       case 'ajustes': contenido = V.ajustes(); break;
       default: contenido = V.resumen();
@@ -81,6 +82,13 @@
       var s = D.serie(serieAbierta);
       if (s) U.$('#modalContenido').innerHTML = V.detalle(s);
     }
+  };
+
+  /** Cierra el modal y repinta: lo que hacen todos los formularios al guardar. */
+  App.cerrarYRefrescar = function () {
+    U.cerrarModal();
+    serieAbierta = null;
+    App.render();
   };
 
   App.abrirSerie = function (id) {
@@ -359,6 +367,25 @@
     'capitulos': function (el) {
       var s = D.serie(el.dataset.serieId);
       if (s) F.capitulos(s);
+    },
+
+    'abrir-serie': function (el) {
+      App.abrirSerie(el.dataset.serieId);
+    },
+
+    'valorar': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (s) F.valorar(s);
+    },
+
+    'duelo': function () {
+      F.duelo(D.duelo());
+    },
+
+    'modo-ranking': function (el) {
+      V.modoRanking = el.dataset.modo;
+      U.guardarLocal('cm:vistaRanking', V.modoRanking);
+      App.render();
     },
 
     'guardar-precios-ajustes': function () {

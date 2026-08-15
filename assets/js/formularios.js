@@ -844,5 +844,170 @@
     });
   };
 
+  /* ============================================================
+     Valoración y ranking
+     ============================================================ */
+
+  /** El texto de la ancla que corresponde a una nota: 7 cae en el tramo del 8. */
+  function anclaDe(criterio, n) {
+    if (!n) return 'Sin puntuar';
+    var tramos = Object.keys(criterio.anclas).map(Number).sort(function (a, b) { return a - b; });
+    for (var i = 0; i < tramos.length; i++) if (n <= tramos[i]) return criterio.anclas[tramos[i]];
+    return criterio.anclas[tramos[tramos.length - 1]];
+  }
+
+  /**
+   * Puntuar una serie por criterios.
+   *
+   * Cada criterio va con la descripción de lo que significa la nota que estás
+   * poniendo, y esa descripción cambia mientras mueves el control. Es lo que
+   * evita que el 8 de hoy no tenga nada que ver con el de dentro de dos años.
+   */
+  F.valorar = function (serie) {
+    var v = serie.valoracion || { criterios: {}, disfrute: null, notas: '' };
+
+    var filas = D.CRITERIOS.map(function (c) {
+      var n = v.criterios[c.id] || 0;
+      return '<div class="critfila" data-criterio="' + c.id + '">' +
+        '<label for="v_' + c.id + '">' + U.esc(c.nombre) +
+          '<small>' + U.esc(c.ayuda) + '</small></label>' +
+        '<input type="range" id="v_' + c.id + '" min="0" max="10" step="1" value="' + n + '">' +
+        '<span class="critfila__nota">' + (n || '—') + '</span>' +
+        '<span class="critfila__ancla">' + U.esc(anclaDe(c, n)) + '</span>' +
+      '</div>';
+    }).join('');
+
+    U.abrirModal(
+      '<h2>Valorar · ' + U.esc(serie.titulo) + '</h2>' +
+      '<p class="ayuda">Puntúa cada cosa por separado. Lo que dejes en 0 no cuenta ' +
+      'para la nota: si la serie sigue publicándose, deja el final sin tocar.</p>' +
+      '<div class="criterios">' + filas + '</div>' +
+
+      '<div class="critfila critfila--disfrute">' +
+        '<label for="v_disfrute">Disfrute<small>Cuánto lo pasaste bien, sin justificarlo. ' +
+          'No cuenta para la nota.</small></label>' +
+        '<input type="range" id="v_disfrute" min="0" max="10" step="1" value="' + (v.disfrute || 0) + '">' +
+        '<span class="critfila__nota">' + (v.disfrute || '—') + '</span>' +
+        '<span class="critfila__ancla"></span>' +
+      '</div>' +
+
+      '<div class="nota-final">Nota: <strong id="vNota">—</strong> ' +
+        '<span class="ayuda" id="vDetalle"></span></div>' +
+
+      '<div class="campos" style="margin-top:14px">' +
+        '<div class="campo--ancho"><label for="vNotas">Comentario</label>' +
+          '<input type="text" id="vNotas" value="' + U.esc(v.notas) + '" ' +
+          'placeholder="Lo que quieras recordar de ella"></div>' +
+      '</div>' +
+
+      '<div class="form__acciones">' +
+        (D.notaDe(serie) !== null
+          ? '<button type="button" class="btn btn--fantasma" id="vBorrar">Quitar la nota</button>' : '') +
+        '<button type="button" class="btn btn--fantasma" data-cerrar-modal>Cancelar</button>' +
+        '<button type="button" class="btn btn--primario" id="vGuardar">Guardar</button>' +
+      '</div>'
+    );
+
+    function leer() {
+      var criterios = {};
+      D.CRITERIOS.forEach(function (c) {
+        var n = Number(U.$('#v_' + c.id).value);
+        if (n) criterios[c.id] = n;
+      });
+      return criterios;
+    }
+
+    function refrescar() {
+      D.CRITERIOS.forEach(function (c) {
+        var n = Number(U.$('#v_' + c.id).value);
+        var fila = U.$('.critfila[data-criterio="' + c.id + '"]');
+        U.$('.critfila__nota', fila).textContent = n || '—';
+        U.$('.critfila__ancla', fila).textContent = anclaDe(c, n);
+      });
+      var d = Number(U.$('#v_disfrute').value);
+      U.$('.critfila--disfrute .critfila__nota').textContent = d || '—';
+
+      var criterios = leer();
+      var puestos = Object.keys(criterios);
+      var nota = puestos.length
+        ? Math.round((puestos.reduce(function (t, k) { return t + criterios[k]; }, 0) / puestos.length) * 10) / 10
+        : null;
+      U.$('#vNota').textContent = nota === null ? '—' : nota;
+      U.$('#vDetalle').textContent = puestos.length
+        ? 'media de ' + U.plural(puestos.length, 'criterio') +
+          (puestos.length < D.CRITERIOS.length ? ' de ' + D.CRITERIOS.length : '')
+        : 'puntúa algo para que salga nota';
+    }
+
+    U.$$('.criterios input, #v_disfrute').forEach(function (i) {
+      i.addEventListener('input', refrescar);
+    });
+    refrescar();
+
+    U.$('#vGuardar').addEventListener('click', function () {
+      var d = Number(U.$('#v_disfrute').value);
+      D.actualizarSerie(serie.id, {
+        valoracion: D.normalizarValoracion({
+          criterios: leer(),
+          disfrute: d || null,
+          // Los duelos ganados no se pierden por retocar una nota.
+          desempate: v.desempate, duelos: v.duelos,
+          notas: U.$('#vNotas').value.trim(),
+          fecha: U.isoHoy()
+        })
+      });
+      U.aviso('«' + serie.titulo + '» valorada', 'ok');
+      App.cerrarYRefrescar();
+    });
+
+    if (U.$('#vBorrar')) {
+      U.$('#vBorrar').addEventListener('click', function () {
+        D.actualizarSerie(serie.id, { valoracion: null });
+        U.aviso('Nota quitada', 'ok');
+        App.cerrarYRefrescar();
+      });
+    }
+  };
+
+  /**
+   * Duelo entre dos series empatadas.
+   *
+   * Comparar dos cosas se nos da mucho mejor que puntuarlas en abstracto, así
+   * que cuando la rúbrica deja un empate se pregunta directamente. El resultado
+   * solo ordena dentro del empate: no toca las notas ni adelanta a nadie.
+   */
+  F.duelo = function (par) {
+    if (!par) return;
+    var carta = function (s) {
+      var portada = V.urlPortada ? V.urlPortada(s) : '';
+      var v = s.valoracion;
+      return '<button class="duelo__carta" data-gana="' + U.esc(s.id) + '" ' +
+        'data-pierde="' + U.esc(par[0].id === s.id ? par[1].id : par[0].id) + '">' +
+        (portada ? '<img src="' + U.esc(portada) + '" alt="" loading="lazy">' : '') +
+        '<strong>' + U.esc(s.titulo) + '</strong>' +
+        '<small>' + D.CRITERIOS.filter(function (c) { return v.criterios[c.id]; })
+          .map(function (c) { return c.nombre + ' ' + v.criterios[c.id]; }).join(' · ') + '</small>' +
+      '</button>';
+    };
+
+    U.abrirModal(
+      '<h2>⚔ Desempate</h2>' +
+      '<p class="ayuda">Las dos tienen un ' + U.esc(String(D.notaDe(par[0]))) +
+      '. Elige cuál está por delante; solo cambia el orden entre ellas.</p>' +
+      '<div class="duelo">' + carta(par[0]) + '<span class="duelo__vs">vs</span>' + carta(par[1]) + '</div>' +
+      '<div class="form__acciones">' +
+        '<button type="button" class="btn btn--fantasma" data-cerrar-modal>Ahora no</button>' +
+      '</div>'
+    );
+
+    U.$$('.duelo__carta').forEach(function (b) {
+      b.addEventListener('click', function () {
+        D.resolverDuelo(b.dataset.gana, b.dataset.pierde);
+        U.aviso('Desempatado', 'ok');
+        App.cerrarYRefrescar();
+      });
+    });
+  };
+
   global.F = F;
 })(window);

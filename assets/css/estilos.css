@@ -278,6 +278,76 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .wiki__factor label { margin: 0; white-space: nowrap; }
 .wiki__factor input { width: 70px; }
 
+/* ───────────── Ranking ───────────── */
+.fila--ranking { cursor: pointer; }
+.puesto {
+  font-variant-numeric: tabular-nums; font-weight: 700; color: var(--texto-3);
+  min-width: 2.2em; text-align: right; font-size: .95rem;
+}
+.fila--ranking .nota {
+  font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.25rem;
+  min-width: 2.4em; text-align: right;
+}
+.critica {
+  display: inline-flex; align-items: baseline; gap: 4px; margin-right: 10px;
+  font-variant-numeric: tabular-nums;
+}
+.critica i { font-style: normal; color: var(--texto-3); }
+.critica--aparte { color: var(--texto-3); }
+
+.duelo-aviso {
+  display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+  background: var(--panel); border: 1px solid var(--borde); border-radius: var(--radio);
+  padding: 10px 14px; margin-bottom: 16px; font-size: .9rem;
+}
+.duelo-aviso .btn { margin-left: auto; }
+
+/* Criterios de la valoración */
+.criterios { margin-top: 6px; }
+.critfila {
+  display: grid; grid-template-columns: 1fr 180px 2.2em; gap: 4px 12px;
+  align-items: center; padding: 10px 0; border-top: 1px solid var(--borde);
+}
+.critfila label { margin: 0; display: flex; flex-direction: column; gap: 2px; font-weight: 600; }
+.critfila label small { font-weight: 400; color: var(--texto-3); }
+.critfila input[type="range"] { width: 100%; }
+.critfila__nota {
+  font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.05rem; text-align: right;
+}
+.critfila__ancla { grid-column: 1 / -1; font-size: .82rem; color: var(--texto-2); }
+.critfila--disfrute { border-top: 2px solid var(--borde); margin-top: 6px; }
+.nota-final {
+  margin-top: 14px; padding: 10px 14px; background: var(--panel-2);
+  border-radius: var(--radio-s); font-size: 1.05rem;
+}
+.nota-final strong { font-size: 1.5rem; font-variant-numeric: tabular-nums; }
+.nota-final .ayuda { display: inline; margin-left: 8px; }
+
+/* Duelo */
+.duelo { display: flex; align-items: center; gap: 14px; margin-top: 16px; }
+.duelo__vs { color: var(--texto-3); font-weight: 700; }
+.duelo__carta {
+  flex: 1; display: flex; flex-direction: column; align-items: center; gap: 8px;
+  padding: 14px; background: var(--panel-2); border: 1px solid var(--borde);
+  border-radius: var(--radio); cursor: pointer; color: inherit; text-align: center;
+}
+.duelo__carta:hover { border-color: var(--acento); background: var(--panel); }
+.duelo__carta img { width: 96px; border-radius: var(--radio-s); }
+.duelo__carta small { color: var(--texto-3); font-size: .78rem; }
+
+@media (max-width: 620px) {
+  .critfila { grid-template-columns: 1fr 2.2em; }
+  .critfila input[type="range"] { grid-column: 1 / -1; }
+  .duelo { flex-direction: column; }
+  .duelo__carta { width: 100%; }
+  /* La fila entera abre la ficha, y allí está el botón de la nota: en el
+     móvil no cabe todo y el «Cambiar» es lo único que sobra. */
+  .fila--ranking .btn { display: none; }
+  .puesto { min-width: 1.6em; font-size: .85rem; }
+  .fila--ranking .nota { font-size: 1.1rem; min-width: 2em; }
+  .critica { margin-right: 7px; font-size: .78rem; }
+}
+
 /* ───────────── Próximas compras ───────────── */
 .resumen-compras {
   display: flex; align-items: center; gap: 16px; flex-wrap: wrap;

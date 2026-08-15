@@ -72,6 +72,7 @@
       mangadexId: s.mangadexId || '',
       listadomangaId: s.listadomangaId ? String(s.listadomangaId) : '',
       capitulos: normalizarCapitulos(s.capitulos),
+      valoracion: normalizarValoracion(s.valoracion),
       notas: s.notas || '',
       anadida: s.anadida || U.isoHoy(),
       tomos: (Array.isArray(s.tomos) ? s.tomos : []).map(function (t) {
@@ -124,6 +125,171 @@
       fuente: c.fuente || ''
     };
   }
+
+  /* ---------- Valoración ---------- */
+
+  /**
+   * Los criterios de la nota, con qué significa cada tramo.
+   *
+   * Las descripciones no son adorno: son lo único que hace que un 7 puesto hoy
+   * valga lo mismo que uno puesto dentro de dos años. Sin ellas la nota deriva
+   * y el ranking deja de tener sentido.
+   */
+  D.CRITERIOS = [
+    { id: 'historia', nombre: 'Historia', ayuda: 'La trama y cómo está construida.', anclas: {
+      2: 'Incoherente o sin nada que contar',
+      4: 'Se sostiene a duras penas, previsible',
+      6: 'Correcta, cumple sin sorprender',
+      8: 'Bien construida, los giros se los gana',
+      10: 'Memorable, no sabrías qué mejorarle'
+    } },
+    { id: 'personajes', nombre: 'Personajes', ayuda: 'Si evolucionan y si te importan.', anclas: {
+      2: 'Planos e intercambiables',
+      4: 'Funcionan, pero no cambian en toda la serie',
+      6: 'Alguno destaca, el resto acompaña',
+      8: 'Evolucionan y te llegas a preocupar por ellos',
+      10: 'El reparto entero sostiene la obra'
+    } },
+    { id: 'dibujo', nombre: 'Dibujo', ayuda: 'El apartado gráfico y su claridad.', anclas: {
+      2: 'Confuso, cuesta seguir lo que pasa',
+      4: 'Irregular o pobre',
+      6: 'Correcto y se lee bien',
+      8: 'Muy bueno, con personalidad propia',
+      10: 'Excepcional, vale la pena por sí solo'
+    } },
+    { id: 'ritmo', nombre: 'Ritmo', ayuda: 'Si se hace largo o va al grano.', anclas: {
+      2: 'Insufrible, relleno constante',
+      4: 'Se hace largo por tramos',
+      6: 'Desigual pero llevadero',
+      8: 'Avanza bien, sin paja',
+      10: 'No sobra ni una página'
+    } },
+    { id: 'final', nombre: 'Final', ayuda: 'Cómo cierra. Déjalo en blanco si sigue publicándose.', anclas: {
+      2: 'Arruina lo anterior',
+      4: 'Flojo o precipitado',
+      6: 'Cumple sin más',
+      8: 'Cierra bien todo lo que abrió',
+      10: 'Redondo, y hace mejor a la serie entera'
+    } }
+  ];
+
+  /**
+   * Lo que has puntuado de una serie.
+   *
+   * `disfrute` va aparte y NO entra en la nota a propósito: «qué buena es» y
+   * «cuánto lo pasé bien» son preguntas distintas, y sumarlas sin darse cuenta
+   * es la forma más rápida de que el ranking no signifique nada. El ranking se
+   * puede ordenar por una o por otra.
+   *
+   * `desempate` lo mueven los duelos, y solo ordena entre notas iguales: nunca
+   * toca la nota ni adelanta a nadie que esté por encima.
+   */
+  function normalizarValoracion(v) {
+    if (!v) return null;
+    var criterios = {};
+    var alguno = false;
+    D.CRITERIOS.forEach(function (c) {
+      var n = Number((v.criterios || {})[c.id]);
+      if (n >= 1 && n <= 10) { criterios[c.id] = n; alguno = true; }
+    });
+    var disfrute = Number(v.disfrute);
+    disfrute = (disfrute >= 1 && disfrute <= 10) ? disfrute : null;
+    if (!alguno && disfrute === null) return null;
+    return {
+      criterios: criterios,
+      disfrute: disfrute,
+      desempate: Number(v.desempate) || 0,
+      duelos: Number(v.duelos) || 0,
+      notas: v.notas || '',
+      fecha: v.fecha || U.isoHoy()
+    };
+  }
+
+  D.normalizarValoracion = normalizarValoracion;
+
+  /** La nota: media de los criterios que hayas puntuado. null si no hay ninguno. */
+  D.notaDe = function (serie) {
+    var v = serie.valoracion;
+    if (!v) return null;
+    var puestos = Object.keys(v.criterios);
+    if (!puestos.length) return null;
+    var suma = puestos.reduce(function (n, k) { return n + v.criterios[k]; }, 0);
+    return Math.round((suma / puestos.length) * 10) / 10;
+  };
+
+  /** ¿Se puede valorar? Si has leído algo de ella, la tengas o no. */
+  D.esValorable = function (serie) {
+    return serie.tomos.some(function (t) { return t.leido; });
+  };
+
+  D.valorables = function () {
+    return D.coleccion.series.filter(D.esValorable);
+  };
+
+  /**
+   * El ranking. `porDisfrute` ordena por lo que te hizo pasarlo bien en vez de
+   * por la nota.
+   *
+   * Entre notas iguales mandan los duelos que hayas resuelto, y si tampoco los
+   * hay, el orden alfabético, que al menos es estable.
+   */
+  D.ranking = function (porDisfrute) {
+    var valor = function (s) {
+      return porDisfrute ? (s.valoracion && s.valoracion.disfrute) : D.notaDe(s);
+    };
+    return D.valorables()
+      .filter(function (s) { return valor(s) !== null && valor(s) !== undefined; })
+      .sort(function (a, b) {
+        return (valor(b) - valor(a)) ||
+          (b.valoracion.desempate - a.valoracion.desempate) ||
+          a.titulo.localeCompare(b.titulo);
+      });
+  };
+
+  /** Las que podrías valorar y aún no has valorado. */
+  D.sinValorar = function () {
+    return D.valorables().filter(function (s) { return D.notaDe(s) === null; });
+  };
+
+  /**
+   * Una pareja empatada que desempatar, la que menos duelos lleve.
+   *
+   * Solo se enfrenta a series con la MISMA nota: comparar un 9 con un 6 no
+   * aporta nada —ya sabes cuál gana— y el resultado no debe mover el ranking.
+   *
+   * @returns {Array|null} las dos series, o null si no hay empates.
+   */
+  D.duelo = function () {
+    var porNota = {};
+    D.ranking().forEach(function (s) {
+      var k = String(D.notaDe(s));
+      (porNota[k] = porNota[k] || []).push(s);
+    });
+    var mejor = null;
+    Object.keys(porNota).forEach(function (k) {
+      var grupo = porNota[k];
+      if (grupo.length < 2) return;
+      for (var i = 0; i < grupo.length; i++) {
+        for (var j = i + 1; j < grupo.length; j++) {
+          var peso = grupo[i].valoracion.duelos + grupo[j].valoracion.duelos;
+          if (!mejor || peso < mejor.peso) mejor = { peso: peso, par: [grupo[i], grupo[j]] };
+        }
+      }
+    });
+    return mejor ? mejor.par : null;
+  };
+
+  /** Apunta quién ganó un duelo. */
+  D.resolverDuelo = function (idGana, idPierde) {
+    var g = D.serie(idGana), p = D.serie(idPierde);
+    if (!g || !p || !g.valoracion || !p.valoracion) return false;
+    g.valoracion.desempate++;
+    p.valoracion.desempate--;
+    g.valoracion.duelos++;
+    p.valoracion.duelos++;
+    D.guardar();
+    return true;
+  };
 
   D.normalizarCapitulos = normalizarCapitulos;
 

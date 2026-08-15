@@ -6738,7 +6738,20 @@
       "mangadexId": "",
       "listadomangaId": "5302",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 8,
+          "personajes": 9,
+          "dibujo": 7,
+          "ritmo": 9,
+          "final": 8
+        },
+        "disfrute": 9,
+        "desempate": 0,
+        "duelos": 0,
+        "notas": "Me gustó porque además es corta la serie.",
+        "fecha": "2026-08-15"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",

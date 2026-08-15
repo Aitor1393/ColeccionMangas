@@ -6813,7 +6813,20 @@
       "mangadexId": "",
       "listadomangaId": "5878",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 6,
+          "personajes": 9,
+          "dibujo": 8,
+          "ritmo": 9,
+          "final": 10
+        },
+        "disfrute": 8,
+        "desempate": 0,
+        "duelos": 0,
+        "notas": "¡ALERTA SPOILER!: el final es más triste de lo que esperaba.",
+        "fecha": "2026-08-15"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-14",

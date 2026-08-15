@@ -78,6 +78,11 @@
     if (serie.abandonada) {
       insignia = '<span class="serie__insignia serie__insignia--abandonada">abandonada</span>';
     }
+    // Y si la estás releyendo ahora mismo, eso manda sobre todo lo demás.
+    if (D.relee(serie)) {
+      insignia = '<span class="serie__insignia serie__insignia--releyendo">🔁 tomo ' +
+        serie.relectura.tomo + '</span>';
+    }
 
     return '' +
       '<article class="serie' + (serie.abandonada ? ' serie--abandonada' : '') + '" ' +
@@ -283,6 +288,7 @@
         '<option value=""' + (f.seguimiento ? '' : ' selected') + '>Sigo y abandonadas</option>' +
         '<option value="sigo"' + (f.seguimiento === 'sigo' ? ' selected' : '') + '>Solo las que sigo</option>' +
         '<option value="abandonadas"' + (f.seguimiento === 'abandonadas' ? ' selected' : '') + '>Solo abandonadas</option>' +
+        '<option value="releyendo"' + (f.seguimiento === 'releyendo' ? ' selected' : '') + '>Las que estoy releyendo</option>' +
       '</select>' +
       '<select id="fDemografia"><option value="">Cualquier demografía</option>' + opciones(Object.keys(D.DEMOGRAFIAS), f.demografia, D.DEMOGRAFIAS) + '</select>' +
       '<select id="fEditorial"><option value="">Cualquier editorial</option>' + opciones(D.editoriales(), f.editorial) + '</select>' +
@@ -339,6 +345,7 @@
       }
       if (f.seguimiento === 'sigo' && s.abandonada) return false;
       if (f.seguimiento === 'abandonadas' && !s.abandonada) return false;
+      if (f.seguimiento === 'releyendo' && !D.relee(s)) return false;
       if (f.estado && D.estadoDe(s) !== f.estado) return false;
       if (f.demografia && D.demografiaDe(s) !== f.demografia) return false;
       if (f.editorial && D.editorialDe(s) !== f.editorial) return false;
@@ -904,6 +911,13 @@
           (caps.exacto ? '' : ' (aprox.)');
       }
 
+      // La relectura se marca encima, sin tocar el color del tomo: lo leído
+      // sigue leído y solo se señala por dónde vas esta vez.
+      if (D.relee(serie) && serie.relectura.tomo === i) {
+        clase += ' tomo--releyendo';
+        titulo += ' · aquí vas en tu ' + D.numeroDeLectura(serie) + 'ª lectura';
+      }
+
       var nLM = D.numeroLM(serie, i);
       var imagen = nLM && nLM.portada;
       if (imagen) clase += ' tomo--conPortada';
@@ -1026,6 +1040,7 @@
         '<div class="detalle__meta">' +
           chipEstado(serie) +
           (serie.abandonada ? '<span class="chip chip--rojo">✕ La dejaste</span>' : '') +
+          (D.relee(serie) ? '<span class="chip">🔁 Releyendo</span>' : '') +
           (demografia ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[demografia] || demografia) + '</span>' : '') +
           (ficha && ficha.coleccion ? '<span class="chip">📚 ' + U.esc(ficha.coleccion) + '</span>' : '') +
           (autor ? '<span class="chip">✍ ' + U.esc(autor) + '</span>' : '') +
@@ -1059,6 +1074,7 @@
           '<span><i style="border:1px dashed var(--verde);background:none"></i>Leído sin tenerlo</span>' +
         '</div>' +
         huecos +
+        panelRelectura(serie) +
         resumenCapitulos(serie, mapaCaps) +
         resumenValoracion(serie) +
         (st.tengo
@@ -1077,6 +1093,12 @@
           (D.esValorable(serie)
             ? '<button class="btn btn--pequeno" data-accion="valorar" data-serie-id="' + U.esc(serie.id) + '">⭐ ' +
               (D.notaDe(serie) === null ? 'Valorar' : 'Nota ' + D.notaDe(serie)) + '</button>'
+            : '') +
+          // Releer se ofrece cuando ya la has leído entera: para lo que dejaste
+          // a medias ya está la propia cuadrícula.
+          (!D.relee(serie) && st.leidosTotal >= st.total && st.total
+            ? '<button class="btn btn--pequeno" data-accion="relectura-empezar" data-serie-id="' +
+              U.esc(serie.id) + '">🔁 Releer</button>'
             : '') +
           '<button class="btn btn--pequeno" data-accion="marcar-todo-leido" data-serie-id="' + U.esc(serie.id) + '">Marcar todo como leído</button>' +
         '</div>' +
@@ -1115,6 +1137,49 @@
         (enQue ? ', que cae en el tomo <strong>' + enQue + '</strong>' : '');
     }
     return '<p class="ayuda">📖 ' + texto + '</p>';
+  }
+
+  /**
+   * El panel de «la estoy releyendo».
+   *
+   * Solo sale cuando de verdad la estás releyendo; si no, el botón para
+   * empezar va con los demás. Los tomos de la cuadrícula no se tocan: esto
+   * es una marca aparte que dice por dónde vas esta vez.
+   */
+  function panelRelectura(serie) {
+    if (!D.relee(serie)) {
+      var vueltas = (serie.relectura && serie.relectura.vueltas) || 0;
+      return vueltas
+        ? '<p class="ayuda">🔁 La has releído ' + U.plural(vueltas, 'vez', 'veces') + '.</p>'
+        : '';
+    }
+    var r = D.rangoTomos(serie);
+    var caps = D.mapaCapitulos(serie);
+    var enCurso = serie.relectura.tomo;
+    var caja = caps && caps[enCurso];
+
+    return '<div class="relectura">' +
+      '<div class="relectura__cabecera">' +
+        '<strong>🔁 ' + D.numeroDeLectura(serie) + 'ª lectura</strong>' +
+        '<span class="ayuda">Empezada el ' + U.fechaCorta(serie.relectura.desde) + '</span>' +
+      '</div>' +
+      '<div class="relectura__control">' +
+        '<button class="btn btn--pequeno" data-accion="relectura-mover" data-serie-id="' +
+          U.esc(serie.id) + '" data-a="' + (enCurso - 1) + '"' +
+          (enCurso <= r.desde ? ' disabled' : '') + '>−</button>' +
+        '<span class="relectura__tomo">Tomo ' + enCurso + '<small> de ' + r.hasta + '</small></span>' +
+        '<button class="btn btn--pequeno" data-accion="relectura-mover" data-serie-id="' +
+          U.esc(serie.id) + '" data-a="' + (enCurso + 1) + '"' +
+          (enCurso >= r.hasta ? ' disabled' : '') + '>+</button>' +
+        (caja ? '<span class="ayuda">capítulos ' + caja.desde + '–' + caja.hasta + '</span>' : '') +
+        '<button class="btn btn--pequeno" data-accion="relectura-terminar" data-serie-id="' +
+          U.esc(serie.id) + '" style="margin-left:auto">La he terminado</button>' +
+        '<button class="btn btn--pequeno btn--fantasma" data-accion="relectura-cancelar" ' +
+          'data-serie-id="' + U.esc(serie.id) + '">Dejarlo</button>' +
+      '</div>' +
+      '<div class="progreso"><span style="width:' +
+        U.porcentaje(enCurso - r.desde + 1, r.hasta - r.desde + 1) + '%"></span></div>' +
+    '</div>';
   }
 
   /** El desglose de la nota en la ficha, con su puesto en el ranking. */

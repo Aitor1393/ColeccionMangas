@@ -278,6 +278,31 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .wiki__factor label { margin: 0; white-space: nowrap; }
 .wiki__factor input { width: 70px; }
 
+/* ───────────── Relectura ───────────── */
+.relectura {
+  background: var(--panel-2); border: 1px solid var(--borde); border-radius: var(--radio-s);
+  padding: 12px 14px; margin-top: 14px;
+}
+.relectura__cabecera {
+  display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.relectura__cabecera .ayuda { margin: 0; }
+.relectura__control {
+  display: flex; align-items: center; gap: 8px; flex-wrap: wrap; margin-bottom: 10px;
+}
+.relectura__control .ayuda { margin: 0; }
+.relectura__tomo { font-weight: 700; font-variant-numeric: tabular-nums; }
+.relectura__tomo small { font-weight: 400; color: var(--texto-3); }
+.relectura .progreso { margin: 0; }
+
+/* La casilla por la que vas releyendo: un aro encima, sin tapar su color. */
+.tomo--releyendo { outline: 2px solid var(--acento); outline-offset: -2px; }
+.serie__insignia--releyendo { background: var(--acento); color: #fff; }
+
+@media (max-width: 620px) {
+  .relectura__control .btn[data-accion="relectura-terminar"] { margin-left: 0 !important; }
+}
+
 /* ───────────── Ranking ───────────── */
 .fila--ranking { cursor: pointer; }
 .puesto {

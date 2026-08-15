@@ -73,6 +73,7 @@
       listadomangaId: s.listadomangaId ? String(s.listadomangaId) : '',
       capitulos: normalizarCapitulos(s.capitulos),
       valoracion: normalizarValoracion(s.valoracion),
+      relectura: normalizarRelectura(s.relectura),
       notas: s.notas || '',
       anadida: s.anadida || U.isoHoy(),
       tomos: (Array.isArray(s.tomos) ? s.tomos : []).map(function (t) {
@@ -125,6 +126,84 @@
       fuente: c.fuente || ''
     };
   }
+
+  /* ---------- Relecturas ---------- */
+
+  /**
+   * Por dónde vas si estás releyendo una serie.
+   *
+   * Va aparte de los tomos a propósito: releer no puede tocar lo que ya
+   * marcaste como leído. Que vayas por el tomo 5 de la segunda vuelta no
+   * significa que los otros 32 hayan dejado de estar leídos.
+   *
+   * `vueltas` son las relecturas que has terminado, sin contar la de ahora.
+   */
+  function normalizarRelectura(r) {
+    if (!r) return null;
+    var vueltas = Number(r.vueltas) || 0;
+    if (!r.activa && !vueltas) return null;
+    return {
+      activa: !!r.activa,
+      tomo: Number(r.tomo) || 0,
+      desde: r.desde || U.isoHoy(),
+      vueltas: vueltas
+    };
+  }
+
+  D.normalizarRelectura = normalizarRelectura;
+
+  D.relee = function (serie) {
+    return !!(serie.relectura && serie.relectura.activa);
+  };
+
+  /** Qué número de lectura es la de ahora: la primera relectura es la 2ª. */
+  D.numeroDeLectura = function (serie) {
+    return ((serie.relectura && serie.relectura.vueltas) || 0) + 2;
+  };
+
+  /** Empieza una relectura por el primer tomo. */
+  D.empezarRelectura = function (id) {
+    var s = D.serie(id);
+    if (!s) return false;
+    var previa = s.relectura || {};
+    s.relectura = normalizarRelectura({
+      activa: true, tomo: D.rangoTomos(s).desde, desde: U.isoHoy(), vueltas: previa.vueltas || 0
+    });
+    D.guardar();
+    return true;
+  };
+
+  /** Mueve por dónde vas, sin salirse de los tomos que existen. */
+  D.avanzarRelectura = function (id, tomo) {
+    var s = D.serie(id);
+    if (!s || !D.relee(s)) return false;
+    var r = D.rangoTomos(s);
+    s.relectura.tomo = Math.max(r.desde, Math.min(r.hasta, Number(tomo)));
+    D.guardar();
+    return true;
+  };
+
+  /** La has terminado de releer: suma una vuelta y deja de estar activa. */
+  D.terminarRelectura = function (id) {
+    var s = D.serie(id);
+    if (!s || !D.relee(s)) return false;
+    s.relectura = normalizarRelectura({ activa: false, vueltas: s.relectura.vueltas + 1 });
+    D.guardar();
+    return true;
+  };
+
+  /** Deja de releerla sin apuntarte la vuelta. */
+  D.cancelarRelectura = function (id) {
+    var s = D.serie(id);
+    if (!s || !D.relee(s)) return false;
+    s.relectura = normalizarRelectura({ activa: false, vueltas: s.relectura.vueltas });
+    D.guardar();
+    return true;
+  };
+
+  D.releyendo = function () {
+    return D.coleccion.series.filter(D.relee);
+  };
 
   /* ---------- Valoración ---------- */
 
@@ -217,9 +296,15 @@
     return Math.round((suma / puestos.length) * 10) / 10;
   };
 
-  /** ¿Se puede valorar? Si has leído algo de ella, la tengas o no. */
+  /**
+   * ¿Se puede valorar?
+   *
+   * Si has leído algo de ella, la tengas o no. Y las que dejaste también,
+   * aunque no llegaras a marcar ningún tomo: para dejar una serie hay que
+   * haberla probado, y ahí es donde apuntas por qué la dejaste.
+   */
   D.esValorable = function (serie) {
-    return serie.tomos.some(function (t) { return t.leido; });
+    return serie.abandonada || serie.tomos.some(function (t) { return t.leido; });
   };
 
   D.valorables = function () {

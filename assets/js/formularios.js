@@ -880,7 +880,10 @@
     U.abrirModal(
       '<h2>Valorar · ' + U.esc(serie.titulo) + '</h2>' +
       '<p class="ayuda">Puntúa cada cosa por separado. Lo que dejes en 0 no cuenta ' +
-      'para la nota: si la serie sigue publicándose, deja el final sin tocar.</p>' +
+      'para la nota: si la serie sigue publicándose, deja el final sin tocar.' +
+      (serie.abandonada
+        ? ' Esta la dejaste, así que puntúa lo que llegaste a leer y apunta abajo por qué.'
+        : '') + '</p>' +
       '<div class="criterios">' + filas + '</div>' +
 
       '<div class="critfila critfila--disfrute">' +
@@ -895,9 +898,14 @@
         '<span class="ayuda" id="vDetalle"></span></div>' +
 
       '<div class="campos" style="margin-top:14px">' +
-        '<div class="campo--ancho"><label for="vNotas">Comentario</label>' +
+        '<div class="campo--ancho">' +
+          // En una que dejaste, la pregunta útil es otra: dentro de dos años no
+          // vas a acordarte de por qué la soltaste.
+          '<label for="vNotas">' + (serie.abandonada ? 'Por qué la dejaste' : 'Comentario') + '</label>' +
           '<input type="text" id="vNotas" value="' + U.esc(v.notas) + '" ' +
-          'placeholder="Lo que quieras recordar de ella"></div>' +
+          'placeholder="' + (serie.abandonada
+            ? 'Se hizo pesada, no enganchaba, el dibujo empeoró…'
+            : 'Lo que quieras recordar de ella') + '"></div>' +
       '</div>' +
 
       '<div class="form__acciones">' +

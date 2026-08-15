@@ -382,6 +382,34 @@
       F.duelo(D.duelo());
     },
 
+    'relectura-empezar': function (el) {
+      D.empezarRelectura(el.dataset.serieId);
+      refrescarModalSerie();
+      actualizarAviso();
+      U.aviso('A releerla', 'ok');
+    },
+
+    'relectura-mover': function (el) {
+      D.avanzarRelectura(el.dataset.serieId, Number(el.dataset.a));
+      refrescarModalSerie();
+      actualizarAviso();
+    },
+
+    'relectura-terminar': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      var n = s ? D.numeroDeLectura(s) : 2;
+      D.terminarRelectura(el.dataset.serieId);
+      refrescarModalSerie();
+      actualizarAviso();
+      U.aviso('Relectura terminada · van ' + n, 'ok');
+    },
+
+    'relectura-cancelar': function (el) {
+      D.cancelarRelectura(el.dataset.serieId);
+      refrescarModalSerie();
+      actualizarAviso();
+    },
+
     'modo-ranking': function (el) {
       V.modoRanking = el.dataset.modo;
       U.guardarLocal('cm:vistaRanking', V.modoRanking);

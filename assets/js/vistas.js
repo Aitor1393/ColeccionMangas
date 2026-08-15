@@ -429,6 +429,7 @@
       '<h1>Ranking</h1>' +
       '<p>Tus series puntuadas de mejor a peor. Puedes valorar todo lo que hayas ' +
       'leído, lo tengas o no.</p>' +
+      notaRanking(lista.length, pendientes.length) +
     '</div>' +
     '<div class="conmutador">' +
       '<button class="' + (porDisfrute ? '' : 'activo') + '" ' +
@@ -445,7 +446,7 @@
             '<button class="btn btn--primario" data-accion="valorar" data-serie-id="' +
             U.esc(pendientes[0].id) + '">Valorar «' + U.esc(pendientes[0].titulo) + '»</button>'
           : 'Marca algún tomo como leído y podrás puntuar esa serie.</p>') +
-        '</div>' + avisoFuera();
+        '</div>';
     }
 
     // El duelo solo aparece cuando de verdad hay un empate que romper.
@@ -471,8 +472,30 @@
       return filaRanking(s, i + 1, porDisfrute);
     }).join('') + '</div>';
 
-    return html + avisoFuera();
+    return html;
   };
+
+  /**
+   * La anotación de debajo del título: cuántas llevas y qué entra aquí.
+   *
+   * Aquí NO vale el aviso de «las abandonadas quedan fuera» que llevan Compras
+   * y Pendientes: en el ranking entran, y de hecho valorarlas es la forma de
+   * acordarte de por qué las dejaste.
+   */
+  function notaRanking(valoradas, pendientes) {
+    var abandonadas = D.abandonadas();
+    var sinNota = abandonadas.filter(function (s) { return D.notaDe(s) === null; }).length;
+
+    return '<p class="ayuda">' +
+      U.plural(valoradas, 'serie valorada', 'series valoradas') +
+      (pendientes ? ' · ' + pendientes + ' sin nota' : '') +
+      (abandonadas.length
+        ? ' · las que dejaste también entran' +
+          (sinNota ? ', y ' + sinNota + ' están sin puntuar' : '') +
+          '. <a href="#/biblioteca" data-accion="ver-abandonadas">Verlas</a>'
+        : '') +
+    '</p>';
+  }
 
   function filaRanking(serie, puesto, porDisfrute) {
     var v = serie.valoracion;

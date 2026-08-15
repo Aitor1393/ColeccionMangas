@@ -356,6 +356,11 @@
       if (s) F.precios(s);
     },
 
+    'capitulos': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (s) F.capitulos(s);
+    },
+
     'guardar-precios-ajustes': function () {
       D.guardarMostrarGasto(U.$('#ajMostrarGasto').checked);
       // Con U.aNumero para que «5,5» valga tanto como «5.5»; null deja el 0.

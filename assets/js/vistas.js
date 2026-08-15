@@ -798,6 +798,7 @@
     // alto que conste: si una serie se alarga más de lo previsto, no se ocultan.
     // Y empieza en 0 cuando la serie tiene tomo 0, o no habría dónde marcarlo.
     var rango = D.rangoTomos(serie);
+    var mapaCaps = D.mapaCapitulos(serie);
     var celdas = '';
     for (var i = rango.desde; i <= rango.hasta; i++) {
       var t = D.tomo(serie, i, false);
@@ -806,6 +807,13 @@
       if (t && t.tengo && t.leido) { clase += ' tomo--leido'; titulo = 'Tomo ' + i + ': leído'; }
       else if (t && t.tengo) { clase += ' tomo--tengo'; titulo = 'Tomo ' + i + ': lo tienes, sin leer'; }
       else if (t && t.leido) { clase += ' tomo--soloLeido'; titulo = 'Tomo ' + i + ': leído, pero no lo tienes'; }
+
+      // Con la equivalencia puesta, cada casilla dice también qué capítulos trae.
+      var caps = mapaCaps && mapaCaps[i];
+      if (caps) {
+        titulo += ' · capítulos ' + caps.desde + '–' + caps.hasta +
+          (caps.exacto ? '' : ' (aprox.)');
+      }
 
       var nLM = D.numeroLM(serie, i);
       var imagen = nLM && nLM.portada;
@@ -962,6 +970,7 @@
           '<span><i style="border:1px dashed var(--verde);background:none"></i>Leído sin tenerlo</span>' +
         '</div>' +
         huecos +
+        resumenCapitulos(serie, mapaCaps) +
         (st.tengo
           ? '<p class="ayuda">Gasto: <strong>' + U.euros(st.gasto) + '</strong>' +
             (st.precioEstimado
@@ -974,6 +983,7 @@
         '<div style="display:flex;gap:8px;flex-wrap:wrap;margin-top:12px">' +
           (puedeAmpliar ? '<button class="btn btn--pequeno" data-accion="anadir-tomo" data-serie-id="' + U.esc(serie.id) + '">+ Tomo ' + siguiente + '</button>' : '') +
           (st.tengo ? '<button class="btn btn--pequeno" data-accion="precios" data-serie-id="' + U.esc(serie.id) + '">💶 Precios</button>' : '') +
+          '<button class="btn btn--pequeno" data-accion="capitulos" data-serie-id="' + U.esc(serie.id) + '">📖 Capítulos</button>' +
           '<button class="btn btn--pequeno" data-accion="marcar-todo-leido" data-serie-id="' + U.esc(serie.id) + '">Marcar todo como leído</button>' +
         '</div>' +
 
@@ -985,6 +995,33 @@
       '</div>' +
     '</div>';
   };
+
+  /**
+   * Una línea con la equivalencia entre capítulos y tomos, cuando está puesta.
+   *
+   * Dice hasta dónde llega lo que se sabe y por qué tomo vas según el capítulo
+   * que hayas apuntado, que es la pregunta que resuelve todo esto.
+   */
+  function resumenCapitulos(serie, mapa) {
+    var c = serie.capitulos;
+    if (!c || !mapa) return '';
+    var nums = Object.keys(mapa).map(Number).sort(function (a, b) { return a - b; });
+    var ultimo = nums[nums.length - 1];
+    var exactos = nums.filter(function (n) { return mapa[n].exacto; }).length;
+
+    var texto = 'Capítulos ' + mapa[nums[0]].desde + '–' + mapa[ultimo].hasta +
+      ' repartidos en ' + U.plural(nums.length, 'tomo') +
+      (exactos === nums.length ? '' :
+        exactos ? ' · ' + exactos + ' exactos, el resto a ' + c.porTomo + ' por tomo'
+                : ' · a ' + c.porTomo + ' por tomo, aproximado');
+
+    if (c.leidoHasta) {
+      var enQue = D.tomoDelCapitulo(serie, c.leidoHasta);
+      texto += '<br>Vas por el capítulo <strong>' + c.leidoHasta + '</strong>' +
+        (enQue ? ', que cae en el tomo <strong>' + enQue + '</strong>' : '');
+    }
+    return '<p class="ayuda">📖 ' + texto + '</p>';
+  }
 
   V.filaSalida = filaSalida;
 

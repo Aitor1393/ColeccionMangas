@@ -644,5 +644,149 @@
     input.click();
   };
 
+  /* ============================================================
+     Capítulos de cada tomo
+     ============================================================ */
+
+  /**
+   * Qué capítulos trae cada tomo, y por cuál vas.
+   *
+   * Es sobre todo para lo que lees por app sin tenerlo: tú sabes que vas por
+   * el capítulo 300, no por el tomo 34. Con la equivalencia puesta, la web
+   * traduce lo uno en lo otro.
+   */
+  F.capitulos = function (serie) {
+    var c = serie.capitulos || { inicio: 1, porTomo: 0, tabla: {}, leidoHasta: null, fuente: '' };
+    var tabla = JSON.parse(JSON.stringify(c.tabla || {}));
+    var total = D.totalDe(serie);
+
+    U.abrirModal(
+      '<h2>Capítulos · ' + U.esc(serie.titulo) + '</h2>' +
+      '<p class="ayuda">Di cuántos capítulos trae cada tomo y podrás marcar por dónde vas ' +
+      'con el número de capítulo, que es el que sabes cuando lees por app.</p>' +
+
+      '<div class="campos" style="margin-top:16px">' +
+        '<div><label for="kInicio">El primer tomo empieza en el capítulo</label>' +
+          '<input type="number" id="kInicio" min="0" step="1" value="' + (c.inicio || 1) + '"></div>' +
+        '<div><label for="kPorTomo">Capítulos por tomo (de media)</label>' +
+          '<input type="number" id="kPorTomo" min="0" step="1" value="' + (c.porTomo || '') +
+          '" placeholder="9"></div>' +
+      '</div>' +
+
+      '<div class="wiki">' +
+        '<button type="button" class="btn btn--pequeno" id="kWiki">📖 Buscarlo en Wikipedia</button>' +
+        '<span class="ayuda" id="kWikiAviso">Cuando el artículo lo tiene, trae los capítulos ' +
+          'exactos de cada tomo. Muchas series no lo tienen puesto.</span>' +
+      '</div>' +
+
+      '<div id="kPreview" class="ayuda" style="margin-top:14px"></div>' +
+
+      '<div class="campos" style="margin-top:16px">' +
+        '<div><label for="kLeido">He leído hasta el capítulo</label>' +
+          '<input type="number" id="kLeido" min="0" step="1" value="' +
+          (c.leidoHasta === null || c.leidoHasta === undefined ? '' : c.leidoHasta) + '"></div>' +
+        '<div style="display:flex;align-items:flex-end">' +
+          '<label style="display:flex;gap:8px;align-items:center;cursor:pointer">' +
+            '<input type="checkbox" id="kMarcar" checked>' +
+            '<span>Marcar como leídos los tomos que entren enteros</span></label>' +
+        '</div>' +
+      '</div>' +
+
+      '<div class="form__acciones">' +
+        '<button type="button" class="btn btn--fantasma" data-cerrar-modal>Cancelar</button>' +
+        '<button type="button" class="btn btn--primario" id="kGuardar">Guardar</button>' +
+      '</div>'
+    );
+
+    /** Lee el formulario y devuelve la configuración que se guardaría. */
+    function actual() {
+      return {
+        inicio: Number(U.$('#kInicio').value) || 0,
+        porTomo: Number(U.$('#kPorTomo').value) || 0,
+        tabla: tabla,
+        leidoHasta: U.$('#kLeido').value === '' ? null : Number(U.$('#kLeido').value),
+        fuente: c.fuente
+      };
+    }
+
+    /** Enseña cómo quedarían los tomos sin llegar a guardar nada. */
+    function pintarPreview() {
+      var caja = U.$('#kPreview');
+      var mapa = D.mapaCapitulos({
+        tomos: serie.tomos, listadomangaId: serie.listadomangaId,
+        tomosTotales: serie.tomosTotales, capitulos: D.normalizarCapitulos(actual())
+      });
+      if (!mapa) {
+        caja.innerHTML = 'Pon los capítulos por tomo —o tráelos de Wikipedia— y aquí verás cómo queda.';
+        return;
+      }
+      var nums = Object.keys(mapa).map(Number).sort(function (a, b) { return a - b; });
+      var exactos = nums.filter(function (n) { return mapa[n].exacto; }).length;
+      var muestra = nums.slice(0, 4).map(function (n) {
+        return '<strong>Tomo ' + n + '</strong> caps ' + mapa[n].desde + '–' + mapa[n].hasta;
+      });
+      var ultimo = nums[nums.length - 1];
+      if (nums.length > 4) muestra.push('… <strong>Tomo ' + ultimo + '</strong> caps ' +
+        mapa[ultimo].desde + '–' + mapa[ultimo].hasta);
+      caja.innerHTML = muestra.join(' · ') +
+        '<br>' + U.plural(nums.length, 'tomo') + ' · ' +
+        (exactos ? exactos + ' con el reparto exacto y el resto con la media'
+                 : 'todos con la media, sin datos exactos');
+    }
+
+    ['#kInicio', '#kPorTomo', '#kLeido'].forEach(function (sel) {
+      U.$(sel).addEventListener('input', pintarPreview);
+    });
+    pintarPreview();
+
+    U.$('#kWiki').addEventListener('click', function () {
+      var boton = U.$('#kWiki'), aviso = U.$('#kWikiAviso');
+      boton.disabled = true;
+      aviso.textContent = 'Buscando…';
+      WK.buscarCapitulos(serie.titulo).then(function (r) {
+        boton.disabled = false;
+        if (!r) {
+          aviso.innerHTML = 'No hay capítulos de «' + U.esc(serie.titulo) + '» en Wikipedia. ' +
+            'Ponlos a mano: con la media de capítulos por tomo ya sale bien.';
+          return;
+        }
+        tabla = {};
+        Object.keys(r.tomos).forEach(function (k) { tabla[k] = r.tomos[k]; });
+        c.fuente = 'wikipedia';
+        U.$('#kInicio').value = r.inicio;
+        U.$('#kPorTomo').value = Math.round(r.capitulos / r.total);
+
+        // Los tomos de Wikipedia son los de la edición original. Si la tuya
+        // agrupa varios en uno, los números no valen y hay que decirlo.
+        var desajuste = total && Math.abs(r.total - total) > 1;
+        aviso.innerHTML = 'De <a href="' + U.esc(WK.url(r)) + '" target="_blank" rel="noopener">' +
+          U.esc(r.pagina) + '</a>: ' + U.plural(r.total, 'tomo') + ' y ' +
+          U.plural(r.capitulos, 'capítulo') + '.' +
+          (desajuste
+            ? ' <strong>Ojo:</strong> son los de la edición original y la tuya tiene ' +
+              total + '. Los capítulos sí valen, pero repartidos en tomos que no son los ' +
+              'tuyos: revisa la media antes de guardar.'
+            : ' Encaja con tus ' + total + ' tomos.');
+        pintarPreview();
+      }).catch(function (e) {
+        boton.disabled = false;
+        aviso.textContent = 'No se pudo consultar Wikipedia: ' + e.message;
+      });
+    });
+
+    U.$('#kGuardar').addEventListener('click', function () {
+      var cfg = D.normalizarCapitulos(actual());
+      D.actualizarSerie(serie.id, { capitulos: cfg });
+      var marcados = 0;
+      if (cfg && cfg.leidoHasta && U.$('#kMarcar').checked) {
+        marcados = D.marcarLeidosHastaCapitulo(D.serie(serie.id), cfg.leidoHasta);
+      }
+      U.aviso(cfg
+        ? 'Capítulos guardados' + (marcados ? ' · ' + U.plural(marcados, 'tomo') + ' marcados como leídos' : '')
+        : 'Capítulos borrados', 'ok');
+      App.abrirSerie(serie.id);
+    });
+  };
+
   global.F = F;
 })(window);

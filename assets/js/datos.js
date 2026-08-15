@@ -71,6 +71,7 @@
       etiquetas: Array.isArray(s.etiquetas) ? s.etiquetas : [],
       mangadexId: s.mangadexId || '',
       listadomangaId: s.listadomangaId ? String(s.listadomangaId) : '',
+      capitulos: normalizarCapitulos(s.capitulos),
       notas: s.notas || '',
       anadida: s.anadida || U.isoHoy(),
       tomos: (Array.isArray(s.tomos) ? s.tomos : []).map(function (t) {
@@ -92,6 +93,39 @@
       }).sort(function (a, b) { return String(a.fecha).localeCompare(String(b.fecha)); })
     };
   };
+
+  /**
+   * Qué capítulos trae cada tomo. Sirve sobre todo para las series que lees
+   * por app sin tenerlas: tú sabes por qué capítulo vas, no por qué tomo.
+   *
+   * `inicio` es el número del primer capítulo del primer tomo —casi siempre 1—,
+   * `porTomo` cuántos trae uno de media y `tabla` los que se sepan exactos,
+   * «nº de tomo» → «cuántos capítulos». Con la media sola ya salen los rangos
+   * aproximados; la tabla los afina.
+   *
+   * null cuando no se ha configurado, que es lo normal.
+   */
+  function normalizarCapitulos(c) {
+    if (!c) return null;
+    var tabla = {};
+    Object.keys(c.tabla || {}).forEach(function (k) {
+      var n = Number(c.tabla[k]);
+      if (n > 0) tabla[String(Number(k))] = n;
+    });
+    var inicio = Number(c.inicio);
+    var porTomo = Number(c.porTomo) || 0;
+    if (!porTomo && !Object.keys(tabla).length) return null;
+    return {
+      inicio: isNaN(inicio) ? 1 : inicio,
+      porTomo: porTomo,
+      tabla: tabla,
+      leidoHasta: (c.leidoHasta === '' || c.leidoHasta === null || c.leidoHasta === undefined)
+        ? null : Number(c.leidoHasta),
+      fuente: c.fuente || ''
+    };
+  }
+
+  D.normalizarCapitulos = normalizarCapitulos;
 
   D.AJUSTES_POR_DEFECTO = { descuento: 5, mostrarGasto: false };
 
@@ -569,6 +603,68 @@
   D.rangoTomos = function (serie) {
     var st = D.statsSerie(serie);
     return { desde: st.primerNumero, hasta: Math.max(st.maxTomo, 1) };
+  };
+
+  /* ---------- Capítulos por tomo ---------- */
+
+  /**
+   * De qué capítulo a qué capítulo va cada tomo.
+   *
+   * Se va acumulando desde el primero: el primer tomo empieza en `inicio` y
+   * cada uno arranca donde acabó el anterior. Cuántos trae cada uno lo dice la
+   * tabla cuando se sabe, y si no, la media.
+   *
+   * @returns {Object|null} { «1»: {desde, hasta, exacto}, … }, o null sin configurar.
+   */
+  D.mapaCapitulos = function (serie) {
+    var c = serie.capitulos;
+    if (!c) return null;
+    var rango = D.rangoTomos(serie);
+    var mapa = {};
+    var cap = c.inicio;
+    for (var i = rango.desde; i <= rango.hasta; i++) {
+      var exacto = c.tabla[String(i)];
+      var cuantos = exacto || c.porTomo;
+      // Sin dato y sin media no se puede seguir: a partir de aquí no se sabe
+      // dónde empieza ningún tomo, así que se corta en vez de inventar.
+      if (!cuantos) break;
+      mapa[i] = { desde: cap, hasta: cap + cuantos - 1, exacto: !!exacto };
+      cap += cuantos;
+    }
+    return Object.keys(mapa).length ? mapa : null;
+  };
+
+  /** En qué tomo cae un capítulo. null si cae fuera de lo que se sabe. */
+  D.tomoDelCapitulo = function (serie, capitulo) {
+    var mapa = D.mapaCapitulos(serie);
+    if (!mapa) return null;
+    var encontrado = null;
+    Object.keys(mapa).forEach(function (n) {
+      if (capitulo >= mapa[n].desde && capitulo <= mapa[n].hasta) encontrado = Number(n);
+    });
+    return encontrado;
+  };
+
+  /**
+   * Marca como leídos los tomos que caben enteros en lo que llevas leído.
+   *
+   * Solo los completos: si vas por el capítulo 300 y el tomo 34 acaba en el
+   * 305, ese tomo aún no está leído. Y no se toca nada más: los que ya
+   * estuvieran marcados siguen igual.
+   *
+   * @returns {number} cuántos tomos se han marcado ahora.
+   */
+  D.marcarLeidosHastaCapitulo = function (serie, capitulo) {
+    var mapa = D.mapaCapitulos(serie);
+    if (!mapa || !capitulo) return 0;
+    var marcados = 0;
+    Object.keys(mapa).forEach(function (n) {
+      if (mapa[n].hasta > capitulo) return;
+      var t = D.tomo(serie, Number(n), true);
+      if (!t.leido) { t.leido = true; marcados++; }
+    });
+    if (marcados) D.guardar();
+    return marcados;
   };
 
   /**

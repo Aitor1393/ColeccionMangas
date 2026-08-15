@@ -247,7 +247,7 @@
   /* ============================================================
      Vista: Biblioteca
      ============================================================ */
-  V.filtros = { texto: '', estado: '', demografia: '', editorial: '', tenencia: '', seguimiento: '', orden: 'titulo', soloPendientes: false };
+  V.filtros = { texto: '', estado: '', demografia: '', editorial: '', tenencia: '', lectura: '', seguimiento: '', orden: 'titulo', soloPendientes: false };
 
   // El panel arranca cerrado: lo normal al entrar en la Biblioteca es mirar
   // las portadas, no filtrar. Se abre con el botón y se recuerda abierto.
@@ -262,7 +262,7 @@
    */
   function filtrosPuestos() {
     var f = V.filtros;
-    return ['texto', 'tenencia', 'seguimiento', 'estado', 'demografia', 'editorial']
+    return ['texto', 'tenencia', 'lectura', 'seguimiento', 'estado', 'demografia', 'editorial']
       .filter(function (k) { return f[k]; }).length + (f.soloPendientes ? 1 : 0);
   }
 
@@ -282,6 +282,12 @@
         '<option value=""' + (f.tenencia ? '' : ' selected') + '>Comprados y leídos</option>' +
         '<option value="comprados"' + (f.tenencia === 'comprados' ? ' selected' : '') + '>Solo comprados</option>' +
         '<option value="leidos"' + (f.tenencia === 'leidos' ? ' selected' : '') + '>Solo leídos, sin comprar</option>' +
+      '</select>' +
+      '<select id="fLectura">' +
+        '<option value=""' + (f.lectura ? '' : ' selected') + '>Leídas y sin leer</option>' +
+        '<option value="completas"' + (f.lectura === 'completas' ? ' selected' : '') + '>Leídas enteras</option>' +
+        '<option value="empezadas"' + (f.lectura === 'empezadas' ? ' selected' : '') + '>Empezadas a medias</option>' +
+        '<option value="sinEmpezar"' + (f.lectura === 'sinEmpezar' ? ' selected' : '') + '>Sin empezar</option>' +
       '</select>' +
       '<select id="fEstado"><option value="">Cualquier estado</option>' + opciones(Object.keys(D.ESTADOS), f.estado, D.ESTADOS) + '</select>' +
       '<select id="fSeguimiento">' +
@@ -343,6 +349,7 @@
         if (f.tenencia === 'comprados' && !st.tengo) return false;
         if (f.tenencia === 'leidos' && (st.tengo || !st.leidosTotal)) return false;
       }
+      if (f.lectura && !D.encajaLectura(s, f.lectura)) return false;
       if (f.seguimiento === 'sigo' && s.abandonada) return false;
       if (f.seguimiento === 'abandonadas' && !s.abandonada) return false;
       if (f.seguimiento === 'releyendo' && !D.relee(s)) return false;

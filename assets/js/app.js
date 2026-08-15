@@ -149,7 +149,8 @@
     }, 250));
 
     [['#fEstado', 'estado'], ['#fDemografia', 'demografia'], ['#fEditorial', 'editorial'],
-     ['#fTenencia', 'tenencia'], ['#fSeguimiento', 'seguimiento'], ['#fOrden', 'orden']]
+     ['#fTenencia', 'tenencia'], ['#fLectura', 'lectura'], ['#fSeguimiento', 'seguimiento'],
+     ['#fOrden', 'orden']]
       .forEach(function (par) {
         var nodo = U.$(par[0]);
         if (nodo) nodo.addEventListener('change', function () { V.filtros[par[1]] = nodo.value; App.refrescarBiblioteca(); });
@@ -303,6 +304,7 @@
     'limpiar-filtros': function () {
       V.filtros.texto = '';
       V.filtros.tenencia = '';
+      V.filtros.lectura = '';
       V.filtros.seguimiento = '';
       V.filtros.estado = '';
       V.filtros.demografia = '';

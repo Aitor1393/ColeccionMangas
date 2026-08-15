@@ -127,6 +127,21 @@
     };
   }
 
+  /**
+   * ¿Por dónde vas con una serie? 'completas' | 'empezadas' | 'sinEmpezar'.
+   *
+   * Cuenta lo leído tengas los tomos o no: si te la leíste prestada entera,
+   * está leída. Y sin saber cuántos tomos son no se puede decir que esté
+   * entera, así que esas se quedan en «empezadas».
+   */
+  D.encajaLectura = function (serie, modo) {
+    var st = D.statsSerie(serie);
+    if (modo === 'sinEmpezar') return st.leidosTotal === 0;
+    if (modo === 'completas') return st.total > 0 && st.leidosTotal >= st.total;
+    if (modo === 'empezadas') return st.leidosTotal > 0 && !(st.total > 0 && st.leidosTotal >= st.total);
+    return true;
+  };
+
   /* ---------- Relecturas ---------- */
 
   /**

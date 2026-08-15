@@ -718,9 +718,14 @@
     /** Enseña cómo quedarían los tomos sin llegar a guardar nada. */
     function pintarPreview() {
       var caja = U.$('#kPreview');
+      var cfg = D.normalizarCapitulos(actual());
+      // Una serie recién creada aún no sabe cuántos tomos tiene, y entonces la
+      // vista previa se quedaba en el tomo 1. Cuando no hay total, se enseña lo
+      // que abarque la tabla: es lo que se va a guardar.
+      var cuantos = cfg ? Object.keys(cfg.tabla).length : 0;
       var mapa = D.mapaCapitulos({
         tomos: serie.tomos, listadomangaId: serie.listadomangaId,
-        tomosTotales: serie.tomosTotales, capitulos: D.normalizarCapitulos(actual())
+        tomosTotales: serie.tomosTotales || cuantos, capitulos: cfg
       });
       if (!mapa) {
         caja.innerHTML = 'Pon los capítulos por tomo —o tráelos de Wikipedia— y aquí verás cómo queda.';
@@ -760,13 +765,15 @@
       Object.keys(agrupado).forEach(function (k) { tabla[k] = agrupado[k]; });
       U.$('#kPorTomo').value = Math.round(wiki.capitulos / salen);
 
-      U.$('#kFactorAviso').innerHTML = factor === 1
-        ? (total ? (salen === total ? '✓ salen tus ' + total + ' tomos'
-                                    : '⚠ salen ' + salen + ', y tú tienes ' + total) : '')
-        : (salen === total ? '✓ agrupando de ' + factor + ' en ' + factor +
-              ' salen justo tus ' + total + ' tomos'
-            : '⚠ agrupando de ' + factor + ' en ' + factor + ' salen ' + salen +
-              ' tomos, y tú tienes ' + total);
+      U.$('#kFactorAviso').innerHTML = !total
+        ? 'salen ' + U.plural(salen, 'tomo')
+        : factor === 1
+          ? (salen === total ? '✓ salen tus ' + total + ' tomos'
+                             : '⚠ salen ' + salen + ', y tú tienes ' + total)
+          : (salen === total ? '✓ agrupando de ' + factor + ' en ' + factor +
+                ' salen justo tus ' + total + ' tomos'
+              : '⚠ agrupando de ' + factor + ' en ' + factor + ' salen ' + salen +
+                ' tomos, y tú tienes ' + total);
       pintarPreview();
     }
 
@@ -797,7 +804,13 @@
         aviso.innerHTML = 'De <a href="' + U.esc(WK.url(r)) + '" target="_blank" rel="noopener">' +
           U.esc(r.pagina) + '</a>: ' + U.plural(r.total, 'tomo') + ' de la edición original y ' +
           U.plural(r.capitulos, 'capítulo') + '.' +
-          (!r.completa
+          (!total
+            // Serie recién creada: todavía no consta cuántos tomos tiene, así
+            // que no hay con qué comparar. Se guarda el reparto entero y ya
+            // encajará cuando la serie sepa su tamaño.
+            ? ' Se guarda entero; los rangos saldrán en cuanto la serie tenga tomos. ' +
+              'Si tu edición junta varios en uno, dilo abajo.'
+            : !r.completa
             ? ' <strong>Ojo:</strong> la lista está incompleta, le faltan tomos por medio, ' +
               'así que los números no van a cuadrar.'
             : d.cuadra && d.factor > 1

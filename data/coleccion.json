@@ -2732,7 +2732,20 @@
       "mangadexId": "",
       "listadomangaId": "5342",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 6,
+          "personajes": 6,
+          "dibujo": 9,
+          "ritmo": 6,
+          "final": 4
+        },
+        "disfrute": 8,
+        "desempate": 0,
+        "duelos": 0,
+        "notas": "Demasiado ambiciosa para lo corta que es y hay detalles que se explican de forma muy apresurada.",
+        "fecha": "2026-08-15"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",

@@ -8447,7 +8447,7 @@
         {
           "numero": 0,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.87,
           "notas": ""
@@ -8455,7 +8455,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.87,
           "notas": ""
@@ -8463,7 +8463,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.87,
           "notas": ""
@@ -8471,7 +8471,7 @@
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.87,
           "notas": ""
@@ -8479,7 +8479,7 @@
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.87,
           "notas": ""
@@ -8487,7 +8487,7 @@
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.87,
           "notas": ""
@@ -8495,7 +8495,7 @@
         {
           "numero": 6,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8503,7 +8503,7 @@
         {
           "numero": 7,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8511,7 +8511,7 @@
         {
           "numero": 8,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8519,7 +8519,7 @@
         {
           "numero": 9,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8527,7 +8527,7 @@
         {
           "numero": 10,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8535,7 +8535,7 @@
         {
           "numero": 11,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8543,7 +8543,7 @@
         {
           "numero": 12,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8551,7 +8551,7 @@
         {
           "numero": 13,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8559,7 +8559,7 @@
         {
           "numero": 14,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8567,7 +8567,7 @@
         {
           "numero": 15,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8575,7 +8575,7 @@
         {
           "numero": 16,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8583,7 +8583,7 @@
         {
           "numero": 17,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8591,7 +8591,7 @@
         {
           "numero": 18,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8599,7 +8599,7 @@
         {
           "numero": 19,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8607,7 +8607,7 @@
         {
           "numero": 20,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8615,7 +8615,7 @@
         {
           "numero": 21,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8623,7 +8623,7 @@
         {
           "numero": 22,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8631,7 +8631,7 @@
         {
           "numero": 23,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8639,7 +8639,7 @@
         {
           "numero": 24,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8647,7 +8647,7 @@
         {
           "numero": 25,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8655,7 +8655,7 @@
         {
           "numero": 26,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8663,7 +8663,7 @@
         {
           "numero": 27,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8671,7 +8671,7 @@
         {
           "numero": 28,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-01-18",
           "precio": 5.86,
           "notas": ""
@@ -8679,7 +8679,7 @@
         {
           "numero": 29,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-03-06",
           "precio": 8.55,
           "notas": ""
@@ -8687,7 +8687,7 @@
         {
           "numero": 30,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-03-06",
           "precio": 8.55,
           "notas": ""

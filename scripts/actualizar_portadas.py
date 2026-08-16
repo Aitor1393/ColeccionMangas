@@ -16,9 +16,10 @@ Fuentes, elegidas por lo que cuestan y lo que cubren:
     pero publica sitemaps precisamente para esto. Dos peticiones traen las 66.000
     entradas del catálogo, con título y portada original de 2000 px.
   - Ivrea: su página de catálogo, que lista las 482 series de una vez.
-  - Norma: su índice de series, 6 páginas que traen nombre, portada y número de
-    álbumes. Su catálogo de productos tiene 63 páginas, pero para una portada por
-    serie no hace falta.
+  - Norma: su índice de series, 6 páginas que traen nombre y portada. Ojo: esa
+    portada es la del ÚLTIMO tomo publicado, así que de cada serie que haga falta
+    se visita además su página, donde están todos los álbumes numerados y se
+    puede coger el primero.
   - Panini: el sitemap de imágenes que anuncia su propio robots.txt —que en
     cambio prohíbe el buscador—. Una petición trae los 10.000 productos con su
     portada, así que no hay que visitar ninguna ficha.
@@ -186,8 +187,8 @@ def buscar(indice, serie, total_lm=None, umbral=0.88):
             como = pasada if pasada == 'exacto' else 'aprox (%s)' % encontrada[:40]
             if generico:
                 como += ' · %d tomos, cuadra' % entrada['total']
-            return entrada['url'], como
-    return None, None
+            return entrada['url'], como, entrada
+    return None, None, None
 
 
 # ---------------------------------------------------------------- Planeta
@@ -251,22 +252,74 @@ def indice_norma():
         # El menú desplegable repite enlaces a series; solo vale el listado.
         lista = s[s.find('<div id="list"'):] or s
         encontradas = 0
-        for m in re.finditer(
-                r'data-src="(/upload/[^"]+)".*?class="caption"><h2>(.*?)</h2>\s*'
-                r'<span class="caption-count">\((\d+)',
-                lista, re.S):
-            ruta, nombre = m.group(1), html.unescape(m.group(2)).strip()
+        # Primero se parte en tarjetas y luego se lee cada una por dentro. Con un
+        # solo regex sobre la página entera, el «.*?» del medio se salta las
+        # tarjetas que no encajan y empareja la imagen de una con el título de
+        # otra: en la página 6 llegaba a perder dos de cada tres.
+        for tarjeta in lista.split('<div class="item">')[1:]:
+            img = re.search(r'data-src="(/upload/[^"]+)"', tarjeta)
+            cap = re.search(r'<a href="(/catalogo/manga/[^"]+)" class="caption"><h2>(.*?)</h2>',
+                            tarjeta, re.S)
+            if not (img and cap):
+                continue
+            ruta, nombre = img.group(1), html.unescape(cap.group(2)).strip()
             # La miniatura del índice es «_medium» (326 px); «_big» da 650.
             grande = 'https://www.normaeditorial.com' + re.sub(r'_medium\.', '_big.', ruta)
+            # OJO: esta es la portada del ÚLTIMO tomo publicado, que es lo que
+            # enseña el índice. La del primero hay que ir a buscarla a la página
+            # de la serie; esta queda como respaldo por si eso falla.
             # Sin total a propósito: Norma cuenta «álbumes», que incluye artbooks
             # y guías, así que no sirve para saber si es la misma edición. Sin
             # total, el título pelado nunca vale de respaldo, que es lo prudente.
-            indice.setdefault(normalizar(nombre), {'url': grande, 'total': None})
+            indice.setdefault(normalizar(nombre), {
+                'url': grande, 'total': None,
+                # La página de la serie llega de dos formas: «/manga/serie/x» y,
+                # cuando pertenece a una franquicia, «/manga/akame-ga-kill/x».
+                # Las dos valen; lo que no vale es la portada de la franquicia
+                # («/manga/pokemon»), que no lleva álbumes.
+                'serie': ('https://www.normaeditorial.com' + cap.group(1)
+                          if len(cap.group(1).split('/catalogo/manga/')[-1].split('/')) >= 2
+                          else None),
+            })
             encontradas += 1
         if not encontradas:
             break          # se acabaron las páginas
         time.sleep(PAUSA_PAGINA)
     return indice
+
+
+def portada_norma_tomo1(url_serie):
+    """
+    La portada del PRIMER tomo, desde la página de la serie.
+
+    El índice de series de Norma enseña la portada del último publicado —de
+    Frieren salía el 15—, y para representar una serie vale más la del primero,
+    que además es la que usa ListadoManga.
+
+    En la página de la serie están todos los álbumes con su nombre, así que basta
+    con quedarse con el número más bajo. Se descartan las ediciones especiales,
+    los fanbooks y los artbooks: llevan el nombre de la serie pero no son el
+    tomo 1.
+
+    Devuelve None si no se puede leer, y quien llama se queda con lo que tenía.
+    """
+    pagina = pedir(url_serie)
+    mejor = None
+    for imagen, _, titulo in re.findall(
+            r'src="([^"]*thumb_\d+_albumes_\w+\.jpe?g)"(.*?)<h2>(.*?)</h2>', pagina, re.S):
+        nombre = html.unescape(titulo).strip()
+        if re.search(r'especial|fanbook|art\s*works|gu[ií]a|artbook', nombre, re.I):
+            continue
+        m = re.search(r'\b(\d{1,3})\s*$', nombre)
+        if not m:
+            continue
+        numero = int(m.group(1))
+        if mejor is None or numero < mejor[0]:
+            mejor = (numero, imagen)
+    if not mejor:
+        return None
+    ruta = re.sub(r'_medium\.', '_big.', mejor[1])
+    return 'https://www.normaeditorial.com' + ruta if ruta.startswith('/') else ruta
 
 
 # ---------------------------------------------------------------- Panini
@@ -445,7 +498,19 @@ def main():
         for s in series:
             idlm = str(s['listadomangaId'])
             ficha = calendario.get(idlm, {})
-            url, como = buscar(indices[cual], s, ficha.get('totalNumeros'))
+            url, como, entrada = buscar(indices[cual], s, ficha.get('totalNumeros'))
+            if url and cual == 'Norma' and entrada.get('serie'):
+                # El índice trae la portada del último tomo; la del primero está
+                # en la página de la serie, a una petición de distancia.
+                try:
+                    primera = portada_norma_tomo1(entrada['serie'])
+                    if primera:
+                        url, como = primera, como + ' · tomo 1'
+                    elif args.verbose:
+                        log('  ! %-38s no se ve el tomo 1, va el último' % s['titulo'][:38])
+                except Exception as e:
+                    log('  ! %-38s error leyendo la serie: %s' % (s['titulo'][:38], str(e)[:40]))
+                time.sleep(PAUSA_PAGINA)
             if not url:
                 if args.verbose:
                     log('  ✗ %-40s no está en el catálogo de %s' % (s['titulo'][:40], cual))

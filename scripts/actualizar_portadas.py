@@ -19,12 +19,19 @@ Fuentes, elegidas por lo que cuestan y lo que cubren:
   - Norma: su índice de series, 6 páginas que traen nombre, portada y número de
     álbumes. Su catálogo de productos tiene 63 páginas, pero para una portada por
     serie no hace falta.
+  - Panini: el sitemap de imágenes que anuncia su propio robots.txt —que en
+    cambio prohíbe el buscador—. Una petición trae los 10.000 productos con su
+    portada, así que no hay que visitar ninguna ficha.
 
-Solo Planeta va por sitemap, que es un estándar y no cambia de forma. Las otras
-dos dependen del HTML de su web, así que si la rediseñan dejarían de encontrar
-nada. Por eso, si una fuente devuelve cero series, el script termina con error:
-más vale que la Action salga en rojo a seguir publicando portadas viejas en
-silencio.
+Planeta y Panini van por sitemap, que es un estándar y no cambia de forma. Las
+otras dos dependen del HTML de su web, así que si la rediseñan dejarían de
+encontrar nada. Por eso, si una fuente devuelve cero series, el script termina
+con error: más vale que la Action salga en rojo a seguir publicando portadas
+viejas en silencio.
+
+Una portada de manga siempre es más alta que ancha, y esa comprobación descarta
+los «IMAGE COMING SOON» que algunas tiendas sirven con el nombre de archivo del
+producto, indistinguibles por la URL.
 
 Uso:
     python3 scripts/actualizar_portadas.py [--forzar] [--verbose] [--dry-run]
@@ -55,7 +62,7 @@ AGENTE = ('ColeccionMangas/1.0 (+https://github.com/Aitor1393/ColeccionMangas; '
           'uso personal, una ejecución semanal)')
 PAUSA_PAGINA = 1.5     # entre peticiones a una web
 PAUSA_IMAGEN = 0.4     # entre descargas de imagen (van a CDN)
-TIEMPO_MAX = 90        # los sitemaps de Planeta pesan 20 MB
+TIEMPO_MAX = 120       # los sitemaps de Planeta pesan 20 MB y el de Panini 7
 ANCHO = 400            # suficiente para la rejilla en pantallas retina
 
 SITEMAPS_PLANETA = [
@@ -64,6 +71,8 @@ SITEMAPS_PLANETA = [
 ]
 CATALOGO_IVREA = 'https://www.editorialivrea.com/ESP/catalogo/'
 INDICE_NORMA = 'https://www.normaeditorial.com/catalogo/manga/series'
+# Lo anuncia su propio robots.txt, que en cambio prohíbe el buscador.
+SITEMAP_PANINI = 'https://www.panini.es/media/shp_esp_es/comics-imagenes-sitemap.xml'
 PAGINAS_NORMA = 8      # ahora son 6; el margen evita quedarse corto si crecen
 
 
@@ -133,6 +142,13 @@ def claves_de(serie):
         if resto:
             claves.append(normalizar(serie['titulo'] + ' ' + ' '.join(resto)))
     claves.append(titulo)
+    # Las ediciones españolas cuelgan el subtítulo detrás de un punto —«Super
+    # String. El viaje de Marco Polo al multiverso», «Magic: The Gathering.
+    # Destruye a toda la humanidad»— y en el catálogo la serie se llama solo por
+    # la primera parte. Va la última, cuando ya no ha casado nada mejor.
+    corto = normalizar(serie.get('titulo', '').split('.')[0])
+    if corto and corto != titulo and len(corto) >= 6:
+        claves.append(corto)
     # el bool dice si esa clave es el título pelado, que necesita comprobación
     return [(c, c == titulo and bool(resto)) for c in dict.fromkeys(claves) if c]
 
@@ -253,7 +269,92 @@ def indice_norma():
     return indice
 
 
+# ---------------------------------------------------------------- Panini
+
+# Panini antepone el nombre de la línea al de la obra —«Maximum Bleach»— y aquí
+# la edición va detrás. Con estas marcas se registra también el orden de casa.
+LINEAS_PANINI = ('maximum', 'ultimate', 'kanzenban', 'integral', 'deluxe',
+                 'omnibus', 'definitive', 'definitiva')
+
+
+def indice_panini():
+    """
+    {título normalizado: portada del primer tomo y cuántos tomos hay}.
+
+    Su sitemap de imágenes trae los 10.000 productos con su portada en una sola
+    petición, así que no hay que visitar ninguna ficha.
+
+    Las series se agrupan por el SKU —«spbma001», «spbma002»…—, que es el código
+    de producto de Panini: las mismas letras son la misma serie y los dígitos el
+    número de tomo. Por el texto del slug no se puede, porque lo abrevian a su
+    aire: «rurouni-kenshin-restauracion-1» y «rurouni-kenshin-rest-2» son la
+    misma colección.
+    """
+    log('  · descargando el sitemap de cómics de Panini')
+    xml = pedir(SITEMAP_PANINI)
+    sku_re = re.compile(r'-([a-z]{3,6})(\d{3})[a-z]*-es\d+$', re.I)
+
+    series = {}
+    for bloque in xml.split('<url>')[1:]:
+        loc = re.search(r'<loc>(.*?)</loc>', bloque)
+        imagenes = re.findall(r'<image:loc>(.*?)</image:loc>', bloque)
+        if not (loc and imagenes):
+            continue
+        slug = loc.group(1).rsplit('/', 1)[-1].replace('.html', '')
+        m = sku_re.search(slug)
+        if not m:
+            continue
+        # La portada limpia acaba en _0.jpg; las _0_1, _0_2… son contracubiertas
+        # y páginas de muestra.
+        imagen = next((i for i in imagenes if re.search(r'_0\.jpe?g$', i, re.I)), imagenes[0])
+        sku, numero = m.group(1).lower(), int(m.group(2))
+        # Del slug, quitando el SKU y el número de tomo del final, queda el título.
+        titulo = re.sub(r'-\d+$', '', slug[:m.start()]).replace('-', ' ')
+        previo = series.get(sku)
+        if previo is None or numero < previo['numero']:
+            series[sku] = {'numero': numero, 'url': imagen, 'titulo': titulo,
+                           'total': max(numero, (previo or {}).get('total', 0))}
+        else:
+            previo['total'] = max(previo['total'], numero)
+
+    indice = {}
+    for datos in series.values():
+        clave = normalizar(datos['titulo'])
+        if not clave:
+            continue
+        entrada = {'url': datos['url'], 'total': datos['total']}
+        indice.setdefault(clave, entrada)
+        # «maximum bleach» también como «bleach maximum», que es como lo llamas tú.
+        partes = clave.split()
+        if len(partes) > 1 and partes[0] in LINEAS_PANINI:
+            indice.setdefault(' '.join(partes[1:] + [partes[0]]), entrada)
+    return indice
+
+
 # ---------------------------------------------------------------- Imágenes
+
+def es_portada(datos):
+    """
+    ¿Esto es una portada de verdad o el «IMAGE COMING SOON» de la tienda?
+
+    Panini sirve un cuadrado blanco con ese cartel para lo que aún no tiene
+    foto, y con el nombre de archivo del propio producto, así que por la URL no
+    se distingue. Lo que sí se distingue es la forma: una portada de manga
+    siempre es más alta que ancha, y el cartel es cuadrado.
+
+    Sin Pillow no se puede mirar, y entonces se deja pasar: más vale una portada
+    fea que ninguna.
+    """
+    try:
+        from PIL import Image
+    except ImportError:
+        return True, ''
+    import io
+    img = Image.open(io.BytesIO(datos))
+    if img.height < img.width * 1.2:
+        return False, 'no es una portada (%dx%d, no es vertical)' % (img.width, img.height)
+    return True, ''
+
 
 def reducir(datos, ancho=ANCHO):
     """Reduce la imagen si Pillow está disponible; si no, la deja como está."""
@@ -297,7 +398,7 @@ def main():
         ficha = calendario.get(str(s.get('listadomangaId') or ''), {})
         return s.get('editorial') or ficha.get('editorial') or ''
 
-    pendientes = {'Planeta': [], 'Ivrea': [], 'Norma': []}
+    pendientes = {'Planeta': [], 'Ivrea': [], 'Norma': [], 'Panini': []}
     for s in coleccion.get('series', []):
         idlm = str(s.get('listadomangaId') or '')
         if not idlm:
@@ -313,13 +414,14 @@ def main():
 
     total = sum(len(v) for v in pendientes.values())
     if not total:
-        log('Todas las portadas de Planeta e Ivrea están al día.')
+        log('Todas las portadas de editorial están al día.')
         return 0
 
     log('Portadas por descargar: ' +
         ' · '.join('%s %d' % (k, len(v)) for k, v in pendientes.items() if v))
 
-    constructores = {'Planeta': indice_planeta, 'Ivrea': indice_ivrea, 'Norma': indice_norma}
+    constructores = {'Planeta': indice_planeta, 'Ivrea': indice_ivrea,
+                     'Norma': indice_norma, 'Panini': indice_panini}
     indices = {}
     fuentes_rotas = []
     for cual, series in pendientes.items():
@@ -353,6 +455,9 @@ def main():
                 datos = pedir(url, binario=True)
                 if not datos.startswith(b'\xff\xd8'):
                     raise ValueError('no es un JPEG')
+                vale, motivo = es_portada(datos)
+                if not vale:
+                    raise ValueError(motivo)
                 datos, reducida = reducir(datos)
                 if not reducida and not avisado_pillow:
                     try:

@@ -283,6 +283,60 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44693_albumes_big.jpeg",
    "bytes": 68703
+  },
+  "5343": {
+   "ruta": "data/portadas-serie/5343.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/45/thumb_44723_albumes_big.jpeg",
+   "bytes": 69284
+  },
+  "3000": {
+   "ruta": "data/portadas-serie/3000.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/p/spbma001_0.jpg",
+   "bytes": 65952
+  },
+  "1594": {
+   "ruta": "data/portadas-serie/1594.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/h/shuhu001_0.jpg",
+   "bytes": 63118
+  },
+  "4066": {
+   "ruta": "data/portadas-serie/4066.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/r/srurb001_0.jpg",
+   "bytes": 91893
+  },
+  "5200": {
+   "ruta": "data/portadas-serie/5200.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/m/smaga001_0.jpg",
+   "bytes": 94415
+  },
+  "1415": {
+   "ruta": "data/portadas-serie/1415.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/d/sdede001_0.jpg",
+   "bytes": 83060
+  },
+  "3829": {
+   "ruta": "data/portadas-serie/3829.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/S/S/SSATA001_0.jpg",
+   "bytes": 85555
+  },
+  "6199": {
+   "ruta": "data/portadas-serie/6199.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/t/strin001.jpg",
+   "bytes": 85654
+  },
+  "6074": {
+   "ruta": "data/portadas-serie/6074.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/g/sgaea001_0.jpg",
+   "bytes": 57489
   }
  }
 }

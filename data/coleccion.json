@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-08-16",
+  "actualizado": "2026-08-17",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -900,7 +900,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""

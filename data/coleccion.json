@@ -8,10 +8,8 @@
   },
   "compras": {
     "series": [
-      "07061de8-085c-4ba6-9f90-614b23404f16",
       "4a75ab81-f604-43da-a202-df5fdbd243db",
       "536b7f0f-7067-49fd-84b9-5f653033be1e",
-      "50c1608a-a58a-4dbb-bb67-b8df6014bfb7",
       "50b42fd0-f161-42d8-9be0-df15f3469e0e",
       "5c253bba-67ba-4051-bbd9-5b4b5282971c",
       "88452128-28d3-4ea7-b250-5336b7d5fe8c",
@@ -19,13 +17,16 @@
       "15266614-3f59-4df7-bca7-4d6d4b894e57",
       "ab935eb6-665e-4375-bf67-923e06f9bac9",
       "9bfe5331-fb02-45ff-a481-0a8ba56d688e",
+      "ecfe8f81-92d6-48c2-8f86-0fadd3e3c43e",
+      "800e0b54-50d2-4452-b21d-857b8daed2ab",
+      "3a71fea0-59d8-4ca8-8f03-399799ee68eb",
       "874f2521-5ead-483c-8898-ccb3128d52ab",
       "72d41be3-9684-431f-b4f5-eea502439128",
       "9dc15baa-8430-4171-b427-71e6d57c8e68",
-      "785bdb10-0be1-442f-aede-1865e1ebc73d",
-      "97adbb24-5dd0-474f-87bc-86ebc4fb2dd4",
       "15924990-5380-4d90-aec6-706db23aeef2",
+      "97adbb24-5dd0-474f-87bc-86ebc4fb2dd4",
       "861e5829-20c7-4056-bf4a-e46d24c616e5",
+      "785bdb10-0be1-442f-aede-1865e1ebc73d",
       "a9a3cdba-a5e4-4264-bf84-5d5ff65a72d5"
     ],
     "tomos": []
@@ -1040,6 +1041,14 @@
           "leido": false,
           "fechaCompra": "2026-08-05",
           "precio": 8.55,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-17",
+          "precio": null,
           "notas": ""
         },
         {
@@ -3673,9 +3682,9 @@
         },
         {
           "numero": 11,
-          "tengo": false,
+          "tengo": true,
           "leido": false,
-          "fechaCompra": "",
+          "fechaCompra": "2026-08-17",
           "precio": null,
           "notas": ""
         },
@@ -4138,6 +4147,14 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-17",
           "precio": null,
           "notas": ""
         }

@@ -727,6 +727,14 @@
           "fechaCompra": "",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-18",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []

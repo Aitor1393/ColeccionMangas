@@ -973,7 +973,7 @@
         {
           "numero": 10,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -2972,7 +2972,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3143,7 +3143,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3151,7 +3151,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3159,7 +3159,7 @@
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3167,7 +3167,7 @@
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3175,7 +3175,7 @@
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3183,7 +3183,7 @@
         {
           "numero": 6,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3191,7 +3191,7 @@
         {
           "numero": 7,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -3199,7 +3199,7 @@
         {
           "numero": 8,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""
@@ -6130,7 +6130,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "",
           "precio": null,
           "notas": ""

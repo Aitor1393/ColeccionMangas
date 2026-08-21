@@ -4509,7 +4509,39 @@
           "numero": 1,
           "tengo": true,
           "leido": true,
-          "fechaCompra": "",
+          "fechaCompra": "2026-01-06",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-21",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-21",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-21",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-26",
           "precio": null,
           "notas": ""
         }

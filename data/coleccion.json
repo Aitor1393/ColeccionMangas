@@ -9236,6 +9236,39 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "47fc887e-6ed1-45bb-a17d-bf0dec9f2533",
+      "titulo": "Ikkitousen",
+      "tituloAlt": "",
+      "edicion": "Edición Remix",
+      "autor": "Yuji Shiozaki",
+      "editorial": "Editorial Ivrea",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 8,
+      "portada": "",
+      "sinopsis": "Ikkitousen, que literalmente significa “invencible”, nos trae la historia de la lucha entre siete institutos de secundaria de la región japonesa de Kanto por hacerse con el poder absoluto, condimentada con la leyenda de los Tres Reinos de China.\n\nCada uno de los estudiantes porta una joya sagrada llamada magatama con el espíritu de un guerrero de esa era que luchó por unificar China, y que ahora es capaz de sacar el máximo potencial de su portador.\n\nLa preciosa Hakufu Sonsaku, descendiente del legendario conquistador Sun Ce, es una luchadora entrenada desde pequeña en las artes marciales, una chica muy maja e inocente, pero también con mucha mala leche.\n\nEl destino le depara una muerte temprana a manos de Ukitsu y por eso su madre le pide a su compañero Koukin Shuyu que la proteja de su terrible destino. Por si eso fuera poco, Hakufu a veces pierde el conocimiento y desata un poder destructor que amenaza su propia vida.\n\nHakufu y Shuyu tendrán que unirse a sus compañeros para derrotar a los institutos rivales y descubrir los secretos del poder de Hakufu antes de que sea demasiado tarde.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4935",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "Es un regalo de Gato",
+      "anadida": "2026-08-21",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 0,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

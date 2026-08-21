@@ -9099,6 +9099,143 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "d6f86f7f-4bd1-44b0-b5c1-6d7cf239139d",
+      "titulo": "Platinum End",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Tsugumi Ohba",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "tomosTotales": 14,
+      "portada": "",
+      "sinopsis": "¡LA NUEVA SERIE DE LOS AUTORES DE DEATH NOTE Y BAKUMAN!\n\nLa vida de Mirai Kakehashi es tan mísera que este, presa del desánimo por haber perdido a su familia y por ser acosado por sus tíos y sus compañeros de clase, decide suicidarse. Sin embargo, lo que debería ser su final se convertirá en un nuevo principio en el que tendrá la oportunidad de convertirse en el nuevo Dios... si consigue sobrevivir.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "2526",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-08-21",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.38,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-20",
+          "precio": 4.37,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

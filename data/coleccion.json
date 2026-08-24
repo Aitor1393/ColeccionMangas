@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-08-21",
+  "actualizado": "2026-08-24",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -3692,7 +3692,7 @@
         {
           "numero": 11,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-17",
           "precio": null,
           "notas": ""
@@ -4516,7 +4516,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-21",
           "precio": null,
           "notas": ""
@@ -4524,7 +4524,7 @@
         {
           "numero": 3,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-21",
           "precio": null,
           "notas": ""
@@ -4532,7 +4532,7 @@
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-21",
           "precio": null,
           "notas": ""

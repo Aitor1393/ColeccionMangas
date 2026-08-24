@@ -4540,7 +4540,7 @@
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-26",
           "precio": null,
           "notas": ""

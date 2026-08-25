@@ -266,6 +266,10 @@ meses de antelación, así que una vez por semana sobra.
 
 ## Desarrollo local
 
+> Si vas a **tocar el código**, empieza por [`CLAUDE.md`](CLAUDE.md): lleva la
+> arquitectura, las reglas del modelo y las trampas que ya han roto algo alguna
+> vez. Este README explica cómo se usa la web; aquel, cómo está hecha.
+
 Necesitas servir los ficheros por HTTP (abrir `index.html` directamente no permite
 leer el JSON):
 

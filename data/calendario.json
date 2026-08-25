@@ -10712,6 +10712,916 @@
       "descargado": "2026-08-25",
       "sinopsis": "Ikkitousen, que literalmente significa “invencible”, nos trae la historia de la lucha entre siete institutos de secundaria de la región japonesa de Kanto por hacerse con el poder absoluto, condimentada con la leyenda de los Tres Reinos de China.\n\r\n\n\r\nCada uno de los estudiantes porta una joya sagrada llamada magatama con el espíritu de un guerrero de esa era que luchó por unificar China, y que ahora es capaz de sacar el máximo potencial de su portador.\n\r\n\n\r\nLa preciosa Hakufu Sonsaku, descendiente del legendario conquistador Sun Ce, es una luchadora entrenada desde pequeña en las artes marciales, una chica muy maja e inocente, pero también con mucha mala leche.\n\r\n\n\r\nEl destino le depara una muerte temprana a manos de Ukitsu y por eso su madre le pide a su compañero Koukin Shuyu que la proteja de su terrible destino. Por si eso fuera poco, Hakufu a veces pierde el conocimiento y desata un poder destructor que amenaza su propia vida.\n\r\n\n\r\nHakufu y Shuyu tendrán que unirse a sus compañeros para derrotar a los institutos rivales y descubrir los secretos del poder de Hakufu antes de que sea demasiado tarde.",
       "portada": "data/portadas/4935/1.jpg"
+    },
+    "18": {
+      "titulo": "Monster (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=18",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/18/9.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Biblioteca Pachinco",
+      "demografia": "",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Naoki Urasawa",
+      "totalNumeros": 9,
+      "estado": "finalizada",
+      "descargado": "2026-08-25",
+      "sinopsis": "Düsseldorf, Alemania, 1986. Un día, el Dr. Kenzo Tenma ignora las órdenes de su jefe acerca de operar a un niño. ¡¡Y ahí empieza esta terrible historia!! ¿Cómo podría el Doctor Tenma saber que su decisión de cumplir con su deber de salvar vidas, más que convertirse en un éxito, daría pie al nacimiento de una criatura terrible? Pero ¿qué es la justicia? ¿Y la maldad?",
+      "portada": "data/portadas/18/1.jpg"
+    },
+    "2864": {
+      "titulo": "Hellsing (Edición Coleccionista)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2864",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 16.0,
+          "aproximada": false,
+          "portada": "data/portadas/2864/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 16.0,
+          "aproximada": false,
+          "portada": "data/portadas/2864/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 16.0,
+          "aproximada": false,
+          "portada": "data/portadas/2864/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 16.0,
+          "aproximada": false,
+          "portada": "data/portadas/2864/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 16.0,
+          "aproximada": false,
+          "portada": "data/portadas/2864/5.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo doble A5 (148x210) cartoné (tapa dura)",
+      "autor": "Kohta Hirano",
+      "totalNumeros": 5,
+      "estado": "finalizada",
+      "descargado": "2026-08-25",
+      "sinopsis": "¡NUEVA EDICIÓN PARA LA HISTORIA DEL VAMPIRO ALUCARD!\n\r\n\n\r\nDesde hace siglos, la organización Hellsing trabaja desde las sombras para proteger a la humanidad de todo tipo de amenazas sobrenaturales, incluidos los ataques de los vampiros. El secreto de su éxito es que cuentan entre sus filas nada más y nada menos que con Alucard, un vampiro aparentemente invulnerable que, aun así, tendrá que luchar con uñas y dientes para salir victorioso ante el ataque de las hordas de muertos vivientes…",
+      "portada": "data/portadas/2864/1.jpg"
+    },
+    "1822": {
+      "titulo": "Vagabond (Nueva Edición)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1822",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/36.jpg"
+        },
+        {
+          "numero": 37,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1822/37.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takehiko Inoue",
+      "totalNumeros": 37,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-25",
+      "sinopsis": "Vagabond, un manga cruento, realista y adulto sobre la vida de Musashi Miyamoto, el más importante espadachín de la historia de Japón. La obra cumbre de Takehiko Inoue, quien gracias a este título se ha convertido en uno de los autores más respetados por colegas, crítica y fandom del panorama nipón actual, recibiendo premios incluso del propio gobierno. Un estilo gráfico impactante e innovador sumado a una narrativa dinámica, convierten a Vagabond en una serie que no se debe dejar pasar.",
+      "portada": "data/portadas/1822/1.jpg"
+    },
+    "1741": {
+      "titulo": "FullMetal Alchemist (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1741",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": null,
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/18.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con doble sobrecubierta",
+      "autor": "Hiromu Arakawa",
+      "totalNumeros": 18,
+      "estado": "finalizada",
+      "descargado": "2026-08-25",
+      "sinopsis": "FullMetal Alchemist narra la aventura de los hermanos Edward y Alphonse Elric a principios del siglo XX, en un mundo donde la alquimia es una ciencia muy extendida. Una serie de sucesos desafortunados llevarán a los dos hermanos a sufrir una transformación al practicar una rama prohibida de la alquimia que les convertirá en dos personas muy especiales y que marcará el inicio de un viaje cargado de aventuras.",
+      "portada": "data/portadas/1741/1.jpg"
+    },
+    "2199": {
+      "titulo": "Buenas Noches, Punpun",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2199",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": 10.95,
+          "aproximada": false,
+          "portada": "data/portadas/2199/13.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Inio Asano",
+      "totalNumeros": 13,
+      "estado": "finalizada",
+      "descargado": "2026-08-25",
+      "sinopsis": "Punpun no es el típico estudiante de primaria. Pese a que siente los mismos impulsos que sus compañeros, empieza a descubrir a las chicas y el sexo, la situación familiar no es la más estable y deberá enfrentarse a ello como buenamente pueda... y en principio, eso es visualizándose como un ave amorfa en un entorno extraño.",
+      "portada": "data/portadas/2199/1.jpg"
+    },
+    "2660": {
+      "titulo": "La Espada del Inmortal (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2660",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": 17.95,
+          "aproximada": false,
+          "portada": "data/portadas/2660/15.jpg"
+        }
+      ],
+      "editorial": "Planeta Cómic",
+      "coleccion": "Manga Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hiroaki Samura",
+      "totalNumeros": 15,
+      "estado": "finalizada",
+      "descargado": "2026-08-25",
+      "sinopsis": "Ambientado en el Japón de la era Edo. La historia narra las aventuras de Manji,  un guerrero que tiene una gran ventaja sobre sus rivales: ninguna herida lo puede matar. Victorioso en más de cien enfrentamientos a muerte ante otros samuráis, entre ellos el marido de su hermana. \n\r\n\n\r\nLa historia nos explica como una monja anciana, de la que se dice que tiene 800 años, le concede el don de la inmortalidad mediante unos gusanos llamados kessenchū, que le curan cualquier herida y hasta restauran miembros amputados aunque la amputación haya sido hace horas. \n\r\n\n\r\nLa muerte de su hermana lo lleva a aceptar la misión que acabará con su inmortalidad: debe matar a mil hombres malvados para redimirse.",
+      "portada": "data/portadas/2660/1.jpg"
+    },
+    "344": {
+      "titulo": "Real",
+      "url": "https://www.listadomanga.es/coleccion.php?id=344",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": null,
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/344/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/344/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/344/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/344/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/344/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/344/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/344/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/344/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": 8.95,
+          "aproximada": false,
+          "portada": "data/portadas/344/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": null,
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": null,
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": null,
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": null,
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/344/17.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takehiko Inoue",
+      "totalNumeros": 17,
+      "estado": "en-publicacion",
+      "descargado": "2026-08-25",
+      "sinopsis": "Real es la obra más personal y experimental de Takehiko Inoue, el autor de Vagabond y Slam Dunk. Ganadora del premio artístico Media Arts Festival del año 2001, cuenta una historia basada en el baloncesto, pero desde un punto de vista completamente diferente. La trama se centra en tres personajes, cada uno ligado profundamente al deporte y cada uno inmerso en un mundo completamente diferente pero que se conecta de alguna forma con el de los otros dos. Por un lado tenemos a Tomomi Nomiya, un macarra que ha perdido la oportunidad de jugar al baloncesto tras ser expulsado de su instituto. Por otro está Kiyoharu Togawa, un atleta que queda confinado en una silla de ruedas al padecer una rara enfermedad en los huesos. Y finalmente tenemos a Hisanobu Takahashi, arrogante estudiante que ahora tiene el puesto de capitán del equipo del instituto después de que Tomomi fuera expulsado. El estilo de dibujo de Inoue es absolutamente realista, del mismo nivel que el de Vagabond, pero con el plus de estar ambientado en el Japón moderno.",
+      "portada": "data/portadas/344/1.jpg"
     }
   },
   "sugerencias": {}

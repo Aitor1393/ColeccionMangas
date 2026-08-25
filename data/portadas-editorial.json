@@ -343,6 +343,42 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/06/thumb_5346_albumes_big.jpeg",
    "bytes": 78046
+  },
+  "18": {
+   "ruta": "data/portadas-serie/18.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/58/original/monster-kanzenban-n1_9788467476613.jpg",
+   "bytes": 56214
+  },
+  "2660": {
+   "ruta": "data/portadas-serie/2660.jpg",
+   "fuente": "Planeta",
+   "origen": "https://proassets.planetadelibros.com/usuaris/libros/fotos/252/original/portada_la-espada-del-inmortal-kanzenban-n-0115_hiroaki-samura_201709041301.jpg",
+   "bytes": 65830
+  },
+  "344": {
+   "ruta": "data/portadas-serie/344.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/wp-content/uploads/2024/06/real_tapa_01.jpg",
+   "bytes": 45941
+  },
+  "2864": {
+   "ruta": "data/portadas-serie/2864.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/22/thumb_21187_albumes_big.jpeg",
+   "bytes": 46192
+  },
+  "1741": {
+   "ruta": "data/portadas-serie/1741.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/05/thumb_4198_albumes_big.jpeg",
+   "bytes": 63996
+  },
+  "2199": {
+   "ruta": "data/portadas-serie/2199.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/05/thumb_4862_albumes_big.jpeg",
+   "bytes": 9440
   }
  }
 }

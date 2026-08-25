@@ -239,32 +239,36 @@ seguidos y sin huecos) sin serlo.
 
 ## Probar los cambios
 
-No hay tests en el repo. **Esto es un hueco conocido**: la batería se ha ido
-escribiendo en el scratchpad de cada sesión, que es efímero. Si vas a tocar algo
-serio, merece la pena rehacerla —o proponer versionarla.
-
-Cómo se ha venido haciendo, con Playwright y Chromium:
+Hay **19 pruebas en `pruebas/`** que abren la web en un Chromium de verdad. No
+las rehagas: están versionadas.
 
 ```bash
-python3 -m http.server 8777          # desde la raíz del repo
-node <prueba>.js                     # abre http://localhost:8777/
+python3 -m http.server 8777          # desde la raíz, en otra terminal
+node pruebas/ejecutar.js             # las 19, unos 3 minutos
+node pruebas/ejecutar.js ranking     # solo las que contengan «ranking»
 ```
 
-Y para comprobar lo que de verdad está publicado, se descargan los archivos del
-sitio a una carpeta aparte y se sirven en otro puerto. Vale la pena: más de una
-vez el árbol local estaba bien y lo publicado no.
+Sale 0 si pasan todas, 1 si falla alguna —y entonces enseña su salida entera— y
+2 si no encuentra el servidor. Detalles y qué cubre cada una:
+[`pruebas/README.md`](pruebas/README.md).
 
-Convenciones que evitan falsos rojos:
+**Playwright vive en `pruebas/package.json`, no en la raíz**, para que la web
+siga sin dependencias. Es a propósito: no lo subas un nivel.
 
-- **El navegador del sandbox no sale a internet.** Para probar algo que pide
-  datos fuera, intercepta la petición con `page.route` y sírvela desde Node, que
-  sí sale (y cachea en disco, que Wikipedia corta el paso si le preguntas mucho).
+Antes de dar algo por hecho, pásalas. Y para lo que ya esté publicado, sírvelo
+en otro puerto y `BASE=http://localhost:8778/`: más de una vez el árbol local
+estaba bien y lo publicado no.
+
+Al escribir una nueva, dos reglas que ya han provocado rojos falsos:
+
 - **No fijes números que dependan de la colección.** «Espera 2 ediciones
   Maximum» caduca en cuanto se añade la tercera. Comprueba la propiedad —que el
   orden no suba, que los tres grupos sumen el total— y saca las cifras del propio
   modelo.
-- Portadas y errores de red externos (`gstatic`, `panini`, `listadomanga`) son
-  ruido del entorno, no fallos de la web.
+- **El navegador del entorno no sale a internet.** Intercepta con `page.route` y
+  sirve desde Node, que sí sale; `pruebas/puente-wikipedia.js` hace eso y además
+  cachea, porque Wikipedia corta el paso si le preguntas mucho. Los errores de
+  red externos (`gstatic`, `panini`, `listadomanga`) son ruido del entorno.
 
 ---
 

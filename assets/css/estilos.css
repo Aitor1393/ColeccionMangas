@@ -278,6 +278,9 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
 .wiki__factor label { margin: 0; white-space: nowrap; }
 .wiki__factor input { width: 70px; }
 
+/* Aviso de que los datos de ListadoManga llevan demasiado sin refrescarse */
+.pie--alerta { color: var(--ambar); font-weight: 600; }
+
 /* ───────────── Relectura ───────────── */
 .relectura {
   background: var(--panel-2); border: 1px solid var(--borde); border-radius: var(--radio-s);

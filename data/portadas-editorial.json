@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-08-20",
+ "actualizado": "2026-08-25",
  "nota": "Portadas de serie tomadas de la web de cada editorial. ListadoManga solo las tiene a 106x150.",
  "portadas": {
   "4753": {
@@ -337,6 +337,12 @@
    "fuente": "Panini",
    "origen": "https://www.panini.es/media/catalog/product/s/g/sgaea001_0.jpg",
    "bytes": 57489
+  },
+  "2526": {
+   "ruta": "data/portadas-serie/2526.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/06/thumb_5346_albumes_big.jpeg",
+   "bytes": 78046
   }
  }
 }

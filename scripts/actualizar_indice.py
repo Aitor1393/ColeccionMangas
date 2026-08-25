@@ -74,7 +74,10 @@ def main():
             time.sleep(PAUSA)
             continue
 
-        encontrados = re.findall(r'<a href="coleccion\.php\?id=(\d+)">(.*?)</a>', pagina, re.S)
+        # La barra inicial es opcional: en agosto de 2026 ListadoManga pasó de
+        # «coleccion.php?id=11» a «/coleccion.php?id=11» y con ella obligatoria
+        # dejaron de encontrarse las 3.455 entradas de golpe.
+        encontrados = re.findall(r'<a href="/?coleccion\.php\?id=(\d+)">(.*?)</a>', pagina, re.S)
         nuevos = 0
         for idlm, nombre in encontrados:
             if idlm not in colecciones:

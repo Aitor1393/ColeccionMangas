@@ -25,10 +25,22 @@ jobs:
     steps:
       - uses: actions/checkout@v7
 
+      # Cada paso que sale a internet se marca como «puede fallar sin abortar»,
+      # y al final se mira si alguno falló. Sin esto, en agosto de 2026 un
+      # cambio de nada en los enlaces de ListadoManga dejó el catálogo en cero,
+      # el primer paso cortó el job y estuvimos cinco días sin fechas ni
+      # portadas de los tomos nuevos.
       - name: Descargar el catálogo de ediciones
+        id: indice
+        continue-on-error: true
         run: python3 scripts/actualizar_indice.py
 
+      # El catálogo solo se usa para buscar ediciones por nombre: si no se ha
+      # podido actualizar, el anterior sigue sirviendo y las fichas —que es lo
+      # que trae fechas y portadas— se descargan igual.
       - name: Descargar las fechas
+        id: fechas
+        continue-on-error: true
         run: python3 scripts/actualizar_calendario.py --verbose
 
       # Pillow solo se usa para reducir las portadas de editorial: Planeta las
@@ -36,9 +48,8 @@ jobs:
       - name: Preparar Pillow
         run: pip install --quiet Pillow
 
-      # Sale en rojo si alguna editorial deja de devolver series —señal de que
-      # ha rediseñado su web—, pero sin abortar: lo demás debe publicarse igual.
       - name: Descargar las portadas de las editoriales
+        id: portadas
         continue-on-error: true
         run: python3 scripts/actualizar_portadas.py --verbose
 
@@ -56,3 +67,20 @@ jobs:
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git commit -m "Actualizar datos de ListadoManga"
           git push
+
+      # Va después de publicar, para que lo que sí se haya podido descargar
+      # llegue a la web igualmente. Y en rojo de verdad: «continue-on-error» por
+      # sí solo deja el run en verde, así que una fuente rota podía llevar
+      # semanas sin que se notara.
+      - name: Avisar si alguna fuente ha fallado
+        if: >-
+          steps.indice.outcome == 'failure' ||
+          steps.fechas.outcome == 'failure' ||
+          steps.portadas.outcome == 'failure'
+        run: |
+          echo "::error::Alguna fuente no ha devuelto datos. Lo normal es que"
+          echo "::error::hayan cambiado su web y haya que revisar el script."
+          echo "  catálogo de ediciones: ${{ steps.indice.outcome }}"
+          echo "  fechas de las fichas:  ${{ steps.fechas.outcome }}"
+          echo "  portadas de editorial: ${{ steps.portadas.outcome }}"
+          exit 1

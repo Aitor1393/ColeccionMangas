@@ -119,9 +119,31 @@
     }
   }
 
+  // El Action va semanal; pasados estos días es que lleva dos sin salir bien.
+  var DIAS_DATOS_VIEJOS = 10;
+
+  /**
+   * Pie: cuándo se publicó la colección y cuándo se trajeron los datos de
+   * ListadoManga.
+   *
+   * Lo segundo se enseña porque no había forma de saberlo: cuando ListadoManga
+   * cambió sus enlaces, el Action estuvo cinco días fallando y las series
+   * nuevas se quedaban sin fechas ni portadas sin que nada lo dijera.
+   */
   function actualizarPie() {
     var fecha = D.coleccion.actualizado;
-    U.$('#pieActualizado').textContent = fecha ? 'Actualizada el ' + U.fechaLarga(fecha) : '';
+    var datos = D.calendario.actualizado;
+    var dias = datos ? -U.diasHasta(datos) : null;
+    var viejos = dias !== null && dias > DIAS_DATOS_VIEJOS;
+
+    U.$('#pieActualizado').innerHTML =
+      (fecha ? 'Actualizada el ' + U.esc(U.fechaLarga(fecha)) : '') +
+      (datos
+        ? ' · <span' + (viejos ? ' class="pie--alerta" title="El proceso semanal que ' +
+            'trae fechas y portadas lleva sin funcionar. Mira las Acciones del repositorio."' : '') +
+          '>datos de ListadoManga ' + U.esc(U.cuando(datos)) +
+          (viejos ? ' ⚠' : '') + '</span>'
+        : '');
   }
 
   /* ---------- Filtros de la biblioteca ---------- */

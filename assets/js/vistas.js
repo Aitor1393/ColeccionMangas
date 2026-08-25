@@ -154,7 +154,10 @@
     }
 
     var stats = [
-      { valor: g.series, etiqueta: 'Series', extra: g.seriesAbiertas + ' en publicación', icono: '📚' },
+      { valor: g.series, etiqueta: 'Series',
+        extra: g.seriesDeseadas
+          ? g.seriesAbiertas + ' en publicación · ' + g.seriesDeseadas + ' que quieres'
+          : g.seriesAbiertas + ' en publicación', icono: '📚' },
       // Con el gasto oculto no se menciona el dinero de ninguna forma: ni el
       // importe, ni un hueco tapado, ni nada en lo que pulsar.
       { valor: g.tomos, etiqueta: 'Tomos en casa',
@@ -295,6 +298,7 @@
         '<option value="sigo"' + (f.seguimiento === 'sigo' ? ' selected' : '') + '>Solo las que sigo</option>' +
         '<option value="abandonadas"' + (f.seguimiento === 'abandonadas' ? ' selected' : '') + '>Solo abandonadas</option>' +
         '<option value="releyendo"' + (f.seguimiento === 'releyendo' ? ' selected' : '') + '>Las que estoy releyendo</option>' +
+        '<option value="deseadas"' + (f.seguimiento === 'deseadas' ? ' selected' : '') + '>Las que quiero tener</option>' +
       '</select>' +
       '<select id="fDemografia"><option value="">Cualquier demografía</option>' + opciones(Object.keys(D.DEMOGRAFIAS), f.demografia, D.DEMOGRAFIAS) + '</select>' +
       '<select id="fEditorial"><option value="">Cualquier editorial</option>' + opciones(D.editoriales(), f.editorial) + '</select>' +
@@ -353,6 +357,11 @@
       if (f.seguimiento === 'sigo' && s.abandonada) return false;
       if (f.seguimiento === 'abandonadas' && !s.abandonada) return false;
       if (f.seguimiento === 'releyendo' && !D.relee(s)) return false;
+      if (f.seguimiento === 'deseadas' && !s.deseada) return false;
+      // Las deseadas no son colección: fuera de la biblioteca salvo que las
+      // pidas. Si no, ensuciarían la rejilla con series de las que no tienes
+      // ni un tomo.
+      if (f.seguimiento !== 'deseadas' && s.deseada) return false;
       if (f.estado && D.estadoDe(s) !== f.estado) return false;
       if (f.demografia && D.demografiaDe(s) !== f.demografia) return false;
       if (f.editorial && D.editorialDe(s) !== f.editorial) return false;
@@ -420,6 +429,94 @@
 
     return html + '</div>';
   };
+
+  /* ============================================================
+     Vista: Deseados
+     ============================================================ */
+
+  /**
+   * Lo que te gustaría tener y aún no has empezado a comprar.
+   *
+   * Son series normales con la marca `deseada`, así que traen su ficha de
+   * ListadoManga, su portada y su precio: se puede ver lo que costaría cada una
+   * entera. En cuanto marcas un tomo dejan de estar aquí solas.
+   */
+  V.deseados = function () {
+    var lista = D.deseadas().slice().sort(function (a, b) {
+      return a.titulo.localeCompare(b.titulo, 'es');
+    });
+
+    var html = '<div class="vista__cabecera"><div class="crece">' +
+      '<h1>Los quiero</h1>' +
+      '<p>Series que te gustaría tener y de las que aún no has comprado nada. ' +
+      'No cuentan como colección ni salen en Compras.</p>' +
+      resumenDeseados(lista) +
+    '</div>' +
+    '<button class="btn btn--primario" data-accion="nueva-deseada">+ Añadir</button>' +
+    '</div>';
+
+    if (!lista.length) {
+      return html + '<div class="vacio"><h3>Todavía no quieres nada</h3>' +
+        '<p>Apunta aquí lo que te apetezca comprar algún día. Enlazándolo con ' +
+        'ListadoManga verás su portada y lo que costaría entero.</p>' +
+        '<button class="btn btn--primario" data-accion="nueva-deseada">Añadir la primera</button>' +
+        '</div>';
+    }
+
+    return html + '<div class="lista">' + lista.map(filaDeseada).join('') + '</div>';
+  };
+
+  /** Cuántas son y cuánto costarían, cuando se puede saber. */
+  function resumenDeseados(lista) {
+    if (!lista.length) return '';
+    var suma = 0, tomos = 0, incompletas = 0, sinPrecio = 0;
+    lista.forEach(function (s) {
+      var c = D.costeDeseada(s);
+      suma += c.coste;
+      tomos += c.tomos;
+      if (!c.completo) incompletas++;
+      if (!c.conPrecio) sinPrecio++;
+    });
+
+    return '<p class="ayuda">' +
+      U.plural(lista.length, 'serie', 'series') + ' · ' + U.plural(tomos, 'tomo') +
+      (suma && D.coleccion.ajustes.mostrarGasto
+        ? ' · costarían <strong>' + U.euros(suma) + '</strong>' +
+          (incompletas ? ' por lo menos, porque no todas están terminadas' : '')
+        : '') +
+      (sinPrecio ? ' · ' + U.plural(sinPrecio, 'sin precio conocido', 'sin precio conocido') : '') +
+    '</p>';
+  }
+
+  function filaDeseada(serie) {
+    var c = D.costeDeseada(serie);
+    var portada = urlPortada(serie);
+    var estado = D.estadoDe(serie);
+    var ficha = D.fichaLM(serie);
+
+    var detalles = [];
+    if (c.total) detalles.push(U.plural(c.total, 'tomo'));
+    else if (c.tomos) detalles.push(c.tomos + ' publicados');
+    if (estado && D.ESTADOS[estado]) detalles.push(D.ESTADOS[estado].etiqueta);
+    var editorial = D.editorialDe(serie);
+    if (editorial) detalles.push(editorial);
+
+    return '<div class="fila fila--deseada" data-accion="abrir-serie" data-serie-id="' + U.esc(serie.id) + '">' +
+      (portada ? '<img class="fila__portada" src="' + U.esc(portada) + '" alt="" loading="lazy">' : '') +
+      '<div class="fila__cuerpo">' +
+        '<div class="fila__titulo">' + U.esc(nombreListado(serie)) + '</div>' +
+        '<div class="fila__sub">' + U.esc(detalles.join(' · ')) +
+          (serie.notas ? ' · <em>' + U.esc(serie.notas) + '</em>' : '') +
+        '</div>' +
+      '</div>' +
+      (c.coste && D.coleccion.ajustes.mostrarGasto
+        ? '<span class="deseada__coste">' + U.euros(c.coste) +
+          (c.completo ? '' : '<small>y subiendo</small>') + '</span>'
+        : (ficha ? '' : '<span class="deseada__coste"><small>sin enlazar</small></span>')) +
+      '<button class="btn btn--pequeno" data-accion="empezar-deseada" data-serie-id="' +
+        U.esc(serie.id) + '">La empiezo</button>' +
+    '</div>';
+  }
 
   /* ============================================================
      Vista: Ranking
@@ -1058,6 +1155,8 @@
         '<button class="btn btn--bloque" data-accion="nueva-salida" data-serie-id="' + U.esc(serie.id) + '">+ Fecha de salida</button>' +
         '<button class="btn btn--bloque" data-accion="abandonar" data-serie-id="' + U.esc(serie.id) + '">' +
           (serie.abandonada ? '↩ Volver a coleccionarla' : '✕ La he dejado') + '</button>' +
+        '<button class="btn btn--pequeno" data-accion="desear" data-serie-id="' + U.esc(serie.id) + '">' +
+          (serie.deseada ? '↩ Sacar de los deseos' : '✨ La quiero') + '</button>' +
         '<button class="btn btn--bloque btn--peligro" data-accion="borrar-serie" data-serie-id="' + U.esc(serie.id) + '">Eliminar</button>' +
       '</div>' +
 
@@ -1070,6 +1169,7 @@
         '<div class="detalle__meta">' +
           chipEstado(serie) +
           (serie.abandonada ? '<span class="chip chip--rojo">✕ La dejaste</span>' : '') +
+          (serie.deseada ? '<span class="chip chip--azul">✨ La quieres</span>' : '') +
           (D.relee(serie) ? '<span class="chip">🔁 Releyendo</span>' : '') +
           (demografia ? '<span class="chip">' + U.esc(D.DEMOGRAFIAS[demografia] || demografia) + '</span>' : '') +
           (ficha && ficha.coleccion ? '<span class="chip">📚 ' + U.esc(ficha.coleccion) + '</span>' : '') +

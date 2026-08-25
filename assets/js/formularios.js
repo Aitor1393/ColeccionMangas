@@ -37,15 +37,16 @@
   /* ============================================================
      Alta / edición de serie
      ============================================================ */
-  F.serie = function (serie) {
+  F.serie = function (serie, porDefecto) {
     var edicion = !!serie;
-    var s = serie || {
+    var s = serie || Object.assign({
       titulo: '', edicion: '', autor: '', editorial: '', demografia: 'otro', estado: '',
-      abandonada: false, tomosTotales: 0, portada: '', sinopsis: '', notas: '', etiquetas: []
-    };
+      abandonada: false, deseada: false, tomosTotales: 0, portada: '', sinopsis: '',
+      notas: '', etiquetas: []
+    }, porDefecto || {});
 
     var html =
-      '<h2>' + (edicion ? 'Editar serie' : 'Añadir serie') + '</h2>' +
+      '<h2>' + (edicion ? 'Editar serie' : (s.deseada ? 'Añadir a la lista de deseos' : 'Añadir serie')) + '</h2>' +
       '<form id="formSerie">' +
         '<div class="campos">' +
           '<div><label for="cTitulo">Título *</label>' +
@@ -86,12 +87,19 @@
               (s.abandonada ? ' checked' : '') + '> He dejado de coleccionarla</label>' +
             '<div class="ayuda">Sigue en tu biblioteca con los tomos que tengas, pero no ' +
               'aparecerá en Próximas compras ni en Próximas publicaciones.</div></div>' +
+          '<div class="campo--ancho">' +
+            '<label style="display:flex;align-items:center;gap:8px;margin:0">' +
+              '<input type="checkbox" id="cDeseada" style="width:auto"' +
+              (s.deseada ? ' checked' : '') + '> Me gustaría tenerla, aún no la he empezado</label>' +
+            '<div class="ayuda">Va a «Los quiero» en vez de a la biblioteca. Deja de estar ' +
+              'ahí sola en cuanto marques un tomo como que lo tienes.</div></div>' +
           '<div class="campo--ancho"><label for="cNotas">Notas personales</label>' +
             '<textarea id="cNotas" placeholder="Edición, tomos dobles, dónde la compras…">' + U.esc(s.notas) + '</textarea></div>' +
         '</div>' +
         '<div class="form__acciones">' +
           '<button type="button" class="btn btn--fantasma" data-cerrar-modal>Cancelar</button>' +
-          '<button type="submit" class="btn btn--primario">' + (edicion ? 'Guardar cambios' : 'Añadir a la colección') + '</button>' +
+          '<button type="submit" class="btn btn--primario">' +
+            (edicion ? 'Guardar cambios' : (s.deseada ? 'Añadir a los deseos' : 'Añadir a la colección')) + '</button>' +
         '</div>' +
       '</form>';
 
@@ -109,6 +117,7 @@
         demografia: U.$('#cDemografia').value,
         estado: U.$('#cEstado').value,
         abandonada: U.$('#cAbandonada').checked,
+        deseada: U.$('#cDeseada').checked,
         tomosTotales: Number(U.$('#cTotales').value) || 0,
         portada: U.$('#cPortada').value.trim(),
         listadomangaId: U.$('#cListadoManga').value.trim().replace(/\D/g, ''),

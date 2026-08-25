@@ -5,7 +5,8 @@
   'use strict';
 
   var App = {};
-  var VISTAS = ['resumen', 'biblioteca', 'pendientes', 'compras', 'ranking', 'calendario', 'ajustes'];
+  var VISTAS = ['resumen', 'biblioteca', 'pendientes', 'compras', 'ranking', 'deseados',
+    'calendario', 'ajustes'];
   var vistaActual = 'resumen';
   var serieAbierta = null;
 
@@ -60,6 +61,7 @@
       case 'pendientes': contenido = V.pendientes(); break;
       case 'compras': contenido = V.compras(); break;
       case 'ranking': contenido = V.ranking(); break;
+      case 'deseados': contenido = V.deseados(); break;
       case 'calendario': contenido = V.calendario(); break;
       case 'ajustes': contenido = V.ajustes(); break;
       default: contenido = V.resumen();
@@ -432,6 +434,28 @@
       D.cancelarRelectura(el.dataset.serieId);
       refrescarModalSerie();
       actualizarAviso();
+    },
+
+    'nueva-deseada': function () { F.serie(null, { deseada: true }); },
+
+    'desear': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (!s) return;
+      var ahora = D.alternarDeseada(s.id);
+      refrescarModalSerie();
+      actualizarAviso();
+      U.aviso(ahora ? '«' + s.titulo + '» a la lista de deseos'
+                    : '«' + s.titulo + '» ya no es un deseo', 'ok');
+    },
+
+    // Deja de ser un deseo y se abre para empezar a marcar tomos.
+    'empezar-deseada': function (el) {
+      var s = D.serie(el.dataset.serieId);
+      if (!s || !s.deseada) return;
+      D.alternarDeseada(s.id);
+      App.render();
+      App.abrirSerie(s.id);
+      U.aviso('«' + s.titulo + '» pasa a la colección', 'ok');
     },
 
     'modo-ranking': function (el) {

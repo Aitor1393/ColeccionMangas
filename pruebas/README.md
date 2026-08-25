@@ -9,7 +9,7 @@ Hace falta el sitio servido por HTTP (con `file://` el navegador no lee el JSON)
 
 ```bash
 python3 -m http.server 8777          # desde la raíz del repo, en otra terminal
-node pruebas/ejecutar.js             # las 19
+node pruebas/ejecutar.js             # las 20
 node pruebas/ejecutar.js ranking     # solo las que contengan «ranking»
 ```
 
@@ -59,6 +59,7 @@ BASE=http://localhost:8778/ node pruebas/ejecutar.js
 | `ranking` | rúbrica, orden, duelos y alineación de las notas |
 | `relectura` | releer sin perder lo ya leído |
 | `capitulos` | capítulos por tomo y ediciones que juntan varios |
+| `deseados` | la lista de deseos y de qué queda excluida |
 
 ## Al escribir una nueva
 

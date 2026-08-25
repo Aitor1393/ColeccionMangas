@@ -84,6 +84,7 @@ Una serie:
   "autor": "", "editorial": "", "demografia": "shounen",
   "estado": "finalizada",        // '' = lo que diga la edición
   "abandonada": false,           // cosa tuya, no de la edición
+  "deseada": false,              // la quieres y no la has empezado
   "tomosTotales": 37,            // 0 = no se sabe
   "portada": "",                 // manual; MANDA sobre la de editorial
   "sinopsis": "", "etiquetas": [], "notas": "",
@@ -190,6 +191,28 @@ salir bien.
 
 ---
 
+### Series marcadas, y de qué las excluye cada marca
+
+Dos banderas cambian dónde aparece una serie. Si añades una vista o un cálculo,
+mira si tienes que respetarlas:
+
+| | `abandonada` | `deseada` |
+|---|---|---|
+| Biblioteca | sale, marcada | **fuera** salvo que la filtres |
+| Compras y Próximas publicaciones | **fuera** | **fuera** |
+| Estadísticas del resumen | cuenta | **no cuenta** |
+| Ranking | entra: valorarla es cómo recuerdas por qué la dejaste | no entra (no la has leído) |
+
+`deseada` fuera de Compras es lo que más importa: una serie deseada de 72 tomos
+metería sus 72 en Próximas compras. Están publicados y no los tienes, sí, pero
+no has decidido comprarla.
+
+Y `normalizarSerie` garantiza el invariante: en cuanto consta un tomo que tienes
+o has leído, `deseada` pasa a false. Así no puede quedarse a la vez en «Los
+quiero» y en la biblioteca, venga el cambio de donde venga.
+
+---
+
 ## Trampas conocidas
 
 Cada una de estas ya rompió algo. No las redescubras.
@@ -239,12 +262,12 @@ seguidos y sin huecos) sin serlo.
 
 ## Probar los cambios
 
-Hay **19 pruebas en `pruebas/`** que abren la web en un Chromium de verdad. No
+Hay **20 pruebas en `pruebas/`** que abren la web en un Chromium de verdad. No
 las rehagas: están versionadas.
 
 ```bash
 python3 -m http.server 8777          # desde la raíz, en otra terminal
-node pruebas/ejecutar.js             # las 19, unos 3 minutos
+node pruebas/ejecutar.js             # las 20, unos 3 minutos
 node pruebas/ejecutar.js ranking     # solo las que contengan «ranking»
 ```
 

@@ -306,6 +306,19 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
   .relectura__control .btn[data-accion="relectura-terminar"] { margin-left: 0 !important; }
 }
 
+/* ───────────── Los quiero ───────────── */
+.fila--deseada { cursor: pointer; }
+.deseada__coste {
+  font-variant-numeric: tabular-nums; font-weight: 700; text-align: right;
+  flex: none; display: flex; flex-direction: column; line-height: 1.2;
+}
+.deseada__coste small { font-weight: 400; font-size: .72rem; color: var(--texto-3); }
+
+@media (max-width: 620px) {
+  .fila--deseada .btn { display: none; }   /* la fila entera abre la ficha */
+  .deseada__coste { font-size: .9rem; }
+}
+
 /* ───────────── Ranking ───────────── */
 .fila--ranking { cursor: pointer; }
 /* Puesto y nota son columnas de ancho fijo, no cajas que crezcan con su

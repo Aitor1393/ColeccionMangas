@@ -65,6 +65,11 @@
       // Cosa tuya, no de la edición: la serie puede estar en publicación y tú
       // haberla dejado. Por eso va aparte del estado.
       abandonada: !!s.abandonada,
+      // Te gustaría tenerla pero aún no has comprado nada. Lo garantiza el
+      // propio contrato: en cuanto consta un tomo que tienes o has leído, deja
+      // de ser un deseo, venga de donde venga el cambio.
+      deseada: !!s.deseada && !(Array.isArray(s.tomos) &&
+        s.tomos.some(function (t) { return t.tengo || t.leido; })),
       tomosTotales: Number(s.tomosTotales) || 0,   // 0 = desconocido / abierto
       portada: s.portada || '',
       sinopsis: s.sinopsis || '',
@@ -662,6 +667,7 @@
     else if (t.tengo && !t.leido) { t.leido = true; }
     else if (t.tengo && t.leido) { t.tengo = false; }
     else { t.leido = false; }
+    dejarDeDesear(s);
     D.guardar();
   };
 
@@ -670,8 +676,20 @@
     if (!s) return;
     var t = D.tomo(s, numero, true);
     Object.keys(campos).forEach(function (k) { t[k] = campos[k]; });
+    dejarDeDesear(s);
     D.guardar();
   };
+
+  /**
+   * En cuanto tienes o has leído algo de una serie deseada, ya no es un deseo:
+   * la has empezado. Si no se hiciera solo, se quedaría a la vez en Deseados y
+   * en la Biblioteca, y habría que acordarse de quitarla a mano.
+   */
+  function dejarDeDesear(s) {
+    if (s.deseada && s.tomos.some(function (t) { return t.tengo || t.leido; })) {
+      s.deseada = false;
+    }
+  }
 
   /* ---------- Estadísticas ---------- */
 
@@ -734,11 +752,15 @@
 
   D.statsGlobales = function () {
     var g = {
-      series: D.coleccion.series.length, tomos: 0, leidos: 0, leidosSinTener: 0,
+      series: 0, tomos: 0, leidos: 0, leidosSinTener: 0,
       pendientes: 0, gasto: 0, precioEstimado: 0, sinPrecio: 0,
-      seriesCompletas: 0, seriesAbiertas: 0, seriesAbandonadas: 0, proximas30: 0
+      seriesCompletas: 0, seriesAbiertas: 0, seriesAbandonadas: 0, seriesDeseadas: 0,
+      proximas30: 0
     };
     D.coleccion.series.forEach(function (s) {
+      // Las deseadas no cuentan: no son colección, son una lista de la compra.
+      if (s.deseada) { g.seriesDeseadas++; return; }
+      g.series++;
       var st = D.statsSerie(s);
       g.tomos += st.tengo;
       g.leidos += st.leidos;
@@ -753,6 +775,48 @@
     });
     g.proximas30 = D.proximasPublicaciones(30).length;
     return g;
+  };
+
+  /* ---------- Lista de deseos ---------- */
+
+  D.deseadas = function () {
+    return D.coleccion.series.filter(function (s) { return s.deseada; });
+  };
+
+  D.alternarDeseada = function (id) {
+    var s = D.serie(id);
+    if (!s) return false;
+    s.deseada = !s.deseada;
+    // No se puede desear algo que ya estás coleccionando.
+    if (s.deseada) s.abandonada = false;
+    D.guardar();
+    return s.deseada;
+  };
+
+  /**
+   * Lo que costaría comprar entera una serie deseada.
+   *
+   * Sale del PVP de cada tomo publicado menos tu descuento, que es la misma
+   * regla que en el resto de la web. `tomos` son los que se conocen y `todos`
+   * dice si están todos: en una serie en publicación aún faltan por salir, así
+   * que la cifra es un mínimo, no el total.
+   */
+  D.costeDeseada = function (serie) {
+    var numeros = D.numerosLM(serie);
+    var coste = 0, conPrecio = 0;
+    numeros.forEach(function (n) {
+      var p = D.precioDe(serie, { numero: n.numero, precio: null });
+      if (p.valor) { coste += p.valor; conPrecio++; }
+    });
+    var total = D.totalDe(serie);
+    return {
+      coste: coste,
+      tomos: numeros.length,
+      conPrecio: conPrecio,
+      total: total,
+      // Si la serie sigue abierta o no se sabe el total, lo que sale es un suelo.
+      completo: !!total && numeros.length >= total && D.estadoDe(serie) === 'finalizada'
+    };
   };
 
   /* ---------- Vistas derivadas ---------- */
@@ -1069,6 +1133,7 @@
 
     D.coleccion.series.forEach(function (s) {
       if (s.abandonada) return;          // la dejaste: sus salidas no te interesan
+      if (s.deseada) return;             // aún no la coleccionas
       var manuales = {};
 
       s.proximas.forEach(function (p) {
@@ -1120,6 +1185,10 @@
 
     D.coleccion.series.forEach(function (s) {
       if (s.abandonada) return;
+      // Sin esto, una serie deseada de 30 tomos mete sus 30 en Próximas
+      // compras: técnicamente están a la venta y no los tienes, pero no has
+      // decidido comprarla todavía.
+      if (s.deseada) return;
       var vistos = {};
 
       function mirar(numero, fecha, origen) {

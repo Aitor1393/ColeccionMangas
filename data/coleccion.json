@@ -9245,7 +9245,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.38,
           "notas": ""
@@ -9253,7 +9253,7 @@
         {
           "numero": 2,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""

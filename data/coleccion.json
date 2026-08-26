@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-08-25",
+  "actualizado": "2026-08-26",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -9563,6 +9563,31 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-25",
+      "tomos": [],
+      "proximas": []
+    },
+    {
+      "id": "b817a2eb-33c5-4764-a170-c6ccb9996f83",
+      "titulo": "Centuria",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Tohru Kuramori",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "deseada": true,
+      "tomosTotales": 9,
+      "portada": "",
+      "sinopsis": "Julian es un niño que es vendido por su madre a un herrero del que escapa por el maltrato al que lo somete. En su huida, acaba escondido en un barco de piratas esclavistas, que quieren matarlo cuando lo descubren, pero la intervención de los otros esclavos consigue que le perdonen la vida. Una esclava embarazada llamada Mira lo cuida y lo ayuda, mostrando un amor y una compasión que Julian jamás había sentido.\n\nAunque pronto, la cosa se tuerce cuando el capitán de los piratas empieza a matar esclavos a diestro y siniestro, al ver que algo en el mar los está atrayendo y no los deja avanzar. Lo que no espera es que la sangre de los esclavos sacrificados despertará a una entidad marina llena de tentáculos que ofrece a Julian y Mira un deseo, pero con dos condiciones: sacrificar más almas humanas y sacrificar un amor puro…\n\nJulian está dispuesto a morir, pero Mira, que ya ha visto a un hijo perder la vida por ella, decide sacarse al bebé de su barriga y dárselo a Julian. Eso satisface a la criatura tentacular y Julian pide el deseo de que todos los sacrificios no hayan sido en vano. La criatura le confiere a Julian la fuerza y las vidas de 100 humanos y este acaba con todos los piratas, huyendo en una barca con Diana, la hija recién nacida de Mira. ¿Qué nueva vida les espera a partir de ahora?",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6090",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-08-26",
       "tomos": [],
       "proximas": []
     }

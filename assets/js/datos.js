@@ -294,11 +294,21 @@
     var disfrute = Number(v.disfrute);
     disfrute = (disfrute >= 1 && disfrute <= 10) ? disfrute : null;
     if (!alguno && disfrute === null) return null;
+    // Contra quién has ganado o perdido: { idRival: +1 | -1 }. Sin esto solo
+    // había un contador, y no se podía saber si una pareja ya se había
+    // enfrentado; con tres series empatadas, una sola comparación colocaba a la
+    // tercera sin haberla comparado con nadie.
+    var enfrentamientos = {};
+    Object.keys(v.enfrentamientos || {}).forEach(function (id) {
+      var r = Number(v.enfrentamientos[id]);
+      if (r === 1 || r === -1) enfrentamientos[id] = r;
+    });
     return {
       criterios: criterios,
       disfrute: disfrute,
       desempate: Number(v.desempate) || 0,
       duelos: Number(v.duelos) || 0,
+      enfrentamientos: enfrentamientos,
       notas: v.notas || '',
       fecha: v.fecha || U.isoHoy()
     };
@@ -357,31 +367,68 @@
   };
 
   /**
-   * Una pareja que el ranking no sabe ordenar, para que lo digas tú.
+   * Una pareja de la misma nota que todavía no se ha enfrentado.
    *
-   * Se agrupa por nota Y por desempate, que juntos son lo que decide el orden.
-   * Dos series con la misma nota pero distinto desempate ya están ordenadas: el
-   * duelo entre ellas está resuelto y preguntarlo otra vez no aporta nada.
+   * Todas las parejas del grupo, no una sola: con tres series empatadas, un
+   * único duelo dejaría a la tercera colocada sin haberla comparado con nadie,
+   * que es inventarse el orden en vez de medirlo. Son tres comparaciones, y con
+   * ellas el orden sale de lo que has dicho tú, no de una deducción.
    *
-   * Antes se agrupaba solo por nota y se elegía la pareja con menos duelos, y
-   * con un grupo de dos eso era un bucle: resolverlo subía los contadores pero
-   * la pareja seguía siendo la única candidata, así que volvía a salir. Rurouni
-   * Kenshin y Shaman King llegaron a enfrentarse tres veces.
+   * Se prefieren las que menos duelos llevan, para repartir el trabajo y no
+   * insistir con las mismas.
    *
-   * @returns {Array|null} las dos series, o null si no hay nada que desempatar.
+   * @returns {Array|null} las dos series, o null si no queda nada por comparar.
    */
   D.duelo = function () {
-    var grupos = {};
+    var porNota = {};
     D.ranking().forEach(function (s) {
-      var k = D.notaDe(s) + '|' + s.valoracion.desempate;
-      (grupos[k] = grupos[k] || []).push(s);
+      var k = String(D.notaDe(s));
+      (porNota[k] = porNota[k] || []).push(s);
     });
-    var par = null;
-    Object.keys(grupos).forEach(function (k) {
-      // El primero que salga vale: dentro del grupo son indistinguibles.
-      if (!par && grupos[k].length >= 2) par = [grupos[k][0], grupos[k][1]];
+
+    var mejor = null;
+    Object.keys(porNota).forEach(function (k) {
+      var grupo = porNota[k];
+      var pares = [];
+      for (var i = 0; i < grupo.length; i++) {
+        for (var j = i + 1; j < grupo.length; j++) {
+          if (!D.yaSeEnfrentaron(grupo[i], grupo[j])) pares.push([grupo[i], grupo[j]]);
+        }
+      }
+      if (!pares.length) return;
+      // Se termina el grupo al que le quedan menos comparaciones antes de
+      // empezar otro: así un empate se resuelve del todo en vez de ir saltando
+      // de un grupo a otro y dejarlos todos a medias.
+      if (!mejor || pares.length < mejor.quedan) {
+        mejor = { quedan: pares.length, par: pares[0] };
+      }
     });
-    return par;
+    return mejor ? mejor.par : null;
+  };
+
+  /** Cuántas comparaciones quedan por hacer, para poder decirlo. */
+  D.duelosPendientes = function () {
+    var porNota = {};
+    D.ranking().forEach(function (s) {
+      var k = String(D.notaDe(s));
+      (porNota[k] = porNota[k] || []).push(s);
+    });
+    var n = 0;
+    Object.keys(porNota).forEach(function (k) {
+      var g = porNota[k];
+      for (var i = 0; i < g.length; i++) {
+        for (var j = i + 1; j < g.length; j++) {
+          if (!D.yaSeEnfrentaron(g[i], g[j])) n++;
+        }
+      }
+    });
+    return n;
+  };
+
+  /** ¿Ya se han enfrentado estas dos? Se apunta en ambas, así que basta una. */
+  D.yaSeEnfrentaron = function (a, b) {
+    return (a.valoracion.enfrentamientos[b.id] !== undefined) ||
+           (b.valoracion.enfrentamientos[a.id] !== undefined);
   };
 
   /** Apunta quién ganó un duelo. */
@@ -392,6 +439,9 @@
     p.valoracion.desempate--;
     g.valoracion.duelos++;
     p.valoracion.duelos++;
+    // En las dos: así da igual por cuál se pregunte después.
+    g.valoracion.enfrentamientos[idPierde] = 1;
+    p.valoracion.enfrentamientos[idGana] = -1;
     D.guardar();
     return true;
   };

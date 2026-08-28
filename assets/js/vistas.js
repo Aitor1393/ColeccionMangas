@@ -555,10 +555,13 @@
 
     // El duelo solo aparece cuando de verdad hay un empate que romper.
     if (duelo && !porDisfrute) {
+      var quedan = D.duelosPendientes();
       html += '<div class="duelo-aviso">' +
         '<span>⚔ <strong>' + U.esc(duelo[0].titulo) + '</strong> y <strong>' +
           U.esc(duelo[1].titulo) + '</strong> están empatadas a ' + U.esc(String(D.notaDe(duelo[0]))) +
-          '. ¿Cuál es mejor?</span>' +
+          '. ¿Cuál es mejor?' +
+          (quedan > 1 ? ' <span class="ayuda">(' + quedan + ' comparaciones por hacer)</span>' : '') +
+        '</span>' +
         '<button class="btn btn--pequeno" data-accion="duelo">Desempatar</button>' +
       '</div>';
     }

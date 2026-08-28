@@ -285,15 +285,49 @@ const SHOT = CAPTURAS + '49-ranking';
      'y NO vuelve a preguntar por la misma pareja' +
      (repetido.hay ? ' (ahora ofrece: ' + repetido.nombres.join(' vs ') + ')' : ''));
 
+  // Tres empatadas: no vale una sola comparación y colocar la tercera por
+  // deducción. Tienen que compararse las tres parejas.
+  console.log('Tres empatadas:');
+  const tres = await p.evaluate(() => {
+    // Se dejan exactamente tres a la misma nota y ninguna más empatada.
+    const ids = D.valorables().slice(0, 3).map(s => s.id);
+    // Primero se despeja: nadie más a 7 salvo los tres del trío.
+    D.coleccion.series.slice().forEach(s => {
+      if (s.valoracion && ids.indexOf(s.id) === -1 && D.notaDe(s) === 7) {
+        D.actualizarSerie(s.id, { valoracion: null });
+      }
+    });
+    ids.forEach(id => D.actualizarSerie(id, { valoracion: D.normalizarValoracion({
+      criterios: { historia: 7, personajes: 7, dibujo: 7, ritmo: 7 }, disfrute: 5 }) }));
+    const parejas = [];
+    let d, n = 0;
+    while ((d = D.duelo()) && n < 60) {
+      // Se apuntan solo los del trío, pero se resuelven todos: así se ve si el
+      // trío se termina de una vez o se queda a medias.
+      const delTrio = ids.indexOf(d[0].id) !== -1 && ids.indexOf(d[1].id) !== -1;
+      if (delTrio) parejas.push([d[0].titulo, d[1].titulo]);
+      D.resolverDuelo(d[0].id, d[1].id);
+      n++;
+      if (parejas.length === 3) break;
+    }
+    const orden = D.ranking().filter(s => ids.indexOf(s.id) !== -1)
+      .map(s => s.titulo + '(' + s.valoracion.desempate + ')');
+    const comparadas = D.serie(ids[0]).valoracion.enfrentamientos;
+    return { parejas, orden, comparadasPrimera: Object.keys(comparadas).length };
+  });
+  tres.parejas.forEach((x, i) => console.log(`  ${i + 1}. ${x[0].slice(0,22)} vs ${x[1].slice(0,22)}`));
+  console.log('  orden final: ' + tres.orden.join(' > '));
+  ok(tres.parejas.length === 3, 'con tres empatadas pide las TRES comparaciones, no una');
+  ok(tres.comparadasPrimera === 2, 'y cada una se compara con las otras dos');
+
   // Y hasta el final: resolviendo lo que ofrezca, se acaba quedando sin nada.
   const vueltas = await p.evaluate(() => {
     let n = 0, d;
-    while ((d = D.duelo()) && n < 200) { D.resolverDuelo(d[0].id, d[1].id); n++; }
-    return { n, quedan: !!D.duelo(), valoradas: D.ranking().length };
+    while ((d = D.duelo()) && n < 400) { D.resolverDuelo(d[0].id, d[1].id); n++; }
+    return { n, quedan: !!D.duelo(), pendientes: D.duelosPendientes() };
   });
-  console.log(`  resolviendo todo lo que ofrece: ${vueltas.n} duelos sobre ${vueltas.valoradas} series valoradas`);
-  ok(!vueltas.quedan, 'resolviéndolos se termina: no es un bucle infinito');
-  ok(vueltas.n < vueltas.valoradas, 'y no pide más duelos que series, que sería absurdo');
+  console.log(`  y resolviendo el resto: ${vueltas.n} duelos más`);
+  ok(!vueltas.quedan && vueltas.pendientes === 0, 'resolviéndolos se termina: no es un bucle infinito');
 
   /* ---------- Quitar la nota ---------- */
   console.log('Quitar:');

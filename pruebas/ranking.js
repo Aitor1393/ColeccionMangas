@@ -320,6 +320,65 @@ const SHOT = CAPTURAS + '49-ranking';
   ok(tres.parejas.length === 3, 'con tres empatadas pide las TRES comparaciones, no una');
   ok(tres.comparadasPrimera === 2, 'y cada una se compara con las otras dos');
 
+  /* ---------- Contradecirse ---------- */
+  console.log('Contradicción:');
+  const ciclo = await p.evaluate(() => {
+    // Se dejan tres a la misma nota y se responde en círculo: A>B, B>C, C>A.
+    const ids = D.valorables().slice(0, 3).map(s => s.id);
+    D.coleccion.series.slice().forEach(s => {
+      if (s.valoracion && ids.indexOf(s.id) === -1 && D.notaDe(s) === 4) {
+        D.actualizarSerie(s.id, { valoracion: null });
+      }
+    });
+    ids.forEach(id => D.actualizarSerie(id, { valoracion: D.normalizarValoracion({
+      criterios: { historia: 4, personajes: 4, dibujo: 4, ritmo: 4 }, disfrute: 4 }) }));
+    D.resolverDuelo(ids[0], ids[1]);
+    D.resolverDuelo(ids[1], ids[2]);
+    D.resolverDuelo(ids[2], ids[0]);
+    const c = D.contradicciones();
+    return {
+      ids,
+      hay: c.length,
+      titulos: c.length ? c[0].ciclo.map(s => s.titulo) : [],
+      nota: c.length ? c[0].nota : null,
+      quedanDuelos: D.duelosPendientes()
+    };
+  });
+  console.log('  ' + ciclo.titulos.map(t => t.slice(0, 18)).join(' > ') + ' > ' + (ciclo.titulos[0] || '').slice(0, 18));
+  ok(ciclo.hay === 1, 'detecta que te has contradicho');
+  ok(ciclo.titulos.length === 3, 'y dice cuáles son las tres');
+  ok(ciclo.quedanDuelos === 0, 'no quedan comparaciones: están todas hechas, pero se contradicen');
+
+  await p.evaluate(() => App.render());
+  await p.waitForTimeout(300);
+  const aviso = await p.evaluate(() => {
+    const n = document.querySelector('.duelo-aviso--ciclo');
+    return n ? { texto: n.textContent.replace(/\s+/g, ' ').trim(), boton: !!n.querySelector('[data-accion="rehacer-ciclo"]') } : null;
+  });
+  console.log('  ' + (aviso ? aviso.texto.slice(0, 150) : '(no sale aviso)'));
+  ok(!!aviso, 'el ranking lo avisa');
+  ok(aviso && /contradicho/.test(aviso.texto), 'diciendo que te has contradicho');
+  ok(aviso && /por t[ií]tulo/.test(aviso.texto), 'y que mientras tanto van por título');
+  ok(aviso && aviso.boton, 'con un botón para compararlas otra vez');
+
+  const rehecho = await p.evaluate(ids => {
+    const n = D.olvidarDuelos(ids);
+    return {
+      borradas: n,
+      pendientes: D.duelosPendientes(),
+      contradicciones: D.contradicciones().length,
+      desempates: ids.map(id => D.serie(id).valoracion.desempate),
+      duelos: ids.map(id => D.serie(id).valoracion.duelos)
+    };
+  }, ciclo.ids);
+  console.log('  tras rehacer: ' + rehecho.borradas + ' borradas · quedan ' + rehecho.pendientes +
+              ' por comparar · desempates ' + JSON.stringify(rehecho.desempates));
+  ok(rehecho.borradas === 3, 'el botón borra las tres comparaciones');
+  ok(rehecho.pendientes === 3, 'y vuelven a estar las tres pendientes');
+  ok(rehecho.contradicciones === 0, 'ya no hay contradicción que avisar');
+  ok(rehecho.desempates.every(d => d === 0), 'y el desempate vuelve a cero: no quedan ventajas fantasma');
+  ok(rehecho.duelos.every(d => d === 0), 'ni contadores de duelos que ya no constan');
+
   // Y hasta el final: resolviendo lo que ofrezca, se acaba quedando sin nada.
   const vueltas = await p.evaluate(() => {
     let n = 0, d;

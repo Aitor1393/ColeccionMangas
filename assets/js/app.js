@@ -408,6 +408,15 @@
       F.duelo(D.duelo());
     },
 
+    // Se olvidan los enfrentamientos de ese trío y se vuelve a preguntar.
+    'rehacer-ciclo': function (el) {
+      var ids = (el.dataset.ids || '').split(',').filter(Boolean);
+      var n = D.olvidarDuelos(ids);
+      App.render();
+      U.aviso(U.plural(n, 'comparación borrada', 'comparaciones borradas') + ': a repetirlas', 'ok');
+      F.duelo(D.duelo());
+    },
+
     'relectura-empezar': function (el) {
       D.empezarRelectura(el.dataset.serieId);
       refrescarModalSerie();

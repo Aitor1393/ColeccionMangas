@@ -425,6 +425,71 @@
     return n;
   };
 
+  /**
+   * Un ciclo entre tres series de la misma nota: dijiste que A gana a B, B a C
+   * y C a A. Es una contradicción, y con ella el orden no se puede deducir de
+   * lo que has dicho.
+   *
+   * Los gustos hacen esto de verdad —no es un fallo tuyo— pero hay que decirlo
+   * en vez de caer al orden alfabético en silencio, que era lo que pasaba.
+   *
+   * @returns {Array|null} las tres series, en el orden del ciclo.
+   */
+  D.cicloEn = function (grupo) {
+    var gana = function (a, b) { return a.valoracion.enfrentamientos[b.id] === 1; };
+    for (var i = 0; i < grupo.length; i++) {
+      for (var j = 0; j < grupo.length; j++) {
+        for (var k = 0; k < grupo.length; k++) {
+          if (i === j || j === k || i === k) continue;
+          if (gana(grupo[i], grupo[j]) && gana(grupo[j], grupo[k]) && gana(grupo[k], grupo[i])) {
+            return [grupo[i], grupo[j], grupo[k]];
+          }
+        }
+      }
+    }
+    return null;
+  };
+
+  /** Todas las contradicciones que haya, una por grupo de nota. */
+  D.contradicciones = function () {
+    var porNota = {};
+    D.ranking().forEach(function (s) {
+      var k = String(D.notaDe(s));
+      (porNota[k] = porNota[k] || []).push(s);
+    });
+    var salida = [];
+    Object.keys(porNota).forEach(function (k) {
+      if (porNota[k].length < 3) return;
+      var ciclo = D.cicloEn(porNota[k]);
+      if (ciclo) salida.push({ nota: Number(k), ciclo: ciclo });
+    });
+    return salida;
+  };
+
+  /**
+   * Borra los enfrentamientos entre esas series para poder compararlas otra vez.
+   *
+   * Se deshace también lo que sumaron al desempate: si no, quedarían con
+   * ventajas de duelos que ya no constan en ninguna parte.
+   */
+  D.olvidarDuelos = function (ids) {
+    var series = ids.map(D.serie).filter(Boolean);
+    var n = 0;
+    series.forEach(function (a) {
+      series.forEach(function (b) {
+        if (a === b) return;
+        var r = a.valoracion.enfrentamientos[b.id];
+        if (r === undefined) return;
+        a.valoracion.desempate -= r;
+        a.valoracion.duelos = Math.max(0, a.valoracion.duelos - 1);
+        delete a.valoracion.enfrentamientos[b.id];
+        n++;
+      });
+    });
+    if (n) D.guardar();
+    return n / 2;      // cada enfrentamiento está apuntado en las dos
+  };
+
   /** ¿Ya se han enfrentado estas dos? Se apunta en ambas, así que basta una. */
   D.yaSeEnfrentaron = function (a, b) {
     return (a.valoracion.enfrentamientos[b.id] !== undefined) ||

@@ -553,6 +553,23 @@
         '</div>';
     }
 
+    // Las contradicciones van antes que el duelo: si te has contradicho, eso es
+    // lo primero que hay que contarte.
+    if (!porDisfrute) {
+      D.contradicciones().forEach(function (c) {
+        var t = c.ciclo.map(function (s) { return '<strong>' + U.esc(s.titulo) + '</strong>'; });
+        html += '<div class="duelo-aviso duelo-aviso--ciclo">' +
+          '<span>🔄 Te has contradicho con las de ' + U.esc(String(c.nota)) + ': dijiste que ' +
+            t[0] + ' es mejor que ' + t[1] + ', que ' + t[1] + ' es mejor que ' + t[2] +
+            ' y que ' + t[2] + ' es mejor que ' + t[0] + '. ' +
+            '<span class="ayuda">Así no hay orden posible, y mientras tanto van por título.</span>' +
+          '</span>' +
+          '<button class="btn btn--pequeno" data-accion="rehacer-ciclo" data-ids="' +
+            U.esc(c.ciclo.map(function (s) { return s.id; }).join(',')) + '">Compararlas otra vez</button>' +
+        '</div>';
+      });
+    }
+
     // El duelo solo aparece cuando de verdad hay un empate que romper.
     if (duelo && !porDisfrute) {
       var quedan = D.duelosPendientes();

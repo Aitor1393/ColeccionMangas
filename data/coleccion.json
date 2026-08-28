@@ -1345,7 +1345,21 @@
       "mangadexId": "",
       "listadomangaId": "6087",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 7,
+          "personajes": 7,
+          "dibujo": 8,
+          "ritmo": 5,
+          "final": 1
+        },
+        "disfrute": 4,
+        "desempate": 0,
+        "duelos": 0,
+        "enfrentamientos": {},
+        "notas": "Serie incompleta que te deja una sensación de lo que podría ser y no fue una lástima",
+        "fecha": "2026-08-29"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",

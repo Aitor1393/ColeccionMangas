@@ -625,7 +625,7 @@
           (aparte ? '<span class="critica critica--aparte">' + aparte + '</span>' : '') +
         '</div>' +
       '</div>' +
-      '<span class="nota">' + (destacada === null || destacada === undefined ? '—' : destacada) + '</span>' +
+      '<span class="puntuacion">' + (destacada === null || destacada === undefined ? '—' : destacada) + '</span>' +
       '<button class="btn btn--pequeno" data-accion="valorar" data-serie-id="' + U.esc(serie.id) + '">Cambiar</button>' +
     '</div>';
   }

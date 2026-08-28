@@ -118,6 +118,14 @@ main { padding: 28px 0 60px; }
 .vista__cabecera { display: flex; align-items: flex-end; gap: 16px; flex-wrap: wrap; margin-bottom: 22px; }
 .vista__cabecera p { margin: 0; color: var(--texto-2); font-size: .92rem; }
 .vista__cabecera .crece { flex: 1; }
+/* En el móvil, «flex: 1» deja el texto en una columna estrechísima al lado del
+   conmutador —el de «Por nota / Por disfrute» se comía media pantalla y la
+   presentación salía a cuatro palabras por línea—. Con base 100% ocupa el ancho
+   entero y lo que venga detrás baja a su propia línea. */
+@media (max-width: 620px) {
+  .vista__cabecera { align-items: stretch; }
+  .vista__cabecera .crece { flex: 1 1 100%; }
+}
 
 .seccion { margin-bottom: 38px; }
 .seccion__titulo { display: flex; align-items: center; gap: 10px; margin-bottom: 14px; }
@@ -328,7 +336,11 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
   font-variant-numeric: tabular-nums; font-weight: 700; color: var(--texto-3);
   width: 2.2em; text-align: right; font-size: .95rem; flex: none;
 }
-.fila--ranking .nota {
+/* «puntuacion», no «nota»: esa clase ya es la de los avisos emergentes de la
+   esquina, y la fila se llevaba su relleno, su borde y su barra naranja. Con
+   box-sizing: border-box, esos 36 px de relleno y borde no cabían en la caja y
+   el número se salía. Antes de bautizar una clase, mira que no exista. */
+.fila--ranking .puntuacion {
   font-variant-numeric: tabular-nums; font-weight: 700; font-size: 1.25rem;
   width: 2.6em; text-align: right; flex: none;
 }
@@ -389,7 +401,7 @@ label { display: block; font-size: .8rem; font-weight: 600; color: var(--texto-2
      móvil no cabe todo y el «Cambiar» es lo único que sobra. */
   .fila--ranking .btn { display: none; }
   .puesto { min-width: 1.6em; font-size: .85rem; }
-  .fila--ranking .nota { font-size: 1.1rem; width: 2.4em; }
+  .fila--ranking .puntuacion { font-size: 1.1rem; width: 2.4em; }
   .critica { margin-right: 7px; font-size: .78rem; }
 }
 

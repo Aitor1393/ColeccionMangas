@@ -72,7 +72,8 @@ const BASE = 'http://localhost:8777/';
     await p.click('[data-accion="limpiar-filtros"]');
     await p.waitForTimeout(500);
     const n = await p.locator('.serie').count();
-    const total = await p.evaluate(() => D.coleccion.series.length);
+    // Las que la biblioteca enseña sin ningún filtro: las deseadas no están.
+    const total = await p.evaluate(() => D.coleccion.series.filter(s => !s.deseada).length);
     console.log('      → vuelven ' + n + ' de ' + total + ' series');
     if (await p.locator('.contador-filtros').count()) throw new Error('sigue el contador');
     if (await p.locator('[data-accion="limpiar-filtros"]').count()) throw new Error('sigue el botón de limpiar');

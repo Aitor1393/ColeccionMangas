@@ -100,7 +100,10 @@ const BASE = 'http://localhost:8777/';
     // creada, sin tomos, no es ni comprada ni leída. Se comparan con lo que
     // dice el modelo, no entre ellos.
     const esperado = await p.evaluate(() => {
-      const st = D.coleccion.series.map(s => D.statsSerie(s));
+      // Sobre las que la biblioteca enseña, no sobre todas las del JSON: las
+      // deseadas no salen ahí, y comparar una cosa con la otra no cuadra.
+      const visibles = D.coleccion.series.filter(s => !s.deseada);
+      const st = visibles.map(s => D.statsSerie(s));
       return {
         compradas: st.filter(x => x.tengo).length,
         leidas: st.filter(x => !x.tengo && x.leidosTotal).length,

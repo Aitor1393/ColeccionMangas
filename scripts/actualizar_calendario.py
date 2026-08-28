@@ -80,7 +80,7 @@ def extraer_numeros(pagina, total=0):
 
     Cada número aparece en un bloque como:
         <td class="cen"><img class="portada" alt="Centuria nº7"/>…
-        9,00 €<br/>4 <a href="novedades.php?mes=6&ano=2026">Junio 2026</a></td>
+        9,00 €<br/>4 <a href="/novedades.php?mes=6&ano=2026">Junio 2026</a></td>
 
     El número se busca en el texto del bloque, no en el alt de la imagen: cuando
     la portada está censurada el alt es «Portada censurada» y no lleva el número.
@@ -104,7 +104,10 @@ def extraer_numeros(pagina, total=0):
         numero = int(coincidencia.group(1)) if coincidencia else 1
         precio = re.search(r'(\d+,\d{2})\s*€', bloque)
         fecha_enlace = re.search(
-            r'(?:(\d{1,2})\s*)?<a href="novedades\.php\?mes=(\d+)&(?:amp;)?ano=(\d+)"', bloque)
+            # La barra inicial es opcional: en agosto de 2026 ListadoManga pasó
+            # de «novedades.php?…» a «/novedades.php?…» y con ella obligatoria
+            # los tomos seguían saliendo, pero todos sin fecha.
+            r'(?:(\d{1,2})\s*)?<a href="/?novedades\.php\?mes=(\d+)&(?:amp;)?ano=(\d+)"', bloque)
 
         fecha, aproximada = None, False
         if fecha_enlace:
@@ -440,6 +443,20 @@ def main():
         f.write('\n')
     log('\nEscrito %s (%d colecciones, %d sugerencias, %d fallos).'
         % (os.path.relpath(SALIDA, RAIZ), len(colecciones), len(sugerencias), fallos))
+
+    # Traer los tomos pero ninguna fecha es la forma silenciosa de romperse:
+    # la web se queda sin Próximas compras ni Próximas publicaciones y nada lo
+    # dice. Pasó en agosto de 2026, cuando ListadoManga añadió una barra a los
+    # enlaces de novedades.php. Un catálogo entero sin una sola fecha no es un
+    # catálogo sin novedades: es un parseo roto.
+    con_numeros = sum(1 for c in colecciones.values() if c.get('numeros'))
+    con_fecha = sum(1 for c in colecciones.values()
+                    for n in c.get('numeros', []) if n.get('fecha'))
+    if con_numeros and not con_fecha:
+        log('\n¡AVISO! %d colecciones con tomos y NINGUNA con fecha. '
+            'Lo normal es que ListadoManga haya cambiado la ficha.' % con_numeros)
+        return 1
+    log('  %d tomos con fecha' % con_fecha)
 
     # Solo es un error si no se pudo traer absolutamente nada.
     return 1 if fallos and not colecciones else 0

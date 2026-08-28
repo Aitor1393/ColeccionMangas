@@ -24,7 +24,9 @@ const SHOT = CAPTURAS + '51-lectura';
 
   /* ---------- El reparto es exhaustivo y sin solapes ---------- */
   const reparto = await p.evaluate(() => {
-    const s = D.coleccion.series;
+    // Las deseadas no salen en la biblioteca, así que tampoco entran en el
+    // reparto con el que se compara lo que se ve.
+    const s = D.coleccion.series.filter(x => !x.deseada);
     const de = m => s.filter(x => D.encajaLectura(x, m));
     const c = de('completas'), e = de('empezadas'), n = de('sinEmpezar');
     return {

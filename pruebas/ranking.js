@@ -122,7 +122,7 @@ const SHOT = CAPTURAS + '49-ranking';
   });
   await p.waitForSelector('.fila--ranking');
   const filas = await p.locator('.fila--ranking').allTextContents();
-  const notas = await p.evaluate(() => Array.from(document.querySelectorAll('.fila--ranking .nota')).map(n => n.textContent.trim()));
+  const notas = await p.evaluate(() => Array.from(document.querySelectorAll('.fila--ranking .puntuacion')).map(n => n.textContent.trim()));
   console.log('  Notas en orden: ' + notas.join(' > '));
   const num = notas.map(Number);
   ok(num.every((n, i) => i === 0 || n <= num[i - 1]), 'ordena de mayor a menor nota, sin subir nunca');
@@ -156,10 +156,10 @@ const SHOT = CAPTURAS + '49-ranking';
     const caja = (f, sel) => { const r = f.querySelector(sel).getBoundingClientRect(); return [Math.round(r.left), Math.round(r.right)]; };
     return {
       n: filas.length,
-      notas: [...new Set(filas.map(f => caja(f, '.nota').join(':')))],
+      notas: [...new Set(filas.map(f => caja(f, '.puntuacion').join(':')))],
       puestos: [...new Set(filas.map(f => caja(f, '.puesto').join(':')))],
       conDiez: filas.filter(f => /(^|[^\d])10([^\d]|$)/.test(f.querySelector('.fila__sub').textContent)).length,
-      global10: filas.filter(f => f.querySelector('.nota').textContent.trim() === '10').length,
+      global10: filas.filter(f => f.querySelector('.puntuacion').textContent.trim() === '10').length,
       puestoLargo: filas.filter(f => f.querySelector('.puesto').textContent.trim().length > 1).length,
       desborda: document.documentElement.scrollWidth > document.documentElement.clientWidth
     };
@@ -175,11 +175,45 @@ const SHOT = CAPTURAS + '49-ranking';
   // Y lo mismo en el móvil, donde el botón «Cambiar» no está.
   await p.setViewportSize({ width: 390, height: 850 });
   await p.waitForTimeout(300);
+  // Que el número quepa dentro de su fila. Se salía porque la clase se llamaba
+  // «nota», que ya era la de los avisos emergentes, y heredaba su relleno de
+  // 11x16 y su borde: no cabía en la caja.
+  const dentro = await p.evaluate(() => Array.from(document.querySelectorAll('.fila--ranking')).map(f => {
+    const n = f.querySelector('.puntuacion');
+    const cs = getComputedStyle(n), cf = getComputedStyle(f);
+    const nb = n.getBoundingClientRect(), fb = f.getBoundingClientRect();
+    return {
+      sale: Math.round(nb.right - (fb.right - parseFloat(cf.paddingRight))),
+      relleno: parseFloat(cs.paddingLeft) + parseFloat(cs.paddingRight),
+      borde: parseFloat(cs.borderLeftWidth),
+      cabe: n.scrollWidth <= Math.ceil(nb.width)
+    };
+  }));
+  console.log('  se sale ' + [...new Set(dentro.map(d => d.sale))].join(',') + 'px · ' +
+    'relleno ' + [...new Set(dentro.map(d => d.relleno))].join(',') + 'px');
+  ok(dentro.every(d => d.sale <= 0), 'la nota no se sale de su fila');
+  ok(dentro.every(d => d.relleno === 0 && d.borde === 0),
+     'y no hereda relleno ni borde de ninguna otra clase');
+  ok(dentro.every(d => d.cabe), 'el número cabe en su caja, sin recortarse');
+
   // Los dos bordes, no solo el derecho: ese cuadra igual aunque la caja se
   // ensanche con el contenido, y era justo lo que fallaba.
-  const movil = await p.evaluate(() => [...new Set(Array.from(document.querySelectorAll('.fila--ranking .nota'))
+  const movil = await p.evaluate(() => [...new Set(Array.from(document.querySelectorAll('.fila--ranking .puntuacion'))
     .map(n => { const r = n.getBoundingClientRect(); return Math.round(r.left) + ':' + Math.round(r.right); }))]);
   ok(movil.length === 1, 'en móvil también: ' + movil.join(' / '));
+
+  // Y el texto de presentación, a ancho completo: con el conmutador al lado se
+  // quedaba en una columna de cuatro palabras por línea.
+  const cab = await p.evaluate(() => {
+    const c = document.querySelector('.vista__cabecera');
+    const crece = c.querySelector('.crece');
+    return {
+      ancho: Math.round(crece.getBoundingClientRect().width),
+      dentro: Math.round(c.getBoundingClientRect().width)
+    };
+  });
+  console.log('  cabecera en móvil: el texto ocupa ' + cab.ancho + ' de ' + cab.dentro + 'px');
+  ok(cab.ancho >= cab.dentro * 0.9, 'el texto de la cabecera usa el ancho entero');
   await p.setViewportSize({ width: 1280, height: 1100 });
   await p.waitForTimeout(300);
 

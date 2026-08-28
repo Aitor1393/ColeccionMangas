@@ -51,7 +51,20 @@
       "mangadexId": "",
       "listadomangaId": "3000",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 10,
+          "personajes": 9,
+          "dibujo": 10,
+          "ritmo": 9,
+          "final": 8
+        },
+        "disfrute": 10,
+        "desempate": 0,
+        "duelos": 0,
+        "notas": "De los mejores villanos construidos y con un protagonista con mucha personalidad y poder.",
+        "fecha": "2026-08-28"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",

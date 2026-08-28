@@ -273,6 +273,28 @@ const SHOT = CAPTURAS + '49-ranking';
   ok(duelos.length === 2 && duelos.every(x => x.du >= 1),
      'y queda apuntado en las dos que se enfrentaron');
 
+  // Lo que fallaba: con dos series a la misma nota, resolver el duelo solo
+  // subía los contadores y la pareja volvía a salir, una y otra vez.
+  const repetido = await p.evaluate(([a, b]) => {
+    const d = D.duelo();
+    if (!d) return { hay: false };
+    const nombres = d.map(s => s.titulo);
+    return { hay: true, mismos: nombres.includes(a) && nombres.includes(b), nombres };
+  }, [tGana, tPierde]);
+  ok(!repetido.hay || !repetido.mismos,
+     'y NO vuelve a preguntar por la misma pareja' +
+     (repetido.hay ? ' (ahora ofrece: ' + repetido.nombres.join(' vs ') + ')' : ''));
+
+  // Y hasta el final: resolviendo lo que ofrezca, se acaba quedando sin nada.
+  const vueltas = await p.evaluate(() => {
+    let n = 0, d;
+    while ((d = D.duelo()) && n < 200) { D.resolverDuelo(d[0].id, d[1].id); n++; }
+    return { n, quedan: !!D.duelo(), valoradas: D.ranking().length };
+  });
+  console.log(`  resolviendo todo lo que ofrece: ${vueltas.n} duelos sobre ${vueltas.valoradas} series valoradas`);
+  ok(!vueltas.quedan, 'resolviéndolos se termina: no es un bucle infinito');
+  ok(vueltas.n < vueltas.valoradas, 'y no pide más duelos que series, que sería absurdo');
+
   /* ---------- Quitar la nota ---------- */
   console.log('Quitar:');
   await p.evaluate(id => App.abrirSerie(id), idA);

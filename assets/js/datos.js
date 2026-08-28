@@ -357,31 +357,31 @@
   };
 
   /**
-   * Una pareja empatada que desempatar, la que menos duelos lleve.
+   * Una pareja que el ranking no sabe ordenar, para que lo digas tú.
    *
-   * Solo se enfrenta a series con la MISMA nota: comparar un 9 con un 6 no
-   * aporta nada —ya sabes cuál gana— y el resultado no debe mover el ranking.
+   * Se agrupa por nota Y por desempate, que juntos son lo que decide el orden.
+   * Dos series con la misma nota pero distinto desempate ya están ordenadas: el
+   * duelo entre ellas está resuelto y preguntarlo otra vez no aporta nada.
    *
-   * @returns {Array|null} las dos series, o null si no hay empates.
+   * Antes se agrupaba solo por nota y se elegía la pareja con menos duelos, y
+   * con un grupo de dos eso era un bucle: resolverlo subía los contadores pero
+   * la pareja seguía siendo la única candidata, así que volvía a salir. Rurouni
+   * Kenshin y Shaman King llegaron a enfrentarse tres veces.
+   *
+   * @returns {Array|null} las dos series, o null si no hay nada que desempatar.
    */
   D.duelo = function () {
-    var porNota = {};
+    var grupos = {};
     D.ranking().forEach(function (s) {
-      var k = String(D.notaDe(s));
-      (porNota[k] = porNota[k] || []).push(s);
+      var k = D.notaDe(s) + '|' + s.valoracion.desempate;
+      (grupos[k] = grupos[k] || []).push(s);
     });
-    var mejor = null;
-    Object.keys(porNota).forEach(function (k) {
-      var grupo = porNota[k];
-      if (grupo.length < 2) return;
-      for (var i = 0; i < grupo.length; i++) {
-        for (var j = i + 1; j < grupo.length; j++) {
-          var peso = grupo[i].valoracion.duelos + grupo[j].valoracion.duelos;
-          if (!mejor || peso < mejor.peso) mejor = { peso: peso, par: [grupo[i], grupo[j]] };
-        }
-      }
+    var par = null;
+    Object.keys(grupos).forEach(function (k) {
+      // El primero que salga vale: dentro del grupo son indistinguibles.
+      if (!par && grupos[k].length >= 2) par = [grupos[k][0], grupos[k][1]];
     });
-    return mejor ? mejor.par : null;
+    return par;
   };
 
   /** Apunta quién ganó un duelo. */

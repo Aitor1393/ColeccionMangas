@@ -534,13 +534,27 @@
           return resultado;
         }
 
-        // ¿Se ha publicado algo nuevo desde que empezaste a editar?
+        D.coleccion = D.normalizarColeccion(local);
+
+        // Si la copia local ya no dice nada que no esté publicado, sobra: se
+        // retira y se sigue limpio. Es lo que pasa cuando vuelves después de
+        // publicar y el despliegue ya ha llegado.
+        if (D.numCambios() === 0) {
+          U.borrarLocal(CLAVE_LOCAL);
+          U.borrarLocal(CLAVE_BASE);
+          D.coleccion = D.clonar(D.publicada);
+          D.sucia = false;
+          notificar();
+          return resultado;
+        }
+
+        // ¿Se ha publicado algo nuevo desde que empezaste a editar? Se guarda
+        // una copia por si acaso; Ajustes ofrece restaurarla.
         if (selloGuardado && D.publicada.actualizado && selloGuardado !== D.publicada.actualizado) {
           U.guardarLocal(CLAVE_COPIA, local);
           resultado.conflicto = true;
         }
 
-        D.coleccion = D.normalizarColeccion(local);
         D.sucia = true;
         notificar();
         return resultado;
@@ -549,6 +563,40 @@
   };
 
   D.clonar = function (obj) { return JSON.parse(JSON.stringify(obj)); };
+
+  /* ---------- Copia de seguridad automática ---------- */
+
+  /**
+   * La copia que se guarda cuando el repositorio se adelanta a tus cambios.
+   *
+   * Existía desde el principio pero no la leía nadie: se escribía y ahí se
+   * quedaba, así que no servía para lo único que sirve una copia. Ajustes la
+   * ofrece cuando la hay.
+   */
+  D.copiaGuardada = function () {
+    var bruta = U.leerLocal(CLAVE_COPIA, null);
+    if (!bruta) return null;
+    var c = D.normalizarColeccion(bruta);
+    return {
+      actualizado: c.actualizado,
+      series: c.series.length,
+      tomos: c.series.reduce(function (n, s) { return n + s.tomos.length; }, 0),
+      valoradas: c.series.filter(function (s) { return D.notaDe(s) !== null; }).length,
+      coleccion: c
+    };
+  };
+
+  /** Vuelve a esa copia. Lo de ahora queda como copia, por si acaso. */
+  D.restaurarCopia = function () {
+    var copia = D.copiaGuardada();
+    if (!copia) return false;
+    U.guardarLocal(CLAVE_COPIA, D.clonar(D.coleccion));
+    D.coleccion = copia.coleccion;
+    D.guardar();
+    return true;
+  };
+
+  D.descartarCopia = function () { U.borrarLocal(CLAVE_COPIA); };
 
   /* ---------- Guardado local ---------- */
 
@@ -560,12 +608,23 @@
     notificar();
   };
 
-  /** Marca los cambios locales como ya publicados en el repo. */
+  /**
+   * Marca los cambios locales como ya publicados en el repo.
+   *
+   * La copia local NO se borra aquí, y esto importa: GitHub Pages tarda cerca
+   * de un minuto en servir el JSON nuevo, y si la página se recarga en esa
+   * ventana —en el móvil basta con cambiar de aplicación y volver— no habría
+   * copia local y la web caería al JSON viejo. Lo que acabas de publicar
+   * desaparecería de la pantalla, y si entonces siguieras editando y volvieras
+   * a publicar, se perdería de verdad.
+   *
+   * La copia se retira sola al cargar, en cuanto lo publicado la alcanza.
+   */
   D.marcarPublicada = function () {
     D.publicada = D.clonar(D.coleccion);
     D.sucia = false;
-    U.borrarLocal(CLAVE_LOCAL);
-    U.borrarLocal(CLAVE_BASE);
+    U.guardarLocal(CLAVE_LOCAL, D.coleccion);
+    U.guardarLocal(CLAVE_BASE, D.coleccion.actualizado);
     notificar();
   };
 

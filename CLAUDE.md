@@ -127,6 +127,12 @@ Claves de `localStorage` (todas con prefijo `cm:`):
 `coleccion` `base` `copia` `tema` `github` `proxy` `fichas` `filtrosBiblioteca`
 `resumenPlegado` `vistaProximas` `vistaCompras` `vistaRanking`
 
+**Al publicar NO se borra la copia local.** GitHub Pages tarda cerca de un
+minuto en servir el JSON nuevo; si la página se recarga en esa ventana —en el
+móvil basta con cambiar de app y volver— sin copia local la web cae al JSON
+viejo y lo recién publicado desaparece de la pantalla. La copia se retira sola
+al cargar, cuando `D.numCambios()` da 0.
+
 **`D.numCambios()` decide si aparece el aviso de «cambios sin publicar».** Si
 añades algo al JSON que no esté dentro de `series`, tienes que compararlo ahí
 también, o el usuario no podrá publicarlo. Ya pasó con `ajustes` y con `compras`.
@@ -262,12 +268,12 @@ seguidos y sin huecos) sin serlo.
 
 ## Probar los cambios
 
-Hay **20 pruebas en `pruebas/`** que abren la web en un Chromium de verdad. No
+Hay **21 pruebas en `pruebas/`** que abren la web en un Chromium de verdad. No
 las rehagas: están versionadas.
 
 ```bash
 python3 -m http.server 8777          # desde la raíz, en otra terminal
-node pruebas/ejecutar.js             # las 20, unos 3 minutos
+node pruebas/ejecutar.js             # las 21, unos 3 minutos
 node pruebas/ejecutar.js ranking     # solo las que contengan «ranking»
 ```
 

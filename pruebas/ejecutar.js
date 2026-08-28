@@ -24,7 +24,7 @@ const TIEMPO_MAX = Number(process.env.TIEMPO_MAX || 300000);
 // algo básico se ha roto.
 const ORDEN = ['humo', 'tomocero', 'lectura', 'filtros', 'abandonadas', 'titulos',
   'resumenorden', 'compras', 'precios', 'coma', 'arreglos', 'calendario', 'picker',
-  'clave', 'frescura', 'portadas', 'ranking', 'relectura', 'capitulos', 'deseados'];
+  'clave', 'frescura', 'portadas', 'ranking', 'relectura', 'capitulos', 'deseados', 'publicar'];
 
 const filtro = process.argv[2];
 const todas = fs.readdirSync(DIR)

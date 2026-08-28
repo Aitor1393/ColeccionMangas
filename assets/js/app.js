@@ -458,6 +458,28 @@
       U.aviso('«' + s.titulo + '» pasa a la colección', 'ok');
     },
 
+    'restaurar-copia': function () {
+      var c = D.copiaGuardada();
+      if (!c) return;
+      if (!confirm('¿Volver a la copia del ' + U.fechaLarga(c.actualizado) + '? ' +
+                   'Lo que tienes ahora quedará guardado como copia.')) return;
+      D.restaurarCopia();
+      U.aviso('Copia restaurada', 'ok');
+      App.render();
+    },
+
+    'descargar-copia': function () {
+      var c = D.copiaGuardada();
+      if (c) U.descargarJSON('coleccion-copia-' + c.actualizado + '.json', c.coleccion);
+    },
+
+    'descartar-copia': function () {
+      if (!confirm('¿Descartar la copia guardada? No se puede deshacer.')) return;
+      D.descartarCopia();
+      U.aviso('Copia descartada');
+      App.render();
+    },
+
     'modo-ranking': function (el) {
       V.modoRanking = el.dataset.modo;
       U.guardarLocal('cm:vistaRanking', V.modoRanking);

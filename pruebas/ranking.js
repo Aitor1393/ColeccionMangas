@@ -65,7 +65,9 @@ const SHOT = CAPTURAS + '49-ranking';
   console.log('  Criterios: ' + crit.join(', '));
   ok(crit.length === 5, 'son cinco criterios');
 
-  const idA = await p.evaluate(() => D.valorables()[0].id);
+  // Una SIN valorar: si ya tuviera nota, el formulario abriría relleno —con el
+  // final incluido— y la media saldría sobre cinco criterios, no sobre cuatro.
+  const idA = await p.evaluate(() => (D.sinValorar()[0] || D.valorables()[0]).id);
   const tituloA = await p.evaluate(id => D.serie(id).titulo, idA);
   await p.evaluate(id => App.abrirSerie(id), idA);
   await p.waitForSelector('.tomos');
@@ -222,7 +224,10 @@ const SHOT = CAPTURAS + '49-ranking';
   await p.waitForTimeout(400);
   const porDis = await p.locator('.fila--ranking').allTextContents();
   console.log('  Por disfrute, el primero: ' + porDis[0].replace(/\s+/g, ' ').slice(0, 60));
-  ok(porDis[0].indexOf(tituloA) !== -1, 'por disfrute manda otro orden (el 10 se pone primero)');
+  const disfrutes = await p.evaluate(() => D.ranking(true).map(s => s.valoracion.disfrute));
+  ok(disfrutes.every((d, i) => i === 0 || d <= disfrutes[i - 1]),
+     'por disfrute ordena por disfrute, sin subir nunca: ' + disfrutes.join(' > ').slice(0, 60));
+  ok(disfrutes[0] === Math.max.apply(null, disfrutes), 'y el mayor va primero');
   await p.reload({ waitUntil: 'networkidle' });
   await p.click('a[data-vista="ranking"]');
   await p.waitForSelector('.fila--ranking');
@@ -250,8 +255,10 @@ const SHOT = CAPTURAS + '49-ranking';
   console.log('  Antes:   ' + antes.slice(2).join(' | '));
   console.log('  Después: ' + despues.slice(2).join(' | '));
   const tPierde = par[0] === tGana ? par[1] : par[0];
-  const iGana = despues.findIndex(t => t.indexOf(tGana) !== -1);
-  const iPierde = despues.findIndex(t => t.indexOf(tPierde) !== -1);
+  // Exactos, no «contiene»: «Another» es prefijo de «Another 0» y casaría con
+  // la fila equivocada.
+  const iGana = despues.indexOf(tGana);
+  const iPierde = despues.indexOf(tPierde);
   ok(iGana >= 0 && iPierde >= 0 && iGana < iPierde,
      '«' + tGana + '» gana y queda por delante de «' + tPierde + '» (' + iGana + ' < ' + iPierde + ')');
 
@@ -260,7 +267,11 @@ const SHOT = CAPTURAS + '49-ranking';
   console.log('  ' + tras.map(x => `${x.t.slice(0,14)}=${x.n}(${x.d >= 0 ? '+' : ''}${x.d})`).join(' '));
   ok(tras.every((x, i) => i === 0 || x.n <= tras[i - 1].n),
      'el duelo NO adelanta a quien tiene mejor nota: el orden por nota sigue intacto');
-  ok(tras.filter(x => x.du > 0).length === 2, 'y solo las dos del duelo lo tienen apuntado');
+  // El incremento de las dos, no cuántas tienen duelos: la colección publicada
+  // ya trae duelos de antes.
+  const duelos = tras.filter(x => x.t === tGana || x.t === tPierde);
+  ok(duelos.length === 2 && duelos.every(x => x.du >= 1),
+     'y queda apuntado en las dos que se enfrentaron');
 
   /* ---------- Quitar la nota ---------- */
   console.log('Quitar:');

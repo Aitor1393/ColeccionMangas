@@ -883,6 +883,32 @@
   /* ============================================================
      Vista: Ajustes
      ============================================================ */
+  /**
+   * La copia automática, cuando la hay.
+   *
+   * Solo aparece si existe: es un cabo suelto que la web guardó al detectar que
+   * el repositorio se había adelantado, y hasta ahora no había forma de verlo.
+   */
+  function tarjetaCopia() {
+    var c = D.copiaGuardada();
+    if (!c) return '';
+    return '<div class="tarjeta">' +
+      '<h3>⚠ Hay una copia guardada de tus cambios</h3>' +
+      '<p>La web la guardó cuando el repositorio se adelantó a lo que estabas ' +
+      'editando en este dispositivo. Es del <strong>' + U.esc(U.fechaLarga(c.actualizado)) +
+      '</strong> y tiene ' + U.plural(c.series, 'serie') + ', ' + U.plural(c.tomos, 'tomo') +
+      ' y ' + U.plural(c.valoradas, 'serie valorada', 'series valoradas') + '.<br>' +
+      'Ahora mismo tienes ' + U.plural(D.coleccion.series.length, 'serie') + ' y ' +
+      U.plural(D.ranking().length, 'serie valorada', 'series valoradas') + '. ' +
+      'Al restaurarla, lo de ahora pasa a ser la copia.</p>' +
+      '<div class="tarjeta__acciones">' +
+        '<button class="btn btn--primario" data-accion="restaurar-copia">Restaurar esa copia</button>' +
+        '<button class="btn" data-accion="descargar-copia">Descargarla como JSON</button>' +
+        '<button class="btn btn--fantasma" data-accion="descartar-copia">Descartarla</button>' +
+      '</div>' +
+    '</div>';
+  }
+
   V.ajustes = function () {
     var cfg = GH.config();
     var g = D.statsGlobales();
@@ -988,6 +1014,8 @@
           '<button class="btn btn--primario" data-accion="guardar-precios-ajustes">Guardar</button>' +
         '</div>' +
       '</div>' +
+
+      tarjetaCopia() +
 
       '<div class="tarjeta">' +
         '<h3>Copia de seguridad</h3>' +

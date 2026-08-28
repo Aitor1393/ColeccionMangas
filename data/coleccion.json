@@ -5077,9 +5077,9 @@
         },
         {
           "numero": 11,
-          "tengo": false,
+          "tengo": true,
           "leido": false,
-          "fechaCompra": "",
+          "fechaCompra": "2026-08-28",
           "precio": null,
           "notas": ""
         },
@@ -9589,6 +9589,40 @@
       "notas": "",
       "anadida": "2026-08-26",
       "tomos": [],
+      "proximas": []
+    },
+    {
+      "id": "4bca01b8-5ca2-4ee9-9087-87b01377aa52",
+      "titulo": "Dogsred",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Satoru Noda",
+      "editorial": "Milky Way Ediciones",
+      "demografia": "seinen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 8,
+      "portada": "",
+      "sinopsis": "Tras obtener la mejor puntuación de todos los tiempos en la final del campeonato nacional juvenil de patinaje artístico, Rô Shirakawa sufre un repentino ataque de ira que nadie es capaz de explicar. No solo lo descalifican de una competición que casi obraba en su poder, sino que es expulsado de forma indefinida del mundo del patinaje. Apodado el Príncipe Rabioso por la prensa, Rô se traslada a Tomakomai, en Hokkaido, una ciudad conocida por su pasión por el hockey sobre hielo. Allí descubre una pista de patinaje natural, formada cuando uno de los lagos de la zona se congela, ¡y que tendrá que disputarse con los temibles hermanos Genma!\n\n¡Superación, crecimiento y evolución! Arranca esta historia de redención que convierte un fracaso histórico en un nuevo motivo de alegría.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6686",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-08-28",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     }
   ]

@@ -386,7 +386,19 @@
       "mangadexId": "",
       "listadomangaId": "1594",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 10,
+          "personajes": 10,
+          "dibujo": 10,
+          "ritmo": 9
+        },
+        "disfrute": 10,
+        "desempate": 0,
+        "duelos": 0,
+        "notas": "Falta el cierre, ojalá lleguemos a verlo. Una de las mejores historias, divertida, entretenida, dura en ciertos momentos, dramática y con un mundo lleno de poderes muy originales y bien construidos.",
+        "fecha": "2026-08-28"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
@@ -774,7 +786,20 @@
       "mangadexId": "",
       "listadomangaId": "4066",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 8,
+          "personajes": 10,
+          "dibujo": 10,
+          "ritmo": 7,
+          "final": 9
+        },
+        "disfrute": 9,
+        "desempate": 2,
+        "duelos": 2,
+        "notas": "Por ahora el mejor manga histórico que he leído con una edición muy bonita.",
+        "fecha": "2026-08-28"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
@@ -912,7 +937,19 @@
       "mangadexId": "",
       "listadomangaId": "5610",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 8,
+          "personajes": 8,
+          "dibujo": 8,
+          "ritmo": 6
+        },
+        "disfrute": 9,
+        "desempate": 0,
+        "duelos": 0,
+        "notas": "Empieza algo lenta, faltan todavía tomos para poder valorarla al completo pero por ahora muy buena serie.",
+        "fecha": "2026-08-28"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
@@ -1124,7 +1161,20 @@
       "mangadexId": "",
       "listadomangaId": "3700",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 10,
+          "personajes": 10,
+          "dibujo": 10,
+          "ritmo": 10,
+          "final": 4
+        },
+        "disfrute": 10,
+        "desempate": -2,
+        "duelos": 2,
+        "notas": "De las mejores series de mi infancia, una pena que el final fuese apresurado por su cancelación. Pero es una serie que me hace recordar la nostalgia de la infancia. Me aporta paz y tranquilidad reflejando el espíritu de Bob Marley que buscaba el autor.",
+        "fecha": "2026-08-28"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",

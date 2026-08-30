@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-28",
+  "actualizado": "2026-08-30",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -11808,6 +11808,113 @@
       "descargado": "2026-08-28",
       "sinopsis": "Tras obtener la mejor puntuación de todos los tiempos en la final del campeonato nacional juvenil de patinaje artístico, Rô Shirakawa sufre un repentino ataque de ira que nadie es capaz de explicar. No solo lo descalifican de una competición que casi obraba en su poder, sino que es expulsado de forma indefinida del mundo del patinaje. Apodado el Príncipe Rabioso por la prensa, Rô se traslada a Tomakomai, en Hokkaido, una ciudad conocida por su pasión por el hockey sobre hielo. Allí descubre una pista de patinaje natural, formada cuando uno de los lagos de la zona se congela, ¡y que tendrá que disputarse con los temibles hermanos Genma!\n\r\n\n\r\n¡Superación, crecimiento y evolución! Arranca esta historia de redención que convierte un fracaso histórico en un nuevo motivo de alegría.",
       "portada": "data/portadas/6686/1.jpg"
+    },
+    "3405": {
+      "titulo": "Jigokuraku",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3405",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2020-06-19",
+          "precio": 4.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2020-08-07",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2020-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-02-05",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-04-09",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-06-11",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-08-06",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2021-10-08",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2022-01-14",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2022-04-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2022-07-08",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2022-08-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2022-11-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/3405/13.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Yûji Kaku",
+      "totalNumeros": 13,
+      "estado": "finalizada",
+      "descargado": "2026-08-30",
+      "sinopsis": "¡LLEGA EL MANGA QUE ESTÁ ARRASANDO EN JAPÓN LLENO DE NINJA Y AVENTURAS!\n\r\n\n\r\nGabimaru el vacío, conocido como el ninja más fuerte, es atrapado al intentar darse a la fuga. La verdugo Yamada Asaemon Sagiri le cuenta que puede conseguir que sea exculpado de todos sus crímenes. No obstante, para ello debe ir hasta una isla misteriosa con varios asesinos en su misma situación. En esta isla se entrelazan el infierno y el paraíso, y solo uno podrá conseguir el elixir de la vida…",
+      "portada": "data/portadas/3405/1.jpg"
     }
   },
   "sugerencias": {}

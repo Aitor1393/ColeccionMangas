@@ -385,6 +385,12 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/07/thumb_6582_albumes_big.jpeg",
    "bytes": 93265
+  },
+  "2998": {
+   "ruta": "data/portadas-serie/2998.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/p/spgma001_0.jpg",
+   "bytes": 41229
   }
  }
 }

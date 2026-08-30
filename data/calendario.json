@@ -11915,6 +11915,148 @@
       "descargado": "2026-08-30",
       "sinopsis": "¡LLEGA EL MANGA QUE ESTÁ ARRASANDO EN JAPÓN LLENO DE NINJA Y AVENTURAS!\n\r\n\n\r\nGabimaru el vacío, conocido como el ninja más fuerte, es atrapado al intentar darse a la fuga. La verdugo Yamada Asaemon Sagiri le cuenta que puede conseguir que sea exculpado de todos sus crímenes. No obstante, para ello debe ir hasta una isla misteriosa con varios asesinos en su misma situación. En esta isla se entrelazan el infierno y el paraíso, y solo uno podrá conseguir el elixir de la vida…",
       "portada": "data/portadas/3405/1.jpg"
+    },
+    "2998": {
+      "titulo": "Gantz (Maximum)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2998",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2018-08-01",
+          "precio": 16.95,
+          "aproximada": true,
+          "portada": "data/portadas/2998/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2018-09-27",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2018-11-29",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2019-01-24",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2019-03-28",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2019-05-23",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2019-07-25",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2019-09-26",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2019-11-28",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2020-01-23",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2020-05-21",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2020-07-23",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2020-09-24",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2020-11-26",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2021-02-25",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2021-04-22",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2021-06-23",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2021-08-26",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2998/18.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Hiroya Oku",
+      "totalNumeros": 18,
+      "estado": "finalizada",
+      "descargado": "2026-08-30",
+      "sinopsis": "Kurono y Katô, antiguos amigos en la escuela primaria, acaban atropellados por un tren cuando se disponían a ayudar a un borracho. Sin embargo, al cabo de un instante aparecen en un piso de aspecto anodino. Allí no están solos: otras personas que también han experimentado el instante previo a la muerte les acompañan, así como una esfera negra, Gantz, que les indica, sin dar pie a ningún tipo de discusión, que deben acabar... ¿¡con el cebollense...!? ¡¡Así empieza una batalla llena de incógnitas!!",
+      "portada": "data/portadas/2998/1.jpg"
     }
   },
   "sugerencias": {}

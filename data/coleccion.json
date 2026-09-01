@@ -10419,6 +10419,31 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "3dfaaff8-663f-4f3c-8763-67b8103e61ff",
+      "titulo": "Tokyo Ghoul",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Sui Ishida",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": true,
+      "tomosTotales": 14,
+      "portada": "",
+      "sinopsis": "¡EL MANGA DEL QUE TODO EL MUNDO HABLA! DESCUBRE POR QUÉ TODOS ESPERAN ESTA SERIE\n\nLos habitantes de Tokio viven aterrados: en las sombras de la metrópolis se ocultan horribles monstruos que se camuflan entre la multitud, cazando y devorando seres humanos. Un joven se topa con uno de estos ghouls, pero aunque consigue sobrevivir, su existencia ya no será igual...",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "1988",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-01",
+      "tomos": [],
+      "proximas": []
     }
   ]
 }

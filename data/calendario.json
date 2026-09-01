@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-08-31",
+  "actualizado": "2026-09-01",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -12057,6 +12057,281 @@
       "descargado": "2026-08-30",
       "sinopsis": "Kurono y Katô, antiguos amigos en la escuela primaria, acaban atropellados por un tren cuando se disponían a ayudar a un borracho. Sin embargo, al cabo de un instante aparecen en un piso de aspecto anodino. Allí no están solos: otras personas que también han experimentado el instante previo a la muerte les acompañan, así como una esfera negra, Gantz, que les indica, sin dar pie a ningún tipo de discusión, que deben acabar... ¿¡con el cebollense...!? ¡¡Así empieza una batalla llena de incógnitas!!",
       "portada": "data/portadas/2998/1.jpg"
+    },
+    "74": {
+      "titulo": "Air Gear",
+      "url": "https://www.listadomanga.es/coleccion.php?id=74",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2007-11-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2008-01-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2008-02-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2008-03-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2008-04-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2008-05-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2008-06-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2008-07-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2008-08-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2008-09-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2008-11-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2009-01-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2009-03-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2009-05-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2009-07-01",
+          "precio": 7.5,
+          "aproximada": true,
+          "portada": "data/portadas/74/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2009-08-28",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2009-10-29",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2009-12-11",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2010-02-26",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2010-04-16",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2010-06-25",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2010-08-27",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2010-10-29",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2010-12-10",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2011-02-25",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2011-05-27",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2011-07-22",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2011-09-23",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": "2011-11-18",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": "2012-01-20",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": "2012-03-23",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": "2012-06-22",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": "2012-09-28",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": "2012-12-05",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": "2013-03-22",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": "2013-05-24",
+          "precio": 7.5,
+          "aproximada": false,
+          "portada": "data/portadas/74/36.jpg"
+        },
+        {
+          "numero": 37,
+          "fecha": "2013-08-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/74/37.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Oh! Great",
+      "totalNumeros": 37,
+      "estado": "finalizada",
+      "descargado": "2026-09-01",
+      "sinopsis": "Disfruta de la espectacularidad del patinaje extremo de los Air Treck y del dibujo de Oh! great. Los Guns del Este se han quedado pequeños para Ikki. El “cuervo” aspira a mucho más, a tener su propio imperio (en forma de equipo de Air Treck). Para ello sabe que cuenta con Akito/Agito, Buccha, Onigiri y Kazu... ¿Cuál será la primera banda a la que se enfrenten en la Guerra de Recambios?",
+      "portada": "data/portadas/74/1.jpg"
     }
   },
   "sugerencias": {}

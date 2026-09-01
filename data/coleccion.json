@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-08-30",
+  "actualizado": "2026-09-01",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -10009,6 +10009,328 @@
           "leido": true,
           "fechaCompra": "",
           "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "eb67f032-df23-4b64-86d4-93edc3d0742a",
+      "titulo": "Air Gear",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Oh! Great",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 37,
+      "portada": "",
+      "sinopsis": "Disfruta de la espectacularidad del patinaje extremo de los Air Treck y del dibujo de Oh! great. Los Guns del Este se han quedado pequeños para Ikki. El “cuervo” aspira a mucho más, a tener su propio imperio (en forma de equipo de Air Treck). Para ello sabe que cuenta con Akito/Agito, Buccha, Onigiri y Kazu... ¿Cuál será la primera banda a la que se enfrenten en la Guerra de Recambios?",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "74",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-08-31",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 4,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 9,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 12,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 13,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 14,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 15,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 16,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 17,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 18,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 19,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.76,
+          "notas": ""
+        },
+        {
+          "numero": 20,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 21,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 22,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 23,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 24,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 25,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 26,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 27,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 28,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 29,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 30,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 31,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 32,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 33,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 34,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 35,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 36,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
+          "notas": ""
+        },
+        {
+          "numero": 37,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-08-30",
+          "precio": 7.75,
           "notas": ""
         }
       ],

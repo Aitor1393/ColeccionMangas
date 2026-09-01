@@ -415,6 +415,12 @@
    "fuente": "Ivrea",
    "origen": "https://www.editorialivrea.com/ESP/wp-content/uploads/2024/07/hanakokun00.jpg",
    "bytes": 60044
+  },
+  "1988": {
+   "ruta": "data/portadas-serie/1988.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/05/thumb_4675_albumes_big.jpeg",
+   "bytes": 73922
   }
  }
 }

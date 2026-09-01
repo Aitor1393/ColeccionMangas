@@ -12576,6 +12576,120 @@
       "descargado": "2026-09-01",
       "sinopsis": "En este tomo único se recopilan tres capítulos prototipo de Hanako-kun, el fantasma del lavabo que se publicaron en la revista Gfantasy, así como la estupenda obra de debut de AidaIro, Dear my Living Dead.",
       "portada": "data/portadas/4569/0.jpg"
+    },
+    "1988": {
+      "titulo": "Tokyo Ghoul",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1988",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2015-03-20",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2015-04-16",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2015-06-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2015-07-24",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2015-08-28",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2015-09-30",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2015-10-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2015-12-04",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2016-01-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2016-02-19",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2016-03-18",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2016-04-11",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2016-05-05",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2016-06-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/1988/14.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Sui Ishida",
+      "totalNumeros": 14,
+      "estado": "finalizada",
+      "descargado": "2026-09-01",
+      "sinopsis": "¡EL MANGA DEL QUE TODO EL MUNDO HABLA! DESCUBRE POR QUÉ TODOS ESPERAN ESTA SERIE\n\r\n\n\r\nLos habitantes de Tokio viven aterrados: en las sombras de la metrópolis se ocultan horribles monstruos que se camuflan entre la multitud, cazando y devorando seres humanos. Un joven se topa con uno de estos ghouls, pero aunque consigue sobrevivir, su existencia ya no será igual...",
+      "portada": "data/portadas/1988/1.jpg"
     }
   },
   "sugerencias": {}

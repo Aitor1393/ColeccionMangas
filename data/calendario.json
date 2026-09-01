@@ -12332,6 +12332,250 @@
       "descargado": "2026-09-01",
       "sinopsis": "Disfruta de la espectacularidad del patinaje extremo de los Air Treck y del dibujo de Oh! great. Los Guns del Este se han quedado pequeños para Ikki. El “cuervo” aspira a mucho más, a tener su propio imperio (en forma de equipo de Air Treck). Para ello sabe que cuenta con Akito/Agito, Buccha, Onigiri y Kazu... ¿Cuál será la primera banda a la que se enfrenten en la Guerra de Recambios?",
       "portada": "data/portadas/74/1.jpg"
+    },
+    "3804": {
+      "titulo": "Hanako-kun, El fantasma del lavabo",
+      "url": "https://www.listadomanga.es/coleccion.php?id=3804",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2021-02-18",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2021-03-25",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2021-04-29",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2021-05-20",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2021-06-17",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2021-07-15",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2021-08-05",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2021-09-16",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2021-10-21",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2021-11-18",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2021-12-16",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2022-02-03",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2022-02-24",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2022-06-30",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2022-07-21",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2022-09-01",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2022-11-03",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2023-02-16",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2023-06-15",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/3804/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2024-01-25",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3804/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2024-05-16",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3804/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2024-10-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3804/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2025-04-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3804/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2025-11-13",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3804/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2026-02-12",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/3804/25.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "AidaIro",
+      "totalNumeros": 25,
+      "estado": "en-publicacion",
+      "descargado": "2026-09-01",
+      "sinopsis": "Nene Yashiro es una estudiante de primero de bachillerato que asiste a la Academia Kamome, famosa por sus sucesos paranormales y por albergar también los siete míticos misterios. El séptimo misterio no es otro que Hanako, una chica que habita los lavabos del tercer piso de la academia y que se supone que concede deseos con el incentivo adecuado. Sin embargo, cuando Nene decide invocarla para conseguir enamorar al chico de sus sueños, se encuentra la sorpresa de que no se trata de una chica, sino de un chico.\n\r\n\n\r\nDespués de que ese deseo fracase, en otro intento desesperado, Nene se come un objeto de Hanako que sirve para un conseguir pareja, pero lanza una maldición sobre quien lo consuma. Con tal de salvarla, Hanako también se lo come, pero a cambio hará que Nene tenga que trabajar para él como su asistenta.\n\r\n\n\r\nHanako se encarga de mantener la paz entre los espíritus y los humanos. Para ello se deshace de las apariciones malignas, sin importar los medios que tenga que utilizar. Poco a poco se va desgranando el pasado de Hanako mientras se descubren los secretos que se esconden entre los siete misterios de la academia.",
+      "portada": "data/portadas/3804/1.jpg"
+    },
+    "4656": {
+      "titulo": "Hanako-kun después de clase",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4656",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2022-12-07",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/4656/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-06-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/4656/2.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "AidaIro",
+      "totalNumeros": 2,
+      "estado": "en-publicacion",
+      "descargado": "2026-09-01",
+      "sinopsis": "¡Hanako-kun nos llena de alegría y nos hace sufrir, pero nuestros protas también tienen una vida fuera de los estudios y los misterios!\n\r\n\n\r\nHanako-kun después de clase es un spin off distendido que nos cuenta qué hacen nuestros protas fuera de la Academia Kamome. Pequeñas aventurillas, juegos, secretos y otras historias cotidianas en facetas de ellos que nunca habíamos visto.",
+      "portada": "data/portadas/4656/1.jpg"
+    },
+    "4569": {
+      "titulo": "Hanako-kun, El fantasma del lavabo 0",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4569",
+      "numeros": [
+        {
+          "numero": 0,
+          "fecha": "2022-10-13",
+          "precio": 8.5,
+          "aproximada": false,
+          "portada": "data/portadas/4569/0.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "AidaIro",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-09-01",
+      "sinopsis": "En este tomo único se recopilan tres capítulos prototipo de Hanako-kun, el fantasma del lavabo que se publicaron en la revista Gfantasy, así como la estupenda obra de debut de AidaIro, Dear my Living Dead.",
+      "portada": "data/portadas/4569/0.jpg"
     }
   },
   "sugerencias": {}

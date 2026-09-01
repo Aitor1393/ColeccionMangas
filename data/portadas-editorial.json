@@ -397,6 +397,24 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/03/thumb_2188_albumes_big.jpeg",
    "bytes": 56235
+  },
+  "3804": {
+   "ruta": "data/portadas-serie/3804.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/wp-content/uploads/2024/07/hanakokun01.jpg",
+   "bytes": 103438
+  },
+  "4656": {
+   "ruta": "data/portadas-serie/4656.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/wp-content/uploads/2024/07/hanakokunclase.jpg",
+   "bytes": 65636
+  },
+  "4569": {
+   "ruta": "data/portadas-serie/4569.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/wp-content/uploads/2024/07/hanakokun00.jpg",
+   "bytes": 60044
   }
  }
 }

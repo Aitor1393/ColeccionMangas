@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-09-02",
+  "actualizado": "2026-09-03",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -10491,6 +10491,31 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-09-01",
+      "tomos": [],
+      "proximas": []
+    },
+    {
+      "id": "21a5bd25-4e18-49a3-8d34-a925a01cfc72",
+      "titulo": "As the Gods Will: La secuela",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Muneyuki Kaneshiro",
+      "editorial": "Distrito Manga",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": true,
+      "tomosTotales": 10,
+      "portada": "",
+      "sinopsis": "Tras pelearse con el mejor amigo de su infancia, Yasuto Akashi decide saltarse las clases. Sin embargo, lo que no se imagina es que, justo ese día, en el instituto, comienzan lo que a primera vista parecen unos juegos la mar de inocentes.\n\nNo obstante, aquellos que no sigan las reglas del juego o que pierdan la partida morirán en el acto de una forma atroz. Desconcertados por la situación, los estudiantes arriesgarán sus vidas para sobrevivir, aunque eso implique dejar de lado su humanidad.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "4966",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-03",
       "tomos": [],
       "proximas": []
     }

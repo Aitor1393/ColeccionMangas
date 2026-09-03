@@ -9358,7 +9358,7 @@
         {
           "numero": 4,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""
@@ -9366,7 +9366,7 @@
         {
           "numero": 5,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""
@@ -9374,7 +9374,7 @@
         {
           "numero": 6,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""
@@ -9382,7 +9382,7 @@
         {
           "numero": 7,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""
@@ -9390,7 +9390,7 @@
         {
           "numero": 8,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""

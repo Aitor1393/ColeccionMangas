@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-02",
+  "actualizado": "2026-09-03",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -12690,6 +12690,92 @@
       "descargado": "2026-09-01",
       "sinopsis": "¡EL MANGA DEL QUE TODO EL MUNDO HABLA! DESCUBRE POR QUÉ TODOS ESPERAN ESTA SERIE\n\r\n\n\r\nLos habitantes de Tokio viven aterrados: en las sombras de la metrópolis se ocultan horribles monstruos que se camuflan entre la multitud, cazando y devorando seres humanos. Un joven se topa con uno de estos ghouls, pero aunque consigue sobrevivir, su existencia ya no será igual...",
       "portada": "data/portadas/1988/1.jpg"
+    },
+    "4966": {
+      "titulo": "As the Gods Will: La secuela",
+      "url": "https://www.listadomanga.es/coleccion.php?id=4966",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2023-10-05",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2024-01-11",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2024-04-04",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2024-09-05",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2024-11-07",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2025-02-06",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2025-05-14",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2025-10-16",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2026-01-22",
+          "precio": 15.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2026-10-08",
+          "precio": 18.95,
+          "aproximada": false,
+          "portada": "data/portadas/4966/10.jpg"
+        }
+      ],
+      "editorial": "Distrito Manga",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo doble B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Muneyuki Kaneshiro",
+      "totalNumeros": 10,
+      "estado": "finalizada",
+      "descargado": "2026-09-03",
+      "sinopsis": "Tras pelearse con el mejor amigo de su infancia, Yasuto Akashi decide saltarse las clases. Sin embargo, lo que no se imagina es que, justo ese día, en el instituto, comienzan lo que a primera vista parecen unos juegos la mar de inocentes.\n\r\n\n\r\nNo obstante, aquellos que no sigan las reglas del juego o que pierdan la partida morirán en el acto de una forma atroz. Desconcertados por la situación, los estudiantes arriesgarán sus vidas para sobrevivir, aunque eso implique dejar de lado su humanidad.",
+      "portada": "data/portadas/4966/1.jpg"
     }
   },
   "sugerencias": {}

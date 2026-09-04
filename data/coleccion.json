@@ -4173,6 +4173,14 @@
           "fechaCompra": "",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 10,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-09-04",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -5545,6 +5553,14 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 6,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-09-04",
           "precio": null,
           "notas": ""
         }
@@ -6944,6 +6960,14 @@
           "fechaCompra": "",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-09-04",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -7381,9 +7405,9 @@
         },
         {
           "numero": 7,
-          "tengo": false,
+          "tengo": true,
           "leido": false,
-          "fechaCompra": "",
+          "fechaCompra": "2026-09-04",
           "precio": null,
           "notas": ""
         },
@@ -8060,6 +8084,14 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-09-04",
           "precio": null,
           "notas": ""
         }
@@ -10517,6 +10549,40 @@
       "notas": "",
       "anadida": "2026-09-03",
       "tomos": [],
+      "proximas": []
+    },
+    {
+      "id": "772c8ece-37da-4837-b10a-5f8049bdab8f",
+      "titulo": "Bibliomania",
+      "tituloAlt": "",
+      "edicion": "Edición Deluxe",
+      "autor": "Obaru",
+      "editorial": "Kibook Ediciones",
+      "demografia": "otro",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 1,
+      "portada": "",
+      "sinopsis": "Alice se despierta en la habitación 431 de una misteriosa residencia donde todos sus deseos pueden hacerse realidad. «No debes abandonar esa habitación», le advierte la Serpiente.\n\n¡Vuelve nuestro título estrella en una versión deluxe!\n\nDe mayor tamaño, en tapa dura con relieve y marcapáginas de hilo clásico para disfrutar de BIBLIOMANIA por todo lo alto.\n\nIlustración de la portada realizada por Macchiro de forma exclusiva para España.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "5770",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-04",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     }
   ]

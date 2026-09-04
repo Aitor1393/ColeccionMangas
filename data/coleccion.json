@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-09-03",
+  "actualizado": "2026-09-04",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -9398,7 +9398,7 @@
         {
           "numero": 9,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-20",
           "precio": 4.37,
           "notas": ""

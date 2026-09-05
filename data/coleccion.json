@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-09-04",
+  "actualizado": "2026-09-05",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -10583,6 +10583,31 @@
           "notas": ""
         }
       ],
+      "proximas": []
+    },
+    {
+      "id": "24ebaef8-ed40-4198-b152-6093b3fd57e3",
+      "titulo": "FullMetal Alchemist",
+      "tituloAlt": "",
+      "edicion": "Kanzenban",
+      "autor": "Hiromu Arakawa",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": true,
+      "tomosTotales": 18,
+      "portada": "",
+      "sinopsis": "FullMetal Alchemist narra la aventura de los hermanos Edward y Alphonse Elric a principios del siglo XX, en un mundo donde la alquimia es una ciencia muy extendida. Una serie de sucesos desafortunados llevarán a los dos hermanos a sufrir una transformación al practicar una rama prohibida de la alquimia que les convertirá en dos personas muy especiales y que marcará el inicio de un viaje cargado de aventuras.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "1741",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-05",
+      "tomos": [],
       "proximas": []
     }
   ]

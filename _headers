@@ -1,0 +1,22 @@
+# Cabeceras para Cloudflare Pages. Se copian a _sitio/ al preparar el sitio.
+
+/*
+  X-Content-Type-Options: nosniff
+  Referrer-Policy: strict-origin-when-cross-origin
+
+# La colección se revalida siempre. Es lo que se acaba de publicar desde el
+# navegador, y el hueco entre publicar y verlo ya costó un disgusto una vez:
+# es la razón de que la copia local no se borre al publicar.
+/data/*.json
+  Cache-Control: no-cache
+
+/index.html
+  Cache-Control: no-cache
+
+# Las portadas sí se cachean: son 1.600 imágenes que no cambian casi nunca y
+# es lo que hace que la biblioteca abra rápido en el móvil.
+/data/portadas/*
+  Cache-Control: public, max-age=86400
+
+/data/portadas-serie/*
+  Cache-Control: public, max-age=86400

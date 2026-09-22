@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-09-13",
+  "actualizado": "2026-09-22",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -9183,7 +9183,7 @@
         {
           "numero": 1,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-08-04",
           "precio": 5.25,
           "notas": ""
@@ -10609,6 +10609,40 @@
       "notas": "",
       "anadida": "2026-09-05",
       "tomos": [],
+      "proximas": []
+    },
+    {
+      "id": "9cba9ee4-552c-4c20-be24-5fa0600d08c7",
+      "titulo": "Hero Organization",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Kei Saikawa",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 6,
+      "portada": "",
+      "sinopsis": "ADÉNTRATE EN ESTA AVENTURA ESPACIAL DE HUMANOS Y MÁQUINAS\n\nLlega una nueva obra de ciencia ficción y mechas a Norma Editorial y se trata de Hero Organization, la primera obra del dúo artístico Kei Saikawa y Akira Takahashi en España, que combina acción y mechas en cada viñeta. ¡No te pierdas el comienzo de esta aventura espacial de uno de los mangas más populares de la plataforma de Manga Plus!\n\nSegunda mitad del siglo XXI... La humanidad, al borde de la extinción debido a diversos problemas, inicia un ambicioso programa de desarrollo espacial. Aproximadamente un siglo más tarde, la nueva amenaza para los humanos que se han aventurado al espacio son unas criaturas desconocidas a las que se conoce por el nombre de “bestias siderales”. Para hacerles frente, se crean armas en forma de power suits, conocidas como AIGIS. Y los soldados que protegen a los colonos con estas máquinas se convierten en auténticos héroes a ojos de la población. En medio de todo esto, Ryu, que trabaja en una fábrica de AIGIS, lleva una vida modesta pero feliz junto a su hijo Leo.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6427",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-22",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     }
   ]

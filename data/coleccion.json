@@ -10645,6 +10645,31 @@
         }
       ],
       "proximas": []
+    },
+    {
+      "id": "9143a453-bf84-4b9f-9c00-5535e94b3a68",
+      "titulo": "The Legend of Zelda",
+      "tituloAlt": "",
+      "edicion": "Perfect Edition",
+      "autor": "Akira Himekawa",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": true,
+      "tomosTotales": 5,
+      "portada": "",
+      "sinopsis": "¡VIVE LAS AVENTURAS DE LINK EN VERSIÓN KANZENBAN!\n\nLas adaptaciones oficiales de los videojuegos más emblemáticos de la saga Zelda, vuelven en una nueva edición llena de extras. A la magnífica historia original se le suman páginas a color, contenido exclusivo y un formato mayor para disfrutar al máximo de la historia.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "2524",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-24",
+      "tomos": [],
+      "proximas": []
     }
   ]
 }

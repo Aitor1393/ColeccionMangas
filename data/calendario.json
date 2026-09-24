@@ -12864,6 +12864,57 @@
       "descargado": "2026-09-22",
       "sinopsis": "ADÉNTRATE EN ESTA AVENTURA ESPACIAL DE HUMANOS Y MÁQUINAS\n\r\n\n\r\nLlega una nueva obra de ciencia ficción y mechas a Norma Editorial y se trata de Hero Organization, la primera obra del dúo artístico Kei Saikawa y Akira Takahashi en España, que combina acción y mechas en cada viñeta. ¡No te pierdas el comienzo de esta aventura espacial de uno de los mangas más populares de la plataforma de Manga Plus!\n\r\n\n\r\nSegunda mitad del siglo XXI... La humanidad, al borde de la extinción debido a diversos problemas, inicia un ambicioso programa de desarrollo espacial. Aproximadamente un siglo más tarde, la nueva amenaza para los humanos que se han aventurado al espacio son unas criaturas desconocidas a las que se conoce por el nombre de “bestias siderales”. Para hacerles frente, se crean armas en forma de power suits, conocidas como AIGIS. Y los soldados que protegen a los colonos con estas máquinas se convierten en auténticos héroes a ojos de la población. En medio de todo esto, Ryu, que trabaja en una fábrica de AIGIS, lleva una vida modesta pero feliz junto a su hijo Leo.",
       "portada": "data/portadas/6427/1.jpg"
+    },
+    "2524": {
+      "titulo": "The Legend of Zelda (Perfect Edition)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2524",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2017-03-30",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2524/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2017-06-23",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2524/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2017-10-31",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2524/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2018-04-12",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2524/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2018-10-31",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/2524/5.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Akira Himekawa",
+      "totalNumeros": 5,
+      "estado": "finalizada",
+      "descargado": "2026-09-24",
+      "sinopsis": "¡VIVE LAS AVENTURAS DE LINK EN VERSIÓN KANZENBAN!\n\r\n\n\r\nLas adaptaciones oficiales de los videojuegos más emblemáticos de la saga Zelda, vuelven en una nueva edición llena de extras. A la magnífica historia original se le suman páginas a color, contenido exclusivo y un formato mayor para disfrutar al máximo de la historia.",
+      "portada": "data/portadas/2524/1.jpg"
     }
   },
   "sugerencias": {}

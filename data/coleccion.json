@@ -10670,6 +10670,40 @@
       "anadida": "2026-09-24",
       "tomos": [],
       "proximas": []
+    },
+    {
+      "id": "0743c0c8-e125-4651-a901-4c2957f58dd2",
+      "titulo": "Mi amigo Capricornio",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Otsuichi",
+      "editorial": "Milky Way Ediciones",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 1,
+      "portada": "",
+      "sinopsis": "Una noche, Yûya Matsuda se topa con su compañero de curso Naoto Wakatsuki, que acaba de cometer un asesinato. Wakatsuki, agobiado por el horrible bullying al que es sometido, acaba matando a su maltratador. El sentimiento de culpabilidad que atenaza a Yûya, que hasta ahora no había hecho nada para evitar el bullying a pesar de verlo a menudo, le insta a tomar la decisión de huir con él. Pero una impactante verdad espera a los dos jóvenes al término de su huida...",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "2397",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-09-27",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": false,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

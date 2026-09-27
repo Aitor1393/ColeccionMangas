@@ -12915,6 +12915,29 @@
       "descargado": "2026-09-24",
       "sinopsis": "¡VIVE LAS AVENTURAS DE LINK EN VERSIÓN KANZENBAN!\n\r\n\n\r\nLas adaptaciones oficiales de los videojuegos más emblemáticos de la saga Zelda, vuelven en una nueva edición llena de extras. A la magnífica historia original se le suman páginas a color, contenido exclusivo y un formato mayor para disfrutar al máximo de la historia.",
       "portada": "data/portadas/2524/1.jpg"
+    },
+    "2397": {
+      "titulo": "Mi amigo Capricornio",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2397",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2016-07-26",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2397/1.jpg"
+        }
+      ],
+      "editorial": "Milky Way Ediciones",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Otsuichi",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-09-27",
+      "sinopsis": "Una noche, Yûya Matsuda se topa con su compañero de curso Naoto Wakatsuki, que acaba de cometer un asesinato. Wakatsuki, agobiado por el horrible bullying al que es sometido, acaba matando a su maltratador. El sentimiento de culpabilidad que atenaza a Yûya, que hasta ahora no había hecho nada para evitar el bullying a pesar de verlo a menudo, le insta a tomar la decisión de huir con él. Pero una impactante verdad espera a los dos jóvenes al término de su huida...",
+      "portada": "data/portadas/2397/1.jpg"
     }
   },
   "sugerencias": {}

@@ -433,6 +433,12 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/06/thumb_5073_albumes_big.jpeg",
    "bytes": 82357
+  },
+  "6699": {
+   "ruta": "data/portadas-serie/6699.jpg",
+   "fuente": "Panini",
+   "origen": "https://www.panini.es/media/catalog/product/s/o/sovlo001_9791370580605.jpg",
+   "bytes": 78263
   }
  }
 }

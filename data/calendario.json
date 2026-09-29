@@ -13234,6 +13234,92 @@
       "descargado": "2026-09-29",
       "sinopsis": "EL NUEVO SHONEN DE ACCIÓN: VAMPIROS, DEMONIOS Y ADOLESCENTES EN UN CÓCTEL IRRESISTIBLE\n\r\n\n\r\nUn virus de origen desconocido ha aniquilado a casi toda la humanidad. Tan solo los niños menores de 13 años han logrado sobrevivir, aunque se hallan bajo el control de los vampiros en una ciudad subterránea. Yûichirô Hyakuya escapa de sus dominios y jura venganza tras participar en una huida frustrada en la que mueren todos sus amigos. ¡¿Cómo será el mundo que le aguarda una vez alcance la superficie?!",
       "portada": "data/portadas/2268/1.jpg"
+    },
+    "6699": {
+      "titulo": "Overlord (Panini)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6699",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-10-22",
+          "precio": 16.95,
+          "aproximada": false,
+          "portada": "data/portadas/6699/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6699/10.jpg"
+        }
+      ],
+      "editorial": "Panini Manga",
+      "coleccion": "Panini Manga Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo doble A5 (150x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Satoshi Ôshio",
+      "totalNumeros": 10,
+      "estado": "finalizada",
+      "descargado": "2026-09-29",
+      "sinopsis": "Yggdrasil, el juego que fue en su época el DMMO-RPG más famoso del mundo, va a ser clausurado. El líder de uno de los gremios más importantes en la historia del juego se conecta por última vez para rememorar los viejos tiempos. Pero algo extraño ocurre que hace que los PNJ cobren vida y respondan a sus órdenes. ¿Sigue estando en el mundo de Yggdrasil o se trata de un mundo paralelo? ¿Se encuentran sus compañeros de gremio allí?",
+      "portada": "data/portadas/6699/1.jpg"
     }
   },
   "sugerencias": {}

@@ -13320,6 +13320,29 @@
       "descargado": "2026-09-29",
       "sinopsis": "Yggdrasil, el juego que fue en su época el DMMO-RPG más famoso del mundo, va a ser clausurado. El líder de uno de los gremios más importantes en la historia del juego se conecta por última vez para rememorar los viejos tiempos. Pero algo extraño ocurre que hace que los PNJ cobren vida y respondan a sus órdenes. ¿Sigue estando en el mundo de Yggdrasil o se trata de un mundo paralelo? ¿Se encuentran sus compañeros de gremio allí?",
       "portada": "data/portadas/6699/1.jpg"
+    },
+    "6760": {
+      "titulo": "Kindergarten WARS: LUKE",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6760",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-12-01",
+          "precio": null,
+          "aproximada": true,
+          "portada": "data/portadas/6760/1.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo B6 (130x182) rústica (tapa blanda) con sobrecubierta",
+      "autor": "You Chiba",
+      "totalNumeros": 1,
+      "estado": "finalizada",
+      "descargado": "2026-09-29",
+      "sinopsis": "",
+      "portada": "data/portadas/6760/1.jpg"
     }
   },
   "sugerencias": {}

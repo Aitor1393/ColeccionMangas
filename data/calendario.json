@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-09-28",
+  "actualizado": "2026-09-29",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -12873,6 +12873,13 @@
           "precio": null,
           "aproximada": false,
           "portada": "data/portadas/6427/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6427/7.jpg"
         }
       ],
       "editorial": "Norma Editorial",
@@ -12880,9 +12887,9 @@
       "demografia": "shounen",
       "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
       "autor": "Kei Saikawa",
-      "totalNumeros": 6,
+      "totalNumeros": 7,
       "estado": "en-publicacion",
-      "descargado": "2026-09-22",
+      "descargado": "2026-09-29",
       "sinopsis": "ADÉNTRATE EN ESTA AVENTURA ESPACIAL DE HUMANOS Y MÁQUINAS\n\r\n\n\r\nLlega una nueva obra de ciencia ficción y mechas a Norma Editorial y se trata de Hero Organization, la primera obra del dúo artístico Kei Saikawa y Akira Takahashi en España, que combina acción y mechas en cada viñeta. ¡No te pierdas el comienzo de esta aventura espacial de uno de los mangas más populares de la plataforma de Manga Plus!\n\r\n\n\r\nSegunda mitad del siglo XXI... La humanidad, al borde de la extinción debido a diversos problemas, inicia un ambicioso programa de desarrollo espacial. Aproximadamente un siglo más tarde, la nueva amenaza para los humanos que se han aventurado al espacio son unas criaturas desconocidas a las que se conoce por el nombre de “bestias siderales”. Para hacerles frente, se crean armas en forma de power suits, conocidas como AIGIS. Y los soldados que protegen a los colonos con estas máquinas se convierten en auténticos héroes a ojos de la población. En medio de todo esto, Ryu, que trabaja en una fábrica de AIGIS, lleva una vida modesta pero feliz junto a su hijo Leo.",
       "portada": "data/portadas/6427/1.jpg"
     },

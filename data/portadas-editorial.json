@@ -427,6 +427,12 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/44/thumb_43601_albumes_big.jpeg",
    "bytes": 99952
+  },
+  "2268": {
+   "ruta": "data/portadas-serie/2268.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/06/thumb_5073_albumes_big.jpeg",
+   "bytes": 82357
   }
  }
 }

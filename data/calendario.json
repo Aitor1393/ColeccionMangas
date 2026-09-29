@@ -11174,148 +11174,6 @@
       "sinopsis": "Vagabond, un manga cruento, realista y adulto sobre la vida de Musashi Miyamoto, el más importante espadachín de la historia de Japón. La obra cumbre de Takehiko Inoue, quien gracias a este título se ha convertido en uno de los autores más respetados por colegas, crítica y fandom del panorama nipón actual, recibiendo premios incluso del propio gobierno. Un estilo gráfico impactante e innovador sumado a una narrativa dinámica, convierten a Vagabond en una serie que no se debe dejar pasar.",
       "portada": "data/portadas/1822/1.jpg"
     },
-    "1741": {
-      "titulo": "FullMetal Alchemist (Kanzenban)",
-      "url": "https://www.listadomanga.es/coleccion.php?id=1741",
-      "numeros": [
-        {
-          "numero": 1,
-          "fecha": "2013-10-31",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/1.jpg"
-        },
-        {
-          "numero": 2,
-          "fecha": "2013-10-31",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/2.jpg"
-        },
-        {
-          "numero": 3,
-          "fecha": "2014-01-24",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/3.jpg"
-        },
-        {
-          "numero": 4,
-          "fecha": "2014-02-21",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/4.jpg"
-        },
-        {
-          "numero": 5,
-          "fecha": "2014-03-21",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/5.jpg"
-        },
-        {
-          "numero": 6,
-          "fecha": "2014-05-15",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/6.jpg"
-        },
-        {
-          "numero": 7,
-          "fecha": "2014-06-27",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/7.jpg"
-        },
-        {
-          "numero": 8,
-          "fecha": "2014-07-25",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/8.jpg"
-        },
-        {
-          "numero": 9,
-          "fecha": "2014-08-29",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/9.jpg"
-        },
-        {
-          "numero": 10,
-          "fecha": "2014-09-26",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/10.jpg"
-        },
-        {
-          "numero": 11,
-          "fecha": "2014-10-30",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/11.jpg"
-        },
-        {
-          "numero": 12,
-          "fecha": "2014-12-05",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/12.jpg"
-        },
-        {
-          "numero": 13,
-          "fecha": "2015-01-23",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/13.jpg"
-        },
-        {
-          "numero": 14,
-          "fecha": "2015-02-20",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/14.jpg"
-        },
-        {
-          "numero": 15,
-          "fecha": "2015-03-20",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/15.jpg"
-        },
-        {
-          "numero": 16,
-          "fecha": "2015-04-16",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/16.jpg"
-        },
-        {
-          "numero": 17,
-          "fecha": "2015-05-22",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/17.jpg"
-        },
-        {
-          "numero": 18,
-          "fecha": "2015-06-26",
-          "precio": 11.95,
-          "aproximada": false,
-          "portada": "data/portadas/1741/18.jpg"
-        }
-      ],
-      "editorial": "Norma Editorial",
-      "coleccion": "Shonen",
-      "demografia": "shounen",
-      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con doble sobrecubierta",
-      "autor": "Hiromu Arakawa",
-      "totalNumeros": 18,
-      "estado": "finalizada",
-      "descargado": "2026-09-28",
-      "sinopsis": "FullMetal Alchemist narra la aventura de los hermanos Edward y Alphonse Elric a principios del siglo XX, en un mundo donde la alquimia es una ciencia muy extendida. Una serie de sucesos desafortunados llevarán a los dos hermanos a sufrir una transformación al practicar una rama prohibida de la alquimia que les convertirá en dos personas muy especiales y que marcará el inicio de un viaje cargado de aventuras.",
-      "portada": "data/portadas/1741/1.jpg"
-    },
     "2199": {
       "titulo": "Buenas Noches, Punpun",
       "url": "https://www.listadomanga.es/coleccion.php?id=2199",
@@ -12966,6 +12824,416 @@
       "descargado": "2026-09-27",
       "sinopsis": "Una noche, Yûya Matsuda se topa con su compañero de curso Naoto Wakatsuki, que acaba de cometer un asesinato. Wakatsuki, agobiado por el horrible bullying al que es sometido, acaba matando a su maltratador. El sentimiento de culpabilidad que atenaza a Yûya, que hasta ahora no había hecho nada para evitar el bullying a pesar de verlo a menudo, le insta a tomar la decisión de huir con él. Pero una impactante verdad espera a los dos jóvenes al término de su huida...",
       "portada": "data/portadas/2397/1.jpg"
+    },
+    "1741": {
+      "titulo": "FullMetal Alchemist (Kanzenban)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=1741",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2013-10-31",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2013-10-31",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2014-01-24",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2014-02-21",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2014-03-21",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2014-05-15",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2014-06-27",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2014-07-25",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2014-08-29",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2014-09-26",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2014-10-30",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2014-12-05",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2015-01-23",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2015-02-20",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2015-03-20",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2015-04-16",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2015-05-22",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2015-06-26",
+          "precio": 11.95,
+          "aproximada": false,
+          "portada": "data/portadas/1741/18.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con doble sobrecubierta",
+      "autor": "Hiromu Arakawa",
+      "totalNumeros": 18,
+      "estado": "finalizada",
+      "descargado": "2026-09-28",
+      "sinopsis": "FullMetal Alchemist narra la aventura de los hermanos Edward y Alphonse Elric a principios del siglo XX, en un mundo donde la alquimia es una ciencia muy extendida. Una serie de sucesos desafortunados llevarán a los dos hermanos a sufrir una transformación al practicar una rama prohibida de la alquimia que les convertirá en dos personas muy especiales y que marcará el inicio de un viaje cargado de aventuras.",
+      "portada": "data/portadas/1741/1.jpg"
+    },
+    "2268": {
+      "titulo": "Seraph of the end",
+      "url": "https://www.listadomanga.es/coleccion.php?id=2268",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2016-05-05",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2016-07-22",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": "2016-09-30",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": "2017-01-20",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": "2017-03-30",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": "2017-05-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": "2017-07-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": "2017-09-29",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": "2017-12-05",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": "2018-02-23",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": "2018-05-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": "2018-09-28",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/12.jpg"
+        },
+        {
+          "numero": 13,
+          "fecha": "2019-01-25",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/13.jpg"
+        },
+        {
+          "numero": 14,
+          "fecha": "2019-04-26",
+          "precio": 8.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/14.jpg"
+        },
+        {
+          "numero": 15,
+          "fecha": "2020-03-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/15.jpg"
+        },
+        {
+          "numero": 16,
+          "fecha": "2020-11-13",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/16.jpg"
+        },
+        {
+          "numero": 17,
+          "fecha": "2021-03-26",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/17.jpg"
+        },
+        {
+          "numero": 18,
+          "fecha": "2021-10-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/18.jpg"
+        },
+        {
+          "numero": 19,
+          "fecha": "2022-03-04",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/19.jpg"
+        },
+        {
+          "numero": 20,
+          "fecha": "2022-09-09",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/20.jpg"
+        },
+        {
+          "numero": 21,
+          "fecha": "2023-02-03",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/21.jpg"
+        },
+        {
+          "numero": 22,
+          "fecha": "2023-07-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/22.jpg"
+        },
+        {
+          "numero": 23,
+          "fecha": "2024-07-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/23.jpg"
+        },
+        {
+          "numero": 24,
+          "fecha": "2025-02-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/24.jpg"
+        },
+        {
+          "numero": 25,
+          "fecha": "2025-08-08",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/25.jpg"
+        },
+        {
+          "numero": 26,
+          "fecha": "2025-11-07",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/26.jpg"
+        },
+        {
+          "numero": 27,
+          "fecha": "2026-02-06",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/27.jpg"
+        },
+        {
+          "numero": 28,
+          "fecha": "2026-06-05",
+          "precio": 9.0,
+          "aproximada": false,
+          "portada": "data/portadas/2268/28.jpg"
+        },
+        {
+          "numero": 29,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/29.jpg"
+        },
+        {
+          "numero": 30,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/30.jpg"
+        },
+        {
+          "numero": 31,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/31.jpg"
+        },
+        {
+          "numero": 32,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/32.jpg"
+        },
+        {
+          "numero": 33,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/33.jpg"
+        },
+        {
+          "numero": 34,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/34.jpg"
+        },
+        {
+          "numero": 35,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/35.jpg"
+        },
+        {
+          "numero": 36,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/2268/36.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo (115x175) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Takaya Kagami",
+      "totalNumeros": 37,
+      "estado": "finalizada",
+      "descargado": "2026-09-29",
+      "sinopsis": "EL NUEVO SHONEN DE ACCIÓN: VAMPIROS, DEMONIOS Y ADOLESCENTES EN UN CÓCTEL IRRESISTIBLE\n\r\n\n\r\nUn virus de origen desconocido ha aniquilado a casi toda la humanidad. Tan solo los niños menores de 13 años han logrado sobrevivir, aunque se hallan bajo el control de los vampiros en una ciudad subterránea. Yûichirô Hyakuya escapa de sus dominios y jura venganza tras participar en una huida frustrada en la que mueren todos sus amigos. ¡¿Cómo será el mundo que le aguarda una vez alcance la superficie?!",
+      "portada": "data/portadas/2268/1.jpg"
     }
   },
   "sugerencias": {}

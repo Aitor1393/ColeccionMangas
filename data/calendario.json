@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-05",
+  "actualizado": "2026-10-06",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -12754,7 +12754,7 @@
       "autor": "Kei Saikawa",
       "totalNumeros": 7,
       "estado": "en-publicacion",
-      "descargado": "2026-09-29",
+      "descargado": "2026-10-06",
       "sinopsis": "ADÉNTRATE EN ESTA AVENTURA ESPACIAL DE HUMANOS Y MÁQUINAS\n\r\n\n\r\nLlega una nueva obra de ciencia ficción y mechas a Norma Editorial y se trata de Hero Organization, la primera obra del dúo artístico Kei Saikawa y Akira Takahashi en España, que combina acción y mechas en cada viñeta. ¡No te pierdas el comienzo de esta aventura espacial de uno de los mangas más populares de la plataforma de Manga Plus!\n\r\n\n\r\nSegunda mitad del siglo XXI... La humanidad, al borde de la extinción debido a diversos problemas, inicia un ambicioso programa de desarrollo espacial. Aproximadamente un siglo más tarde, la nueva amenaza para los humanos que se han aventurado al espacio son unas criaturas desconocidas a las que se conoce por el nombre de “bestias siderales”. Para hacerles frente, se crean armas en forma de power suits, conocidas como AIGIS. Y los soldados que protegen a los colonos con estas máquinas se convierten en auténticos héroes a ojos de la población. En medio de todo esto, Ryu, que trabaja en una fábrica de AIGIS, lleva una vida modesta pero feliz junto a su hijo Leo.",
       "portada": "data/portadas/6427/1.jpg"
     },
@@ -13238,7 +13238,7 @@
       "autor": "Takaya Kagami",
       "totalNumeros": 37,
       "estado": "finalizada",
-      "descargado": "2026-09-29",
+      "descargado": "2026-10-06",
       "sinopsis": "EL NUEVO SHONEN DE ACCIÓN: VAMPIROS, DEMONIOS Y ADOLESCENTES EN UN CÓCTEL IRRESISTIBLE\n\r\n\n\r\nUn virus de origen desconocido ha aniquilado a casi toda la humanidad. Tan solo los niños menores de 13 años han logrado sobrevivir, aunque se hallan bajo el control de los vampiros en una ciudad subterránea. Yûichirô Hyakuya escapa de sus dominios y jura venganza tras participar en una huida frustrada en la que mueren todos sus amigos. ¡¿Cómo será el mundo que le aguarda una vez alcance la superficie?!",
       "portada": "data/portadas/2268/1.jpg"
     },
@@ -13255,8 +13255,8 @@
         },
         {
           "numero": 2,
-          "fecha": null,
-          "precio": null,
+          "fecha": "2026-12-17",
+          "precio": 16.95,
           "aproximada": false,
           "portada": "data/portadas/6699/2.jpg"
         },
@@ -13324,7 +13324,7 @@
       "autor": "Satoshi Ôshio",
       "totalNumeros": 10,
       "estado": "finalizada",
-      "descargado": "2026-09-29",
+      "descargado": "2026-10-06",
       "sinopsis": "Yggdrasil, el juego que fue en su época el DMMO-RPG más famoso del mundo, va a ser clausurado. El líder de uno de los gremios más importantes en la historia del juego se conecta por última vez para rememorar los viejos tiempos. Pero algo extraño ocurre que hace que los PNJ cobren vida y respondan a sus órdenes. ¿Sigue estando en el mundo de Yggdrasil o se trata de un mundo paralelo? ¿Se encuentran sus compañeros de gremio allí?",
       "portada": "data/portadas/6699/1.jpg"
     },
@@ -13347,7 +13347,7 @@
       "autor": "You Chiba",
       "totalNumeros": 1,
       "estado": "finalizada",
-      "descargado": "2026-09-29",
+      "descargado": "2026-10-06",
       "sinopsis": "",
       "portada": "data/portadas/6760/1.jpg"
     }

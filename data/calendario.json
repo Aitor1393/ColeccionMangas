@@ -13351,36 +13351,6 @@
       "sinopsis": "",
       "portada": "data/portadas/6760/1.jpg"
     },
-    "6732": {
-      "titulo": "Kamudo",
-      "url": "https://www.listadomanga.es/coleccion.php?id=6732",
-      "numeros": [
-        {
-          "numero": 1,
-          "fecha": "2026-11-01",
-          "precio": null,
-          "aproximada": true,
-          "portada": "data/portadas/6732/1.jpg"
-        },
-        {
-          "numero": 2,
-          "fecha": null,
-          "precio": null,
-          "aproximada": false,
-          "portada": "data/portadas/6732/2.jpg"
-        }
-      ],
-      "editorial": "Norma Editorial",
-      "coleccion": "Shonen",
-      "demografia": "shounen",
-      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
-      "autor": "Akira Himekawa",
-      "totalNumeros": 2,
-      "estado": "en-publicacion",
-      "descargado": "2026-10-07",
-      "sinopsis": "Kamuna es un joven híbrido de humano y dragón que tomará las riendas de su propio destino en un mundo convulso donde conviven dioses y leyendas.\n\r\n\n\r\nEste joven, que pertenece a dos mundos imposibles, deberá aprender a forjar su propio camino y entender la profecía que lo acompaña. ¿Será la salvación o la perdición de su gente?",
-      "portada": "data/portadas/6732/1.jpg"
-    },
     "6767": {
       "titulo": "Jujutsu Kaisen Modulo",
       "url": "https://www.listadomanga.es/coleccion.php?id=6767",

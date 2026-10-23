@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-10-12",
+  "actualizado": "2026-10-23",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -10778,6 +10778,31 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-10-07",
+      "tomos": [],
+      "proximas": []
+    },
+    {
+      "id": "84b7e0a3-5441-4d5c-ae20-4f3ad24cb1e6",
+      "titulo": "Psyren",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Toshiaki Iwashiro",
+      "editorial": "Editorial Ivrea",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": true,
+      "tomosTotales": 8,
+      "portada": "",
+      "sinopsis": "Ageha Yoshina, un estudiante problemático, pero siempre dispuesto a ayudar a los demás, descubre que la misteriosa desaparición de una de sus compañeras está relacionada con Psyren, una enigmática leyenda urbana.\n\nAl utilizar una misteriosa tarjeta para contactar con este mundo desconocido, Ageha es transportado junto a otros compañeros a un futuro devastado por una misteriosa organización y peligrosos monstruos que acaban con cualquier humano que se cruza en su camino.\n\nAhora, dotados de poderes psíquicos tras su viaje a este mundo, deberán descubrir qué provocó tanta destrucción y encontrar cómo cambiar la historia antes de que sea demasiado tarde.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6738",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-10-21",
       "tomos": [],
       "proximas": []
     }

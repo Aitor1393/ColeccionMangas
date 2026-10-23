@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-10-19",
+  "actualizado": "2026-10-23",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -13394,6 +13394,122 @@
       "descargado": "2026-10-19",
       "sinopsis": "",
       "portada": "data/portadas/6767/1.jpg"
+    },
+    "6738": {
+      "titulo": "Psyren",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6738",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-10-29",
+          "precio": 17.0,
+          "aproximada": false,
+          "portada": "data/portadas/6738/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2026-12-10",
+          "precio": 17.0,
+          "aproximada": false,
+          "portada": "data/portadas/6738/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6738/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6738/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6738/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6738/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6738/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6738/8.jpg"
+        }
+      ],
+      "editorial": "Editorial Ivrea",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo doble (115x170) rústica (tapa blanda)",
+      "autor": "Toshiaki Iwashiro",
+      "totalNumeros": 8,
+      "estado": "finalizada",
+      "descargado": "2026-10-23",
+      "sinopsis": "Ageha Yoshina, un estudiante problemático, pero siempre dispuesto a ayudar a los demás, descubre que la misteriosa desaparición de una de sus compañeras está relacionada con Psyren, una enigmática leyenda urbana.\n\r\n\n\r\nAl utilizar una misteriosa tarjeta para contactar con este mundo desconocido, Ageha es transportado junto a otros compañeros a un futuro devastado por una misteriosa organización y peligrosos monstruos que acaban con cualquier humano que se cruza en su camino.\n\r\n\n\r\nAhora, dotados de poderes psíquicos tras su viaje a este mundo, deberán descubrir qué provocó tanta destrucción y encontrar cómo cambiar la historia antes de que sea demasiado tarde.",
+      "portada": "data/portadas/6738/1.jpg"
+    },
+    "6330": {
+      "titulo": "Tomogui: Que comience la caza",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6330",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-10-01",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/6330/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": "2027-01-14",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/6330/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6330/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6330/4.jpg"
+        }
+      ],
+      "editorial": "Distrito Manga",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Nobuaki Kanazawa",
+      "totalNumeros": 4,
+      "estado": "finalizada",
+      "descargado": "2026-10-23",
+      "sinopsis": "Kaede Kanda decide utilizar a sus compañeros de clase para vengarse de la profesora Nanami Takao, a quien odia a raíz del suicidio de su mejor amiga. Sin embargo, encuentran ahorcado a Masaru Miyata, que había accedido a formar parte del plan. ¿Por qué ha muerto Miyata? ¿Hay alguien manejando los hilos en secreto? ¡He aquí el inicio de un proceso de devoración mutua entre alumnos encerrados en el acuario que es su aula!",
+      "portada": "data/portadas/6330/1.jpg"
     }
   },
   "sugerencias": {}

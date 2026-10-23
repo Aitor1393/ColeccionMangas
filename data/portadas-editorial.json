@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-19",
+ "actualizado": "2026-10-23",
  "nota": "Portadas de serie tomadas de la web de cada editorial. ListadoManga solo las tiene a 106x150.",
  "portadas": {
   "4753": {
@@ -439,6 +439,12 @@
    "fuente": "Panini",
    "origen": "https://www.panini.es/media/catalog/product/s/o/sovlo001_9791370580605.jpg",
    "bytes": 78263
+  },
+  "6090": {
+   "ruta": "data/portadas-serie/6090.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2025/07/centuria_01.jpg",
+   "bytes": 125487
   }
  }
 }

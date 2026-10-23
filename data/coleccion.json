@@ -1042,6 +1042,14 @@
           "fechaCompra": "",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 11,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -2538,6 +2546,14 @@
           "tengo": true,
           "leido": true,
           "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 16,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
           "precio": null,
           "notas": ""
         }
@@ -4500,6 +4516,14 @@
           "fechaCompra": "2026-08-17",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 5,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -5183,9 +5207,9 @@
         },
         {
           "numero": 12,
-          "tengo": false,
+          "tengo": true,
           "leido": false,
-          "fechaCompra": "",
+          "fechaCompra": "2026-10-23",
           "precio": null,
           "notas": ""
         },
@@ -8409,6 +8433,14 @@
           "fechaCompra": "",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -9228,6 +9260,22 @@
           "leido": true,
           "fechaCompra": "2026-08-04",
           "precio": 5.24,
+          "notas": ""
+        },
+        {
+          "numero": 7,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 8,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
+          "precio": null,
           "notas": ""
         }
       ],
@@ -10593,6 +10641,14 @@
           "fechaCompra": "",
           "precio": null,
           "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-10-23",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -10716,7 +10772,7 @@
       "demografia": "seinen",
       "estado": "finalizada",
       "abandonada": false,
-      "deseada": true,
+      "deseada": false,
       "tomosTotales": 10,
       "portada": "",
       "sinopsis": "Yggdrasil, el juego que fue en su época el DMMO-RPG más famoso del mundo, va a ser clausurado. El líder de uno de los gremios más importantes en la historia del juego se conecta por última vez para rememorar los viejos tiempos. Pero algo extraño ocurre que hace que los PNJ cobren vida y respondan a sus órdenes. ¿Sigue estando en el mundo de Yggdrasil o se trata de un mundo paralelo? ¿Se encuentran sus compañeros de gremio allí?",
@@ -10728,7 +10784,16 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-09-29",
-      "tomos": [],
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     },
     {

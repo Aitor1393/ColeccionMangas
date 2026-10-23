@@ -10870,6 +10870,40 @@
       "anadida": "2026-10-21",
       "tomos": [],
       "proximas": []
+    },
+    {
+      "id": "0d6c3e80-7a77-4882-a6c5-8e27b28f2072",
+      "titulo": "Tomogui: Que comience la caza",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Nobuaki Kanazawa",
+      "editorial": "Distrito Manga",
+      "demografia": "seinen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 4,
+      "portada": "",
+      "sinopsis": "Kaede Kanda decide utilizar a sus compañeros de clase para vengarse de la profesora Nanami Takao, a quien odia a raíz del suicidio de su mejor amiga. Sin embargo, encuentran ahorcado a Masaru Miyata, que había accedido a formar parte del plan. ¿Por qué ha muerto Miyata? ¿Hay alguien manejando los hilos en secreto? ¡He aquí el inicio de un proceso de devoración mutua entre alumnos encerrados en el acuario que es su aula!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6330",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-10-23",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
     }
   ]
 }

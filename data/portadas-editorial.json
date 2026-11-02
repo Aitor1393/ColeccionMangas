@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-10-28",
+ "actualizado": "2026-11-02",
  "nota": "Portadas de serie tomadas de la web de cada editorial. ListadoManga solo las tiene a 106x150.",
  "portadas": {
   "4753": {
@@ -445,6 +445,12 @@
    "fuente": "Ivrea",
    "origen": "https://www.editorialivrea.com/ESP/storage/2025/07/centuria_01.jpg",
    "bytes": 125487
+  },
+  "6738": {
+   "ruta": "data/portadas-serie/6738.jpg",
+   "fuente": "Ivrea",
+   "origen": "https://www.editorialivrea.com/ESP/storage/2026/10/psyren01.jpg",
+   "bytes": 169292
   }
  }
 }

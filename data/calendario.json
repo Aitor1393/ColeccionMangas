@@ -13531,6 +13531,50 @@
       "descargado": "2026-11-02",
       "sinopsis": "Kaede Kanda decide utilizar a sus compañeros de clase para vengarse de la profesora Nanami Takao, a quien odia a raíz del suicidio de su mejor amiga. Sin embargo, encuentran ahorcado a Masaru Miyata, que había accedido a formar parte del plan. ¿Por qué ha muerto Miyata? ¿Hay alguien manejando los hilos en secreto? ¡He aquí el inicio de un proceso de devoración mutua entre alumnos encerrados en el acuario que es su aula!",
       "portada": "data/portadas/6330/1.jpg"
+    },
+    "6610": {
+      "titulo": "Meteoria",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6610",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-10-21",
+          "precio": 9.95,
+          "aproximada": false,
+          "portada": "data/portadas/6610/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6610/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6610/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6610/4.jpg"
+        }
+      ],
+      "editorial": "Devir Manga",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (128x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Makoto Todo",
+      "totalNumeros": 4,
+      "estado": "en-publicacion",
+      "descargado": "2026-11-03",
+      "sinopsis": "Meteoria nos sitúa en un mundo donde la revolución industrial avanza gracias al “carbón meteórico”, una fuente de energía tan poderosa como enigmática. Kanata, un joven trabajador en una mina, lucha día a día por superarse a pesar de las duras condiciones.\n\r\n\n\r\nSin embargo, todo cambia cuando descubre una nueva veta de mineral que pone en marcha los engranajes de un destino mucho más grande de lo que jamás imaginó.",
+      "portada": "data/portadas/6610/1.jpg"
     }
   },
   "sugerencias": {}

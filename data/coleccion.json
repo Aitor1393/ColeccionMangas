@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-11-03",
+  "actualizado": "2026-11-04",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -8,11 +8,10 @@
   },
   "compras": {
     "series": [
-      "9cba9ee4-552c-4c20-be24-5fa0600d08c7",
-      "921df649-bd36-4bcd-bbb3-ff5929f920bd",
+      "5657a3a5-a918-419a-87c1-40a6892e8a68",
+      "5c16abbf-bb33-4374-bc3d-9f5e4480cd00",
       "84aeca68-4167-420c-9fb0-d5ed9db4a2dc",
       "536b7f0f-7067-49fd-84b9-5f653033be1e",
-      "50c1608a-a58a-4dbb-bb67-b8df6014bfb7",
       "4a75ab81-f604-43da-a202-df5fdbd243db",
       "50b42fd0-f161-42d8-9be0-df15f3469e0e",
       "b817a2eb-33c5-4764-a170-c6ccb9996f83",
@@ -31,7 +30,9 @@
       "15924990-5380-4d90-aec6-706db23aeef2",
       "97adbb24-5dd0-474f-87bc-86ebc4fb2dd4",
       "785bdb10-0be1-442f-aede-1865e1ebc73d",
-      "a9a3cdba-a5e4-4264-bf84-5d5ff65a72d5"
+      "a9a3cdba-a5e4-4264-bf84-5d5ff65a72d5",
+      "7a68920b-bbf9-469c-826d-9079565fa1cf",
+      "4bca01b8-5ca2-4ee9-9087-87b01377aa52"
     ],
     "tomos": []
   },

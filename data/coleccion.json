@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-11-04",
+  "actualizado": "2026-11-08",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -6935,7 +6935,7 @@
       "demografia": "shounen",
       "estado": "en-publicacion",
       "abandonada": false,
-      "deseada": true,
+      "deseada": false,
       "tomosTotales": 4,
       "portada": "",
       "sinopsis": "",
@@ -6947,7 +6947,16 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",
-      "tomos": [],
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     },
     {
@@ -7441,9 +7450,9 @@
         },
         {
           "numero": 8,
-          "tengo": false,
+          "tengo": true,
           "leido": false,
-          "fechaCompra": "",
+          "fechaCompra": "2026-11-08",
           "precio": null,
           "notas": ""
         },
@@ -9266,7 +9275,7 @@
         {
           "numero": 7,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-10-23",
           "precio": null,
           "notas": ""
@@ -9354,6 +9363,14 @@
           "fechaCompra": "2026-08-15",
           "precio": 8.95,
           "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-11-08",
+          "precio": null,
+          "notas": ""
         }
       ],
       "proximas": []
@@ -9387,6 +9404,14 @@
           "leido": false,
           "fechaCompra": "2026-08-15",
           "precio": 8.95,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": false,
+          "leido": false,
+          "fechaCompra": "2026-11-08",
+          "precio": null,
           "notas": ""
         }
       ],
@@ -9816,6 +9841,14 @@
           "tengo": true,
           "leido": false,
           "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "2026-11-08",
           "precio": null,
           "notas": ""
         }
@@ -10866,7 +10899,7 @@
       "demografia": "shounen",
       "estado": "finalizada",
       "abandonada": false,
-      "deseada": true,
+      "deseada": false,
       "tomosTotales": 8,
       "portada": "",
       "sinopsis": "Ageha Yoshina, un estudiante problemático, pero siempre dispuesto a ayudar a los demás, descubre que la misteriosa desaparición de una de sus compañeras está relacionada con Psyren, una enigmática leyenda urbana.\n\nAl utilizar una misteriosa tarjeta para contactar con este mundo desconocido, Ageha es transportado junto a otros compañeros a un futuro devastado por una misteriosa organización y peligrosos monstruos que acaban con cualquier humano que se cruza en su camino.\n\nAhora, dotados de poderes psíquicos tras su viaje a este mundo, deberán descubrir qué provocó tanta destrucción y encontrar cómo cambiar la historia antes de que sea demasiado tarde.",
@@ -10878,7 +10911,16 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-10-21",
-      "tomos": [],
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     },
     {
@@ -10937,6 +10979,108 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-11-03",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": true,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "86309810-21bc-4acb-b898-07fc65ccfc84",
+      "titulo": "Kamudo",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Akira Himekawa",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 2,
+      "portada": "",
+      "sinopsis": "ÉL ES CUMPLIMIENTO DE LA PROFECÍA\n\nEn el paraíso celestial de Hinoaruchi, un lugar gobernado por semidivinos, seres mitad humanos y mitad bestias, contemplan el cumplimiento de una profecía: el nacimiento del primer niño humano. Acogido por algunos con recelo y con ternura por otros, el joven Kamuna crece sin saber aún si su nacimiento llevará a la catástrofe o a la salvación.\n\nDescubre el nuevo trabajo de Akira Himekawa, aclamado por la adaptación al manga de The legend of Zelda, en el que se mezclan la fantasía, el misterio y la mitología japonesa.",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6732",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-11-08",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "514245a4-f3a3-4870-b91a-b2dec60065a8",
+      "titulo": "Bakuman.",
+      "tituloAlt": "",
+      "edicion": "Edición Integral",
+      "autor": "Tsugumi Ohba",
+      "editorial": "Norma Editorial",
+      "demografia": "shounen",
+      "estado": "finalizada",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 12,
+      "portada": "",
+      "sinopsis": "«¡¡HAZTE MANGAKA FORMANDO TÁNDEM CONMIGO!!»\n\nLa vida de Moritaka Mashiro, de 14 años, da un vuelco gracias a las impactantes palabras que le lanza Akito Takagi, el mayor genio del colegio. Con la intención de obtener una gloria reservada solo a unos pocos, los dos se adentran en un mundillo de lo más complicado... ¡¡Y así se inicia este camino del manga al estilo Jump!!\n\nLos creadores de Death Note nos muestran los entresijos más desconocidos del mundo del manga desde la perspectiva de dos jóvenes estudiantes. Esta reedición hará las delicias de aquellos que conocían la obra en manga o en anime, y también de los que gustan de obras que muestran los aspectos más cotidianos del día a día. ¡¡Contágiate de la ilusión de los que sueñan en esta edición coleccionista!!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6438",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-11-08",
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
+      "proximas": []
+    },
+    {
+      "id": "c4ab8798-8495-4f5e-81bf-04ba70b70b38",
+      "titulo": "La corona del ladrador",
+      "tituloAlt": "",
+      "edicion": "",
+      "autor": "Shinachiku",
+      "editorial": "Milky Way Ediciones",
+      "demografia": "seinen",
+      "estado": "en-publicacion",
+      "abandonada": false,
+      "deseada": false,
+      "tomosTotales": 2,
+      "portada": "",
+      "sinopsis": "Riqueza, poder, talento... Tarte es un joven noble al que nunca le ha faltado de nada. Cuenta con los mejores instructores para afrontar el Examen Real, una dura prueba a nivel mundial en la que el ganador es proclamado rey. Todo parece marchar bien hasta que, el día de su graduación, un joven herrero plebeyo le reta a un combate...\n\n¡¡Tras un duro baño de realidad, empieza la carrera por el trono de este noble sin talento!!\n\n¡Sé testigo de una emocionante pugna entre guerreros que aspiran a lo más alto, cada uno con sus objetivos y sus propias armas en el terreno de combate!",
+      "etiquetas": [],
+      "mangadexId": "",
+      "listadomangaId": "6449",
+      "capitulos": null,
+      "valoracion": null,
+      "relectura": null,
+      "notas": "",
+      "anadida": "2026-11-08",
       "tomos": [
         {
           "numero": 1,

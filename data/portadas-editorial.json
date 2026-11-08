@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-04",
+ "actualizado": "2026-11-08",
  "nota": "Portadas de serie tomadas de la web de cada editorial. ListadoManga solo las tiene a 106x150.",
  "portadas": {
   "4753": {
@@ -451,6 +451,12 @@
    "fuente": "Ivrea",
    "origen": "https://www.editorialivrea.com/ESP/storage/2026/10/psyren01.jpg",
    "bytes": 169292
+  },
+  "6732": {
+   "ruta": "data/portadas-serie/6732.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/47/thumb_46248_albumes_big.jpeg",
+   "bytes": 111712
   }
  }
 }

@@ -1,5 +1,5 @@
 {
-  "actualizado": "2026-11-04",
+  "actualizado": "2026-11-08",
   "fuente": "https://www.listadomanga.es/",
   "colecciones": {
     "3000": {
@@ -13575,6 +13575,166 @@
       "descargado": "2026-11-03",
       "sinopsis": "Meteoria nos sitúa en un mundo donde la revolución industrial avanza gracias al “carbón meteórico”, una fuente de energía tan poderosa como enigmática. Kanata, un joven trabajador en una mina, lucha día a día por superarse a pesar de las duras condiciones.\n\r\n\n\r\nSin embargo, todo cambia cuando descubre una nueva veta de mineral que pone en marcha los engranajes de un destino mucho más grande de lo que jamás imaginó.",
       "portada": "data/portadas/6610/1.jpg"
+    },
+    "6732": {
+      "titulo": "Kamudo",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6732",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-11-06",
+          "precio": 14.95,
+          "aproximada": false,
+          "portada": "data/portadas/6732/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6732/2.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Akira Himekawa",
+      "totalNumeros": 2,
+      "estado": "en-publicacion",
+      "descargado": "2026-11-08",
+      "sinopsis": "ÉL ES CUMPLIMIENTO DE LA PROFECÍA\n\r\n\n\r\nEn el paraíso celestial de Hinoaruchi, un lugar gobernado por semidivinos, seres mitad humanos y mitad bestias, contemplan el cumplimiento de una profecía: el nacimiento del primer niño humano. Acogido por algunos con recelo y con ternura por otros, el joven Kamuna crece sin saber aún si su nacimiento llevará a la catástrofe o a la salvación.\n\r\n\n\r\nDescubre el nuevo trabajo de Akira Himekawa, aclamado por la adaptación al manga de The legend of Zelda, en el que se mezclan la fantasía, el misterio y la mitología japonesa.",
+      "portada": "data/portadas/6732/1.jpg"
+    },
+    "6438": {
+      "titulo": "Bakuman. (Edición Integral)",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6438",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-11-06",
+          "precio": 19.95,
+          "aproximada": false,
+          "portada": "data/portadas/6438/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/2.jpg"
+        },
+        {
+          "numero": 3,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/3.jpg"
+        },
+        {
+          "numero": 4,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/4.jpg"
+        },
+        {
+          "numero": 5,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/5.jpg"
+        },
+        {
+          "numero": 6,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/6.jpg"
+        },
+        {
+          "numero": 7,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/7.jpg"
+        },
+        {
+          "numero": 8,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/8.jpg"
+        },
+        {
+          "numero": 9,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/9.jpg"
+        },
+        {
+          "numero": 10,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/10.jpg"
+        },
+        {
+          "numero": 11,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/11.jpg"
+        },
+        {
+          "numero": 12,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6438/12.jpg"
+        }
+      ],
+      "editorial": "Norma Editorial",
+      "coleccion": "Shonen",
+      "demografia": "shounen",
+      "formato": "Tomo A5 (148x210) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Tsugumi Ohba",
+      "totalNumeros": 12,
+      "estado": "finalizada",
+      "descargado": "2026-11-08",
+      "sinopsis": "«¡¡HAZTE MANGAKA FORMANDO TÁNDEM CONMIGO!!»\n\r\n\n\r\nLa vida de Moritaka Mashiro, de 14 años, da un vuelco gracias a las impactantes palabras que le lanza Akito Takagi, el mayor genio del colegio. Con la intención de obtener una gloria reservada solo a unos pocos, los dos se adentran en un mundillo de lo más complicado... ¡¡Y así se inicia este camino del manga al estilo Jump!!\n\r\n\n\r\nLos creadores de Death Note nos muestran los entresijos más desconocidos del mundo del manga desde la perspectiva de dos jóvenes estudiantes. Esta reedición hará las delicias de aquellos que conocían la obra en manga o en anime, y también de los que gustan de obras que muestran los aspectos más cotidianos del día a día. ¡¡Contágiate de la ilusión de los que sueñan en esta edición coleccionista!!",
+      "portada": "data/portadas/6438/1.jpg"
+    },
+    "6449": {
+      "titulo": "La corona del ladrador",
+      "url": "https://www.listadomanga.es/coleccion.php?id=6449",
+      "numeros": [
+        {
+          "numero": 1,
+          "fecha": "2026-10-29",
+          "precio": 9.5,
+          "aproximada": false,
+          "portada": "data/portadas/6449/1.jpg"
+        },
+        {
+          "numero": 2,
+          "fecha": null,
+          "precio": null,
+          "aproximada": false,
+          "portada": "data/portadas/6449/2.jpg"
+        }
+      ],
+      "editorial": "Milky Way Ediciones",
+      "coleccion": "Seinen",
+      "demografia": "seinen",
+      "formato": "Tomo B6 (130x180) rústica (tapa blanda) con sobrecubierta",
+      "autor": "Shinachiku",
+      "totalNumeros": 2,
+      "estado": "en-publicacion",
+      "descargado": "2026-11-08",
+      "sinopsis": "Riqueza, poder, talento... Tarte es un joven noble al que nunca le ha faltado de nada. Cuenta con los mejores instructores para afrontar el Examen Real, una dura prueba a nivel mundial en la que el ganador es proclamado rey. Todo parece marchar bien hasta que, el día de su graduación, un joven herrero plebeyo le reta a un combate...\n\r\n\n\r\n¡¡Tras un duro baño de realidad, empieza la carrera por el trono de este noble sin talento!!\n\r\n\n\r\n¡Sé testigo de una emocionante pugna entre guerreros que aspiran a lo más alto, cada uno con sus objetivos y sus propias armas en el terreno de combate!",
+      "portada": "data/portadas/6449/1.jpg"
     }
   },
   "sugerencias": {}

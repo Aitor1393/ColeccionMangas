@@ -1421,7 +1421,21 @@
       "mangadexId": "",
       "listadomangaId": "6086",
       "capitulos": null,
-      "valoracion": null,
+      "valoracion": {
+        "criterios": {
+          "historia": 5,
+          "personajes": 5,
+          "dibujo": 5,
+          "ritmo": 5,
+          "final": 5
+        },
+        "disfrute": 5,
+        "desempate": 0,
+        "duelos": 0,
+        "enfrentamientos": {},
+        "notas": "Un tomo para contar historias sueltas de la obra original.",
+        "fecha": "2026-11-17"
+      },
       "relectura": null,
       "notas": "",
       "anadida": "2026-08-13",

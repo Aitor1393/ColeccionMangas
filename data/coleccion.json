@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "actualizado": "2026-11-23",
+  "actualizado": "2026-11-28",
   "ajustes": {
     "descuento": 5,
     "mostrarGasto": false,
@@ -7465,7 +7465,7 @@
         {
           "numero": 8,
           "tengo": true,
-          "leido": false,
+          "leido": true,
           "fechaCompra": "2026-11-08",
           "precio": null,
           "notas": ""
@@ -10610,7 +10610,7 @@
       "demografia": "shounen",
       "estado": "finalizada",
       "abandonada": false,
-      "deseada": true,
+      "deseada": false,
       "tomosTotales": 10,
       "portada": "",
       "sinopsis": "Tras pelearse con el mejor amigo de su infancia, Yasuto Akashi decide saltarse las clases. Sin embargo, lo que no se imagina es que, justo ese día, en el instituto, comienzan lo que a primera vista parecen unos juegos la mar de inocentes.\n\nNo obstante, aquellos que no sigan las reglas del juego o que pierdan la partida morirán en el acto de una forma atroz. Desconcertados por la situación, los estudiantes arriesgarán sus vidas para sobrevivir, aunque eso implique dejar de lado su humanidad.",
@@ -10622,7 +10622,32 @@
       "relectura": null,
       "notas": "",
       "anadida": "2026-09-03",
-      "tomos": [],
+      "tomos": [
+        {
+          "numero": 1,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 2,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        },
+        {
+          "numero": 3,
+          "tengo": true,
+          "leido": false,
+          "fechaCompra": "",
+          "precio": null,
+          "notas": ""
+        }
+      ],
       "proximas": []
     },
     {

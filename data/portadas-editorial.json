@@ -1,5 +1,5 @@
 {
- "actualizado": "2026-11-23",
+ "actualizado": "2026-11-28",
  "nota": "Portadas de serie tomadas de la web de cada editorial. ListadoManga solo las tiene a 106x150.",
  "portadas": {
   "4753": {
@@ -457,6 +457,12 @@
    "fuente": "Norma",
    "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/47/thumb_46248_albumes_big.jpeg",
    "bytes": 111712
+  },
+  "6767": {
+   "ruta": "data/portadas-serie/6767.jpg",
+   "fuente": "Norma",
+   "origen": "https://www.normaeditorial.com/upload/media/albumes/0001/47/thumb_46749_albumes_big.jpeg",
+   "bytes": 93098
   }
  }
 }
